@@ -11,6 +11,9 @@ const AppState = {
   currentMode: "all",     // "all" or exact core name e.g. "Core_0_L0"
   lastPrediction: null,   // Last response from POST /api/predict (null when cleared/outdated)
   isOutdated: false,
+  floorplanRequestId: 0,
+  predictionRequestId: 0,
+  loadingFloorplan: false,
 };
 
 // DOM References
@@ -224,6 +227,12 @@ function populateFloorplanDropdown(styleName, selectedFpId) {
  * Clears stale predictions, graph points, temperature table, and selected-core state on floorplan changes.
  */
 async function loadFloorplan(fullName, options = { autoPredict: false }) {
+  const requestId = ++AppState.floorplanRequestId;
+  ++AppState.predictionRequestId;
+  AppState.loadingFloorplan = true;
+  if (AppState.currentFloorplan) {
+    clearStalePredictionDisplay(AppState.currentFloorplan, "Loading floorplan…");
+  }
   clearValidationErrors();
   dom.staleBanner.classList.add("hidden");
 
@@ -243,12 +252,14 @@ async function loadFloorplan(fullName, options = { autoPredict: false }) {
   try {
     const res = await fetch(`/api/floorplan/${encodeURIComponent(style)}/${encodeURIComponent(fpId)}`);
     const bundle = await res.json();
+    if (requestId !== AppState.floorplanRequestId) return;
     if (!res.ok) {
       throw new Error(bundle.error || `Failed to load ${style}/${fpId}`);
     }
 
     AppState.currentStyle = bundle.style;
     AppState.currentFloorplan = bundle;
+    AppState.loadingFloorplan = false;
 
     // Keep both side-by-side dropdowns synchronized with the loaded floorplan
     if (dom.styleSelect.value !== bundle.style) {
@@ -289,7 +300,11 @@ async function loadFloorplan(fullName, options = { autoPredict: false }) {
       await runPrediction("all");
     }
   } catch (err) {
+    if (requestId !== AppState.floorplanRequestId) return;
+    AppState.currentFloorplan = null;
     showValidationError(err.message);
+  } finally {
+    if (requestId === AppState.floorplanRequestId) AppState.loadingFloorplan = false;
   }
 }
 
@@ -382,6 +397,7 @@ function renderIndividualCoreButtons(bundle) {
  * Clears stale chart points, table rows, and heatmap colors until the user predicts again.
  */
 function markPredictionOutdated() {
+  ++AppState.predictionRequestId;
   const bundle = AppState.currentFloorplan;
   if (!bundle) return;
 
@@ -524,8 +540,16 @@ function clearValidationErrors() {
  * Execute thermal prediction via POST /api/predict for either "all" or a specific core name.
  */
 async function runPrediction(target) {
+  const requestId = ++AppState.predictionRequestId;
+  const floorplanRequestId = AppState.floorplanRequestId;
   const bundle = AppState.currentFloorplan;
-  if (!bundle) return;
+  if (!bundle || AppState.loadingFloorplan) return;
+  const isCurrentRequest = () => (
+    requestId === AppState.predictionRequestId &&
+    floorplanRequestId === AppState.floorplanRequestId &&
+    bundle === AppState.currentFloorplan &&
+    !AppState.loadingFloorplan
+  );
 
   const collected = collectAndValidatePowers();
   if (!collected.valid) return;
@@ -548,6 +572,7 @@ async function runPrediction(target) {
       }),
     });
     const data = await res.json();
+    if (!isCurrentRequest()) return;
     const roundtripMs = performance.now() - tClientStart;
 
     if (!res.ok) {
@@ -571,6 +596,7 @@ async function runPrediction(target) {
     renderFloorplanSvg(bundle, data);
     renderCoreTempChart(bundle, data);
   } catch (err) {
+    if (!isCurrentRequest()) return;
     showValidationError(`Network error calling /api/predict: ${err.message}`);
   }
 }

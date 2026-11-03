@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """
-Batch Orchestrator & Final Consolidator for Stage A (All 23 2D Floorplans)
+Read-only Batch Verification for Stage A (All 23 Calibrated 2D Floorplans)
 Lightweight Temperature Predictor Project
 """
 
+import argparse
 import csv
 import glob
 import math
@@ -14,13 +15,14 @@ from typing import Dict, List, Tuple
 
 import numpy as np
 
+from predict import locate_and_load_thermal_matrix
+
 from stage_a_pipeline import (
     AMBIENT_TEMP_K,
     determine_core_power_range,
     parse_flp,
     parse_lcf,
     parse_steady_ptrace,
-    run_stage_a_for_floorplan,
 )
 
 
@@ -80,24 +82,25 @@ def inspect_floorplan_metadata(fp_dir: str) -> Dict[str, object]:
 
 
 def check_floorplan_completed(fp_dir: str, fp_id: str, num_cores: int) -> bool:
-    """Verify if a floorplan already has 100 training samples, thermal matrix, and 20 validation samples."""
-    gen_dir = os.path.join(fp_dir, "generated_samples")
-    val_dir = os.path.join(fp_dir, "validation_samples")
-    matrix_filename = f"thermal_matrix_{fp_id.replace('_', '')}.csv"
-    matrix_path = os.path.join(gen_dir, matrix_filename)
-    train_csv_path = os.path.join(gen_dir, "combined_100_samples.csv")
-    val_comp_path = os.path.join(val_dir, f"validation_comparisons_{20 * num_cores}.csv")
+    """Recognize a usable saved model without requiring raw simulation archives.
 
-    if not (os.path.exists(matrix_path) and os.path.exists(train_csv_path) and os.path.exists(val_comp_path)):
+    Training traces, simulator outputs, and historical summaries are not runtime
+    dependencies of an already-calibrated model. Never recalibrate here.
+    """
+    matrix_path = os.path.join(fp_dir, "generated_samples", f"thermal_matrix_{fp_id.replace('_', '')}.csv")
+    if not os.path.isfile(matrix_path):
         return False
-
-    # Verify 100 training steady files and 20 validation steady files exist
-    train_steady = glob.glob(os.path.join(gen_dir, "steady", "*.steady"))
-    val_steady = glob.glob(os.path.join(val_dir, "steady", "*.steady"))
-    if len(train_steady) != 100 or len(val_steady) != 20:
+    try:
+        _, names, matrix, _, _ = locate_and_load_thermal_matrix(fp_dir, fp_id)
+        values = np.asarray(matrix, dtype=np.float64)
+        return (
+            len(names) == num_cores
+            and len(set(names)) == num_cores
+            and values.shape == (num_cores, num_cores)
+            and bool(np.isfinite(values).all())
+        )
+    except (OSError, ValueError, TypeError):
         return False
-
-    return True
 
 
 def collect_metrics_from_completed_floorplan(fp_dir: str, style_id: str, fp_id: str, meta: Dict[str, object]) -> Dict[str, object]:
@@ -174,50 +177,6 @@ def collect_metrics_from_completed_floorplan(fp_dir: str, style_id: str, fp_id: 
         avg_pred_sec = (time.perf_counter() - t0) / 10000.0
         avg_pred_us = avg_pred_sec * 1e6
 
-        # Save stage_a_summary_<fp_id>.csv for fp_001 / fp_002 if not created yet
-        csv_file_size = os.path.getsize(matrix_path)
-        raw_f64_size = num_cores * num_cores * 8
-        summary_headers = [
-            "floorplan_name",
-            "num_cores",
-            "matrix_dimensions",
-            "power_matrix_rank",
-            "power_matrix_cond",
-            "train_samples",
-            "val_samples",
-            "train_rmse_K",
-            "train_mae_K",
-            "train_max_error_K",
-            "val_rmse_K",
-            "val_mae_K",
-            "val_max_error_K",
-            "avg_prediction_time_us",
-            "avg_prediction_time_s",
-            "saved_matrix_csv_bytes",
-            "raw_float64_bytes",
-        ]
-        with open(summary_csv_path, "w", newline="\n") as f:
-            writer = csv.writer(f)
-            writer.writerow(summary_headers)
-            writer.writerow([
-                f"{style_id}/{fp_id}",
-                num_cores,
-                f"{num_cores}x{num_cores}",
-                rank_P,
-                f"{cond_P:.4f}",
-                len(p_list),
-                len(val_abs_errs) // num_cores,
-                f"{train_rmse:.6f}",
-                f"{train_mae:.6f}",
-                f"{train_max_err:.6f}",
-                f"{val_rmse:.6f}",
-                f"{val_mae:.6f}",
-                f"{val_max_err:.6f}",
-                f"{avg_pred_us:.4f}",
-                f"{avg_pred_us*1e-6:.6e}",
-                csv_file_size,
-                raw_f64_size,
-            ])
 
     csv_file_size = os.path.getsize(matrix_path)
     raw_f64_size = num_cores * num_cores * 8
@@ -250,163 +209,55 @@ def collect_metrics_from_completed_floorplan(fp_dir: str, style_id: str, fp_id: 
     }
 
 
-def main():
+def main(argv=None) -> int:
+    parser = argparse.ArgumentParser(
+        description=(
+            "Verify existing Stage A models without running HotSpot, recalibrating "
+            "matrices, or writing dataset/summary files."
+        )
+    )
+    parser.parse_args(argv)
     project_root = os.path.dirname(os.path.abspath(__file__))
     floorplans_root = os.path.join(project_root, "dataset", "Sample_dataset", "2D_floorplans")
-
-    # Discover all 23 2D floorplans sorted by Style_1..Style_4 and fp_001..fp_010
     styles = ["Style_1", "Style_2", "Style_3", "Style_4"]
-    all_fp_entries: List[Tuple[str, str, str]] = []
-    for st in styles:
-        st_dir = os.path.join(floorplans_root, st)
-        if not os.path.isdir(st_dir):
+    entries: List[Tuple[str, str, str]] = []
+    for style in styles:
+        style_dir = os.path.join(floorplans_root, style)
+        if not os.path.isdir(style_dir):
             continue
         fp_names = sorted(
-            [d for d in os.listdir(st_dir) if os.path.isdir(os.path.join(st_dir, d)) and d.startswith("fp_")],
-            key=lambda x: int(x.split("_")[1]),
+            (name for name in os.listdir(style_dir)
+             if name.startswith("fp_") and os.path.isdir(os.path.join(style_dir, name))),
+            key=lambda name: int(name.split("_")[1]),
         )
-        for fp_id in fp_names:
-            all_fp_entries.append((st, fp_id, os.path.join(st_dir, fp_id)))
+        entries.extend((style, fp_id, os.path.join(style_dir, fp_id)) for fp_id in fp_names)
 
-    print(f"Discovered {len(all_fp_entries)} total 2D floorplans.")
-
-    # Step 1: Inspect and classify completed vs remaining floorplans
-    completed_list = []
-    remaining_list = []
-    meta_map: Dict[str, Dict[str, object]] = {}
-
-    for st, fp_id, fp_dir in all_fp_entries:
-        key = f"{st}/{fp_id}"
-        meta = inspect_floorplan_metadata(fp_dir)
-        meta_map[key] = meta
-        if check_floorplan_completed(fp_dir, fp_id, int(meta["num_cores"])):
-            completed_list.append((st, fp_id, fp_dir))
-        else:
-            remaining_list.append((st, fp_id, fp_dir))
-
-    print(f"Already completed ({len(completed_list)}): {[f'{s}/{f}' for s, f, _ in completed_list]}")
-    print(f"Remaining to run  ({len(remaining_list)}): {[f'{s}/{f}' for s, f, _ in remaining_list]}")
-
-    summary_rows: List[Dict[str, object]] = []
+    print(f"Discovered {len(entries)} total 2D floorplans.")
     failures: List[Tuple[str, str]] = []
-
-    # Step 2: Run remaining floorplans sequentially
-    for idx, (st, fp_id, fp_dir) in enumerate(remaining_list, start=1):
-        key = f"{st}/{fp_id}"
-        meta = meta_map[key]
-        needs_override = bool(meta["needs_override"])
-        print(
-            f"\n>>> [{idx}/{len(remaining_list)}] Processing {key} "
-            f"(Big={meta['num_big']}, Little={meta['num_little']}, FILL={meta['num_fill']}, "
-            f"needs_geometry_override={needs_override}) <<<"
-        )
+    verified = 0
+    for style, fp_id, fp_dir in entries:
+        label = f"{style}/{fp_id}"
         try:
-            run_stage_a_for_floorplan(
-                fp_dir=fp_dir,
-                hotspot_bin="~/HotSpot/hotspot",
-                config_file=os.path.join(project_root, "hotspot.config"),
-                num_train=100,
-                num_val=20,
-                train_seed=42,
-                val_seed=2026,
-                force_overwrite=False,
-                allow_geometry_fallback=needs_override,
-            )
+            meta = inspect_floorplan_metadata(fp_dir)
+            if not check_floorplan_completed(fp_dir, fp_id, int(meta["num_cores"])):
+                raise ValueError("Saved thermal matrix is missing or invalid; no calibration attempted.")
+            _, names, _, _, _ = locate_and_load_thermal_matrix(fp_dir, fp_id)
+            if set(names) != set(meta["active_core_names"]):
+                raise ValueError("Saved matrix core labels do not match the floorplan.")
+            verified += 1
+            print(f"PASS {label}: existing {len(names)}x{len(names)} calibrated model ready.")
         except Exception as exc:
-            err_str = f"{type(exc).__name__}: {exc}"
-            print(f"ERROR on {key}: {err_str}", file=sys.stderr)
-            failures.append((key, err_str))
+            failures.append((label, str(exc)))
+            print(f"FAIL {label}: {exc}", file=sys.stderr)
 
-    # Step 3: Collect consolidated results across all 23 floorplans in canonical order
-    total_train_samples = 0
-    total_val_samples = 0
-    total_matrices = 0
-
-    for st, fp_id, fp_dir in all_fp_entries:
-        key = f"{st}/{fp_id}"
-        meta = meta_map[key]
-        if check_floorplan_completed(fp_dir, fp_id, int(meta["num_cores"])):
-            row_dict = collect_metrics_from_completed_floorplan(fp_dir, st, fp_id, meta)
-            summary_rows.append(row_dict)
-            total_train_samples += int(row_dict["train_samples"])
-            total_val_samples += int(row_dict["val_samples"])
-            total_matrices += 1
-        else:
-            summary_rows.append({
-                "style": st,
-                "floorplan": fp_id,
-                "full_name": key,
-                "die_dimensions_mm": meta["die_dimensions_mm"],
-                "num_big_cores": meta["num_big"],
-                "num_little_cores": meta["num_little"],
-                "num_fill_blocks": meta["num_fill"],
-                "num_active_cores": meta["num_cores"],
-                "train_samples": 0,
-                "val_samples": 0,
-                "matrix_dimensions": f"{meta['num_cores']}x{meta['num_cores']}",
-                "matrix_rank": 0,
-                "power_matrix_cond": "N/A",
-                "train_rmse_K": "N/A",
-                "train_mae_K": "N/A",
-                "train_max_error_K": "N/A",
-                "val_rmse_K": "N/A",
-                "val_mae_K": "N/A",
-                "val_max_error_K": "N/A",
-                "avg_prediction_time_us": "N/A",
-                "saved_matrix_csv_bytes": 0,
-                "raw_float64_bytes": 0,
-                "power_override_used": "Yes" if meta["needs_override"] else "No",
-                "status": "FAILED",
-            })
-
-    out_summary_csv = os.path.join(project_root, "stage_a_all_floorplans_summary.csv")
-    fieldnames = [
-        "style",
-        "floorplan",
-        "full_name",
-        "die_dimensions_mm",
-        "num_big_cores",
-        "num_little_cores",
-        "num_fill_blocks",
-        "num_active_cores",
-        "train_samples",
-        "val_samples",
-        "matrix_dimensions",
-        "matrix_rank",
-        "power_matrix_cond",
-        "train_rmse_K",
-        "train_mae_K",
-        "train_max_error_K",
-        "val_rmse_K",
-        "val_mae_K",
-        "val_max_error_K",
-        "avg_prediction_time_us",
-        "saved_matrix_csv_bytes",
-        "raw_float64_bytes",
-        "power_override_used",
-        "status",
-    ]
-
-    with open(out_summary_csv, "w", newline="\n") as f:
-        writer = csv.DictWriter(f, fieldnames=fieldnames)
-        writer.writeheader()
-        writer.writerows(summary_rows)
-
-    print("\n============================================================")
-    print("STAGE A CONSOLIDATED FINAL VERIFICATION")
-    print("============================================================")
-    print(f"Total Floorplans Processed : {len(all_fp_entries)}")
-    print(f"Completed Floorplans       : {total_matrices} / {len(all_fp_entries)}")
-    print(f"Total Training Samples     : {total_train_samples} (Expected: 2300)")
-    print(f"Total Validation Samples   : {total_val_samples} (Expected: 460)")
-    print(f"Total Calibrated Matrices  : {total_matrices} (Expected: 23)")
-    print(f"Failures Encountered       : {len(failures)}")
-    if failures:
-        for k, err in failures:
-            print(f"  - FAILED: {k}: {err}")
-    print(f"Consolidated Summary CSV   : {out_summary_csv}")
-    print("============================================================")
+    if len(entries) != 23:
+        failures.append(("catalog", f"Expected 23 floorplans, found {len(entries)}."))
+        print(f"FAIL catalog: {failures[-1][1]}", file=sys.stderr)
+    print(f"Verified calibrated models: {verified} / 23")
+    print("Existing matrices, training/validation data, and saved summaries were not changed.")
+    print("HotSpot was not invoked. No calibration or result-file writes were performed.")
+    return 1 if failures else 0
 
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())
