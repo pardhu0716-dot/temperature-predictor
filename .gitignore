@@ -1,0 +1,47 @@
+# Python environments and caches
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+*.egg-info/
+build/
+dist/
+
+# Local settings and temporary files
+.env
+.env.*
+!.env.example
+*.log
+*.tmp
+*.temp
+*.swp
+*~
+.DS_Store
+Thumbs.db
+
+# External HotSpot installation and compiled artifacts
+HotSpot/
+*.o
+*.a
+*.so
+*.dll
+*.exe
+
+# Regenerable raw calibration simulations; keep helper scripts and combined CSVs
+**/generated_samples/ptrace/
+**/generated_samples/steady/
+_run_hotspot_batch.sh
+*.ttrace
+*.grid.steady
+
+# Exact redundant matrices; runtime copies remain tracked
+/temperature_project/dataset/thermal_matrix_fp001.csv
+/temperature_project/dataset/Sample_dataset/2D_floorplans/Style_1/fp_001/thermal_matrix_fp001.csv
+
+# Retain validation .steady references, model CSVs, and published result tables.
