@@ -1,0 +1,2 @@
+floorplan_name,num_cores,matrix_dimensions,power_matrix_rank,power_matrix_cond,train_samples,val_samples,train_rmse_K,train_mae_K,train_max_error_K,val_rmse_K,val_mae_K,val_max_error_K,avg_prediction_time_us,avg_prediction_time_s,saved_matrix_csv_bytes,raw_float64_bytes
+Style_2/fp_005,8,8x8,8,24.8583,100,20,0.002759,0.002346,0.006132,0.002903,0.002496,0.005775,1.1077,1.107710e-06,771,512

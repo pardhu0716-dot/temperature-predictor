@@ -1,0 +1,14 @@
+============================================================
+Stage A Validation Accuracy Summary Report (Style_1/fp_001)
+============================================================
+Thermal Matrix File : \\wsl$\Ubuntu\home\pardhu\temperature_project\dataset\Sample_dataset\2D_floorplans\Style_1\fp_001\generated_samples\thermal_matrix_fp001.csv
+Validation Samples  : 20 independent configurations
+Active Cores        : 8 (Core_0_L0 .. Core_7_L0)
+Total Comparisons   : 160 (20 samples x 8 cores)
+Ambient Temperature : 318.15 K
+------------------------------------------------------------
+Validation Error Metrics:
+  - Overall Validation RMSE : 0.003143 K
+  - Maximum Absolute Error  : 0.006844 K
+  - Mean Absolute Error     : 0.002655 K
+============================================================

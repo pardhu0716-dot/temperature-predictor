@@ -1,0 +1,71 @@
+# Layer 0: Silicon (Core Layer 0)
+0
+Y
+Y
+1.75e+06
+0.01
+1.50e-04
+fp_005_layer_0.flp
+
+# Layer 1: TIM_TSV
+1
+Y
+N
+4.00e+06
+0.0058
+2.00e-05
+fp_005_tim_tsv.flp
+
+# Layer 2: Silicon (Core Layer 1)
+2
+Y
+Y
+1.75e+06
+0.01
+1.50e-04
+fp_005_layer_1.flp
+
+# Layer 3: TIM_TSV
+3
+Y
+N
+4.00e+06
+0.0058
+2.00e-05
+fp_005_tim_tsv.flp
+
+# Layer 4: Silicon (Core Layer 2)
+4
+Y
+Y
+1.75e+06
+0.01
+1.50e-04
+fp_005_layer_2.flp
+
+# Layer 5: TIM_TSV
+5
+Y
+N
+4.00e+06
+0.0058
+2.00e-05
+fp_005_tim_tsv.flp
+
+# Layer 6: Silicon (Core Layer 3)
+6
+Y
+Y
+1.75e+06
+0.01
+1.50e-04
+fp_005_layer_3.flp
+
+# Layer 7: TIM to Spreader
+7
+Y
+N
+4.00e+06
+0.25
+2.00e-05
+fp_005_tim.flp

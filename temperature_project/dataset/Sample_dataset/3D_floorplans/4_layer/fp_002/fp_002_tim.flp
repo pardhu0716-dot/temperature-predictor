@@ -1,0 +1,3 @@
+# TIM (Thermal Interface Material) Layer
+# Format: name\twidth(m)\theight(m)\tleft-x(m)\tbottom-y(m)
+TIM	0.016000	0.016000	0.0	0.0

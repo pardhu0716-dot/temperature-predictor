@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lightweight Temperature Predictor — Stage A</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+</head>
+<body>
+  <!-- Top Engineering Header -->
+  <header class="app-header">
+    <div class="header-left">
+      <div class="brand-badge">STAGE A</div>
+      <div class="brand-titles">
+        <h1>Lightweight Temperature Predictor — Stage A</h1>
+        <p class="subtitle">
+          Steady-State Linear Thermal Resistance Superposition
+          <span class="formula-pill">T (°C) = 45 + R &times; P</span>
+          <span class="formula-pill">Ambient = 45°C (318.15 K)</span>
+        </p>
+      </div>
+    </div>
+    <div class="header-badges">
+      <div class="meta-chip">
+        <span class="meta-label">Active Floorplan</span>
+        <span class="meta-val" id="hdr-floorplan">Style_1/fp_001</span>
+      </div>
+      <div class="meta-chip">
+        <span class="meta-label">Die Dimensions</span>
+        <span class="meta-val" id="hdr-die-size">9.0 &times; 10.0 mm</span>
+      </div>
+      <div class="meta-chip">
+        <span class="meta-label">Topology</span>
+        <span class="meta-val" id="hdr-topology">2 Big, 6 Little, 3 FILL</span>
+      </div>
+      <div class="meta-chip">
+        <span class="meta-label">Stage A Val RMSE</span>
+        <span class="meta-val accent-emerald" id="hdr-val-rmse">0.003143 K</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main 3-Column Engineering Dashboard -->
+  <main class="dashboard-grid">
+    <!-- LEFT PANEL: Floorplan Selection, 8 Power Inputs, and Prediction Controls -->
+    <section class="panel panel-left" aria-label="Floorplan and Power Controls">
+      <!-- 1. Floorplan Selection Card -->
+      <div class="card">
+        <div class="card-header">
+          <h2>1. Select 2D Floorplan</h2>
+        </div>
+
+        <div class="fp-dropdown-grid">
+          <div class="fp-dropdown-field">
+            <label for="style-select" class="fp-dropdown-label">Floorplan Style</label>
+            <select id="style-select" aria-label="Floorplan Style">
+              <option value="Style_1">Style_1 (3 floorplans)</option>
+              <option value="Style_2">Style_2 (5 floorplans)</option>
+              <option value="Style_3">Style_3 (5 floorplans)</option>
+              <option value="Style_4">Style_4 (10 floorplans)</option>
+            </select>
+          </div>
+
+          <div class="fp-dropdown-field">
+            <label for="floorplan-select" class="fp-dropdown-label">Floorplan</label>
+            <select id="floorplan-select" aria-label="Floorplan">
+              <option value="fp_001">fp_001</option>
+              <option value="fp_002">fp_002</option>
+              <option value="fp_003">fp_003</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="fp-status-line" id="fp-status-line">
+          Style_1 / fp_001 &middot; Calibrated model loaded
+        </div>
+      </div>
+
+      <!-- 2. Eight Active Core Power Inputs Card -->
+      <div class="card">
+        <div class="card-header">
+          <h2>2. Active Core Power Inputs</h2>
+          <span class="badge-subtle">Big: 10–20 W &bull; Little: 5–10 W</span>
+        </div>
+
+        <div class="preset-bar">
+          <span class="preset-label">Presets:</span>
+          <button type="button" class="btn-preset" id="btn-preset-val" title="Load saved validation sample #1 power vector">
+            Validation Sample #1
+          </button>
+          <button type="button" class="btn-preset" id="btn-preset-mid" title="Set Big=15.0 W, Little=7.5 W">
+            Midpoint
+          </button>
+          <button type="button" class="btn-preset" id="btn-preset-min" title="Set Big=10.0 W, Little=5.0 W">
+            Min
+          </button>
+          <button type="button" class="btn-preset" id="btn-preset-max" title="Set Big=20.0 W, Little=10.0 W">
+            Max
+          </button>
+        </div>
+
+        <div id="validation-error-banner" class="error-banner hidden" role="alert"></div>
+        <div id="stale-warning-banner" class="stale-banner hidden" role="status">
+          Power inputs changed — click a Predict button below to update results.
+        </div>
+
+        <div id="power-inputs-container" class="power-inputs-list">
+          <!-- Dynamically populated in exact matrix column order without coordinate clutter -->
+        </div>
+      </div>
+
+      <!-- 3. Simplified Thermal Prediction Controls Card -->
+      <div class="card">
+        <div class="card-header">
+          <h2>3. Thermal Prediction Controls</h2>
+        </div>
+
+        <button type="button" class="btn-predict-all" id="btn-predict-all">Predict All Cores</button>
+        <div class="predict-all-formula">T (&deg;C) = 45 + R &times; P</div>
+
+        <div class="individual-buttons-label">Individual Core Prediction:</div>
+        <div class="individual-buttons-grid" id="individual-buttons-container">
+          <!-- Concise buttons: Predict Core 0 .. Predict Core 7 -->
+        </div>
+
+        <div class="coupling-note-box">
+          <p class="coupling-short-note">
+            All 8 power inputs affect each core's temperature due to thermal coupling.
+          </p>
+          <details class="coupling-formula-details">
+            <summary>View single-core coupling equation</summary>
+            <div class="coupling-formula-code">T<sub>i</sub> (&deg;C) = 45 + &Sigma; R[i,j] &times; P[j]</div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CENTER PANEL: Proportional Chip Floorplan + Core vs Predicted Temperature Graph -->
+    <section class="panel panel-center" aria-label="Interactive Chip Floorplan and Temperature Graph">
+      <!-- Chip Floorplan Visualization Card -->
+      <div class="card">
+        <div class="card-header">
+          <div>
+            <h2>2D Silicon Floorplan &amp; Thermal Heatmap</h2>
+            <p class="card-subtitle" id="flp-geometry-subtitle">
+              1:1 Uniform Scale &bull; Big Core (4&times;4 mm) is 4&times; the area of Little Core (2&times;2 mm) &bull; Hover any block for details
+            </p>
+          </div>
+          <div class="view-mode-pill" id="heatmap-mode-badge">All Cores</div>
+        </div>
+
+        <!-- SVG Chip Canvas Wrapper -->
+        <div class="chip-stage-wrapper" id="chip-stage-wrapper">
+          <svg id="floorplan-svg" class="floorplan-svg" role="img" aria-label="2D Silicon Die Floorplan"></svg>
+          <!-- Floating Hover Tooltip -->
+          <div id="chip-tooltip" class="chip-tooltip hidden"></div>
+        </div>
+
+        <!-- Temperature Heatmap & Categorical Core Legend -->
+        <div class="heatmap-legend-box">
+          <div class="legend-header-row">
+            <span class="legend-title" id="legend-title">
+              Predicted Temperature Heatmap Scale (&deg;C)
+            </span>
+            <span class="legend-note" id="legend-mode-note">
+              Before prediction: block fill shows Core Type. After prediction: block fill shows Predicted Temperature (&deg;C).
+            </span>
+          </div>
+          <div class="legend-bar-wrapper">
+            <div class="legend-gradient-bar" id="legend-gradient-bar">
+              <div class="legend-marker hidden" id="legend-single-marker"></div>
+            </div>
+            <div class="legend-ticks">
+              <div class="legend-tick">
+                <span class="tick-swatch swatch-blue"></span>
+                <span class="tick-label">Cooler: <strong id="legend-min-val">-- &deg;C</strong></span>
+              </div>
+              <div class="legend-tick">
+                <span class="tick-swatch swatch-yellow"></span>
+                <span class="tick-label">Warmer: <strong id="legend-mid1-val">-- &deg;C</strong></span>
+              </div>
+              <div class="legend-tick">
+                <span class="tick-swatch swatch-orange"></span>
+                <span class="tick-label">Hot: <strong id="legend-mid2-val">-- &deg;C</strong></span>
+              </div>
+              <div class="legend-tick">
+                <span class="tick-swatch swatch-red"></span>
+                <span class="tick-label">Hottest: <strong id="legend-max-val">-- &deg;C</strong></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Categorical Core Types & Visual Indicators Legend -->
+          <div class="geometry-legend-row" aria-label="Floorplan Core Types and Visual Indicators">
+            <span class="geom-item" title="4×4 mm active core (categorical orange/yellow fill before prediction; heatmap fill after prediction)">
+              <span class="geom-box geom-big"></span>
+              <span><strong>Big Core (4&times;4 mm):</strong> Orange/Yellow</span>
+            </span>
+            <span class="geom-item" title="2×2 mm active core (categorical cyan/blue fill before prediction; heatmap fill after prediction)">
+              <span class="geom-box geom-little"></span>
+              <span><strong>Little Core (2&times;2 mm):</strong> Cyan/Blue</span>
+            </span>
+            <span class="geom-item" title="0 W passive silicon region (dark grey with subtle dashed border)">
+              <span class="geom-box geom-fill"></span>
+              <span><strong>Passive FILL (0 W):</strong> Dark Grey (Dashed)</span>
+            </span>
+            <span class="geom-item" title="Visual indicator only: cyan/white outline and top-left dot on the selected target core">
+              <span class="geom-box geom-selected"><span class="geom-dot-cyan"></span></span>
+              <span><strong>Selected Core:</strong> Cyan/White Outline</span>
+            </span>
+            <span class="geom-item" title="Visual indicator only: gold/yellow outline and top-right marker dot on the hottest core">
+              <span class="geom-box geom-hottest"><span class="geom-dot-gold"></span></span>
+              <span><strong>Hottest Core:</strong> Gold/Yellow Outline &amp; Marker</span>
+            </span>
+          </div>
+          <div class="legend-distinction-note">
+            <strong>Color Distinction:</strong> Categorical colors (orange/yellow for Big, cyan/blue for Little) identify core types prior to prediction; after prediction, active core fill colors switch to the thermal heatmap scale above. Selected and Hottest indicators are outlines/markers only (both appear together when a selected core is also the hottest).
+          </div>
+        </div>
+      </div>
+
+      <!-- NEW: Core vs Predicted Temperature Graph Card -->
+      <div class="card chart-card" id="chart-card">
+        <div class="card-header">
+          <div>
+            <h2>Core vs Predicted Temperature</h2>
+            <p class="card-subtitle" id="chart-subtitle">
+              Steady-state predicted temperature (&deg;C) across Core 0 through Core 7
+            </p>
+          </div>
+          <span class="badge-subtle" id="chart-status-badge">8 Active Cores</span>
+        </div>
+
+        <div class="chart-stage-wrapper" id="chart-stage-wrapper">
+          <svg id="core-temp-chart-svg" class="core-temp-chart-svg" role="img" aria-label="Core vs Predicted Temperature Graph"></svg>
+          <div id="chart-tooltip" class="chip-tooltip hidden"></div>
+        </div>
+      </div>
+
+      <!-- 3. Performance & Evaluation Section (Compact Dashboard) -->
+      <div class="card eval-card" id="eval-card">
+        <div class="card-header">
+          <div>
+            <h2>Performance &amp; Evaluation</h2>
+            <p class="card-subtitle" id="eval-subtitle">
+              Precomputed benchmark comparisons (per floorplan)
+            </p>
+          </div>
+          <span class="badge-subtle" id="eval-status-badge">Stage A Benchmark</span>
+        </div>
+
+        <div id="eval-content-container">
+          <!-- A. Execution Time Comparison -->
+          <div class="eval-chart-section">
+            <div class="eval-chart-header">
+              <span class="eval-chart-title">Execution Time Comparison</span>
+              <span class="eval-chart-scale-note">Logarithmic scale (1 &mu;s &ndash; 10 s)</span>
+            </div>
+
+            <div class="eval-bars-container">
+              <!-- Bar 1: HotSpot Steady Simulation -->
+              <div class="eval-bar-row">
+                <div class="eval-bar-label-col">
+                  <span class="eval-bar-name">HotSpot Simulation</span>
+                  <span class="eval-bar-meta">Steady-state grid solve</span>
+                </div>
+                <div class="eval-bar-track">
+                  <div class="eval-bar-fill eval-bar-hotspot" id="eval-bar-hotspot" style="width: 90%;"></div>
+                </div>
+                <div class="eval-bar-val-col">
+                  <span class="eval-bar-val accent-amber" id="eval-bar-hotspot-val">-- ms</span>
+                </div>
+              </div>
+
+              <!-- Bar 2: Flask API Request Time (Backend E2E) -->
+              <div class="eval-bar-row">
+                <div class="eval-bar-label-col">
+                  <span class="eval-bar-name">Flask API Request</span>
+                  <span class="eval-bar-meta">Backend HTTP request</span>
+                </div>
+                <div class="eval-bar-track">
+                  <div class="eval-bar-fill eval-bar-web" id="eval-bar-web" style="width: 47%;"></div>
+                </div>
+                <div class="eval-bar-val-col">
+                  <span class="eval-bar-val" id="eval-bar-web-val">-- ms</span>
+                </div>
+              </div>
+
+              <!-- Bar 3: Pure NumPy Linear Predictor (R x P) -->
+              <div class="eval-bar-row">
+                <div class="eval-bar-label-col">
+                  <span class="eval-bar-name">NumPy Predictor</span>
+                  <span class="eval-bar-meta">Pure R &times; P calculation</span>
+                </div>
+                <div class="eval-bar-track">
+                  <div class="eval-bar-fill eval-bar-numpy" id="eval-bar-numpy" style="width: 5%;"></div>
+                </div>
+                <div class="eval-bar-val-col">
+                  <span class="eval-bar-val accent-cyan" id="eval-bar-numpy-val">-- &mu;s</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Logarithmic Axis Ticks -->
+            <div class="eval-log-axis">
+              <span class="axis-tick">1 &mu;s</span>
+              <span class="axis-tick">10 &mu;s</span>
+              <span class="axis-tick">100 &mu;s</span>
+              <span class="axis-tick">1 ms</span>
+              <span class="axis-tick">10 ms</span>
+              <span class="axis-tick">100 ms</span>
+              <span class="axis-tick">1 s</span>
+              <span class="axis-tick">10 s</span>
+            </div>
+          </div>
+
+          <!-- B. Storage Comparison -->
+          <div class="eval-chart-section" style="margin-top: 0.9rem;">
+            <div class="eval-chart-header">
+              <span class="eval-chart-title">Storage Comparison</span>
+              <span class="eval-chart-scale-note">Model &amp; runtime footprint</span>
+            </div>
+
+            <div class="eval-bars-container">
+              <!-- Bar 1: Our Predictor Model Size -->
+              <div class="eval-bar-row">
+                <div class="eval-bar-label-col">
+                  <span class="eval-bar-name">Our Predictor Model</span>
+                  <span class="eval-bar-meta">Pre-calibrated 8&times;8 float64</span>
+                </div>
+                <div class="eval-bar-track">
+                  <div class="eval-bar-fill eval-bar-storage-predictor" id="eval-bar-storage-predictor" style="width: 30%;"></div>
+                </div>
+                <div class="eval-bar-val-col">
+                  <span class="eval-bar-val accent-emerald" id="eval-bar-storage-predictor-val">512 B raw</span>
+                </div>
+              </div>
+
+              <!-- Bar 2: HotSpot Storage / Memory -->
+              <div class="eval-bar-row">
+                <div class="eval-bar-label-col">
+                  <span class="eval-bar-name">HotSpot Storage / Memory</span>
+                  <span class="eval-bar-meta">Grid model &amp; runtime RAM</span>
+                </div>
+                <div class="eval-bar-track eval-track-awaiting">
+                  <div class="eval-bar-fill eval-bar-storage-hotspot hidden" id="eval-bar-storage-hotspot" style="width: 0%;"></div>
+                  <span class="eval-track-placeholder-text">Awaiting TA clarification (not measured)</span>
+                </div>
+                <div class="eval-bar-val-col">
+                  <span class="badge-awaiting" id="eval-bar-storage-hotspot-val">Not measured &mdash; awaiting TA clarification</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Fallback Message if Benchmark Data Missing -->
+        <div id="eval-unavailable-banner" class="eval-unavailable-banner hidden" role="alert">
+          <span class="eval-unavailable-title">Benchmark Data Unavailable</span>
+          <p>Precomputed benchmark results for this floorplan were not found in <code>stage_a_benchmark_per_floorplan.csv</code>. Normal thermal temperature prediction remains fully operational.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- RIGHT PANEL: Prediction Results, KPIs, Temperature Table, and Matrix R Inspector -->
+    <section class="panel panel-right" aria-label="Prediction Results and Model Metrics">
+      <!-- Prominent Single-Core or All-Core Summary Banner -->
+      <div class="card highlight-result-card" id="primary-result-card">
+        <div class="card-header">
+          <h2 id="result-banner-title">Prediction Summary</h2>
+          <span class="badge-mode" id="result-mode-pill">PREDICT ALL</span>
+        </div>
+
+        <!-- Prominent KPI Grid -->
+        <div class="kpi-grid">
+          <div class="kpi-box kpi-primary">
+            <div class="kpi-label" id="kpi-temp-label">Maximum Predicted Temp</div>
+            <div class="kpi-value-large" id="kpi-temp-c">-- &deg;C</div>
+            <div class="kpi-subvalue" id="kpi-temp-k">-- K</div>
+          </div>
+
+          <div class="kpi-box kpi-secondary">
+            <div class="kpi-label" id="kpi-core-label">Hottest Core</div>
+            <div class="kpi-value-medium" id="kpi-core-name">--</div>
+            <div class="kpi-subvalue" id="kpi-core-type">--</div>
+          </div>
+
+          <div class="kpi-box">
+            <div class="kpi-label">Total Active Power</div>
+            <div class="kpi-value-sm" id="kpi-total-power">-- W</div>
+            <div class="kpi-subvalue">Ambient: 45&deg;C (318.15 K)</div>
+          </div>
+
+          <div class="kpi-box">
+            <div class="kpi-label">Live Prediction Time</div>
+            <div class="kpi-value-sm accent-cyan" id="kpi-pred-time">-- &mu;s</div>
+            <div class="kpi-subvalue" id="kpi-roundtrip-time">Awaiting prediction</div>
+          </div>
+
+          <div class="kpi-box kpi-wide">
+            <div class="kpi-label">Loaded Calibrated Model Size</div>
+            <div class="kpi-value-sm" id="kpi-model-size">771 bytes (CSV) / 512 bytes (8&times;8 float64)</div>
+            <div class="kpi-subvalue" id="kpi-matrix-path">generated_samples/thermal_matrix_fp001.csv</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Detailed Temperature Results Table Card -->
+      <div class="card">
+        <div class="card-header">
+          <h2 id="table-card-title">Predicted Core Temperatures</h2>
+          <span class="badge-subtle" id="table-row-count">8 Active Cores</span>
+        </div>
+
+        <div class="table-formula-note">
+          <span><strong>&Delta;T</strong> = Temperature rise above ambient.</span>
+          <span><strong>Temp</strong> = Ambient temperature (45&deg;C) + &Delta;T.</span>
+        </div>
+
+        <div class="table-responsive">
+          <table class="results-table" id="results-table">
+            <thead>
+              <tr>
+                <th>Core Name</th>
+                <th>Type</th>
+                <th class="num">Power (W)</th>
+                <th class="num">&Delta;T (&deg;C)</th>
+                <th class="num">Temp (&deg;C)</th>
+                <th class="num">Temp (K)</th>
+              </tr>
+            </thead>
+            <tbody id="results-table-body">
+              <!-- Populated dynamically -->
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Expandable Single-Core Thermal Coupling Breakdown -->
+        <div id="coupling-breakdown-section" class="coupling-section hidden">
+          <details class="coupling-details-panel">
+            <summary id="coupling-title">View 8-core thermal coupling contributions</summary>
+            <div class="table-responsive" style="margin-top: 0.45rem;">
+              <table class="results-table compact-table">
+                <thead>
+                  <tr>
+                    <th>Source Core</th>
+                    <th>Type</th>
+                    <th class="num">R[i,j] (K/W)</th>
+                    <th class="num">P[j] (W)</th>
+                    <th class="num">&Delta;T<sub>i&larr;j</sub> (&deg;C)</th>
+                  </tr>
+                </thead>
+                <tbody id="coupling-table-body"></tbody>
+              </table>
+            </div>
+          </details>
+        </div>
+      </div>
+
+      <!-- Collapsible Calibrated 8x8 Thermal Resistance Matrix R Inspector -->
+      <details class="card details-card">
+        <summary class="details-summary">
+          <span>Inspect Loaded 8&times;8 Thermal Resistance Matrix R (K/W)</span>
+          <span class="badge-subtle">Pre-Calibrated Stage A</span>
+        </summary>
+        <div class="matrix-inspector-body">
+          <p class="matrix-inspector-note">
+            Loaded from <code id="inspector-matrix-file">thermal_matrix_fp001.csv</code> without invoking HotSpot.
+          </p>
+          <div class="table-responsive">
+            <table class="matrix-table" id="matrix-r-table">
+              <thead id="matrix-r-thead"></thead>
+              <tbody id="matrix-r-tbody"></tbody>
+            </table>
+          </div>
+        </div>
+      </details>
+    </section>
+  </main>
+
+  <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>

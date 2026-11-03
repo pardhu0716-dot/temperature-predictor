@@ -1,0 +1,30 @@
+============================================================
+Stage A Calibration & Validation Summary Report (Style_4/fp_009)
+============================================================
+Floorplan Directory      : \\wsl$\Ubuntu\home\pardhu\temperature_project\dataset\Sample_dataset\2D_floorplans\Style_4\fp_009
+Die Dimensions           : 14.00 mm x 14.00 mm
+Active Cores Detected    : 8 (Core_0_L0, Core_1_L0, Core_2_L0, Core_3_L0, Core_4_L0, Core_5_L0, Core_6_L0, Core_7_L0)
+Passive FILL Blocks      : 13
+Thermal Matrix File      : \\wsl$\Ubuntu\home\pardhu\temperature_project\dataset\Sample_dataset\2D_floorplans\Style_4\fp_009\generated_samples\thermal_matrix_fp009.csv
+Matrix Dimensions        : 8x8 (Units: K/W)
+Power Matrix Rank        : 8 (Full Rank: True)
+Power Matrix Cond Number : 24.0291
+------------------------------------------------------------
+Training Set (100 samples, 800 comparisons):
+  - Training RMSE        : 0.002811 K
+  - Training MAE         : 0.002402 K
+  - Training Max Error   : 0.006109 K
+------------------------------------------------------------
+Validation Set (20 samples, 160 comparisons, 0 overlap):
+  - Validation RMSE      : 0.002967 K
+  - Validation MAE       : 0.002569 K
+  - Validation Max Error : 0.006357 K
+------------------------------------------------------------
+Runtime & Model Footprint:
+  - Avg Prediction Time  : 1.1343 us (1.134250e-06 s)
+  - Training Sim Time    : 67.51 s (0.675 s/run)
+  - Validation Sim Time  : 13.80 s (0.690 s/run)
+  - Least-Squares Fit    : 0.3646 ms
+  - Saved CSV Model Size : 771 bytes
+  - Raw float64 Size     : 512 bytes (8x8x8)
+============================================================

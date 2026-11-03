@@ -1,0 +1,63 @@
+# Layer Configuration File for Heterogeneous 3D Stack
+# Format: <Layer Number>\n<Lateral flow Y/N?>\n<Power Dissipation Y/N?>\n# <Specific heat>\n<Resistivity>\n<Thickness>\n<Floorplan file>\n\n# Layer 0: Logic Tier 0
+0
+Y
+Y
+1750000.0
+0.01
+0.000050
+fp_002_layer_0.flp
+
+# Layer 1: TIM between Tier 0 and 1
+1
+Y
+N
+4000000.0
+0.25
+0.000020
+fp_002_tim.flp
+
+# Layer 2: Logic Tier 1
+2
+Y
+Y
+1750000.0
+0.01
+0.000050
+fp_002_layer_1.flp
+
+# Layer 3: TIM between Tier 1 and 2
+3
+Y
+N
+4000000.0
+0.25
+0.000020
+fp_002_tim.flp
+
+# Layer 4: Logic Tier 2
+4
+Y
+Y
+1750000.0
+0.01
+0.000050
+fp_002_layer_2.flp
+
+# Layer 5: TIM between Tier 2 and 3
+5
+Y
+N
+4000000.0
+0.25
+0.000020
+fp_002_tim.flp
+
+# Layer 6: Logic Tier 3
+6
+Y
+Y
+1750000.0
+0.01
+0.000050
+fp_002_layer_3.flp

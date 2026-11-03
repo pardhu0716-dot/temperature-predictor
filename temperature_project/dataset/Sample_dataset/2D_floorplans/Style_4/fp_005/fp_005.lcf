@@ -1,0 +1,17 @@
+# Layer 0: Silicon
+0
+Y
+Y
+1.75e6
+0.01
+0.00015
+fp_005_layer_0.flp
+
+# Layer 1: TIM
+1
+Y
+N
+4e6
+0.25
+2.0e-05
+fp_005_tim.flp
