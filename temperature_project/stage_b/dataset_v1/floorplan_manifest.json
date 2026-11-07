@@ -1,0 +1,2726 @@
+{
+  "base_commit": "c8cc4e27a332af168b9e539aae80da615735eeca",
+  "expected_simulations": 1540,
+  "floorplans": [
+    {
+      "attempts": 1,
+      "big_cores": [
+        "Core_4_L0",
+        "Core_5_L0"
+      ],
+      "die_um": [
+        10532,
+        12245
+      ],
+      "fill_count": 22,
+      "geometry_seed": 20261108,
+      "id": "b_fp_006",
+      "input_sha256": {
+        "floorplans/b_fp_006/b_fp_006.lcf": "d0e71b2b7236b074f3f38bbb51eb22f207601d98c8b33053eb319af8da182e24",
+        "floorplans/b_fp_006/b_fp_006_layer_0.flp": "a34d05554b5bf88d0f93a55da4c7fe37eef566b21db00486ae35669c511220f8",
+        "floorplans/b_fp_006/b_fp_006_tim.flp": "8814ae15e0c98f96ade2bc9de532342d8b5ddcfa34e1994f7a4bfeee5c27ee9b"
+      },
+      "lcf": "floorplans/b_fp_006/b_fp_006.lcf",
+      "little_cores": [
+        "Core_0_L0",
+        "Core_1_L0",
+        "Core_2_L0",
+        "Core_3_L0",
+        "Core_6_L0",
+        "Core_7_L0"
+      ],
+      "nearest_descriptor_rms_um": 992.9609532129161,
+      "power_seed": 5839365757149768143,
+      "silicon": "floorplans/b_fp_006/b_fp_006_layer_0.flp",
+      "source_sha256": "d9b2cf1755d9809978ecf1866df0089c3289114ea3f7915988eae863ae3074ca",
+      "source_template": "dataset/Sample_dataset/2D_floorplans/Style_1/fp_002/fp_002_layer_0.flp",
+      "style_family": "Style_1",
+      "whitespace_fraction": 0.5657714372825853
+    },
+    {
+      "attempts": 1,
+      "big_cores": [
+        "Core_1_L0",
+        "Core_4_L0"
+      ],
+      "die_um": [
+        9594,
+        12269
+      ],
+      "fill_count": 20,
+      "geometry_seed": 20261109,
+      "id": "b_fp_007",
+      "input_sha256": {
+        "floorplans/b_fp_007/b_fp_007.lcf": "4efaccb38c9cb764c2ecaae3fcc115b94dca140cd7a9d98dfc264f38b493cb74",
+        "floorplans/b_fp_007/b_fp_007_layer_0.flp": "914e441a4e655220b7ae1cb271c02f88c7cbce7a455db5ee640470db697cd503",
+        "floorplans/b_fp_007/b_fp_007_tim.flp": "a3e9064690d39b28100ef50b70749cd9af7ab9ab0dedd50b9952b1049d862c1f"
+      },
+      "lcf": "floorplans/b_fp_007/b_fp_007.lcf",
+      "little_cores": [
+        "Core_0_L0",
+        "Core_2_L0",
+        "Core_3_L0",
+        "Core_5_L0",
+        "Core_6_L0",
+        "Core_7_L0"
+      ],
+      "nearest_descriptor_rms_um": 1113.086127141818,
+      "power_seed": 16819546029071733227,
+      "silicon": "floorplans/b_fp_007/b_fp_007_layer_0.flp",
+      "source_sha256": "26fe7a00a0baedc1447e2ba4aada9c4c86d60addcc532bb959efee5b45920bc6",
+      "source_template": "dataset/Sample_dataset/2D_floorplans/Style_2/fp_002/fp_002_layer_0.flp",
+      "style_family": "Style_2",
+      "whitespace_fraction": 0.5242496171866049
+    },
+    {
+      "attempts": 1,
+      "big_cores": [
+        "Core_4_L0",
+        "Core_5_L0"
+      ],
+      "die_um": [
+        18459,
+        7648
+      ],
+      "fill_count": 23,
+      "geometry_seed": 20261110,
+      "id": "b_fp_008",
+      "input_sha256": {
+        "floorplans/b_fp_008/b_fp_008.lcf": "e40b50beb45c98261f30edb975ddc3df52c6d4c50b808ca06f0359d77b38dfc8",
+        "floorplans/b_fp_008/b_fp_008_layer_0.flp": "9d362befcf9be98ed6877298c63a012e63fb4bb35a0875ea404ba98fac0e1db9",
+        "floorplans/b_fp_008/b_fp_008_tim.flp": "b86962669c0ee104e5749c7b06454dcdcf2a4a5553fcceefd7639ef8b29bedba"
+      },
+      "lcf": "floorplans/b_fp_008/b_fp_008.lcf",
+      "little_cores": [
+        "Core_0_L0",
+        "Core_1_L0",
+        "Core_2_L0",
+        "Core_3_L0",
+        "Core_6_L0",
+        "Core_7_L0"
+      ],
+      "nearest_descriptor_rms_um": 1409.3075054519213,
+      "power_seed": 6853223466263359448,
+      "silicon": "floorplans/b_fp_008/b_fp_008_layer_0.flp",
+      "source_sha256": "4e41d4f1e41c74eaee9ce4dbdb5d6456b25f25f4ad85741ce43047c484005455",
+      "source_template": "dataset/Sample_dataset/2D_floorplans/Style_3/fp_003/fp_003_layer_0.flp",
+      "style_family": "Style_3",
+      "whitespace_fraction": 0.6033276053839551
+    },
+    {
+      "attempts": 1,
+      "big_cores": [
+        "Core_0_L0",
+        "Core_2_L0"
+      ],
+      "die_um": [
+        14320,
+        15703
+      ],
+      "fill_count": 25,
+      "geometry_seed": 20261111,
+      "id": "b_fp_009",
+      "input_sha256": {
+        "floorplans/b_fp_009/b_fp_009.lcf": "08343258081d0d87632fffcdd6fdfad705eaf3ef650911c6ede4e147c8c2809d",
+        "floorplans/b_fp_009/b_fp_009_layer_0.flp": "8df02044745b4010e10d068c04ec754b8400e7ebe6e93edf9e446ccba4ed3cf7",
+        "floorplans/b_fp_009/b_fp_009_tim.flp": "ff971f02e06fc9c98aa52134325de8c94a683b6a2ff10e272a25f4b4aeae5c48"
+      },
+      "lcf": "floorplans/b_fp_009/b_fp_009.lcf",
+      "little_cores": [
+        "Core_1_L0",
+        "Core_3_L0",
+        "Core_4_L0",
+        "Core_5_L0",
+        "Core_6_L0",
+        "Core_7_L0"
+      ],
+      "nearest_descriptor_rms_um": 1084.1258227370934,
+      "power_seed": 18033444557862624124,
+      "silicon": "floorplans/b_fp_009/b_fp_009_layer_0.flp",
+      "source_sha256": "0dc5e4137081d7d5e4856406204fdbbb20d3a2c13a5a765789df805094811237",
+      "source_template": "dataset/Sample_dataset/2D_floorplans/Style_4/fp_008/fp_008_layer_0.flp",
+      "style_family": "Style_4",
+      "whitespace_fraction": 0.7509638588078924
+    },
+    {
+      "attempts": 1,
+      "big_cores": [
+        "Core_0_L0",
+        "Core_1_L0"
+      ],
+      "die_um": [
+        10817,
+        11923
+      ],
+      "fill_count": 25,
+      "geometry_seed": 20261112,
+      "id": "b_fp_010",
+      "input_sha256": {
+        "floorplans/b_fp_010/b_fp_010.lcf": "84c7c3a0a747f25c27109f255fa8dc499b6855d570a96349c78e4a694b53313e",
+        "floorplans/b_fp_010/b_fp_010_layer_0.flp": "67b02c6ad7db25c58965005de9f5b2fbbfaaa766f68926435690c2b09ded93e7",
+        "floorplans/b_fp_010/b_fp_010_tim.flp": "2b59114df7d59a7a1b61f022b2afd2af1f57cb835331f46372db11ede0f6f913"
+      },
+      "lcf": "floorplans/b_fp_010/b_fp_010.lcf",
+      "little_cores": [
+        "Core_2_L0",
+        "Core_3_L0",
+        "Core_4_L0",
+        "Core_5_L0",
+        "Core_6_L0",
+        "Core_7_L0"
+      ],
+      "nearest_descriptor_rms_um": 733.2794196299811,
+      "power_seed": 13264917985348085827,
+      "silicon": "floorplans/b_fp_010/b_fp_010_layer_0.flp",
+      "source_sha256": "a512a6e929a6e6ebc88a3d3d88edd5e8ba27d7eb6c6b3eb475ceae9a8be5a7ba",
+      "source_template": "dataset/Sample_dataset/2D_floorplans/Style_1/fp_001/fp_001_layer_0.flp",
+      "style_family": "Style_1",
+      "whitespace_fraction": 0.5657941670044491
+    },
+    {
+      "attempts": 1,
+      "big_cores": [
+        "Core_0_L0",
+        "Core_3_L0"
+      ],
+      "die_um": [
+        9745,
+        11571
+      ],
+      "fill_count": 18,
+      "geometry_seed": 20261113,
+      "id": "b_fp_011",
+      "input_sha256": {
+        "floorplans/b_fp_011/b_fp_011.lcf": "4d7c5be2000e83d90be20e5d2dba7b806219bb473c0bb5cfbfd7ac0e0d3856b2",
+        "floorplans/b_fp_011/b_fp_011_layer_0.flp": "5d40fa677c3fd8aac64c2a3a2d89778ccdc93847683876a9ec1eadc48cce4d11",
+        "floorplans/b_fp_011/b_fp_011_tim.flp": "6720c3c5bf83626b002f1708a7125497780fed0ec4098f75c1a7574cc9786420"
+      },
+      "lcf": "floorplans/b_fp_011/b_fp_011.lcf",
+      "little_cores": [
+        "Core_1_L0",
+        "Core_2_L0",
+        "Core_4_L0",
+        "Core_5_L0",
+        "Core_6_L0",
+        "Core_7_L0"
+      ],
+      "nearest_descriptor_rms_um": 567.3314522810778,
+      "power_seed": 4766191528362109737,
+      "silicon": "floorplans/b_fp_011/b_fp_011_layer_0.flp",
+      "source_sha256": "26fe7a00a0baedc1447e2ba4aada9c4c86d60addcc532bb959efee5b45920bc6",
+      "source_template": "dataset/Sample_dataset/2D_floorplans/Style_2/fp_002/fp_002_layer_0.flp",
+      "style_family": "Style_2",
+      "whitespace_fraction": 0.5033673247360009
+    },
+    {
+      "attempts": 1,
+      "big_cores": [
+        "Core_0_L0",
+        "Core_5_L0"
+      ],
+      "die_um": [
+        8448,
+        18387
+      ],
+      "fill_count": 25,
+      "geometry_seed": 20261114,
+      "id": "b_fp_012",
+      "input_sha256": {
+        "floorplans/b_fp_012/b_fp_012.lcf": "ee66c5ce74f5f6db55d2f5d9ebba12fb47ebd044b6b96d74b6b14de42effe18a",
+        "floorplans/b_fp_012/b_fp_012_layer_0.flp": "99fd736246c7390425905776542fbff64c16c250dccd377779cbe47b959de304",
+        "floorplans/b_fp_012/b_fp_012_tim.flp": "71261d2b7609fdc74707e6bbb9898b25346e693a1a933146631633da93f77847"
+      },
+      "lcf": "floorplans/b_fp_012/b_fp_012.lcf",
+      "little_cores": [
+        "Core_1_L0",
+        "Core_2_L0",
+        "Core_3_L0",
+        "Core_4_L0",
+        "Core_6_L0",
+        "Core_7_L0"
+      ],
+      "nearest_descriptor_rms_um": 890.3026261983234,
+      "power_seed": 12496804378844023634,
+      "silicon": "floorplans/b_fp_012/b_fp_012_layer_0.flp",
+      "source_sha256": "13986b9b3022ed5bccfd302bab93dfc03b82cdcdb893f7ba7ffcff0b07fb1b03",
+      "source_template": "dataset/Sample_dataset/2D_floorplans/Style_3/fp_001/fp_001_layer_0.flp",
+      "style_family": "Style_3",
+      "whitespace_fraction": 0.6394850775663306
+    },
+    {
+      "attempts": 1,
+      "big_cores": [
+        "Core_1_L0",
+        "Core_3_L0"
+      ],
+      "die_um": [
+        15588,
+        18491
+      ],
+      "fill_count": 25,
+      "geometry_seed": 20261115,
+      "id": "b_fp_013",
+      "input_sha256": {
+        "floorplans/b_fp_013/b_fp_013.lcf": "a9529f86ce20bdbc01fd98b4665f9f7520b9fd948e932e4219c318362e53cf69",
+        "floorplans/b_fp_013/b_fp_013_layer_0.flp": "ef2f9ae96f1211dd7774c532b73e9bc6c98a324c6edbdb0df9b2115331dc6c7f",
+        "floorplans/b_fp_013/b_fp_013_tim.flp": "93fbec8497c9e045b182eaa0ae6714dc7743cd47347583f42b502a8e4783455f"
+      },
+      "lcf": "floorplans/b_fp_013/b_fp_013.lcf",
+      "little_cores": [
+        "Core_0_L0",
+        "Core_2_L0",
+        "Core_4_L0",
+        "Core_5_L0",
+        "Core_6_L0",
+        "Core_7_L0"
+      ],
+      "nearest_descriptor_rms_um": 1435.3969937507998,
+      "power_seed": 13500711522213257899,
+      "silicon": "floorplans/b_fp_013/b_fp_013_layer_0.flp",
+      "source_sha256": "7614933a75e4f0d628f45fc8fba7450388d7236f5e3d440e29b68a539cf8f100",
+      "source_template": "dataset/Sample_dataset/2D_floorplans/Style_4/fp_005/fp_005_layer_0.flp",
+      "style_family": "Style_4",
+      "whitespace_fraction": 0.8057159127840414
+    },
+    {
+      "attempts": 1,
+      "big_cores": [
+        "Core_4_L0",
+        "Core_6_L0"
+      ],
+      "die_um": [
+        10266,
+        11990
+      ],
+      "fill_count": 25,
+      "geometry_seed": 20261116,
+      "id": "b_fp_014",
+      "input_sha256": {
+        "floorplans/b_fp_014/b_fp_014.lcf": "6c7b4c1c18a47a237378c7ac0f68f1c5bc56906dcb045d4bae845cfd12106a2b",
+        "floorplans/b_fp_014/b_fp_014_layer_0.flp": "c67442ff2fff03eb762582feeea2a5ebcb9b177e7fa0bdc9c47f2831aace9bad",
+        "floorplans/b_fp_014/b_fp_014_tim.flp": "72f20760748a8850c9fd2d124a9a051b9844d55435f37234eb42cb0c17f24083"
+      },
+      "lcf": "floorplans/b_fp_014/b_fp_014.lcf",
+      "little_cores": [
+        "Core_0_L0",
+        "Core_1_L0",
+        "Core_2_L0",
+        "Core_3_L0",
+        "Core_5_L0",
+        "Core_7_L0"
+      ],
+      "nearest_descriptor_rms_um": 449.35009370432704,
+      "power_seed": 6154759108584331352,
+      "silicon": "floorplans/b_fp_014/b_fp_014_layer_0.flp",
+      "source_sha256": "a512a6e929a6e6ebc88a3d3d88edd5e8ba27d7eb6c6b3eb475ceae9a8be5a7ba",
+      "source_template": "dataset/Sample_dataset/2D_floorplans/Style_1/fp_001/fp_001_layer_0.flp",
+      "style_family": "Style_1",
+      "whitespace_fraction": 0.5450458991818463
+    },
+    {
+      "attempts": 1,
+      "big_cores": [
+        "Core_6_L0",
+        "Core_7_L0"
+      ],
+      "die_um": [
+        9414,
+        10918
+      ],
+      "fill_count": 19,
+      "geometry_seed": 20261117,
+      "id": "b_fp_015",
+      "input_sha256": {
+        "floorplans/b_fp_015/b_fp_015.lcf": "3d7c77f149a0f2691a52f6d8094ddb482623e5014a07e8dc0f7f24f846951d12",
+        "floorplans/b_fp_015/b_fp_015_layer_0.flp": "ee0e2a94ce216e9abb8c354145e0b670c5f481b31d96e3dbfa2709175e1a1d0a",
+        "floorplans/b_fp_015/b_fp_015_tim.flp": "dce5a8b7746996bb4c0eb8a1d38fddf1f66ddd7112cc46e4f53cb282f08b486b"
+      },
+      "lcf": "floorplans/b_fp_015/b_fp_015.lcf",
+      "little_cores": [
+        "Core_0_L0",
+        "Core_1_L0",
+        "Core_2_L0",
+        "Core_3_L0",
+        "Core_4_L0",
+        "Core_5_L0"
+      ],
+      "nearest_descriptor_rms_um": 610.0992834323563,
+      "power_seed": 12280583926898319107,
+      "silicon": "floorplans/b_fp_015/b_fp_015_layer_0.flp",
+      "source_sha256": "26fe7a00a0baedc1447e2ba4aada9c4c86d60addcc532bb959efee5b45920bc6",
+      "source_template": "dataset/Sample_dataset/2D_floorplans/Style_2/fp_002/fp_002_layer_0.flp",
+      "style_family": "Style_2",
+      "whitespace_fraction": 0.45515779350270225
+    },
+    {
+      "attempts": 1,
+      "big_cores": [
+        "Core_1_L0",
+        "Core_3_L0"
+      ],
+      "die_um": [
+        14146,
+        13693
+      ],
+      "fill_count": 23,
+      "geometry_seed": 20261118,
+      "id": "b_fp_016",
+      "input_sha256": {
+        "floorplans/b_fp_016/b_fp_016.lcf": "7a720e45ea244239cb5e88d14adcc403dee239e0e46d67750d53d1ce38129df0",
+        "floorplans/b_fp_016/b_fp_016_layer_0.flp": "875d1fe3bd58930409e718ea7341cc13482fe9a0f964b8ea0fc55dfbdfb8feab",
+        "floorplans/b_fp_016/b_fp_016_tim.flp": "ee123f614f93a710833f03832f7495319612fb786c7c3da0c6da57980e94d464"
+      },
+      "lcf": "floorplans/b_fp_016/b_fp_016.lcf",
+      "little_cores": [
+        "Core_0_L0",
+        "Core_2_L0",
+        "Core_4_L0",
+        "Core_5_L0",
+        "Core_6_L0",
+        "Core_7_L0"
+      ],
+      "nearest_descriptor_rms_um": 948.7918804803165,
+      "power_seed": 10710980978093084914,
+      "silicon": "floorplans/b_fp_016/b_fp_016_layer_0.flp",
+      "source_sha256": "0064456e9a8c2737b1347477dc7d87424327cc7c3bc5bc4c22bf8b3f44de7237",
+      "source_template": "dataset/Sample_dataset/2D_floorplans/Style_3/fp_002/fp_002_layer_0.flp",
+      "style_family": "Style_3",
+      "whitespace_fraction": 0.7108948919247151
+    },
+    {
+      "attempts": 1,
+      "big_cores": [
+        "Core_0_L0",
+        "Core_6_L0"
+      ],
+      "die_um": [
+        16795,
+        17216
+      ],
+      "fill_count": 25,
+      "geometry_seed": 20261119,
+      "id": "b_fp_017",
+      "input_sha256": {
+        "floorplans/b_fp_017/b_fp_017.lcf": "ee70e508186f0ed4e7b1ddad5f0e10ccd607a6285ee75950911ca79aaa469620",
+        "floorplans/b_fp_017/b_fp_017_layer_0.flp": "f35aaf440081730ad6bdbd5243fa71aa082e200189ffb0c0990a753c55020436",
+        "floorplans/b_fp_017/b_fp_017_tim.flp": "0a63c099ab66b48b95c46168b4294a91d128eb654e1b8b4d25a66d5dcc676df5"
+      },
+      "lcf": "floorplans/b_fp_017/b_fp_017.lcf",
+      "little_cores": [
+        "Core_1_L0",
+        "Core_2_L0",
+        "Core_3_L0",
+        "Core_4_L0",
+        "Core_5_L0",
+        "Core_7_L0"
+      ],
+      "nearest_descriptor_rms_um": 1392.4623062478643,
+      "power_seed": 14140893405266927481,
+      "silicon": "floorplans/b_fp_017/b_fp_017_layer_0.flp",
+      "source_sha256": "0dc5e4137081d7d5e4856406204fdbbb20d3a2c13a5a765789df805094811237",
+      "source_template": "dataset/Sample_dataset/2D_floorplans/Style_4/fp_008/fp_008_layer_0.flp",
+      "style_family": "Style_4",
+      "whitespace_fraction": 0.8063240188098113
+    },
+    {
+      "attempts": 1,
+      "big_cores": [
+        "Core_5_L0",
+        "Core_6_L0"
+      ],
+      "die_um": [
+        10987,
+        12663
+      ],
+      "fill_count": 25,
+      "geometry_seed": 20261120,
+      "id": "b_fp_018",
+      "input_sha256": {
+        "floorplans/b_fp_018/b_fp_018.lcf": "1959cfda24d533bbb38577963a480659e1a0b5d00dcb908e7457edc1192a390a",
+        "floorplans/b_fp_018/b_fp_018_layer_0.flp": "e860c743fb31f881cfb6e436cbd7724a336c506e7122d99a8bd40f625ea763ae",
+        "floorplans/b_fp_018/b_fp_018_tim.flp": "2cfc3438ff2587d5868c5d82610e229eb63e178351662733be7eeb8fe7dc5c77"
+      },
+      "lcf": "floorplans/b_fp_018/b_fp_018.lcf",
+      "little_cores": [
+        "Core_0_L0",
+        "Core_1_L0",
+        "Core_2_L0",
+        "Core_3_L0",
+        "Core_4_L0",
+        "Core_7_L0"
+      ],
+      "nearest_descriptor_rms_um": 600.8521031096875,
+      "power_seed": 18318766689792802479,
+      "silicon": "floorplans/b_fp_018/b_fp_018_layer_0.flp",
+      "source_sha256": "d9b2cf1755d9809978ecf1866df0089c3289114ea3f7915988eae863ae3074ca",
+      "source_template": "dataset/Sample_dataset/2D_floorplans/Style_1/fp_002/fp_002_layer_0.flp",
+      "style_family": "Style_1",
+      "whitespace_fraction": 0.5974940583833862
+    },
+    {
+      "attempts": 1,
+      "big_cores": [
+        "Core_0_L0",
+        "Core_1_L0"
+      ],
+      "die_um": [
+        11425,
+        7534
+      ],
+      "fill_count": 22,
+      "geometry_seed": 20261121,
+      "id": "b_fp_019",
+      "input_sha256": {
+        "floorplans/b_fp_019/b_fp_019.lcf": "3a5b7a25c3e602ff6baefb1762d517eb933e66fcc49e42fdf335c1fdf0de14b3",
+        "floorplans/b_fp_019/b_fp_019_layer_0.flp": "eade93fb840a2ae007833661028aa3be0ea2745b80f883453041ded260a2ec3a",
+        "floorplans/b_fp_019/b_fp_019_tim.flp": "55a10a93876c04f070f35d183b578213e89e15014e2b3c62d37417a7e6af154f"
+      },
+      "lcf": "floorplans/b_fp_019/b_fp_019.lcf",
+      "little_cores": [
+        "Core_2_L0",
+        "Core_3_L0",
+        "Core_4_L0",
+        "Core_5_L0",
+        "Core_6_L0",
+        "Core_7_L0"
+      ],
+      "nearest_descriptor_rms_um": 650.6552523760441,
+      "power_seed": 8969616532456136417,
+      "silicon": "floorplans/b_fp_019/b_fp_019_layer_0.flp",
+      "source_sha256": "f650bc8937bd960603f9eb4175e463bf25763f1d8a690d8296b2bdc7ab5dffd8",
+      "source_template": "dataset/Sample_dataset/2D_floorplans/Style_2/fp_005/fp_005_layer_0.flp",
+      "style_family": "Style_2",
+      "whitespace_fraction": 0.3494117694896194
+    },
+    {
+      "attempts": 1,
+      "big_cores": [
+        "Core_0_L0",
+        "Core_7_L0"
+      ],
+      "die_um": [
+        17867,
+        7030
+      ],
+      "fill_count": 23,
+      "geometry_seed": 20261122,
+      "id": "b_fp_020",
+      "input_sha256": {
+        "floorplans/b_fp_020/b_fp_020.lcf": "a66a309fb3812c84c2d1cc947dd99ad906f90b70406bcdb9050c54f727a1547f",
+        "floorplans/b_fp_020/b_fp_020_layer_0.flp": "0c1375157774ebc9baee34bcba9e38752eb76547390062369991b97451a52b2a",
+        "floorplans/b_fp_020/b_fp_020_tim.flp": "519891e2eb1d9e96d52d11d7021c7acfc3460e504748c9b547e1486ac3e4edec"
+      },
+      "lcf": "floorplans/b_fp_020/b_fp_020.lcf",
+      "little_cores": [
+        "Core_1_L0",
+        "Core_2_L0",
+        "Core_3_L0",
+        "Core_4_L0",
+        "Core_5_L0",
+        "Core_6_L0"
+      ],
+      "nearest_descriptor_rms_um": 553.2902994706322,
+      "power_seed": 6613864528384855960,
+      "silicon": "floorplans/b_fp_020/b_fp_020_layer_0.flp",
+      "source_sha256": "ac5fff413ad61a0e13d5307473d7c77095d95e05b726ffc8dcd121279961df54",
+      "source_template": "dataset/Sample_dataset/2D_floorplans/Style_3/fp_005/fp_005_layer_0.flp",
+      "style_family": "Style_3",
+      "whitespace_fraction": 0.5541579113763058
+    },
+    {
+      "attempts": 1,
+      "big_cores": [
+        "Core_2_L0",
+        "Core_7_L0"
+      ],
+      "die_um": [
+        15677,
+        14355
+      ],
+      "fill_count": 25,
+      "geometry_seed": 20261123,
+      "id": "b_fp_021",
+      "input_sha256": {
+        "floorplans/b_fp_021/b_fp_021.lcf": "d7cc88ded59153ddbb55c5e8f00eb1996e9e432109a3f84dec5ce7310e64075d",
+        "floorplans/b_fp_021/b_fp_021_layer_0.flp": "f197ad256451763b0daecf481a9fd642c11acab2d42db1a5b6a710c2203a9610",
+        "floorplans/b_fp_021/b_fp_021_tim.flp": "773331094aa0d5c7ba266beddf8a19462ac026a055afce33342f681a689e8787"
+      },
+      "lcf": "floorplans/b_fp_021/b_fp_021.lcf",
+      "little_cores": [
+        "Core_0_L0",
+        "Core_1_L0",
+        "Core_3_L0",
+        "Core_4_L0",
+        "Core_5_L0",
+        "Core_6_L0"
+      ],
+      "nearest_descriptor_rms_um": 1044.0849440213149,
+      "power_seed": 6634528045441796717,
+      "silicon": "floorplans/b_fp_021/b_fp_021_layer_0.flp",
+      "source_sha256": "ad15b33623172754e3f8f9ded6bd51f057584e33d9e223a1be1ccee85f3410c5",
+      "source_template": "dataset/Sample_dataset/2D_floorplans/Style_4/fp_010/fp_010_layer_0.flp",
+      "style_family": "Style_4",
+      "whitespace_fraction": 0.7511590378804154
+    },
+    {
+      "attempts": 1,
+      "big_cores": [
+        "Core_0_L0",
+        "Core_3_L0"
+      ],
+      "die_um": [
+        10473,
+        11382
+      ],
+      "fill_count": 25,
+      "geometry_seed": 20261124,
+      "id": "b_fp_022",
+      "input_sha256": {
+        "floorplans/b_fp_022/b_fp_022.lcf": "e4aa4579da8353c80d4134f9f9b122d86c37214a391334d53f615fa214a74d86",
+        "floorplans/b_fp_022/b_fp_022_layer_0.flp": "f8fdc22d8730b874e66f221710665f76c7da0dd786746b8b3b4053f0631efbb4",
+        "floorplans/b_fp_022/b_fp_022_tim.flp": "157f9999d83a6f803a862eae42cf94b400f1d208632ba365a7dad42f2e3e3077"
+      },
+      "lcf": "floorplans/b_fp_022/b_fp_022.lcf",
+      "little_cores": [
+        "Core_1_L0",
+        "Core_2_L0",
+        "Core_4_L0",
+        "Core_5_L0",
+        "Core_6_L0",
+        "Core_7_L0"
+      ],
+      "nearest_descriptor_rms_um": 525.8196876632393,
+      "power_seed": 68275064435245297,
+      "silicon": "floorplans/b_fp_022/b_fp_022_layer_0.flp",
+      "source_sha256": "a512a6e929a6e6ebc88a3d3d88edd5e8ba27d7eb6c6b3eb475ceae9a8be5a7ba",
+      "source_template": "dataset/Sample_dataset/2D_floorplans/Style_1/fp_001/fp_001_layer_0.flp",
+      "style_family": "Style_1",
+      "whitespace_fraction": 0.5302158693314232
+    },
+    {
+      "attempts": 1,
+      "big_cores": [
+        "Core_5_L0",
+        "Core_6_L0"
+      ],
+      "die_um": [
+        12114,
+        8964
+      ],
+      "fill_count": 22,
+      "geometry_seed": 20261125,
+      "id": "b_fp_023",
+      "input_sha256": {
+        "floorplans/b_fp_023/b_fp_023.lcf": "9083baab3961f23d30d5f8377b24b6ec5d37c81c956624a463d880f301ef0569",
+        "floorplans/b_fp_023/b_fp_023_layer_0.flp": "c8c9219725e432de623c96669c24b164e6c0a7e46d49e78d3e804a1567937c83",
+        "floorplans/b_fp_023/b_fp_023_tim.flp": "5ee77e72b5e757bdb60a8889a7c5a30e56a97383de9f22b124bba083a6295d9d"
+      },
+      "lcf": "floorplans/b_fp_023/b_fp_023.lcf",
+      "little_cores": [
+        "Core_0_L0",
+        "Core_1_L0",
+        "Core_2_L0",
+        "Core_3_L0",
+        "Core_4_L0",
+        "Core_7_L0"
+      ],
+      "nearest_descriptor_rms_um": 607.2173412004902,
+      "power_seed": 946043336732917244,
+      "silicon": "floorplans/b_fp_023/b_fp_023_layer_0.flp",
+      "source_sha256": "5d95adef94aed4f955a178957d13760c5d55b6852f10dbaa9ec7b83c79ba83f0",
+      "source_template": "dataset/Sample_dataset/2D_floorplans/Style_2/fp_001/fp_001_layer_0.flp",
+      "style_family": "Style_2",
+      "whitespace_fraction": 0.4842982444701853
+    },
+    {
+      "attempts": 1,
+      "big_cores": [
+        "Core_0_L0",
+        "Core_2_L0"
+      ],
+      "die_um": [
+        7732,
+        15534
+      ],
+      "fill_count": 21,
+      "geometry_seed": 20261126,
+      "id": "b_fp_024",
+      "input_sha256": {
+        "floorplans/b_fp_024/b_fp_024.lcf": "fb781e978927839c340a9f4f3233586c448db36329e752efe856f3f24da971be",
+        "floorplans/b_fp_024/b_fp_024_layer_0.flp": "4f1a4de4e52278a3f84806c10726c627011a0c6bc00a04f12c863ff095955828",
+        "floorplans/b_fp_024/b_fp_024_tim.flp": "cd91e82d9a3a95ed5364039c07f9334b092353dac911e1e8e9ed62f15f575e08"
+      },
+      "lcf": "floorplans/b_fp_024/b_fp_024.lcf",
+      "little_cores": [
+        "Core_1_L0",
+        "Core_3_L0",
+        "Core_4_L0",
+        "Core_5_L0",
+        "Core_6_L0",
+        "Core_7_L0"
+      ],
+      "nearest_descriptor_rms_um": 806.1323657143461,
+      "power_seed": 5727258616227036670,
+      "silicon": "floorplans/b_fp_024/b_fp_024_layer_0.flp",
+      "source_sha256": "cc13a0aeed4c110e0fe6bd468bc6b3e217d8fd4d8c0b7358f6a48d1c9c05eb56",
+      "source_template": "dataset/Sample_dataset/2D_floorplans/Style_3/fp_004/fp_004_layer_0.flp",
+      "style_family": "Style_3",
+      "whitespace_fraction": 0.5337564027734567
+    },
+    {
+      "attempts": 1,
+      "big_cores": [
+        "Core_1_L0",
+        "Core_4_L0"
+      ],
+      "die_um": [
+        17649,
+        15443
+      ],
+      "fill_count": 25,
+      "geometry_seed": 20261127,
+      "id": "b_fp_025",
+      "input_sha256": {
+        "floorplans/b_fp_025/b_fp_025.lcf": "98a1b402b73eef498220a5d2110b1905f3f25509b7ad17e4d89f0d4c51988db5",
+        "floorplans/b_fp_025/b_fp_025_layer_0.flp": "59af5994a298911c284353c6e3c6b246b954b8fd8b841023897e0ce62c1b1f30",
+        "floorplans/b_fp_025/b_fp_025_tim.flp": "3a8cebb51472c3fb2e6c1eacfae1c027cf9d224c274449bb573b67a22a70681e"
+      },
+      "lcf": "floorplans/b_fp_025/b_fp_025.lcf",
+      "little_cores": [
+        "Core_0_L0",
+        "Core_2_L0",
+        "Core_3_L0",
+        "Core_5_L0",
+        "Core_6_L0",
+        "Core_7_L0"
+      ],
+      "nearest_descriptor_rms_um": 2162.964595977913,
+      "power_seed": 1589757140922261787,
+      "silicon": "floorplans/b_fp_025/b_fp_025_layer_0.flp",
+      "source_sha256": "411470066ab68a3ed54274ce67e9734385f191b1958245163665c684cf3b0ce1",
+      "source_template": "dataset/Sample_dataset/2D_floorplans/Style_4/fp_001/fp_001_layer_0.flp",
+      "style_family": "Style_4",
+      "whitespace_fraction": 0.7945357569734004
+    },
+    {
+      "attempts": 1,
+      "big_cores": [
+        "Core_2_L0",
+        "Core_6_L0"
+      ],
+      "die_um": [
+        10831,
+        12697
+      ],
+      "fill_count": 25,
+      "geometry_seed": 20261128,
+      "id": "b_fp_026",
+      "input_sha256": {
+        "floorplans/b_fp_026/b_fp_026.lcf": "6a0109e0758a525da4e5253fc6ac197ea70b6fa801152dd52ec4cb7dd703605b",
+        "floorplans/b_fp_026/b_fp_026_layer_0.flp": "41a7e3138fc235f431d7d99618f4f7a6c28f0e7855aa0a58e1dae0350f721cf3",
+        "floorplans/b_fp_026/b_fp_026_tim.flp": "209d37eedf1deb2a0da0d41745d3e9887fa3f904afcdac3969e18740232ce2b4"
+      },
+      "lcf": "floorplans/b_fp_026/b_fp_026.lcf",
+      "little_cores": [
+        "Core_0_L0",
+        "Core_1_L0",
+        "Core_3_L0",
+        "Core_4_L0",
+        "Core_5_L0",
+        "Core_7_L0"
+      ],
+      "nearest_descriptor_rms_um": 595.5236797933206,
+      "power_seed": 10295087223580292379,
+      "silicon": "floorplans/b_fp_026/b_fp_026_layer_0.flp",
+      "source_sha256": "d9b2cf1755d9809978ecf1866df0089c3289114ea3f7915988eae863ae3074ca",
+      "source_template": "dataset/Sample_dataset/2D_floorplans/Style_1/fp_002/fp_002_layer_0.flp",
+      "style_family": "Style_1",
+      "whitespace_fraction": 0.5927900778241424
+    },
+    {
+      "attempts": 1,
+      "big_cores": [
+        "Core_4_L0",
+        "Core_7_L0"
+      ],
+      "die_um": [
+        11910,
+        9009
+      ],
+      "fill_count": 22,
+      "geometry_seed": 20261129,
+      "id": "b_fp_027",
+      "input_sha256": {
+        "floorplans/b_fp_027/b_fp_027.lcf": "b4100365be292e9ce43381b29d4f989e50eee6cbe2e53e8cbe88155dc9b42bd5",
+        "floorplans/b_fp_027/b_fp_027_layer_0.flp": "01186a593a8bc617b7b2177c79533dfbae98c514ef5153e8160a387d7be3d7b4",
+        "floorplans/b_fp_027/b_fp_027_tim.flp": "1f2ca1fb5a545abb701ea2ffc93949a03f0f1168ad3ec01915a25b0d6d201ff6"
+      },
+      "lcf": "floorplans/b_fp_027/b_fp_027.lcf",
+      "little_cores": [
+        "Core_0_L0",
+        "Core_1_L0",
+        "Core_2_L0",
+        "Core_3_L0",
+        "Core_5_L0",
+        "Core_6_L0"
+      ],
+      "nearest_descriptor_rms_um": 466.38428736150996,
+      "power_seed": 14529263194273064838,
+      "silicon": "floorplans/b_fp_027/b_fp_027_layer_0.flp",
+      "source_sha256": "5d95adef94aed4f955a178957d13760c5d55b6852f10dbaa9ec7b83c79ba83f0",
+      "source_template": "dataset/Sample_dataset/2D_floorplans/Style_2/fp_001/fp_001_layer_0.flp",
+      "style_family": "Style_2",
+      "whitespace_fraction": 0.47808512040250073
+    },
+    {
+      "attempts": 1,
+      "big_cores": [
+        "Core_1_L0",
+        "Core_2_L0"
+      ],
+      "die_um": [
+        15474,
+        12831
+      ],
+      "fill_count": 25,
+      "geometry_seed": 20261130,
+      "id": "b_fp_028",
+      "input_sha256": {
+        "floorplans/b_fp_028/b_fp_028.lcf": "9a21e5a9429a80f2fbeb64cde2fb9ce66c09d6504a733c671aa873460ab04da8",
+        "floorplans/b_fp_028/b_fp_028_layer_0.flp": "82af73cf06fa43a717546c26432f23f499c9d7a2e64739dc7787d8a7c5625ccf",
+        "floorplans/b_fp_028/b_fp_028_tim.flp": "1ce90163bcc369da30f652bc11a2c1842d79218a1bed69bf12debc9f19ee8308"
+      },
+      "lcf": "floorplans/b_fp_028/b_fp_028.lcf",
+      "little_cores": [
+        "Core_0_L0",
+        "Core_3_L0",
+        "Core_4_L0",
+        "Core_5_L0",
+        "Core_6_L0",
+        "Core_7_L0"
+      ],
+      "nearest_descriptor_rms_um": 942.0709531262519,
+      "power_seed": 10802208625389264086,
+      "silicon": "floorplans/b_fp_028/b_fp_028_layer_0.flp",
+      "source_sha256": "0064456e9a8c2737b1347477dc7d87424327cc7c3bc5bc4c22bf8b3f44de7237",
+      "source_template": "dataset/Sample_dataset/2D_floorplans/Style_3/fp_002/fp_002_layer_0.flp",
+      "style_family": "Style_3",
+      "whitespace_fraction": 0.7179507628056876
+    },
+    {
+      "attempts": 1,
+      "big_cores": [
+        "Core_1_L0",
+        "Core_3_L0"
+      ],
+      "die_um": [
+        16201,
+        18123
+      ],
+      "fill_count": 25,
+      "geometry_seed": 20261131,
+      "id": "b_fp_029",
+      "input_sha256": {
+        "floorplans/b_fp_029/b_fp_029.lcf": "de888d3cc11074669437b07390bca83f8e5c414891c449d510b78e36ca1f1c7a",
+        "floorplans/b_fp_029/b_fp_029_layer_0.flp": "c8173a4fa76e2dff5963dd743f45a8445e6b1cc448c9231c21166a3d811de4af",
+        "floorplans/b_fp_029/b_fp_029_tim.flp": "6a328650d7bedcbe3271be58732821b4bb30c46f39ad86c840408b25b1acff22"
+      },
+      "lcf": "floorplans/b_fp_029/b_fp_029.lcf",
+      "little_cores": [
+        "Core_0_L0",
+        "Core_2_L0",
+        "Core_4_L0",
+        "Core_5_L0",
+        "Core_6_L0",
+        "Core_7_L0"
+      ],
+      "nearest_descriptor_rms_um": 1600.6157147125275,
+      "power_seed": 3690821747664148609,
+      "silicon": "floorplans/b_fp_029/b_fp_029_layer_0.flp",
+      "source_sha256": "6d6f06a586709bd0cf7082a1e2bfd2c812646ae50b210debaa52b7aa691a0950",
+      "source_template": "dataset/Sample_dataset/2D_floorplans/Style_4/fp_007/fp_007_layer_0.flp",
+      "style_family": "Style_4",
+      "whitespace_fraction": 0.8092712710632166
+    },
+    {
+      "attempts": 1,
+      "big_cores": [
+        "Core_0_L0",
+        "Core_7_L0"
+      ],
+      "die_um": [
+        10942,
+        11721
+      ],
+      "fill_count": 24,
+      "geometry_seed": 20261132,
+      "id": "b_fp_030",
+      "input_sha256": {
+        "floorplans/b_fp_030/b_fp_030.lcf": "ccb9a33ba78b70265127a1d143ff1aac5b5c782e0d8c341086369071e9da7d6d",
+        "floorplans/b_fp_030/b_fp_030_layer_0.flp": "9cd0c2d2b8edf0695ea11338415156e5d8a58148852bcf45a2c77d454126b5f2",
+        "floorplans/b_fp_030/b_fp_030_tim.flp": "12278078bbf2d2daeb832bc9bc60eac9688aaa6e179b180cfffd68a21288404e"
+      },
+      "lcf": "floorplans/b_fp_030/b_fp_030.lcf",
+      "little_cores": [
+        "Core_1_L0",
+        "Core_2_L0",
+        "Core_3_L0",
+        "Core_4_L0",
+        "Core_5_L0",
+        "Core_6_L0"
+      ],
+      "nearest_descriptor_rms_um": 562.7616785067473,
+      "power_seed": 11926392257732764559,
+      "silicon": "floorplans/b_fp_030/b_fp_030_layer_0.flp",
+      "source_sha256": "d9b2cf1755d9809978ecf1866df0089c3289114ea3f7915988eae863ae3074ca",
+      "source_template": "dataset/Sample_dataset/2D_floorplans/Style_1/fp_002/fp_002_layer_0.flp",
+      "style_family": "Style_1",
+      "whitespace_fraction": 0.5633568507774065
+    },
+    {
+      "attempts": 1,
+      "big_cores": [
+        "Core_0_L0",
+        "Core_6_L0"
+      ],
+      "die_um": [
+        16641,
+        6207
+      ],
+      "fill_count": 16,
+      "geometry_seed": 20261133,
+      "id": "b_fp_031",
+      "input_sha256": {
+        "floorplans/b_fp_031/b_fp_031.lcf": "1c3826b430b04a784160fce13ecaca90202f6ede90386adbe8ce239ebdd3f716",
+        "floorplans/b_fp_031/b_fp_031_layer_0.flp": "28aff47aaefcd1d7f795e79925730747a005ba6e47f4109831716b23d4cfb5a2",
+        "floorplans/b_fp_031/b_fp_031_tim.flp": "d31cfe710f827630dd19eaa0f93a10f6bda00e76a0b9f0fa53e47baeaf4f67e9"
+      },
+      "lcf": "floorplans/b_fp_031/b_fp_031.lcf",
+      "little_cores": [
+        "Core_1_L0",
+        "Core_2_L0",
+        "Core_3_L0",
+        "Core_4_L0",
+        "Core_5_L0",
+        "Core_7_L0"
+      ],
+      "nearest_descriptor_rms_um": 776.2145322526031,
+      "power_seed": 13082732039531579058,
+      "silicon": "floorplans/b_fp_031/b_fp_031_layer_0.flp",
+      "source_sha256": "f7be80502d7339b579bd2c78f0ea68d68280157fd0aa0a556389fdb68980ef52",
+      "source_template": "dataset/Sample_dataset/2D_floorplans/Style_2/fp_003/fp_003_layer_0.flp",
+      "style_family": "Style_2",
+      "whitespace_fraction": 0.4578407635143331
+    },
+    {
+      "attempts": 1,
+      "big_cores": [
+        "Core_4_L0",
+        "Core_7_L0"
+      ],
+      "die_um": [
+        18188,
+        7820
+      ],
+      "fill_count": 22,
+      "geometry_seed": 20261134,
+      "id": "b_fp_032",
+      "input_sha256": {
+        "floorplans/b_fp_032/b_fp_032.lcf": "57478edb3b21dc568bd47bc85f98c20a0db8b5e0caa3e84a7f46ae48cabc58ac",
+        "floorplans/b_fp_032/b_fp_032_layer_0.flp": "661294ea24c563a20f845c8854fc1b06831254c29c56569a3c26a808e2f74f86",
+        "floorplans/b_fp_032/b_fp_032_tim.flp": "c548d1e5d2a2dda71192c10b3227043ef4c6cd30396840d07f4719631d67b5af"
+      },
+      "lcf": "floorplans/b_fp_032/b_fp_032.lcf",
+      "little_cores": [
+        "Core_0_L0",
+        "Core_1_L0",
+        "Core_2_L0",
+        "Core_3_L0",
+        "Core_5_L0",
+        "Core_6_L0"
+      ],
+      "nearest_descriptor_rms_um": 532.9432239657034,
+      "power_seed": 14173887645886131495,
+      "silicon": "floorplans/b_fp_032/b_fp_032_layer_0.flp",
+      "source_sha256": "ac5fff413ad61a0e13d5307473d7c77095d95e05b726ffc8dcd121279961df54",
+      "source_template": "dataset/Sample_dataset/2D_floorplans/Style_3/fp_005/fp_005_layer_0.flp",
+      "style_family": "Style_3",
+      "whitespace_fraction": 0.6062719749453984
+    },
+    {
+      "attempts": 1,
+      "big_cores": [
+        "Core_4_L0",
+        "Core_6_L0"
+      ],
+      "die_um": [
+        15548,
+        20025
+      ],
+      "fill_count": 25,
+      "geometry_seed": 20261135,
+      "id": "b_fp_033",
+      "input_sha256": {
+        "floorplans/b_fp_033/b_fp_033.lcf": "b56ffcc80e0a9c61dc236828b4efc53f0c0cca6f275ba6a8cb861be4256e8fa3",
+        "floorplans/b_fp_033/b_fp_033_layer_0.flp": "38fd7e2d1d15c50d310dedc15a3bf356b9b1a70dd32e6acb85d1961462b5cd6e",
+        "floorplans/b_fp_033/b_fp_033_tim.flp": "5fceeaa2566504f4543b46e23ac7106847f3b358aff8ae07f0054b16b61d99e6"
+      },
+      "lcf": "floorplans/b_fp_033/b_fp_033.lcf",
+      "little_cores": [
+        "Core_0_L0",
+        "Core_1_L0",
+        "Core_2_L0",
+        "Core_3_L0",
+        "Core_5_L0",
+        "Core_7_L0"
+      ],
+      "nearest_descriptor_rms_um": 1302.1160076585338,
+      "power_seed": 12899005874992100614,
+      "silicon": "floorplans/b_fp_033/b_fp_033_layer_0.flp",
+      "source_sha256": "6d6f06a586709bd0cf7082a1e2bfd2c812646ae50b210debaa52b7aa691a0950",
+      "source_template": "dataset/Sample_dataset/2D_floorplans/Style_4/fp_007/fp_007_layer_0.flp",
+      "style_family": "Style_4",
+      "whitespace_fraction": 0.8201373572460717
+    },
+    {
+      "attempts": 1,
+      "big_cores": [
+        "Core_1_L0",
+        "Core_3_L0"
+      ],
+      "die_um": [
+        17794,
+        10651
+      ],
+      "fill_count": 24,
+      "geometry_seed": 20261136,
+      "id": "b_fp_034",
+      "input_sha256": {
+        "floorplans/b_fp_034/b_fp_034.lcf": "f6c0c23b7e83c9726da60c19ee2b7fac46022213b98c4838270d97254e5727af",
+        "floorplans/b_fp_034/b_fp_034_layer_0.flp": "0b062b84467558e7a717127ffb0614ef2012a6777a028a82b4005a8be7728af3",
+        "floorplans/b_fp_034/b_fp_034_tim.flp": "fc588d455b28bb8f2b61149556e850a5aef83938dca619a4e075e335419aa5ff"
+      },
+      "lcf": "floorplans/b_fp_034/b_fp_034.lcf",
+      "little_cores": [
+        "Core_0_L0",
+        "Core_2_L0",
+        "Core_4_L0",
+        "Core_5_L0",
+        "Core_6_L0",
+        "Core_7_L0"
+      ],
+      "nearest_descriptor_rms_um": 943.8423383138706,
+      "power_seed": 4747626456455881030,
+      "silicon": "floorplans/b_fp_034/b_fp_034_layer_0.flp",
+      "source_sha256": "9b5a0c20ebb2414d2214bb5c9689c55beda011b5b6a6d43884bcdfd9f3156e0c",
+      "source_template": "dataset/Sample_dataset/2D_floorplans/Style_1/fp_003/fp_003_layer_0.flp",
+      "style_family": "Style_1",
+      "whitespace_fraction": 0.7045227447680027
+    },
+    {
+      "attempts": 1,
+      "big_cores": [
+        "Core_0_L0",
+        "Core_1_L0"
+      ],
+      "die_um": [
+        10832,
+        9130
+      ],
+      "fill_count": 16,
+      "geometry_seed": 20261137,
+      "id": "b_fp_035",
+      "input_sha256": {
+        "floorplans/b_fp_035/b_fp_035.lcf": "0d3a4620fa99ea4d686ec5a177cda3fb25700f96958a45fc4632e04c1814e6a5",
+        "floorplans/b_fp_035/b_fp_035_layer_0.flp": "6251af33f42e5303cdb26c804c8fc67e6feeda9389d0b2571b7ed4276fb6d97a",
+        "floorplans/b_fp_035/b_fp_035_tim.flp": "e3cbd5a7504eec925a84bbe0f922aa5113da0d5524346f87bc91dd28bd4148a5"
+      },
+      "lcf": "floorplans/b_fp_035/b_fp_035.lcf",
+      "little_cores": [
+        "Core_2_L0",
+        "Core_3_L0",
+        "Core_4_L0",
+        "Core_5_L0",
+        "Core_6_L0",
+        "Core_7_L0"
+      ],
+      "nearest_descriptor_rms_um": 399.77026725302386,
+      "power_seed": 1504070025922735119,
+      "silicon": "floorplans/b_fp_035/b_fp_035_layer_0.flp",
+      "source_sha256": "5d95adef94aed4f955a178957d13760c5d55b6852f10dbaa9ec7b83c79ba83f0",
+      "source_template": "dataset/Sample_dataset/2D_floorplans/Style_2/fp_001/fp_001_layer_0.flp",
+      "style_family": "Style_2",
+      "whitespace_fraction": 0.43374950048616645
+    },
+    {
+      "attempts": 1,
+      "big_cores": [
+        "Core_1_L0",
+        "Core_5_L0"
+      ],
+      "die_um": [
+        16169,
+        7931
+      ],
+      "fill_count": 20,
+      "geometry_seed": 20261138,
+      "id": "b_fp_036",
+      "input_sha256": {
+        "floorplans/b_fp_036/b_fp_036.lcf": "7fa4b43c6a07cfa64b4faf9b7d6b31f5649e317e421c10fe48e8cd26c96426cf",
+        "floorplans/b_fp_036/b_fp_036_layer_0.flp": "79379c59c77cd540cfd45f21c9488659285827cc362ded1fec1dca1c2915065b",
+        "floorplans/b_fp_036/b_fp_036_tim.flp": "09a68f44a86935526b77ceaeda0434fc134c1502145e7dbdb947397dbaec9981"
+      },
+      "lcf": "floorplans/b_fp_036/b_fp_036.lcf",
+      "little_cores": [
+        "Core_0_L0",
+        "Core_2_L0",
+        "Core_3_L0",
+        "Core_4_L0",
+        "Core_6_L0",
+        "Core_7_L0"
+      ],
+      "nearest_descriptor_rms_um": 715.2464683230016,
+      "power_seed": 16196925346362757263,
+      "silicon": "floorplans/b_fp_036/b_fp_036_layer_0.flp",
+      "source_sha256": "ac5fff413ad61a0e13d5307473d7c77095d95e05b726ffc8dcd121279961df54",
+      "source_template": "dataset/Sample_dataset/2D_floorplans/Style_3/fp_005/fp_005_layer_0.flp",
+      "style_family": "Style_3",
+      "whitespace_fraction": 0.5633063105458742
+    },
+    {
+      "attempts": 1,
+      "big_cores": [
+        "Core_2_L0",
+        "Core_6_L0"
+      ],
+      "die_um": [
+        15488,
+        16516
+      ],
+      "fill_count": 25,
+      "geometry_seed": 20261139,
+      "id": "b_fp_037",
+      "input_sha256": {
+        "floorplans/b_fp_037/b_fp_037.lcf": "da4d1595381a0023149072ed9a6e4f09661aa8425fb8a741badce75356e04c5a",
+        "floorplans/b_fp_037/b_fp_037_layer_0.flp": "b0c1bc0939408d25f634645022a2ae5931f2bf9e112bdfb23df79f8af1edcdef",
+        "floorplans/b_fp_037/b_fp_037_tim.flp": "479e5cc8a77018237fccb9b205570180ce230f285f25033cabb69cf4bf597137"
+      },
+      "lcf": "floorplans/b_fp_037/b_fp_037.lcf",
+      "little_cores": [
+        "Core_0_L0",
+        "Core_1_L0",
+        "Core_3_L0",
+        "Core_4_L0",
+        "Core_5_L0",
+        "Core_7_L0"
+      ],
+      "nearest_descriptor_rms_um": 1244.2677630114988,
+      "power_seed": 613197184945073070,
+      "silicon": "floorplans/b_fp_037/b_fp_037_layer_0.flp",
+      "source_sha256": "7614933a75e4f0d628f45fc8fba7450388d7236f5e3d440e29b68a539cf8f100",
+      "source_template": "dataset/Sample_dataset/2D_floorplans/Style_4/fp_005/fp_005_layer_0.flp",
+      "style_family": "Style_4",
+      "whitespace_fraction": 0.7810788036244343
+    },
+    {
+      "attempts": 1,
+      "big_cores": [
+        "Core_0_L0",
+        "Core_7_L0"
+      ],
+      "die_um": [
+        17047,
+        8920
+      ],
+      "fill_count": 22,
+      "geometry_seed": 20261140,
+      "id": "b_fp_038",
+      "input_sha256": {
+        "floorplans/b_fp_038/b_fp_038.lcf": "174988715c47fe0a946c90f2e2a2e9dfeab520d6f6a03c71f8e25e5bd2f6a918",
+        "floorplans/b_fp_038/b_fp_038_layer_0.flp": "9b23a0c8575de7fd3fa1ae78173874e31490a5ccdd619c13544b67d52d9b5653",
+        "floorplans/b_fp_038/b_fp_038_tim.flp": "581a3e8ba76c32c17a7d7fccd664c16feb2079dfee97f988415bce3662cbb1a4"
+      },
+      "lcf": "floorplans/b_fp_038/b_fp_038.lcf",
+      "little_cores": [
+        "Core_1_L0",
+        "Core_2_L0",
+        "Core_3_L0",
+        "Core_4_L0",
+        "Core_5_L0",
+        "Core_6_L0"
+      ],
+      "nearest_descriptor_rms_um": 358.3995117287027,
+      "power_seed": 17699713429659884293,
+      "silicon": "floorplans/b_fp_038/b_fp_038_layer_0.flp",
+      "source_sha256": "9b5a0c20ebb2414d2214bb5c9689c55beda011b5b6a6d43884bcdfd9f3156e0c",
+      "source_template": "dataset/Sample_dataset/2D_floorplans/Style_1/fp_003/fp_003_layer_0.flp",
+      "style_family": "Style_1",
+      "whitespace_fraction": 0.631722478686596
+    },
+    {
+      "attempts": 1,
+      "big_cores": [
+        "Core_2_L0",
+        "Core_4_L0"
+      ],
+      "die_um": [
+        14163,
+        6726
+      ],
+      "fill_count": 24,
+      "geometry_seed": 20261141,
+      "id": "b_fp_039",
+      "input_sha256": {
+        "floorplans/b_fp_039/b_fp_039.lcf": "b3d4bcb89662927b1acd7a3a70501f7b58c33a3e7a9e34305da751a83ec92ccf",
+        "floorplans/b_fp_039/b_fp_039_layer_0.flp": "74c2d9158a4782a64a505b724ced3722681ebcf14ed09ef4afa5ac2b60a8c7e9",
+        "floorplans/b_fp_039/b_fp_039_tim.flp": "f5ec31f2528e225ccf2ce6e0193075ba3b568f57cc3cc481827b57f2ea23d36b"
+      },
+      "lcf": "floorplans/b_fp_039/b_fp_039.lcf",
+      "little_cores": [
+        "Core_0_L0",
+        "Core_1_L0",
+        "Core_3_L0",
+        "Core_5_L0",
+        "Core_6_L0",
+        "Core_7_L0"
+      ],
+      "nearest_descriptor_rms_um": 437.258738695331,
+      "power_seed": 8407235473774565868,
+      "silicon": "floorplans/b_fp_039/b_fp_039_layer_0.flp",
+      "source_sha256": "f7be80502d7339b579bd2c78f0ea68d68280157fd0aa0a556389fdb68980ef52",
+      "source_template": "dataset/Sample_dataset/2D_floorplans/Style_2/fp_003/fp_003_layer_0.flp",
+      "style_family": "Style_2",
+      "whitespace_fraction": 0.41213729474694916
+    },
+    {
+      "attempts": 1,
+      "big_cores": [
+        "Core_5_L0",
+        "Core_7_L0"
+      ],
+      "die_um": [
+        18022,
+        7230
+      ],
+      "fill_count": 23,
+      "geometry_seed": 20261142,
+      "id": "b_fp_040",
+      "input_sha256": {
+        "floorplans/b_fp_040/b_fp_040.lcf": "665e75cc912db10ac67eabf177d0ee93b82f1d8f0c14a66518535b59c822a990",
+        "floorplans/b_fp_040/b_fp_040_layer_0.flp": "5d24630cf8adcfa1d8beff67a8a7fc2b977378d1582addf7b13c0c6b038ca88c",
+        "floorplans/b_fp_040/b_fp_040_tim.flp": "2e6acd743fcca6f7b7773bd43c8677d7cf76f8ea854ca211bd375489f2b2c34d"
+      },
+      "lcf": "floorplans/b_fp_040/b_fp_040.lcf",
+      "little_cores": [
+        "Core_0_L0",
+        "Core_1_L0",
+        "Core_2_L0",
+        "Core_3_L0",
+        "Core_4_L0",
+        "Core_6_L0"
+      ],
+      "nearest_descriptor_rms_um": 601.250094363756,
+      "power_seed": 7575498266905008476,
+      "silicon": "floorplans/b_fp_040/b_fp_040_layer_0.flp",
+      "source_sha256": "ac5fff413ad61a0e13d5307473d7c77095d95e05b726ffc8dcd121279961df54",
+      "source_template": "dataset/Sample_dataset/2D_floorplans/Style_3/fp_005/fp_005_layer_0.flp",
+      "style_family": "Style_3",
+      "whitespace_fraction": 0.5702194628265161
+    },
+    {
+      "attempts": 1,
+      "big_cores": [
+        "Core_3_L0",
+        "Core_4_L0"
+      ],
+      "die_um": [
+        14434,
+        17637
+      ],
+      "fill_count": 25,
+      "geometry_seed": 20261143,
+      "id": "b_fp_041",
+      "input_sha256": {
+        "floorplans/b_fp_041/b_fp_041.lcf": "d6429babd06d588561dd53588174239d35f22f9e5cb5d01ae35a1a9b7db9a126",
+        "floorplans/b_fp_041/b_fp_041_layer_0.flp": "345e52649d7e6efc8f26c62f403da5997a5ec90ffda32496d88814c7f038f7e3",
+        "floorplans/b_fp_041/b_fp_041_tim.flp": "5729ef017f3c5d55657c2613bfcaf25f43016b81e684d45d5d6611b80e4f2c5d"
+      },
+      "lcf": "floorplans/b_fp_041/b_fp_041.lcf",
+      "little_cores": [
+        "Core_0_L0",
+        "Core_1_L0",
+        "Core_2_L0",
+        "Core_5_L0",
+        "Core_6_L0",
+        "Core_7_L0"
+      ],
+      "nearest_descriptor_rms_um": 1111.1879857674178,
+      "power_seed": 6287376779824341980,
+      "silicon": "floorplans/b_fp_041/b_fp_041_layer_0.flp",
+      "source_sha256": "0dc5e4137081d7d5e4856406204fdbbb20d3a2c13a5a765789df805094811237",
+      "source_template": "dataset/Sample_dataset/2D_floorplans/Style_4/fp_008/fp_008_layer_0.flp",
+      "style_family": "Style_4",
+      "whitespace_fraction": 0.7800233362243767
+    },
+    {
+      "attempts": 1,
+      "big_cores": [
+        "Core_3_L0",
+        "Core_4_L0"
+      ],
+      "die_um": [
+        10221,
+        13795
+      ],
+      "fill_count": 22,
+      "geometry_seed": 20261144,
+      "id": "b_fp_042",
+      "input_sha256": {
+        "floorplans/b_fp_042/b_fp_042.lcf": "24ba811f2fa3edf4112a4522199e178152a0d90d044bb4febeb7f952594c43e7",
+        "floorplans/b_fp_042/b_fp_042_layer_0.flp": "e4d45afc44d10c45420ef3c56fd657dc484b5b465e44a6df55436b1cd8f708a7",
+        "floorplans/b_fp_042/b_fp_042_tim.flp": "a86a4bf6d13af94f885a838b6ce3065d7dbfe92bfdfe09449630c9905d127940"
+      },
+      "lcf": "floorplans/b_fp_042/b_fp_042.lcf",
+      "little_cores": [
+        "Core_0_L0",
+        "Core_1_L0",
+        "Core_2_L0",
+        "Core_5_L0",
+        "Core_6_L0",
+        "Core_7_L0"
+      ],
+      "nearest_descriptor_rms_um": 547.2727359764319,
+      "power_seed": 3193242274052855545,
+      "silicon": "floorplans/b_fp_042/b_fp_042_layer_0.flp",
+      "source_sha256": "d9b2cf1755d9809978ecf1866df0089c3289114ea3f7915988eae863ae3074ca",
+      "source_template": "dataset/Sample_dataset/2D_floorplans/Style_1/fp_002/fp_002_layer_0.flp",
+      "style_family": "Style_1",
+      "whitespace_fraction": 0.6028332035271674
+    },
+    {
+      "attempts": 1,
+      "big_cores": [
+        "Core_0_L0",
+        "Core_2_L0"
+      ],
+      "die_um": [
+        11068,
+        7312
+      ],
+      "fill_count": 23,
+      "geometry_seed": 20261145,
+      "id": "b_fp_043",
+      "input_sha256": {
+        "floorplans/b_fp_043/b_fp_043.lcf": "60b951b7f34f6beb0b026641f0416168d1224ab9d11e4f78397096a046d7fa35",
+        "floorplans/b_fp_043/b_fp_043_layer_0.flp": "c851698ca75823875293b4ae5c9bd67aea40975a85892fed9532f2eb1d3e42f0",
+        "floorplans/b_fp_043/b_fp_043_tim.flp": "3e8f3788977e005d15ad932b55f735c7224088db567274ff89d12a4124b90c58"
+      },
+      "lcf": "floorplans/b_fp_043/b_fp_043.lcf",
+      "little_cores": [
+        "Core_1_L0",
+        "Core_3_L0",
+        "Core_4_L0",
+        "Core_5_L0",
+        "Core_6_L0",
+        "Core_7_L0"
+      ],
+      "nearest_descriptor_rms_um": 278.13022198633234,
+      "power_seed": 5816910140539071015,
+      "silicon": "floorplans/b_fp_043/b_fp_043_layer_0.flp",
+      "source_sha256": "f650bc8937bd960603f9eb4175e463bf25763f1d8a690d8296b2bdc7ab5dffd8",
+      "source_template": "dataset/Sample_dataset/2D_floorplans/Style_2/fp_005/fp_005_layer_0.flp",
+      "style_family": "Style_2",
+      "whitespace_fraction": 0.3080372853235104
+    },
+    {
+      "attempts": 1,
+      "big_cores": [
+        "Core_1_L0",
+        "Core_3_L0"
+      ],
+      "die_um": [
+        18969,
+        6848
+      ],
+      "fill_count": 23,
+      "geometry_seed": 20261146,
+      "id": "b_fp_044",
+      "input_sha256": {
+        "floorplans/b_fp_044/b_fp_044.lcf": "7011b5f46097b5d609915cdba9638b6bc5478324d9b3965358b3a65a6c8638af",
+        "floorplans/b_fp_044/b_fp_044_layer_0.flp": "c2dc01d6d759d43bf56e75ed7a09741722e67e621732f2165ad821e0b85d7f26",
+        "floorplans/b_fp_044/b_fp_044_tim.flp": "b7f6879bc17f6dfc49836668dda47e7da88aa3f3c89f85ac02b362c6f5bb60a8"
+      },
+      "lcf": "floorplans/b_fp_044/b_fp_044.lcf",
+      "little_cores": [
+        "Core_0_L0",
+        "Core_2_L0",
+        "Core_4_L0",
+        "Core_5_L0",
+        "Core_6_L0",
+        "Core_7_L0"
+      ],
+      "nearest_descriptor_rms_um": 541.1534968398637,
+      "power_seed": 13032492162648791826,
+      "silicon": "floorplans/b_fp_044/b_fp_044_layer_0.flp",
+      "source_sha256": "ac5fff413ad61a0e13d5307473d7c77095d95e05b726ffc8dcd121279961df54",
+      "source_template": "dataset/Sample_dataset/2D_floorplans/Style_3/fp_005/fp_005_layer_0.flp",
+      "style_family": "Style_3",
+      "whitespace_fraction": 0.5688981974032399
+    },
+    {
+      "attempts": 1,
+      "big_cores": [
+        "Core_2_L0",
+        "Core_5_L0"
+      ],
+      "die_um": [
+        18838,
+        18172
+      ],
+      "fill_count": 25,
+      "geometry_seed": 20261147,
+      "id": "b_fp_045",
+      "input_sha256": {
+        "floorplans/b_fp_045/b_fp_045.lcf": "3a4fd46283aae8e3dfbd6c3f5ccae09abf446f8bb7eb9b7b2c5d55fddcf658e4",
+        "floorplans/b_fp_045/b_fp_045_layer_0.flp": "6ad32c98480a0e92db8feeea5907a83cff7a7b8ffbdb620f8ec82d689f817093",
+        "floorplans/b_fp_045/b_fp_045_tim.flp": "2495f42ab434dab874d8d0ac23c6b23a2d0ed7f7b77f4b16237a9930f38b4475"
+      },
+      "lcf": "floorplans/b_fp_045/b_fp_045.lcf",
+      "little_cores": [
+        "Core_0_L0",
+        "Core_1_L0",
+        "Core_3_L0",
+        "Core_4_L0",
+        "Core_6_L0",
+        "Core_7_L0"
+      ],
+      "nearest_descriptor_rms_um": 1640.0401521632064,
+      "power_seed": 8104611214544361410,
+      "silicon": "floorplans/b_fp_045/b_fp_045_layer_0.flp",
+      "source_sha256": "7614933a75e4f0d628f45fc8fba7450388d7236f5e3d440e29b68a539cf8f100",
+      "source_template": "dataset/Sample_dataset/2D_floorplans/Style_4/fp_005/fp_005_layer_0.flp",
+      "style_family": "Style_4",
+      "whitespace_fraction": 0.8364123527649829
+    },
+    {
+      "attempts": 1,
+      "big_cores": [
+        "Core_5_L0",
+        "Core_6_L0"
+      ],
+      "die_um": [
+        10779,
+        12170
+      ],
+      "fill_count": 25,
+      "geometry_seed": 20261148,
+      "id": "b_fp_046",
+      "input_sha256": {
+        "floorplans/b_fp_046/b_fp_046.lcf": "365d0d9a96de2bd8a08193be34d298ebc2df7a2a932097ba67312f297d088a07",
+        "floorplans/b_fp_046/b_fp_046_layer_0.flp": "370c1e07c7350bb2f74a65f6c9b456da37f2978c5df6b07be4a8f1a8af326ad9",
+        "floorplans/b_fp_046/b_fp_046_tim.flp": "370c4a6401952aa0e7a8dae08294be82fb79e4d8063550cfe13c65e34cdafc5e"
+      },
+      "lcf": "floorplans/b_fp_046/b_fp_046.lcf",
+      "little_cores": [
+        "Core_0_L0",
+        "Core_1_L0",
+        "Core_2_L0",
+        "Core_3_L0",
+        "Core_4_L0",
+        "Core_7_L0"
+      ],
+      "nearest_descriptor_rms_um": 484.5505085238223,
+      "power_seed": 14311827793803564041,
+      "silicon": "floorplans/b_fp_046/b_fp_046_layer_0.flp",
+      "source_sha256": "a512a6e929a6e6ebc88a3d3d88edd5e8ba27d7eb6c6b3eb475ceae9a8be5a7ba",
+      "source_template": "dataset/Sample_dataset/2D_floorplans/Style_1/fp_001/fp_001_layer_0.flp",
+      "style_family": "Style_1",
+      "whitespace_fraction": 0.5731070556789606
+    },
+    {
+      "attempts": 1,
+      "big_cores": [
+        "Core_4_L0",
+        "Core_7_L0"
+      ],
+      "die_um": [
+        10402,
+        12116
+      ],
+      "fill_count": 23,
+      "geometry_seed": 20261149,
+      "id": "b_fp_047",
+      "input_sha256": {
+        "floorplans/b_fp_047/b_fp_047.lcf": "4ba7ee502902ba3b7c62d9fdf9013e83a7678fcf4e9d2bd76726f3ef4f4799cf",
+        "floorplans/b_fp_047/b_fp_047_layer_0.flp": "e1bae27917887c2f5a5f18a60d7df6cf42a14776bef57ca94fd34b05b21d5a20",
+        "floorplans/b_fp_047/b_fp_047_tim.flp": "227229ab12e3a7af37c2fb54c9963bb502304abac037d77fd2a78a9cce0185d4"
+      },
+      "lcf": "floorplans/b_fp_047/b_fp_047.lcf",
+      "little_cores": [
+        "Core_0_L0",
+        "Core_1_L0",
+        "Core_2_L0",
+        "Core_3_L0",
+        "Core_5_L0",
+        "Core_6_L0"
+      ],
+      "nearest_descriptor_rms_um": 823.9977897809594,
+      "power_seed": 13143045472878683610,
+      "silicon": "floorplans/b_fp_047/b_fp_047_layer_0.flp",
+      "source_sha256": "26fe7a00a0baedc1447e2ba4aada9c4c86d60addcc532bb959efee5b45920bc6",
+      "source_template": "dataset/Sample_dataset/2D_floorplans/Style_2/fp_002/fp_002_layer_0.flp",
+      "style_family": "Style_2",
+      "whitespace_fraction": 0.5556635786766506
+    },
+    {
+      "attempts": 1,
+      "big_cores": [
+        "Core_4_L0",
+        "Core_6_L0"
+      ],
+      "die_um": [
+        7830,
+        15966
+      ],
+      "fill_count": 25,
+      "geometry_seed": 20261150,
+      "id": "b_fp_048",
+      "input_sha256": {
+        "floorplans/b_fp_048/b_fp_048.lcf": "bf3aa975a2816ce784b9c83c87cb9371da713c86cb29dc7d6f74a3f102dfb7a9",
+        "floorplans/b_fp_048/b_fp_048_layer_0.flp": "2817c1409e89cb6d9881b21e7401f6905b0273ada42586a232507adaca83ed32",
+        "floorplans/b_fp_048/b_fp_048_tim.flp": "8bd4581a31abfc9cd92b1eb1a446d5c67e6bae6d0af91edda53d8ae2dae23602"
+      },
+      "lcf": "floorplans/b_fp_048/b_fp_048.lcf",
+      "little_cores": [
+        "Core_0_L0",
+        "Core_1_L0",
+        "Core_2_L0",
+        "Core_3_L0",
+        "Core_5_L0",
+        "Core_7_L0"
+      ],
+      "nearest_descriptor_rms_um": 747.0994914152295,
+      "power_seed": 11720155005697102592,
+      "silicon": "floorplans/b_fp_048/b_fp_048_layer_0.flp",
+      "source_sha256": "13986b9b3022ed5bccfd302bab93dfc03b82cdcdb893f7ba7ffcff0b07fb1b03",
+      "source_template": "dataset/Sample_dataset/2D_floorplans/Style_3/fp_001/fp_001_layer_0.flp",
+      "style_family": "Style_3",
+      "whitespace_fraction": 0.5520493820761199
+    },
+    {
+      "attempts": 1,
+      "big_cores": [
+        "Core_2_L0",
+        "Core_5_L0"
+      ],
+      "die_um": [
+        16773,
+        16030
+      ],
+      "fill_count": 25,
+      "geometry_seed": 20261151,
+      "id": "b_fp_049",
+      "input_sha256": {
+        "floorplans/b_fp_049/b_fp_049.lcf": "93ec18ccd8d28766200099ea8f72e468f2a211da4eeb60b267a27b4caea158a6",
+        "floorplans/b_fp_049/b_fp_049_layer_0.flp": "aa0def2ae9699dbcfd49b0b8a1be596322c5983899e3d8f421b37709d8f938c9",
+        "floorplans/b_fp_049/b_fp_049_tim.flp": "47925531924fe551c09c5df478b9f37e18fbf63aab3c88d6216ba47e356093a3"
+      },
+      "lcf": "floorplans/b_fp_049/b_fp_049.lcf",
+      "little_cores": [
+        "Core_0_L0",
+        "Core_1_L0",
+        "Core_3_L0",
+        "Core_4_L0",
+        "Core_6_L0",
+        "Core_7_L0"
+      ],
+      "nearest_descriptor_rms_um": 1271.585645086864,
+      "power_seed": 12473723645802128805,
+      "silicon": "floorplans/b_fp_049/b_fp_049_layer_0.flp",
+      "source_sha256": "411470066ab68a3ed54274ce67e9734385f191b1958245163665c684cf3b0ce1",
+      "source_template": "dataset/Sample_dataset/2D_floorplans/Style_4/fp_001/fp_001_layer_0.flp",
+      "style_family": "Style_4",
+      "whitespace_fraction": 0.7917218278388249
+    },
+    {
+      "attempts": 1,
+      "big_cores": [
+        "Core_3_L0",
+        "Core_4_L0"
+      ],
+      "die_um": [
+        9511,
+        12469
+      ],
+      "fill_count": 25,
+      "geometry_seed": 20261152,
+      "id": "b_fp_050",
+      "input_sha256": {
+        "floorplans/b_fp_050/b_fp_050.lcf": "58dd45aa16d68c6518701309e99662885ac9df7b6cb3faa62c5987e818c65f28",
+        "floorplans/b_fp_050/b_fp_050_layer_0.flp": "84b42c6a9d6c72c84ef7c9864a736062ccdaf3e0984beb77fb091c567020d7b3",
+        "floorplans/b_fp_050/b_fp_050_tim.flp": "8a4d1153df5a703cb43510f490469750a36e8f428415a0b0d3b1df875ff776b4"
+      },
+      "lcf": "floorplans/b_fp_050/b_fp_050.lcf",
+      "little_cores": [
+        "Core_0_L0",
+        "Core_1_L0",
+        "Core_2_L0",
+        "Core_5_L0",
+        "Core_6_L0",
+        "Core_7_L0"
+      ],
+      "nearest_descriptor_rms_um": 501.4400169547405,
+      "power_seed": 3607102336939145192,
+      "silicon": "floorplans/b_fp_050/b_fp_050_layer_0.flp",
+      "source_sha256": "d9b2cf1755d9809978ecf1866df0089c3289114ea3f7915988eae863ae3074ca",
+      "source_template": "dataset/Sample_dataset/2D_floorplans/Style_1/fp_002/fp_002_layer_0.flp",
+      "style_family": "Style_1",
+      "whitespace_fraction": 0.5277953924618555
+    },
+    {
+      "attempts": 1,
+      "big_cores": [
+        "Core_0_L0",
+        "Core_7_L0"
+      ],
+      "die_um": [
+        12096,
+        9403
+      ],
+      "fill_count": 23,
+      "geometry_seed": 20261153,
+      "id": "b_fp_051",
+      "input_sha256": {
+        "floorplans/b_fp_051/b_fp_051.lcf": "8f616632840627c9cad1e6baf0326c21e503c5481cb343b378dd10854fc320cd",
+        "floorplans/b_fp_051/b_fp_051_layer_0.flp": "e155ae785ebdada868545ad39e7001b209fdf60490a987613b1c21b57fd3fda9",
+        "floorplans/b_fp_051/b_fp_051_tim.flp": "1929bd7a89a716b53122befa16c80fe26a4188d4aeef47b5cd1e6a14f13c5799"
+      },
+      "lcf": "floorplans/b_fp_051/b_fp_051.lcf",
+      "little_cores": [
+        "Core_1_L0",
+        "Core_2_L0",
+        "Core_3_L0",
+        "Core_4_L0",
+        "Core_5_L0",
+        "Core_6_L0"
+      ],
+      "nearest_descriptor_rms_um": 479.82811773629214,
+      "power_seed": 4949166296067826709,
+      "silicon": "floorplans/b_fp_051/b_fp_051_layer_0.flp",
+      "source_sha256": "5d95adef94aed4f955a178957d13760c5d55b6852f10dbaa9ec7b83c79ba83f0",
+      "source_template": "dataset/Sample_dataset/2D_floorplans/Style_2/fp_001/fp_001_layer_0.flp",
+      "style_family": "Style_2",
+      "whitespace_fraction": 0.5076433447166192
+    },
+    {
+      "attempts": 1,
+      "big_cores": [
+        "Core_0_L0",
+        "Core_3_L0"
+      ],
+      "die_um": [
+        14609,
+        6814
+      ],
+      "fill_count": 21,
+      "geometry_seed": 20261154,
+      "id": "b_fp_052",
+      "input_sha256": {
+        "floorplans/b_fp_052/b_fp_052.lcf": "a4619ee8848c3e00305b87c6fe5f2f614485f669d12718e17b000ce4b674d698",
+        "floorplans/b_fp_052/b_fp_052_layer_0.flp": "c09112e81898e870443e470d3722a81d4362af9602ca023076efcf2f24f447b3",
+        "floorplans/b_fp_052/b_fp_052_tim.flp": "c461271d0c8686b36f7686851368979fccefde63cb42b0d5133786316efc1d14"
+      },
+      "lcf": "floorplans/b_fp_052/b_fp_052.lcf",
+      "little_cores": [
+        "Core_1_L0",
+        "Core_2_L0",
+        "Core_4_L0",
+        "Core_5_L0",
+        "Core_6_L0",
+        "Core_7_L0"
+      ],
+      "nearest_descriptor_rms_um": 616.0101300644391,
+      "power_seed": 12329000590896142371,
+      "silicon": "floorplans/b_fp_052/b_fp_052_layer_0.flp",
+      "source_sha256": "ac5fff413ad61a0e13d5307473d7c77095d95e05b726ffc8dcd121279961df54",
+      "source_template": "dataset/Sample_dataset/2D_floorplans/Style_3/fp_005/fp_005_layer_0.flp",
+      "style_family": "Style_3",
+      "whitespace_fraction": 0.43744445643000285
+    },
+    {
+      "attempts": 1,
+      "big_cores": [
+        "Core_0_L0",
+        "Core_3_L0"
+      ],
+      "die_um": [
+        14301,
+        15780
+      ],
+      "fill_count": 25,
+      "geometry_seed": 20261155,
+      "id": "b_fp_053",
+      "input_sha256": {
+        "floorplans/b_fp_053/b_fp_053.lcf": "e341ebd4988e60d063499ecaaef765c508b90256304311cb29c2d11c64cd9839",
+        "floorplans/b_fp_053/b_fp_053_layer_0.flp": "95993ed7e5d68a564f7fca8a368e651634412380d9c38d505cc7affae4192738",
+        "floorplans/b_fp_053/b_fp_053_tim.flp": "9eeaaf02773a2877a018a946565b49405ae357f35e90b44864c234ae92844c00"
+      },
+      "lcf": "floorplans/b_fp_053/b_fp_053.lcf",
+      "little_cores": [
+        "Core_1_L0",
+        "Core_2_L0",
+        "Core_4_L0",
+        "Core_5_L0",
+        "Core_6_L0",
+        "Core_7_L0"
+      ],
+      "nearest_descriptor_rms_um": 912.5748926141274,
+      "power_seed": 9582478985671426199,
+      "silicon": "floorplans/b_fp_053/b_fp_053_layer_0.flp",
+      "source_sha256": "7a063ba13b36a31488d76d575cff5e0b58ddcf785c9f9953b721109e93a88c55",
+      "source_template": "dataset/Sample_dataset/2D_floorplans/Style_4/fp_004/fp_004_layer_0.flp",
+      "style_family": "Style_4",
+      "whitespace_fraction": 0.7518498046127399
+    },
+    {
+      "attempts": 1,
+      "big_cores": [
+        "Core_3_L0",
+        "Core_6_L0"
+      ],
+      "die_um": [
+        18923,
+        9496
+      ],
+      "fill_count": 24,
+      "geometry_seed": 20261156,
+      "id": "b_fp_054",
+      "input_sha256": {
+        "floorplans/b_fp_054/b_fp_054.lcf": "4947d90a5b6c0f0bfabbaec1033b1e6ed313b78cbb9c3b3aeb54e92c1451ae5d",
+        "floorplans/b_fp_054/b_fp_054_layer_0.flp": "79582282b5e5e9bf42d249464469ca1c92f3c99e2564229316860b5bde3fe0da",
+        "floorplans/b_fp_054/b_fp_054_tim.flp": "d694975976cbf097aff0d48825ccb4f6266faa2750a51c03449b1d8903654755"
+      },
+      "lcf": "floorplans/b_fp_054/b_fp_054.lcf",
+      "little_cores": [
+        "Core_0_L0",
+        "Core_1_L0",
+        "Core_2_L0",
+        "Core_4_L0",
+        "Core_5_L0",
+        "Core_7_L0"
+      ],
+      "nearest_descriptor_rms_um": 1171.253642321106,
+      "power_seed": 9322280605411247541,
+      "silicon": "floorplans/b_fp_054/b_fp_054_layer_0.flp",
+      "source_sha256": "9b5a0c20ebb2414d2214bb5c9689c55beda011b5b6a6d43884bcdfd9f3156e0c",
+      "source_template": "dataset/Sample_dataset/2D_floorplans/Style_1/fp_003/fp_003_layer_0.flp",
+      "style_family": "Style_1",
+      "whitespace_fraction": 0.6883570320744279
+    },
+    {
+      "attempts": 1,
+      "big_cores": [
+        "Core_5_L0",
+        "Core_6_L0"
+      ],
+      "die_um": [
+        9756,
+        11039
+      ],
+      "fill_count": 21,
+      "geometry_seed": 20261157,
+      "id": "b_fp_055",
+      "input_sha256": {
+        "floorplans/b_fp_055/b_fp_055.lcf": "2e6d5c6b38b302dcfb0cddfe320d969be61677e0170c5a20a5effd4d97b9f237",
+        "floorplans/b_fp_055/b_fp_055_layer_0.flp": "009b3bc770b39db0862d65077b64adc816d2e99686a38220ed80654c3c3560ec",
+        "floorplans/b_fp_055/b_fp_055_tim.flp": "39bd9f0fee9af7702c49fb14647605a1e96eaf3ed5a1124eaa25b190e25a1c3d"
+      },
+      "lcf": "floorplans/b_fp_055/b_fp_055.lcf",
+      "little_cores": [
+        "Core_0_L0",
+        "Core_1_L0",
+        "Core_2_L0",
+        "Core_3_L0",
+        "Core_4_L0",
+        "Core_7_L0"
+      ],
+      "nearest_descriptor_rms_um": 670.0461830257218,
+      "power_seed": 13132122793007224153,
+      "silicon": "floorplans/b_fp_055/b_fp_055_layer_0.flp",
+      "source_sha256": "26fe7a00a0baedc1447e2ba4aada9c4c86d60addcc532bb959efee5b45920bc6",
+      "source_template": "dataset/Sample_dataset/2D_floorplans/Style_2/fp_002/fp_002_layer_0.flp",
+      "style_family": "Style_2",
+      "whitespace_fraction": 0.48002016481800835
+    },
+    {
+      "attempts": 1,
+      "big_cores": [
+        "Core_4_L0",
+        "Core_5_L0"
+      ],
+      "die_um": [
+        8544,
+        19692
+      ],
+      "fill_count": 25,
+      "geometry_seed": 20261158,
+      "id": "b_fp_056",
+      "input_sha256": {
+        "floorplans/b_fp_056/b_fp_056.lcf": "ae76ec93508abd24602910dc82cb199516db03b9be6a43a90942281fe6f3b347",
+        "floorplans/b_fp_056/b_fp_056_layer_0.flp": "8179b9e488151742db16820985a85b9cd34992f4edb25fd54dc3731006d68a18",
+        "floorplans/b_fp_056/b_fp_056_tim.flp": "702cd40698876daee61c277dc54e11e1dd2359e35d35785542bd04c047764afb"
+      },
+      "lcf": "floorplans/b_fp_056/b_fp_056.lcf",
+      "little_cores": [
+        "Core_0_L0",
+        "Core_1_L0",
+        "Core_2_L0",
+        "Core_3_L0",
+        "Core_6_L0",
+        "Core_7_L0"
+      ],
+      "nearest_descriptor_rms_um": 818.0108318820907,
+      "power_seed": 12610283342290563140,
+      "silicon": "floorplans/b_fp_056/b_fp_056_layer_0.flp",
+      "source_sha256": "13986b9b3022ed5bccfd302bab93dfc03b82cdcdb893f7ba7ffcff0b07fb1b03",
+      "source_template": "dataset/Sample_dataset/2D_floorplans/Style_3/fp_001/fp_001_layer_0.flp",
+      "style_family": "Style_3",
+      "whitespace_fraction": 0.6671588911179733
+    },
+    {
+      "attempts": 1,
+      "big_cores": [
+        "Core_1_L0",
+        "Core_2_L0"
+      ],
+      "die_um": [
+        19869,
+        17543
+      ],
+      "fill_count": 25,
+      "geometry_seed": 20261159,
+      "id": "b_fp_057",
+      "input_sha256": {
+        "floorplans/b_fp_057/b_fp_057.lcf": "2e0bef014b26603d3f581dc6a535e0e0752db63d5a4787bfa3270d9905347c4c",
+        "floorplans/b_fp_057/b_fp_057_layer_0.flp": "80b2761fefe830afcbac94fe332af94b6fd7e16967fa925f2dfcdcfcaaf5a4d4",
+        "floorplans/b_fp_057/b_fp_057_tim.flp": "a2aa5b883b78ef12933c0e2b82008bbf83f29513e4302f7f23e1333e414a0b88"
+      },
+      "lcf": "floorplans/b_fp_057/b_fp_057.lcf",
+      "little_cores": [
+        "Core_0_L0",
+        "Core_3_L0",
+        "Core_4_L0",
+        "Core_5_L0",
+        "Core_6_L0",
+        "Core_7_L0"
+      ],
+      "nearest_descriptor_rms_um": 1137.4779213094887,
+      "power_seed": 8976607582320068635,
+      "silicon": "floorplans/b_fp_057/b_fp_057_layer_0.flp",
+      "source_sha256": "7614933a75e4f0d628f45fc8fba7450388d7236f5e3d440e29b68a539cf8f100",
+      "source_template": "dataset/Sample_dataset/2D_floorplans/Style_4/fp_005/fp_005_layer_0.flp",
+      "style_family": "Style_4",
+      "whitespace_fraction": 0.8393398552687922
+    },
+    {
+      "attempts": 1,
+      "big_cores": [
+        "Core_1_L0",
+        "Core_3_L0"
+      ],
+      "die_um": [
+        10997,
+        13776
+      ],
+      "fill_count": 25,
+      "geometry_seed": 20261160,
+      "id": "b_fp_058",
+      "input_sha256": {
+        "floorplans/b_fp_058/b_fp_058.lcf": "af3ca5d92518b174ee893626a356c5444817e9a4ef1ba637bb0466dd5529f457",
+        "floorplans/b_fp_058/b_fp_058_layer_0.flp": "4ab2a5db381f79de3f7cb1c9ffa7fb81b4b909cbe4c778d2bdab3560fc3d641e",
+        "floorplans/b_fp_058/b_fp_058_tim.flp": "a52f2c5d4e76f7a713b56d7e7506bcdb53f4521af9df3080a834d24a72811181"
+      },
+      "lcf": "floorplans/b_fp_058/b_fp_058.lcf",
+      "little_cores": [
+        "Core_0_L0",
+        "Core_2_L0",
+        "Core_4_L0",
+        "Core_5_L0",
+        "Core_6_L0",
+        "Core_7_L0"
+      ],
+      "nearest_descriptor_rms_um": 932.5368763836283,
+      "power_seed": 10032748299836490336,
+      "silicon": "floorplans/b_fp_058/b_fp_058_layer_0.flp",
+      "source_sha256": "d9b2cf1755d9809978ecf1866df0089c3289114ea3f7915988eae863ae3074ca",
+      "source_template": "dataset/Sample_dataset/2D_floorplans/Style_1/fp_002/fp_002_layer_0.flp",
+      "style_family": "Style_1",
+      "whitespace_fraction": 0.6303500363365915
+    },
+    {
+      "attempts": 1,
+      "big_cores": [
+        "Core_2_L0",
+        "Core_4_L0"
+      ],
+      "die_um": [
+        11017,
+        7309
+      ],
+      "fill_count": 21,
+      "geometry_seed": 20261161,
+      "id": "b_fp_059",
+      "input_sha256": {
+        "floorplans/b_fp_059/b_fp_059.lcf": "4b01f123a78c315bc578460c7fd1e78ab2073624b4af7fe4ff4d7ddf80bbe3f5",
+        "floorplans/b_fp_059/b_fp_059_layer_0.flp": "96b67bd806edcde5ae38c41c642503258ee22278b511b522d67f370cdf780851",
+        "floorplans/b_fp_059/b_fp_059_tim.flp": "9c3ede169a15c7423059e60385305bede8ab2786c10094ac78a20133458ea8c0"
+      },
+      "lcf": "floorplans/b_fp_059/b_fp_059.lcf",
+      "little_cores": [
+        "Core_0_L0",
+        "Core_1_L0",
+        "Core_3_L0",
+        "Core_5_L0",
+        "Core_6_L0",
+        "Core_7_L0"
+      ],
+      "nearest_descriptor_rms_um": 488.0443238009496,
+      "power_seed": 6639604503319375153,
+      "silicon": "floorplans/b_fp_059/b_fp_059_layer_0.flp",
+      "source_sha256": "bcded812b5a77cc435a5c379ee597ea932395e3b229b105355c18b2146b4f1dd",
+      "source_template": "dataset/Sample_dataset/2D_floorplans/Style_2/fp_004/fp_004_layer_0.flp",
+      "style_family": "Style_2",
+      "whitespace_fraction": 0.3045487121589586
+    },
+    {
+      "attempts": 1,
+      "big_cores": [
+        "Core_1_L0",
+        "Core_2_L0"
+      ],
+      "die_um": [
+        6913,
+        16490
+      ],
+      "fill_count": 23,
+      "geometry_seed": 20261162,
+      "id": "b_fp_060",
+      "input_sha256": {
+        "floorplans/b_fp_060/b_fp_060.lcf": "6298d6d31ee7b94b2904ba659d0aaef4dab2172f4416a16cb9a6d3cf2bd70511",
+        "floorplans/b_fp_060/b_fp_060_layer_0.flp": "cbd4e2c410da982ffbc409e721b503fd11470dbe728b71c8cfa46687b0a8018c",
+        "floorplans/b_fp_060/b_fp_060_tim.flp": "da2a6e9cd29bfeb2a75b8e5f012146d23debc59a069c1f154eca591fea09556b"
+      },
+      "lcf": "floorplans/b_fp_060/b_fp_060.lcf",
+      "little_cores": [
+        "Core_0_L0",
+        "Core_3_L0",
+        "Core_4_L0",
+        "Core_5_L0",
+        "Core_6_L0",
+        "Core_7_L0"
+      ],
+      "nearest_descriptor_rms_um": 542.0143574037511,
+      "power_seed": 209066621119413603,
+      "silicon": "floorplans/b_fp_060/b_fp_060_layer_0.flp",
+      "source_sha256": "cc13a0aeed4c110e0fe6bd468bc6b3e217d8fd4d8c0b7358f6a48d1c9c05eb56",
+      "source_template": "dataset/Sample_dataset/2D_floorplans/Style_3/fp_004/fp_004_layer_0.flp",
+      "style_family": "Style_3",
+      "whitespace_fraction": 0.5087519782601697
+    },
+    {
+      "attempts": 1,
+      "big_cores": [
+        "Core_3_L0",
+        "Core_6_L0"
+      ],
+      "die_um": [
+        15309,
+        16839
+      ],
+      "fill_count": 25,
+      "geometry_seed": 20261163,
+      "id": "b_fp_061",
+      "input_sha256": {
+        "floorplans/b_fp_061/b_fp_061.lcf": "3ca261fc03a143b5b05ce38446b977001f3e50f3003d62d55cb3bb534f2b1b6b",
+        "floorplans/b_fp_061/b_fp_061_layer_0.flp": "01fc20e553a84ca3aae05338bb1789d2c57a4d186d85eed245e5f0082225e0a0",
+        "floorplans/b_fp_061/b_fp_061_tim.flp": "9c98c93998e5f252b9005b40dacfd51734ba7f0e32d584ecbed85cec9fae9b53"
+      },
+      "lcf": "floorplans/b_fp_061/b_fp_061.lcf",
+      "little_cores": [
+        "Core_0_L0",
+        "Core_1_L0",
+        "Core_2_L0",
+        "Core_4_L0",
+        "Core_5_L0",
+        "Core_7_L0"
+      ],
+      "nearest_descriptor_rms_um": 1030.5834149299817,
+      "power_seed": 18329911730430594381,
+      "silicon": "floorplans/b_fp_061/b_fp_061_layer_0.flp",
+      "source_sha256": "d1b2ff5ee662c191011e6d9a1312a6ca9e0d08f11f9231bba6ccf42cf78d1ded",
+      "source_template": "dataset/Sample_dataset/2D_floorplans/Style_4/fp_009/fp_009_layer_0.flp",
+      "style_family": "Style_4",
+      "whitespace_fraction": 0.7827674466048493
+    },
+    {
+      "attempts": 1,
+      "big_cores": [
+        "Core_0_L0",
+        "Core_5_L0"
+      ],
+      "die_um": [
+        9232,
+        12332
+      ],
+      "fill_count": 22,
+      "geometry_seed": 20261164,
+      "id": "b_fp_062",
+      "input_sha256": {
+        "floorplans/b_fp_062/b_fp_062.lcf": "aeee28e25641833513359d2d1dacdfc20e9cbbf26b9a8aa7765aabe3e74d22ba",
+        "floorplans/b_fp_062/b_fp_062_layer_0.flp": "4c075926f8efa50e9c65d29b365ef70377d97546011e697607939f6ca9588022",
+        "floorplans/b_fp_062/b_fp_062_tim.flp": "c752596745ca3ffdc574a9df6ff741072d287f788d3625106a89766a64a44cc4"
+      },
+      "lcf": "floorplans/b_fp_062/b_fp_062.lcf",
+      "little_cores": [
+        "Core_1_L0",
+        "Core_2_L0",
+        "Core_3_L0",
+        "Core_4_L0",
+        "Core_6_L0",
+        "Core_7_L0"
+      ],
+      "nearest_descriptor_rms_um": 470.2672070187205,
+      "power_seed": 10946560445982677873,
+      "silicon": "floorplans/b_fp_062/b_fp_062_layer_0.flp",
+      "source_sha256": "d9b2cf1755d9809978ecf1866df0089c3289114ea3f7915988eae863ae3074ca",
+      "source_template": "dataset/Sample_dataset/2D_floorplans/Style_1/fp_002/fp_002_layer_0.flp",
+      "style_family": "Style_1",
+      "whitespace_fraction": 0.5081205087889027
+    },
+    {
+      "attempts": 1,
+      "big_cores": [
+        "Core_4_L0",
+        "Core_5_L0"
+      ],
+      "die_um": [
+        13900,
+        7416
+      ],
+      "fill_count": 22,
+      "geometry_seed": 20261165,
+      "id": "b_fp_063",
+      "input_sha256": {
+        "floorplans/b_fp_063/b_fp_063.lcf": "b9e5ef0f14225ca009bb4aaabff2c837e824e4fb403627931c4a001081452323",
+        "floorplans/b_fp_063/b_fp_063_layer_0.flp": "33390ae2b7b68d7b3647e6f9fd9e5a1ec6accd4ca1d7b5e333c6443980ff2c58",
+        "floorplans/b_fp_063/b_fp_063_tim.flp": "6aff9ebe1fca723572d37112cd6e3cd8b14483c5ef5f8dd52a31a2d68bf17b73"
+      },
+      "lcf": "floorplans/b_fp_063/b_fp_063.lcf",
+      "little_cores": [
+        "Core_0_L0",
+        "Core_1_L0",
+        "Core_2_L0",
+        "Core_3_L0",
+        "Core_6_L0",
+        "Core_7_L0"
+      ],
+      "nearest_descriptor_rms_um": 387.209572539835,
+      "power_seed": 5967702045359192175,
+      "silicon": "floorplans/b_fp_063/b_fp_063_layer_0.flp",
+      "source_sha256": "f7be80502d7339b579bd2c78f0ea68d68280157fd0aa0a556389fdb68980ef52",
+      "source_template": "dataset/Sample_dataset/2D_floorplans/Style_2/fp_003/fp_003_layer_0.flp",
+      "style_family": "Style_2",
+      "whitespace_fraction": 0.4567452833849426
+    },
+    {
+      "attempts": 1,
+      "big_cores": [
+        "Core_5_L0",
+        "Core_7_L0"
+      ],
+      "die_um": [
+        9094,
+        17226
+      ],
+      "fill_count": 25,
+      "geometry_seed": 20261166,
+      "id": "b_fp_064",
+      "input_sha256": {
+        "floorplans/b_fp_064/b_fp_064.lcf": "eee128f6c94a657f22fa824b65b90feec12abf589a305af0024ee59e8091e230",
+        "floorplans/b_fp_064/b_fp_064_layer_0.flp": "b92970eb72715c560d378f5c797ec404af6790ef613f77cd487fc9a633315527",
+        "floorplans/b_fp_064/b_fp_064_tim.flp": "d4b33f5efdb4a98df54c42cfc7cd63d8a172788647ae6609947da0c8210fad74"
+      },
+      "lcf": "floorplans/b_fp_064/b_fp_064.lcf",
+      "little_cores": [
+        "Core_0_L0",
+        "Core_1_L0",
+        "Core_2_L0",
+        "Core_3_L0",
+        "Core_4_L0",
+        "Core_6_L0"
+      ],
+      "nearest_descriptor_rms_um": 659.1807268711568,
+      "power_seed": 9730967305106776800,
+      "silicon": "floorplans/b_fp_064/b_fp_064_layer_0.flp",
+      "source_sha256": "13986b9b3022ed5bccfd302bab93dfc03b82cdcdb893f7ba7ffcff0b07fb1b03",
+      "source_template": "dataset/Sample_dataset/2D_floorplans/Style_3/fp_001/fp_001_layer_0.flp",
+      "style_family": "Style_3",
+      "whitespace_fraction": 0.6425225640395931
+    },
+    {
+      "attempts": 1,
+      "big_cores": [
+        "Core_3_L0",
+        "Core_7_L0"
+      ],
+      "die_um": [
+        16469,
+        14808
+      ],
+      "fill_count": 25,
+      "geometry_seed": 20261167,
+      "id": "b_fp_065",
+      "input_sha256": {
+        "floorplans/b_fp_065/b_fp_065.lcf": "63d3ca265687da1704e64dc4c0269dcd9fb1ac571756f3c55f7253b990ddc177",
+        "floorplans/b_fp_065/b_fp_065_layer_0.flp": "4480055dae87eff8632e25f73e3d21a9a2353e5c5522e53e1d8d4872925b04c9",
+        "floorplans/b_fp_065/b_fp_065_tim.flp": "753e95c60e6903854650af2b32938d6216b8a3d2b8d6c750b0280b9e3403ea68"
+      },
+      "lcf": "floorplans/b_fp_065/b_fp_065.lcf",
+      "little_cores": [
+        "Core_0_L0",
+        "Core_1_L0",
+        "Core_2_L0",
+        "Core_4_L0",
+        "Core_5_L0",
+        "Core_6_L0"
+      ],
+      "nearest_descriptor_rms_um": 1373.4709649167967,
+      "power_seed": 1330160023466420765,
+      "silicon": "floorplans/b_fp_065/b_fp_065_layer_0.flp",
+      "source_sha256": "f1bbb4bfc29831503347e3d8e9c7a50c18f38c8040173047ac720d5ffaefd30e",
+      "source_template": "dataset/Sample_dataset/2D_floorplans/Style_4/fp_003/fp_003_layer_0.flp",
+      "style_family": "Style_4",
+      "whitespace_fraction": 0.7703722387384724
+    },
+    {
+      "attempts": 1,
+      "big_cores": [
+        "Core_1_L0",
+        "Core_4_L0"
+      ],
+      "die_um": [
+        10303,
+        11712
+      ],
+      "fill_count": 25,
+      "geometry_seed": 20261168,
+      "id": "b_fp_066",
+      "input_sha256": {
+        "floorplans/b_fp_066/b_fp_066.lcf": "428c4034708b5a9ad4903860d4a6152372e05b8c4c7e9fd1c6e256343d3bc05f",
+        "floorplans/b_fp_066/b_fp_066_layer_0.flp": "46732017d3ee142bc5c33d7733f4b608ac3a403e930fcde323a8cff165aff476",
+        "floorplans/b_fp_066/b_fp_066_tim.flp": "eb28be90ca6952503d0b5c117df425bb6e5e578c6863c5054d0c7da1dfc60e38"
+      },
+      "lcf": "floorplans/b_fp_066/b_fp_066.lcf",
+      "little_cores": [
+        "Core_0_L0",
+        "Core_2_L0",
+        "Core_3_L0",
+        "Core_5_L0",
+        "Core_6_L0",
+        "Core_7_L0"
+      ],
+      "nearest_descriptor_rms_um": 544.0271738540738,
+      "power_seed": 10342285224372442430,
+      "silicon": "floorplans/b_fp_066/b_fp_066_layer_0.flp",
+      "source_sha256": "a512a6e929a6e6ebc88a3d3d88edd5e8ba27d7eb6c6b3eb475ceae9a8be5a7ba",
+      "source_template": "dataset/Sample_dataset/2D_floorplans/Style_1/fp_001/fp_001_layer_0.flp",
+      "style_family": "Style_1",
+      "whitespace_fraction": 0.5359195608048799
+    },
+    {
+      "attempts": 1,
+      "big_cores": [
+        "Core_0_L0",
+        "Core_2_L0"
+      ],
+      "die_um": [
+        12016,
+        8122
+      ],
+      "fill_count": 17,
+      "geometry_seed": 20261169,
+      "id": "b_fp_067",
+      "input_sha256": {
+        "floorplans/b_fp_067/b_fp_067.lcf": "1e42005ead703a26b02f886ba3d66e49e9312331fb4d238d9f6142f5ccdf5a3c",
+        "floorplans/b_fp_067/b_fp_067_layer_0.flp": "00fe5ca5ad06c56981a6d7aeda9d6799ee565c9d8462ef353fa2483d3cc28731",
+        "floorplans/b_fp_067/b_fp_067_tim.flp": "c374ad640ccd846a81138466adb4b6c9247fb86dae2e8ff7f006817a4e81bec9"
+      },
+      "lcf": "floorplans/b_fp_067/b_fp_067.lcf",
+      "little_cores": [
+        "Core_1_L0",
+        "Core_3_L0",
+        "Core_4_L0",
+        "Core_5_L0",
+        "Core_6_L0",
+        "Core_7_L0"
+      ],
+      "nearest_descriptor_rms_um": 418.1460199829679,
+      "power_seed": 15227664297382259258,
+      "silicon": "floorplans/b_fp_067/b_fp_067_layer_0.flp",
+      "source_sha256": "f650bc8937bd960603f9eb4175e463bf25763f1d8a690d8296b2bdc7ab5dffd8",
+      "source_template": "dataset/Sample_dataset/2D_floorplans/Style_2/fp_005/fp_005_layer_0.flp",
+      "style_family": "Style_2",
+      "whitespace_fraction": 0.4261939510349986
+    },
+    {
+      "attempts": 1,
+      "big_cores": [
+        "Core_1_L0",
+        "Core_2_L0"
+      ],
+      "die_um": [
+        16981,
+        6427
+      ],
+      "fill_count": 21,
+      "geometry_seed": 20261170,
+      "id": "b_fp_068",
+      "input_sha256": {
+        "floorplans/b_fp_068/b_fp_068.lcf": "328bbf91be08cad1a900702cbbc2be326ad30c6d987c5b0bd3c54ae3295ae1f1",
+        "floorplans/b_fp_068/b_fp_068_layer_0.flp": "489d272571b799d936840ea442b53971b4513b2af73f50f491a93fa626c6433f",
+        "floorplans/b_fp_068/b_fp_068_tim.flp": "63fc65f15df3c1e61beb9240be42d60458311b23dd4ec685eb3daa2b9e511812"
+      },
+      "lcf": "floorplans/b_fp_068/b_fp_068.lcf",
+      "little_cores": [
+        "Core_0_L0",
+        "Core_3_L0",
+        "Core_4_L0",
+        "Core_5_L0",
+        "Core_6_L0",
+        "Core_7_L0"
+      ],
+      "nearest_descriptor_rms_um": 589.1686376323328,
+      "power_seed": 8206542317479930048,
+      "silicon": "floorplans/b_fp_068/b_fp_068_layer_0.flp",
+      "source_sha256": "ac5fff413ad61a0e13d5307473d7c77095d95e05b726ffc8dcd121279961df54",
+      "source_template": "dataset/Sample_dataset/2D_floorplans/Style_3/fp_005/fp_005_layer_0.flp",
+      "style_family": "Style_3",
+      "whitespace_fraction": 0.48688292712618786
+    },
+    {
+      "attempts": 1,
+      "big_cores": [
+        "Core_3_L0",
+        "Core_4_L0"
+      ],
+      "die_um": [
+        17224,
+        17593
+      ],
+      "fill_count": 25,
+      "geometry_seed": 20261171,
+      "id": "b_fp_069",
+      "input_sha256": {
+        "floorplans/b_fp_069/b_fp_069.lcf": "9a60bcbca646806b6ed8d56d532113622676e1b4ec279a738f7a616f6095726c",
+        "floorplans/b_fp_069/b_fp_069_layer_0.flp": "7a9cb4335679b08519ab58689b89e8085602d13fe251012a547d663826ee6a3b",
+        "floorplans/b_fp_069/b_fp_069_tim.flp": "f7338bedf3477ccd8c0302b5de6456580adf94b279743093118ed896c0c47b85"
+      },
+      "lcf": "floorplans/b_fp_069/b_fp_069.lcf",
+      "little_cores": [
+        "Core_0_L0",
+        "Core_1_L0",
+        "Core_2_L0",
+        "Core_5_L0",
+        "Core_6_L0",
+        "Core_7_L0"
+      ],
+      "nearest_descriptor_rms_um": 1774.8329109225815,
+      "power_seed": 6675374162003400327,
+      "silicon": "floorplans/b_fp_069/b_fp_069_layer_0.flp",
+      "source_sha256": "2011b0e4724d01d09e9496759315fcdb9ea46fb5eb24b97248a26ade3653749b",
+      "source_template": "dataset/Sample_dataset/2D_floorplans/Style_4/fp_002/fp_002_layer_0.flp",
+      "style_family": "Style_4",
+      "whitespace_fraction": 0.8151948338824643
+    },
+    {
+      "attempts": 1,
+      "big_cores": [
+        "Core_1_L0",
+        "Core_5_L0"
+      ],
+      "die_um": [
+        10512,
+        12540
+      ],
+      "fill_count": 24,
+      "geometry_seed": 20261172,
+      "id": "b_fp_070",
+      "input_sha256": {
+        "floorplans/b_fp_070/b_fp_070.lcf": "e1063150830cebee8edabf6a9bb544a798e6909115194ca62f66ad0d9fc0b950",
+        "floorplans/b_fp_070/b_fp_070_layer_0.flp": "623ae532c33e4119fccf4b125f96127968bdff8ea576bd3a3bf5e8092c98f06a",
+        "floorplans/b_fp_070/b_fp_070_tim.flp": "74627d91cc664523ccdfd57378239e578e258e45f3e81b59964e461a113314cf"
+      },
+      "lcf": "floorplans/b_fp_070/b_fp_070.lcf",
+      "little_cores": [
+        "Core_0_L0",
+        "Core_2_L0",
+        "Core_3_L0",
+        "Core_4_L0",
+        "Core_6_L0",
+        "Core_7_L0"
+      ],
+      "nearest_descriptor_rms_um": 554.0875613721959,
+      "power_seed": 10590361384609762079,
+      "silicon": "floorplans/b_fp_070/b_fp_070_layer_0.flp",
+      "source_sha256": "d9b2cf1755d9809978ecf1866df0089c3289114ea3f7915988eae863ae3074ca",
+      "source_template": "dataset/Sample_dataset/2D_floorplans/Style_1/fp_002/fp_002_layer_0.flp",
+      "style_family": "Style_1",
+      "whitespace_fraction": 0.5751798203132017
+    },
+    {
+      "attempts": 1,
+      "big_cores": [
+        "Core_2_L0",
+        "Core_7_L0"
+      ],
+      "die_um": [
+        12022,
+        7056
+      ],
+      "fill_count": 21,
+      "geometry_seed": 20261173,
+      "id": "b_fp_071",
+      "input_sha256": {
+        "floorplans/b_fp_071/b_fp_071.lcf": "bdd3136084fc1449017251bc544cf507944442a34dfe8a2fe81b0e74e80f22ac",
+        "floorplans/b_fp_071/b_fp_071_layer_0.flp": "9102c21625dffce64818ba39c5d2fb7bed19fb46f7c42df2d99588cd1f10c39a",
+        "floorplans/b_fp_071/b_fp_071_tim.flp": "3e2d516d092cdaa876816ec9abc467a13ba42228add48e6d98fcc3ac21662442"
+      },
+      "lcf": "floorplans/b_fp_071/b_fp_071.lcf",
+      "little_cores": [
+        "Core_0_L0",
+        "Core_1_L0",
+        "Core_3_L0",
+        "Core_4_L0",
+        "Core_5_L0",
+        "Core_6_L0"
+      ],
+      "nearest_descriptor_rms_um": 478.49695560811585,
+      "power_seed": 7512926106245412576,
+      "silicon": "floorplans/b_fp_071/b_fp_071_layer_0.flp",
+      "source_sha256": "f650bc8937bd960603f9eb4175e463bf25763f1d8a690d8296b2bdc7ab5dffd8",
+      "source_template": "dataset/Sample_dataset/2D_floorplans/Style_2/fp_005/fp_005_layer_0.flp",
+      "style_family": "Style_2",
+      "whitespace_fraction": 0.33983464178107337
+    },
+    {
+      "attempts": 1,
+      "big_cores": [
+        "Core_2_L0",
+        "Core_5_L0"
+      ],
+      "die_um": [
+        15198,
+        14381
+      ],
+      "fill_count": 23,
+      "geometry_seed": 20261174,
+      "id": "b_fp_072",
+      "input_sha256": {
+        "floorplans/b_fp_072/b_fp_072.lcf": "e35b10350b26ef6aaea093ab003e65f413038c3d24c466ba8362451fc190702c",
+        "floorplans/b_fp_072/b_fp_072_layer_0.flp": "e9667bfbbacc38bec5f45a01bce8479baff14adbdb7d7a09aa95aa28f28f7ed7",
+        "floorplans/b_fp_072/b_fp_072_tim.flp": "f44c243be23e81eeffecbfc7e2c07878f229dcdf1296d6653640fa5b2080c1b4"
+      },
+      "lcf": "floorplans/b_fp_072/b_fp_072.lcf",
+      "little_cores": [
+        "Core_0_L0",
+        "Core_1_L0",
+        "Core_3_L0",
+        "Core_4_L0",
+        "Core_6_L0",
+        "Core_7_L0"
+      ],
+      "nearest_descriptor_rms_um": 905.3644761306651,
+      "power_seed": 7908219758363242370,
+      "silicon": "floorplans/b_fp_072/b_fp_072_layer_0.flp",
+      "source_sha256": "0064456e9a8c2737b1347477dc7d87424327cc7c3bc5bc4c22bf8b3f44de7237",
+      "source_template": "dataset/Sample_dataset/2D_floorplans/Style_3/fp_002/fp_002_layer_0.flp",
+      "style_family": "Style_3",
+      "whitespace_fraction": 0.7437803105033081
+    },
+    {
+      "attempts": 1,
+      "big_cores": [
+        "Core_0_L0",
+        "Core_5_L0"
+      ],
+      "die_um": [
+        18619,
+        17203
+      ],
+      "fill_count": 25,
+      "geometry_seed": 20261175,
+      "id": "b_fp_073",
+      "input_sha256": {
+        "floorplans/b_fp_073/b_fp_073.lcf": "bc9393f2b68453cbc2c0ae04b6c3af379d308ae9e551a8755aa670b6048d9c7f",
+        "floorplans/b_fp_073/b_fp_073_layer_0.flp": "91c56ed0b74212738083ac800bdc89e20d2bfef71efab7c41caa9223c887c6b1",
+        "floorplans/b_fp_073/b_fp_073_tim.flp": "08409aa225c34a26de1284b25f74def2178227b8f4daa6e4e61cd53bbbdd8d25"
+      },
+      "lcf": "floorplans/b_fp_073/b_fp_073.lcf",
+      "little_cores": [
+        "Core_1_L0",
+        "Core_2_L0",
+        "Core_3_L0",
+        "Core_4_L0",
+        "Core_6_L0",
+        "Core_7_L0"
+      ],
+      "nearest_descriptor_rms_um": 1073.3757255332068,
+      "power_seed": 4545000649882272494,
+      "silicon": "floorplans/b_fp_073/b_fp_073_layer_0.flp",
+      "source_sha256": "2011b0e4724d01d09e9496759315fcdb9ea46fb5eb24b97248a26ade3653749b",
+      "source_template": "dataset/Sample_dataset/2D_floorplans/Style_4/fp_002/fp_002_layer_0.flp",
+      "style_family": "Style_4",
+      "whitespace_fraction": 0.8251653591496745
+    },
+    {
+      "attempts": 1,
+      "big_cores": [
+        "Core_0_L0",
+        "Core_1_L0"
+      ],
+      "die_um": [
+        16541,
+        9613
+      ],
+      "fill_count": 24,
+      "geometry_seed": 20261176,
+      "id": "b_fp_074",
+      "input_sha256": {
+        "floorplans/b_fp_074/b_fp_074.lcf": "88746ce9133faae2e591ef2180ab5d7fd94cef487f392b6b841029a23cb03e2d",
+        "floorplans/b_fp_074/b_fp_074_layer_0.flp": "d71ed25837d3afbdb750231250d8734dcb53c535fa72d28c9755e6d1bd5ecb5b",
+        "floorplans/b_fp_074/b_fp_074_tim.flp": "b67054ddac05b2b54c0cf58746f2a6b24a4997a7bc33f044a369cee6b9b5b5cb"
+      },
+      "lcf": "floorplans/b_fp_074/b_fp_074.lcf",
+      "little_cores": [
+        "Core_2_L0",
+        "Core_3_L0",
+        "Core_4_L0",
+        "Core_5_L0",
+        "Core_6_L0",
+        "Core_7_L0"
+      ],
+      "nearest_descriptor_rms_um": 676.8048921322212,
+      "power_seed": 4570836107796243554,
+      "silicon": "floorplans/b_fp_074/b_fp_074_layer_0.flp",
+      "source_sha256": "9b5a0c20ebb2414d2214bb5c9689c55beda011b5b6a6d43884bcdfd9f3156e0c",
+      "source_template": "dataset/Sample_dataset/2D_floorplans/Style_1/fp_003/fp_003_layer_0.flp",
+      "style_family": "Style_1",
+      "whitespace_fraction": 0.647817864077858
+    },
+    {
+      "attempts": 1,
+      "big_cores": [
+        "Core_2_L0",
+        "Core_5_L0"
+      ],
+      "die_um": [
+        12690,
+        7653
+      ],
+      "fill_count": 24,
+      "geometry_seed": 20261177,
+      "id": "b_fp_075",
+      "input_sha256": {
+        "floorplans/b_fp_075/b_fp_075.lcf": "7e64ac9b54f0ce416491d31c3da9bcd87ee445e53bb6de05f41745cb8f9b2084",
+        "floorplans/b_fp_075/b_fp_075_layer_0.flp": "c7b8e3f6c60e39b0b907a2a1438af3c958ea57fccf1ef148ea261be20e6abd6e",
+        "floorplans/b_fp_075/b_fp_075_tim.flp": "cd8e488706e71c4fafb67796a340ff7dec93d0935b5339fb7c98104d59b422ca"
+      },
+      "lcf": "floorplans/b_fp_075/b_fp_075.lcf",
+      "little_cores": [
+        "Core_0_L0",
+        "Core_1_L0",
+        "Core_3_L0",
+        "Core_4_L0",
+        "Core_6_L0",
+        "Core_7_L0"
+      ],
+      "nearest_descriptor_rms_um": 421.20509368141745,
+      "power_seed": 10762708105332537339,
+      "silicon": "floorplans/b_fp_075/b_fp_075_layer_0.flp",
+      "source_sha256": "bcded812b5a77cc435a5c379ee597ea932395e3b229b105355c18b2146b4f1dd",
+      "source_template": "dataset/Sample_dataset/2D_floorplans/Style_2/fp_004/fp_004_layer_0.flp",
+      "style_family": "Style_2",
+      "whitespace_fraction": 0.4233733749039943
+    },
+    {
+      "attempts": 1,
+      "big_cores": [
+        "Core_3_L0",
+        "Core_7_L0"
+      ],
+      "die_um": [
+        6717,
+        15331
+      ],
+      "fill_count": 21,
+      "geometry_seed": 20261178,
+      "id": "b_fp_076",
+      "input_sha256": {
+        "floorplans/b_fp_076/b_fp_076.lcf": "db2a0905a24b508db0ffcd32293171b9da8abe4af227aa14ed828b5c3066cf3b",
+        "floorplans/b_fp_076/b_fp_076_layer_0.flp": "e4dc76c39c89d5bf18795c21bf46578700224999ebe62a3012d5ea8a20d1907a",
+        "floorplans/b_fp_076/b_fp_076_tim.flp": "9c698b6c96df3f3d56fb92bd5be546c88fc3e84799656e4dae1d4bd73aa3adf9"
+      },
+      "lcf": "floorplans/b_fp_076/b_fp_076.lcf",
+      "little_cores": [
+        "Core_0_L0",
+        "Core_1_L0",
+        "Core_2_L0",
+        "Core_4_L0",
+        "Core_5_L0",
+        "Core_6_L0"
+      ],
+      "nearest_descriptor_rms_um": 502.42117229201534,
+      "power_seed": 15665652381230440973,
+      "silicon": "floorplans/b_fp_076/b_fp_076_layer_0.flp",
+      "source_sha256": "cc13a0aeed4c110e0fe6bd468bc6b3e217d8fd4d8c0b7358f6a48d1c9c05eb56",
+      "source_template": "dataset/Sample_dataset/2D_floorplans/Style_3/fp_004/fp_004_layer_0.flp",
+      "style_family": "Style_3",
+      "whitespace_fraction": 0.45619625380008355
+    },
+    {
+      "attempts": 1,
+      "big_cores": [
+        "Core_1_L0",
+        "Core_2_L0"
+      ],
+      "die_um": [
+        14845,
+        17757
+      ],
+      "fill_count": 25,
+      "geometry_seed": 20261179,
+      "id": "b_fp_077",
+      "input_sha256": {
+        "floorplans/b_fp_077/b_fp_077.lcf": "b0cd126851ff24d0a1663bd11bcb8b0b876bb3afc3bb1349b0608feeaed7df64",
+        "floorplans/b_fp_077/b_fp_077_layer_0.flp": "0aa73dd891002d1c9fe3d1bce713e0462ffb62f63ba64038c2911c948ca2e16a",
+        "floorplans/b_fp_077/b_fp_077_tim.flp": "54326fa3a96b2512a8b92e1c82415b8d446cdd437e6244503472d091a10d197f"
+      },
+      "lcf": "floorplans/b_fp_077/b_fp_077.lcf",
+      "little_cores": [
+        "Core_0_L0",
+        "Core_3_L0",
+        "Core_4_L0",
+        "Core_5_L0",
+        "Core_6_L0",
+        "Core_7_L0"
+      ],
+      "nearest_descriptor_rms_um": 1485.6922929081536,
+      "power_seed": 10041880281680855186,
+      "silicon": "floorplans/b_fp_077/b_fp_077_layer_0.flp",
+      "source_sha256": "411470066ab68a3ed54274ce67e9734385f191b1958245163665c684cf3b0ce1",
+      "source_template": "dataset/Sample_dataset/2D_floorplans/Style_4/fp_001/fp_001_layer_0.flp",
+      "style_family": "Style_4",
+      "whitespace_fraction": 0.7875590521818131
+    },
+    {
+      "attempts": 1,
+      "big_cores": [
+        "Core_0_L0",
+        "Core_5_L0"
+      ],
+      "die_um": [
+        10889,
+        12047
+      ],
+      "fill_count": 24,
+      "geometry_seed": 20261180,
+      "id": "b_fp_078",
+      "input_sha256": {
+        "floorplans/b_fp_078/b_fp_078.lcf": "6fa7d296fd151e153f81dab721704af9af1acbc75b29d5bc45a50f1ccb1c1bca",
+        "floorplans/b_fp_078/b_fp_078_layer_0.flp": "f8dd4f6d17bce93c1ffab1876a2424395a0838195cc946c3bf05fb401cd4222e",
+        "floorplans/b_fp_078/b_fp_078_tim.flp": "97bc567d2e3781afae1f4332c0da6498c0505e33c4e7bc958be1e13e92b6ad34"
+      },
+      "lcf": "floorplans/b_fp_078/b_fp_078.lcf",
+      "little_cores": [
+        "Core_1_L0",
+        "Core_2_L0",
+        "Core_3_L0",
+        "Core_4_L0",
+        "Core_6_L0",
+        "Core_7_L0"
+      ],
+      "nearest_descriptor_rms_um": 523.828818055601,
+      "power_seed": 17480029197909311089,
+      "silicon": "floorplans/b_fp_078/b_fp_078_layer_0.flp",
+      "source_sha256": "a512a6e929a6e6ebc88a3d3d88edd5e8ba27d7eb6c6b3eb475ceae9a8be5a7ba",
+      "source_template": "dataset/Sample_dataset/2D_floorplans/Style_1/fp_001/fp_001_layer_0.flp",
+      "style_family": "Style_1",
+      "whitespace_fraction": 0.5731049501736103
+    },
+    {
+      "attempts": 1,
+      "big_cores": [
+        "Core_0_L0",
+        "Core_6_L0"
+      ],
+      "die_um": [
+        13537,
+        7946
+      ],
+      "fill_count": 23,
+      "geometry_seed": 20261181,
+      "id": "b_fp_079",
+      "input_sha256": {
+        "floorplans/b_fp_079/b_fp_079.lcf": "5f00ea1cf7655a4aa1db613caefa66a8b5dc84b504ba565261b66ebc2e066271",
+        "floorplans/b_fp_079/b_fp_079_layer_0.flp": "210aa87491d60164eeae1b9ded1d4f20daad691b5d38bdb00aee3d06c03f944a",
+        "floorplans/b_fp_079/b_fp_079_tim.flp": "0f6f63a577df9c473ee1f2eeaacd3778dacbbb89aad294faed1613817a14cdc0"
+      },
+      "lcf": "floorplans/b_fp_079/b_fp_079.lcf",
+      "little_cores": [
+        "Core_1_L0",
+        "Core_2_L0",
+        "Core_3_L0",
+        "Core_4_L0",
+        "Core_5_L0",
+        "Core_7_L0"
+      ],
+      "nearest_descriptor_rms_um": 633.5138150199365,
+      "power_seed": 8628759829385373036,
+      "silicon": "floorplans/b_fp_079/b_fp_079_layer_0.flp",
+      "source_sha256": "bcded812b5a77cc435a5c379ee597ea932395e3b229b105355c18b2146b4f1dd",
+      "source_template": "dataset/Sample_dataset/2D_floorplans/Style_2/fp_004/fp_004_layer_0.flp",
+      "style_family": "Style_2",
+      "whitespace_fraction": 0.47938456785414274
+    },
+    {
+      "attempts": 1,
+      "big_cores": [
+        "Core_2_L0",
+        "Core_3_L0"
+      ],
+      "die_um": [
+        14075,
+        14485
+      ],
+      "fill_count": 25,
+      "geometry_seed": 20261182,
+      "id": "b_fp_080",
+      "input_sha256": {
+        "floorplans/b_fp_080/b_fp_080.lcf": "c618f3dadff91189797f2692ff977caca22f199f61bc0ae3ce77d0a298ddad29",
+        "floorplans/b_fp_080/b_fp_080_layer_0.flp": "4e3f5f9fb2d4073f34a5d92036715ed478ebde549ed4d668b6602534229c58a6",
+        "floorplans/b_fp_080/b_fp_080_tim.flp": "22405408b8f57c5353263081995cba9d91da79142236532ca9704d1fc15fc5a0"
+      },
+      "lcf": "floorplans/b_fp_080/b_fp_080.lcf",
+      "little_cores": [
+        "Core_0_L0",
+        "Core_1_L0",
+        "Core_4_L0",
+        "Core_5_L0",
+        "Core_6_L0",
+        "Core_7_L0"
+      ],
+      "nearest_descriptor_rms_um": 884.2360390946819,
+      "power_seed": 15328840902949811056,
+      "silicon": "floorplans/b_fp_080/b_fp_080_layer_0.flp",
+      "source_sha256": "0064456e9a8c2737b1347477dc7d87424327cc7c3bc5bc4c22bf8b3f44de7237",
+      "source_template": "dataset/Sample_dataset/2D_floorplans/Style_3/fp_002/fp_002_layer_0.flp",
+      "style_family": "Style_3",
+      "whitespace_fraction": 0.725323740918976
+    },
+    {
+      "attempts": 1,
+      "big_cores": [
+        "Core_1_L0",
+        "Core_4_L0"
+      ],
+      "die_um": [
+        18484,
+        18959
+      ],
+      "fill_count": 25,
+      "geometry_seed": 20261183,
+      "id": "b_fp_081",
+      "input_sha256": {
+        "floorplans/b_fp_081/b_fp_081.lcf": "bbc74bd124b873b82459f8f3c0503f43be36fee9205b0dd442b3962005d6c15b",
+        "floorplans/b_fp_081/b_fp_081_layer_0.flp": "1aeb9c508076fc7489611e46f360896dacd57f529b9de1304edf376ab2527601",
+        "floorplans/b_fp_081/b_fp_081_tim.flp": "c75a38f147d142ec24a10b3e0d8f2f9e7ff7923f4c08c06de9a4354e3f626f67"
+      },
+      "lcf": "floorplans/b_fp_081/b_fp_081.lcf",
+      "little_cores": [
+        "Core_0_L0",
+        "Core_2_L0",
+        "Core_3_L0",
+        "Core_5_L0",
+        "Core_6_L0",
+        "Core_7_L0"
+      ],
+      "nearest_descriptor_rms_um": 1630.8137332601216,
+      "power_seed": 5997981376909259658,
+      "silicon": "floorplans/b_fp_081/b_fp_081_layer_0.flp",
+      "source_sha256": "2011b0e4724d01d09e9496759315fcdb9ea46fb5eb24b97248a26ade3653749b",
+      "source_template": "dataset/Sample_dataset/2D_floorplans/Style_4/fp_002/fp_002_layer_0.flp",
+      "style_family": "Style_4",
+      "whitespace_fraction": 0.8402000494489532
+    },
+    {
+      "attempts": 1,
+      "big_cores": [
+        "Core_5_L0",
+        "Core_7_L0"
+      ],
+      "die_um": [
+        17524,
+        10578
+      ],
+      "fill_count": 25,
+      "geometry_seed": 20261184,
+      "id": "b_fp_082",
+      "input_sha256": {
+        "floorplans/b_fp_082/b_fp_082.lcf": "569f9fc44f8898a708ace9123a985eaee25d6e1c050d69548a245dbbf38fc591",
+        "floorplans/b_fp_082/b_fp_082_layer_0.flp": "8de9b0bb8ff91debed38c184fb9bb054a3ac2a9f4b28d755be191fe7855b8151",
+        "floorplans/b_fp_082/b_fp_082_tim.flp": "6fd788b0eff363d6fce5506e05f7e39c9d56188f0ac0174ddea35cba5d987f96"
+      },
+      "lcf": "floorplans/b_fp_082/b_fp_082.lcf",
+      "little_cores": [
+        "Core_0_L0",
+        "Core_1_L0",
+        "Core_2_L0",
+        "Core_3_L0",
+        "Core_4_L0",
+        "Core_6_L0"
+      ],
+      "nearest_descriptor_rms_um": 927.8354385804539,
+      "power_seed": 12551357853110602173,
+      "silicon": "floorplans/b_fp_082/b_fp_082_layer_0.flp",
+      "source_sha256": "9b5a0c20ebb2414d2214bb5c9689c55beda011b5b6a6d43884bcdfd9f3156e0c",
+      "source_template": "dataset/Sample_dataset/2D_floorplans/Style_1/fp_003/fp_003_layer_0.flp",
+      "style_family": "Style_1",
+      "whitespace_fraction": 0.6978996559897068
+    }
+  ],
+  "new_floorplan_count": 77,
+  "parameters": {
+    "big_range_w": [
+      10.0,
+      20.0
+    ],
+    "count": 77,
+    "jitter_um": 1000,
+    "little_range_w": [
+      5.0,
+      10.0
+    ],
+    "margin_um": 1600,
+    "min_distance_um": 150,
+    "samples": 20,
+    "seed": 20261108,
+    "spacing_um": 800
+  },
+  "preserved_pilot_count": 5,
+  "preserved_stage_a_count": 23,
+  "schema_version": 1,
+  "temperature_labels": "NOT GENERATED; real HotSpot execution required",
+  "total_floorplans": 105,
+  "workload_manifest": "workload_manifest.json",
+  "workload_manifest_sha256": "9bbf9e8a31184990ff3c0c8196d0db4936ffeb7bec5a62fbcf4743bbabd013f1"
+}

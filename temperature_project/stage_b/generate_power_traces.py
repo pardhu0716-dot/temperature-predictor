@@ -135,7 +135,7 @@ def read_flp_lines(path: Union[str, Path]) -> List[Tuple[str, float, float, floa
                 f"{flp_path}:{line_idx}: non-numeric coordinates for block '{name}': {exc}"
             ) from exc
 
-        if w <= 0 or h <= 0 or x < 0 or y < 0:
+        if not all(math.isfinite(v) for v in (w, h, x, y)) or w <= 0 or h <= 0 or x < 0 or y < 0:
             raise GeometryValidationError(
                 f"{flp_path}:{line_idx}: block '{name}' has non-positive size or negative position: "
                 f"w={w}, h={h}, x={x}, y={y}"
@@ -283,14 +283,14 @@ def generate_custom_trace(
     if extra:
         raise PowerAssignmentError(f"Provided powers for non-active blocks or unknown cores: {sorted(extra)}")
 
-    if not math.isclose(fill_power, 0.0, abs_tol=1e-6):
+    if not math.isfinite(fill_power) or fill_power != 0.0:
         raise PowerAssignmentError(f"Passive FILL blocks must have 0.0 W, requested: {fill_power} W")
 
     powers: List[float] = []
     for b in profile.blocks:
         if b.block_type in (CoreType.BIG, CoreType.LITTLE):
             p = float(core_powers[b.name])
-            if p < 0:
+            if not math.isfinite(p) or p < 0:
                 raise PowerAssignmentError(f"Negative power {p} W specified for core '{b.name}'")
             powers.append(p)
         else:
@@ -327,11 +327,23 @@ def generate_random_traces(
 
     b_min, b_max = big_range
     l_min, l_max = little_range
-    if b_min <= 0 or b_max < b_min:
+    if not all(math.isfinite(v) for v in big_range) or b_min <= 0 or b_max < b_min:
         raise ValueError(f"Invalid Big core power range: {big_range}")
-    if l_min <= 0 or l_max < l_min:
+    if not all(math.isfinite(v) for v in little_range) or l_min <= 0 or l_max < l_min:
         raise ValueError(f"Invalid Little core power range: {little_range}")
 
+    if type(round_decimals) is not int or not 0 <= round_decimals <= 6:
+        raise ValueError("round_decimals must be an integer from 0 through 6")
+    scale = 10 ** round_decimals
+    b_ticks = (math.ceil(b_min * scale), math.floor(b_max * scale))
+    l_ticks = (math.ceil(l_min * scale), math.floor(l_max * scale))
+    if b_ticks[0] > b_ticks[1] or l_ticks[0] > l_ticks[1]:
+        raise ValueError("Power range has no representable value at the requested precision")
+    capacity = (b_ticks[1]-b_ticks[0]+1)**2 * (l_ticks[1]-l_ticks[0]+1)**6
+    if include_reference and not (b_min <= 20 <= b_max and l_min <= 8 <= l_max):
+        capacity += 1
+    if num_samples > capacity:
+        raise ValueError("Requested more unique configurations than the ranges permit")
     rng = random.Random(seed)
     traces: List[PowerTrace] = []
     seen_active_tuples = set()
@@ -357,9 +369,9 @@ def generate_random_traces(
 
         core_powers: Dict[str, float] = {}
         for c in profile.big_cores:
-            core_powers[c] = round(rng.uniform(b_min, b_max), round_decimals)
+            core_powers[c] = rng.randint(*b_ticks) / scale
         for c in profile.little_cores:
-            core_powers[c] = round(rng.uniform(l_min, l_max), round_decimals)
+            core_powers[c] = rng.randint(*l_ticks) / scale
 
         active_tuple = tuple(core_powers[c] for c in profile.big_cores + profile.little_cores)
         if active_tuple in seen_active_tuples:

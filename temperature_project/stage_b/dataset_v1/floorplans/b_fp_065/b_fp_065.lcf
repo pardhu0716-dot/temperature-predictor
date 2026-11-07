@@ -1,0 +1,17 @@
+# Silicon: original assumptions
+0
+Y
+Y
+1.75e6
+0.01
+0.00015
+b_fp_065_layer_0.flp
+
+# TIM
+1
+Y
+N
+4e6
+0.25
+2.0e-05
+b_fp_065_tim.flp

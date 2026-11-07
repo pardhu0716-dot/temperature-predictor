@@ -1,1 +1,4 @@
 __pycache__/
+simulation_results/
+.preparing-*/
+.test-dataset-*/

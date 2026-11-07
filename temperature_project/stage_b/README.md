@@ -1,3 +1,14 @@
+# Stage B dataset preparation
+
+The expanded input dataset and WSL simulation runner are documented in
+[DATASET_PREPARATION.md](DATASET_PREPARATION.md). The new dataset contains 77
+additional layouts and 1,540 power configurations. No temperature labels or ML
+models were produced during preparation.
+
+The following is the historical five-floorplan pilot report; its stopping limit
+applies to the original pilot generator. The new preparation script reuses the
+geometry functions without regenerating that pilot.
+
 # Stage B: five-floorplan geometry pilot
 
 This directory contains only new files. Source: repository commit

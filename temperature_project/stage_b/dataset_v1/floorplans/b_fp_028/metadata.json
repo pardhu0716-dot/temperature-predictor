@@ -1,0 +1,35 @@
+{
+  "attempts": 1,
+  "big_cores": [
+    "Core_1_L0",
+    "Core_2_L0"
+  ],
+  "die_um": [
+    15474,
+    12831
+  ],
+  "fill_count": 25,
+  "geometry_seed": 20261130,
+  "id": "b_fp_028",
+  "input_sha256": {
+    "floorplans/b_fp_028/b_fp_028.lcf": "9a21e5a9429a80f2fbeb64cde2fb9ce66c09d6504a733c671aa873460ab04da8",
+    "floorplans/b_fp_028/b_fp_028_layer_0.flp": "82af73cf06fa43a717546c26432f23f499c9d7a2e64739dc7787d8a7c5625ccf",
+    "floorplans/b_fp_028/b_fp_028_tim.flp": "1ce90163bcc369da30f652bc11a2c1842d79218a1bed69bf12debc9f19ee8308"
+  },
+  "lcf": "floorplans/b_fp_028/b_fp_028.lcf",
+  "little_cores": [
+    "Core_0_L0",
+    "Core_3_L0",
+    "Core_4_L0",
+    "Core_5_L0",
+    "Core_6_L0",
+    "Core_7_L0"
+  ],
+  "nearest_descriptor_rms_um": 942.0709531262519,
+  "power_seed": 10802208625389264086,
+  "silicon": "floorplans/b_fp_028/b_fp_028_layer_0.flp",
+  "source_sha256": "0064456e9a8c2737b1347477dc7d87424327cc7c3bc5bc4c22bf8b3f44de7237",
+  "source_template": "dataset/Sample_dataset/2D_floorplans/Style_3/fp_002/fp_002_layer_0.flp",
+  "style_family": "Style_3",
+  "whitespace_fraction": 0.7179507628056876
+}

@@ -12,6 +12,7 @@ Covers:
 - HotSpot simulation execution and consistency against corrected reference
 """
 import math
+import os
 from pathlib import Path
 import subprocess
 import tempfile
@@ -322,6 +323,8 @@ class TestStageBPowerTraceGeneration(unittest.TestCase):
         for t1, t2 in zip(traces, traces_repeat):
             self.assertEqual(t1.powers, t2.powers)
 
+    @unittest.skipUnless(os.environ.get("STAGE_B_RUN_HOTSPOT_TESTS") == "1",
+                         "Real HotSpot integration is opt-in; preparation tests never simulate")
     def test_hotspot_simulation_match(self):
         """Run HotSpot with freshly generated reference traces and verify physical temperature ranges."""
         if not HOTSPOT.is_file() or not CONFIG.is_file():
