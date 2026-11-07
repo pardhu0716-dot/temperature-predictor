@@ -1,0 +1,248 @@
+{
+  "id": "b_fp_001",
+  "style_family": "Style_1",
+  "source_template": "Style_1/fp_003/fp_003_layer_0.flp",
+  "source_sha256": "9b5a0c20ebb2414d2214bb5c9689c55beda011b5b6a6d43884bcdfd9f3156e0c",
+  "seed": 20261107,
+  "die_um": [
+    17466,
+    8423
+  ],
+  "whitespace_fraction": 0.6193483028147875,
+  "fill_blocks": 22,
+  "nearest_descriptor_rms_um": 934.0068127057112,
+  "attempts": 1,
+  "blocks_um": [
+    {
+      "name": "Core_0_L0",
+      "w": 4000,
+      "h": 4000,
+      "x": 7310,
+      "y": 1954
+    },
+    {
+      "name": "Core_1_L0",
+      "w": 4000,
+      "h": 4000,
+      "x": 12627,
+      "y": 2511
+    },
+    {
+      "name": "Core_2_L0",
+      "w": 2000,
+      "h": 2000,
+      "x": 39,
+      "y": 1899
+    },
+    {
+      "name": "Core_3_L0",
+      "w": 2000,
+      "h": 2000,
+      "x": 2101,
+      "y": 348
+    },
+    {
+      "name": "Core_4_L0",
+      "w": 2000,
+      "h": 2000,
+      "x": 322,
+      "y": 4164
+    },
+    {
+      "name": "Core_5_L0",
+      "w": 2000,
+      "h": 2000,
+      "x": 3103,
+      "y": 4183
+    },
+    {
+      "name": "Core_6_L0",
+      "w": 2000,
+      "h": 2000,
+      "x": 0,
+      "y": 6388
+    },
+    {
+      "name": "Core_7_L0",
+      "w": 2000,
+      "h": 2000,
+      "x": 2338,
+      "y": 6388
+    },
+    {
+      "name": "FILL_0_L0",
+      "w": 17466,
+      "h": 348,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "name": "FILL_1_L0",
+      "w": 2101,
+      "h": 1551,
+      "x": 0,
+      "y": 348
+    },
+    {
+      "name": "FILL_2_L0",
+      "w": 13365,
+      "h": 1606,
+      "x": 4101,
+      "y": 348
+    },
+    {
+      "name": "FILL_3_L0",
+      "w": 39,
+      "h": 2000,
+      "x": 0,
+      "y": 1899
+    },
+    {
+      "name": "FILL_4_L0",
+      "w": 62,
+      "h": 449,
+      "x": 2039,
+      "y": 1899
+    },
+    {
+      "name": "FILL_5_L0",
+      "w": 3209,
+      "h": 394,
+      "x": 4101,
+      "y": 1954
+    },
+    {
+      "name": "FILL_6_L0",
+      "w": 6156,
+      "h": 557,
+      "x": 11310,
+      "y": 1954
+    },
+    {
+      "name": "FILL_7_L0",
+      "w": 5271,
+      "h": 1551,
+      "x": 2039,
+      "y": 2348
+    },
+    {
+      "name": "FILL_8_L0",
+      "w": 1317,
+      "h": 3443,
+      "x": 11310,
+      "y": 2511
+    },
+    {
+      "name": "FILL_9_L0",
+      "w": 839,
+      "h": 4000,
+      "x": 16627,
+      "y": 2511
+    },
+    {
+      "name": "FILL_10_L0",
+      "w": 7310,
+      "h": 265,
+      "x": 0,
+      "y": 3899
+    },
+    {
+      "name": "FILL_11_L0",
+      "w": 322,
+      "h": 2000,
+      "x": 0,
+      "y": 4164
+    },
+    {
+      "name": "FILL_12_L0",
+      "w": 4988,
+      "h": 19,
+      "x": 2322,
+      "y": 4164
+    },
+    {
+      "name": "FILL_13_L0",
+      "w": 781,
+      "h": 1981,
+      "x": 2322,
+      "y": 4183
+    },
+    {
+      "name": "FILL_14_L0",
+      "w": 2207,
+      "h": 1771,
+      "x": 5103,
+      "y": 4183
+    },
+    {
+      "name": "FILL_15_L0",
+      "w": 7524,
+      "h": 229,
+      "x": 5103,
+      "y": 5954
+    },
+    {
+      "name": "FILL_16_L0",
+      "w": 3103,
+      "h": 19,
+      "x": 0,
+      "y": 6164
+    },
+    {
+      "name": "FILL_17_L0",
+      "w": 12627,
+      "h": 205,
+      "x": 0,
+      "y": 6183
+    },
+    {
+      "name": "FILL_18_L0",
+      "w": 338,
+      "h": 2000,
+      "x": 2000,
+      "y": 6388
+    },
+    {
+      "name": "FILL_19_L0",
+      "w": 8289,
+      "h": 123,
+      "x": 4338,
+      "y": 6388
+    },
+    {
+      "name": "FILL_20_L0",
+      "w": 13128,
+      "h": 1877,
+      "x": 4338,
+      "y": 6511
+    },
+    {
+      "name": "FILL_21_L0",
+      "w": 17466,
+      "h": 35,
+      "x": 0,
+      "y": 8388
+    }
+  ],
+  "validation": "PASS: bounds, non-overlap, full coverage, core dimensions/count, file roundtrip",
+  "hotspot_runtime": "NOT RUN",
+  "parameters": {
+    "source": "/workspace/work/temperature-predictor/temperature_project/dataset/Sample_dataset/2D_floorplans",
+    "output": "/workspace/work/temperature-predictor/temperature_project/stage_b/pilot",
+    "count": 5,
+    "seed": 20261107,
+    "styles": [
+      "Style_1",
+      "Style_2",
+      "Style_3",
+      "Style_4"
+    ],
+    "die_um": null,
+    "spacing_um": 400,
+    "margin_um": 800,
+    "jitter_um": 600,
+    "min_gap_um": 0,
+    "min_distance_um": 150,
+    "positions_json": null
+  }
+}

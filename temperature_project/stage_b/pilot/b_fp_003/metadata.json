@@ -1,0 +1,269 @@
+{
+  "id": "b_fp_003",
+  "style_family": "Style_3",
+  "source_template": "Style_3/fp_001/fp_001_layer_0.flp",
+  "source_sha256": "13986b9b3022ed5bccfd302bab93dfc03b82cdcdb893f7ba7ffcff0b07fb1b03",
+  "seed": 20261107,
+  "die_um": [
+    8031,
+    16422
+  ],
+  "whitespace_fraction": 0.5753879123341638,
+  "fill_blocks": 25,
+  "nearest_descriptor_rms_um": 891.1123917629183,
+  "attempts": 1,
+  "blocks_um": [
+    {
+      "name": "Core_0_L0",
+      "w": 4000,
+      "h": 4000,
+      "x": 72,
+      "y": 771
+    },
+    {
+      "name": "Core_2_L0",
+      "w": 2000,
+      "h": 2000,
+      "x": 1617,
+      "y": 5693
+    },
+    {
+      "name": "Core_1_L0",
+      "w": 4000,
+      "h": 4000,
+      "x": 559,
+      "y": 8088
+    },
+    {
+      "name": "Core_3_L0",
+      "w": 2000,
+      "h": 2000,
+      "x": 4450,
+      "y": 339
+    },
+    {
+      "name": "Core_4_L0",
+      "w": 2000,
+      "h": 2000,
+      "x": 5436,
+      "y": 3304
+    },
+    {
+      "name": "Core_5_L0",
+      "w": 2000,
+      "h": 2000,
+      "x": 5156,
+      "y": 7751
+    },
+    {
+      "name": "Core_6_L0",
+      "w": 2000,
+      "h": 2000,
+      "x": 5922,
+      "y": 11110
+    },
+    {
+      "name": "Core_7_L0",
+      "w": 2000,
+      "h": 2000,
+      "x": 4431,
+      "y": 13892
+    },
+    {
+      "name": "FILL_0_L0",
+      "w": 8031,
+      "h": 339,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "name": "FILL_1_L0",
+      "w": 4450,
+      "h": 432,
+      "x": 0,
+      "y": 339
+    },
+    {
+      "name": "FILL_2_L0",
+      "w": 1581,
+      "h": 2000,
+      "x": 6450,
+      "y": 339
+    },
+    {
+      "name": "FILL_3_L0",
+      "w": 72,
+      "h": 4000,
+      "x": 0,
+      "y": 771
+    },
+    {
+      "name": "FILL_4_L0",
+      "w": 378,
+      "h": 1568,
+      "x": 4072,
+      "y": 771
+    },
+    {
+      "name": "FILL_5_L0",
+      "w": 3959,
+      "h": 965,
+      "x": 4072,
+      "y": 2339
+    },
+    {
+      "name": "FILL_6_L0",
+      "w": 1364,
+      "h": 1467,
+      "x": 4072,
+      "y": 3304
+    },
+    {
+      "name": "FILL_7_L0",
+      "w": 595,
+      "h": 2000,
+      "x": 7436,
+      "y": 3304
+    },
+    {
+      "name": "FILL_8_L0",
+      "w": 5436,
+      "h": 533,
+      "x": 0,
+      "y": 4771
+    },
+    {
+      "name": "FILL_9_L0",
+      "w": 8031,
+      "h": 389,
+      "x": 0,
+      "y": 5304
+    },
+    {
+      "name": "FILL_10_L0",
+      "w": 1617,
+      "h": 2000,
+      "x": 0,
+      "y": 5693
+    },
+    {
+      "name": "FILL_11_L0",
+      "w": 4414,
+      "h": 2000,
+      "x": 3617,
+      "y": 5693
+    },
+    {
+      "name": "FILL_12_L0",
+      "w": 8031,
+      "h": 58,
+      "x": 0,
+      "y": 7693
+    },
+    {
+      "name": "FILL_13_L0",
+      "w": 5156,
+      "h": 337,
+      "x": 0,
+      "y": 7751
+    },
+    {
+      "name": "FILL_14_L0",
+      "w": 875,
+      "h": 2000,
+      "x": 7156,
+      "y": 7751
+    },
+    {
+      "name": "FILL_15_L0",
+      "w": 559,
+      "h": 4000,
+      "x": 0,
+      "y": 8088
+    },
+    {
+      "name": "FILL_16_L0",
+      "w": 597,
+      "h": 1663,
+      "x": 4559,
+      "y": 8088
+    },
+    {
+      "name": "FILL_17_L0",
+      "w": 3472,
+      "h": 1359,
+      "x": 4559,
+      "y": 9751
+    },
+    {
+      "name": "FILL_18_L0",
+      "w": 1363,
+      "h": 978,
+      "x": 4559,
+      "y": 11110
+    },
+    {
+      "name": "FILL_19_L0",
+      "w": 109,
+      "h": 2000,
+      "x": 7922,
+      "y": 11110
+    },
+    {
+      "name": "FILL_20_L0",
+      "w": 5922,
+      "h": 1022,
+      "x": 0,
+      "y": 12088
+    },
+    {
+      "name": "FILL_21_L0",
+      "w": 8031,
+      "h": 782,
+      "x": 0,
+      "y": 13110
+    },
+    {
+      "name": "FILL_22_L0",
+      "w": 4431,
+      "h": 2000,
+      "x": 0,
+      "y": 13892
+    },
+    {
+      "name": "FILL_23_L0",
+      "w": 1600,
+      "h": 2000,
+      "x": 6431,
+      "y": 13892
+    },
+    {
+      "name": "FILL_24_L0",
+      "w": 8031,
+      "h": 530,
+      "x": 0,
+      "y": 15892
+    }
+  ],
+  "validation": "PASS: bounds, non-overlap, full coverage, core dimensions/count, file roundtrip",
+  "hotspot_runtime": "NOT RUN",
+  "parameters": {
+    "source": "/workspace/work/temperature-predictor/temperature_project/dataset/Sample_dataset/2D_floorplans",
+    "output": "/workspace/work/temperature-predictor/temperature_project/stage_b/pilot",
+    "count": 5,
+    "seed": 20261107,
+    "styles": [
+      "Style_1",
+      "Style_2",
+      "Style_3",
+      "Style_4"
+    ],
+    "die_um": null,
+    "spacing_um": 400,
+    "margin_um": 800,
+    "jitter_um": 600,
+    "min_gap_um": 0,
+    "min_distance_um": 150,
+    "positions_json": null
+  }
+}

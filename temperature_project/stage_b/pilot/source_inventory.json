@@ -1,0 +1,186 @@
+[
+  {
+    "path": "/workspace/work/temperature-predictor/temperature_project/dataset/Sample_dataset/2D_floorplans/Style_1/fp_001/fp_001_layer_0.flp",
+    "style": "Style_1",
+    "width": 9000,
+    "height": 10000,
+    "fills": 3,
+    "whitespace": 0.37777777777777777
+  },
+  {
+    "path": "/workspace/work/temperature-predictor/temperature_project/dataset/Sample_dataset/2D_floorplans/Style_1/fp_002/fp_002_layer_0.flp",
+    "style": "Style_1",
+    "width": 9000,
+    "height": 11000,
+    "fills": 3,
+    "whitespace": 0.43434343434343436
+  },
+  {
+    "path": "/workspace/work/temperature-predictor/temperature_project/dataset/Sample_dataset/2D_floorplans/Style_1/fp_003/fp_003_layer_0.flp",
+    "style": "Style_1",
+    "width": 16000,
+    "height": 8000,
+    "fills": 3,
+    "whitespace": 0.5625
+  },
+  {
+    "path": "/workspace/work/temperature-predictor/temperature_project/dataset/Sample_dataset/2D_floorplans/Style_2/fp_001/fp_001_layer_0.flp",
+    "style": "Style_2",
+    "width": 10000,
+    "height": 8000,
+    "fills": 2,
+    "whitespace": 0.30000000000000004
+  },
+  {
+    "path": "/workspace/work/temperature-predictor/temperature_project/dataset/Sample_dataset/2D_floorplans/Style_2/fp_002/fp_002_layer_0.flp",
+    "style": "Style_2",
+    "width": 9000,
+    "height": 10000,
+    "fills": 4,
+    "whitespace": 0.37777777777777777
+  },
+  {
+    "path": "/workspace/work/temperature-predictor/temperature_project/dataset/Sample_dataset/2D_floorplans/Style_2/fp_003/fp_003_layer_0.flp",
+    "style": "Style_2",
+    "width": 12000,
+    "height": 6000,
+    "fills": 1,
+    "whitespace": 0.2222222222222222
+  },
+  {
+    "path": "/workspace/work/temperature-predictor/temperature_project/dataset/Sample_dataset/2D_floorplans/Style_2/fp_004/fp_004_layer_0.flp",
+    "style": "Style_2",
+    "width": 10000,
+    "height": 6000,
+    "fills": 1,
+    "whitespace": 0.06666666666666665
+  },
+  {
+    "path": "/workspace/work/temperature-predictor/temperature_project/dataset/Sample_dataset/2D_floorplans/Style_2/fp_005/fp_005_layer_0.flp",
+    "style": "Style_2",
+    "width": 10000,
+    "height": 6000,
+    "fills": 1,
+    "whitespace": 0.06666666666666665
+  },
+  {
+    "path": "/workspace/work/temperature-predictor/temperature_project/dataset/Sample_dataset/2D_floorplans/Style_3/fp_001/fp_001_layer_0.flp",
+    "style": "Style_3",
+    "width": 7000,
+    "height": 14000,
+    "fills": 9,
+    "whitespace": 0.4285714285714286
+  },
+  {
+    "path": "/workspace/work/temperature-predictor/temperature_project/dataset/Sample_dataset/2D_floorplans/Style_3/fp_002/fp_002_layer_0.flp",
+    "style": "Style_3",
+    "width": 13000,
+    "height": 12000,
+    "fills": 12,
+    "whitespace": 0.641025641025641
+  },
+  {
+    "path": "/workspace/work/temperature-predictor/temperature_project/dataset/Sample_dataset/2D_floorplans/Style_3/fp_003/fp_003_layer_0.flp",
+    "style": "Style_3",
+    "width": 14000,
+    "height": 6000,
+    "fills": 3,
+    "whitespace": 0.33333333333333337
+  },
+  {
+    "path": "/workspace/work/temperature-predictor/temperature_project/dataset/Sample_dataset/2D_floorplans/Style_3/fp_004/fp_004_layer_0.flp",
+    "style": "Style_3",
+    "width": 6000,
+    "height": 14000,
+    "fills": 3,
+    "whitespace": 0.33333333333333337
+  },
+  {
+    "path": "/workspace/work/temperature-predictor/temperature_project/dataset/Sample_dataset/2D_floorplans/Style_3/fp_005/fp_005_layer_0.flp",
+    "style": "Style_3",
+    "width": 14000,
+    "height": 6000,
+    "fills": 3,
+    "whitespace": 0.33333333333333337
+  },
+  {
+    "path": "/workspace/work/temperature-predictor/temperature_project/dataset/Sample_dataset/2D_floorplans/Style_4/fp_001/fp_001_layer_0.flp",
+    "style": "Style_4",
+    "width": 14000,
+    "height": 14000,
+    "fills": 17,
+    "whitespace": 0.7142857142857143
+  },
+  {
+    "path": "/workspace/work/temperature-predictor/temperature_project/dataset/Sample_dataset/2D_floorplans/Style_4/fp_002/fp_002_layer_0.flp",
+    "style": "Style_4",
+    "width": 14000,
+    "height": 14000,
+    "fills": 12,
+    "whitespace": 0.7142857142857143
+  },
+  {
+    "path": "/workspace/work/temperature-predictor/temperature_project/dataset/Sample_dataset/2D_floorplans/Style_4/fp_003/fp_003_layer_0.flp",
+    "style": "Style_4",
+    "width": 14000,
+    "height": 14000,
+    "fills": 16,
+    "whitespace": 0.7142857142857143
+  },
+  {
+    "path": "/workspace/work/temperature-predictor/temperature_project/dataset/Sample_dataset/2D_floorplans/Style_4/fp_004/fp_004_layer_0.flp",
+    "style": "Style_4",
+    "width": 14000,
+    "height": 14000,
+    "fills": 16,
+    "whitespace": 0.7142857142857143
+  },
+  {
+    "path": "/workspace/work/temperature-predictor/temperature_project/dataset/Sample_dataset/2D_floorplans/Style_4/fp_005/fp_005_layer_0.flp",
+    "style": "Style_4",
+    "width": 14000,
+    "height": 14000,
+    "fills": 14,
+    "whitespace": 0.7142857142857143
+  },
+  {
+    "path": "/workspace/work/temperature-predictor/temperature_project/dataset/Sample_dataset/2D_floorplans/Style_4/fp_006/fp_006_layer_0.flp",
+    "style": "Style_4",
+    "width": 14000,
+    "height": 14000,
+    "fills": 16,
+    "whitespace": 0.7142857142857143
+  },
+  {
+    "path": "/workspace/work/temperature-predictor/temperature_project/dataset/Sample_dataset/2D_floorplans/Style_4/fp_007/fp_007_layer_0.flp",
+    "style": "Style_4",
+    "width": 14000,
+    "height": 14000,
+    "fills": 10,
+    "whitespace": 0.7142857142857143
+  },
+  {
+    "path": "/workspace/work/temperature-predictor/temperature_project/dataset/Sample_dataset/2D_floorplans/Style_4/fp_008/fp_008_layer_0.flp",
+    "style": "Style_4",
+    "width": 14000,
+    "height": 14000,
+    "fills": 16,
+    "whitespace": 0.7142857142857143
+  },
+  {
+    "path": "/workspace/work/temperature-predictor/temperature_project/dataset/Sample_dataset/2D_floorplans/Style_4/fp_009/fp_009_layer_0.flp",
+    "style": "Style_4",
+    "width": 14000,
+    "height": 14000,
+    "fills": 13,
+    "whitespace": 0.7142857142857143
+  },
+  {
+    "path": "/workspace/work/temperature-predictor/temperature_project/dataset/Sample_dataset/2D_floorplans/Style_4/fp_010/fp_010_layer_0.flp",
+    "style": "Style_4",
+    "width": 14000,
+    "height": 14000,
+    "fills": 11,
+    "whitespace": 0.7142857142857143
+  }
+]

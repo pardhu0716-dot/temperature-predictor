@@ -1,0 +1,234 @@
+{
+  "id": "b_fp_002",
+  "style_family": "Style_2",
+  "source_template": "Style_2/fp_003/fp_003_layer_0.flp",
+  "source_sha256": "f7be80502d7339b579bd2c78f0ea68d68280157fd0aa0a556389fdb68980ef52",
+  "seed": 20261107,
+  "die_um": [
+    13287,
+    6278
+  ],
+  "whitespace_fraction": 0.32866424108261716,
+  "fill_blocks": 20,
+  "nearest_descriptor_rms_um": 553.523233107375,
+  "attempts": 1,
+  "blocks_um": [
+    {
+      "name": "Core_0_L0",
+      "w": 2000,
+      "h": 2000,
+      "x": 122,
+      "y": 101
+    },
+    {
+      "name": "Core_1_L0",
+      "w": 2000,
+      "h": 2000,
+      "x": 2218,
+      "y": 0
+    },
+    {
+      "name": "Core_2_L0",
+      "w": 2000,
+      "h": 2000,
+      "x": 4436,
+      "y": 0
+    },
+    {
+      "name": "Core_3_L0",
+      "w": 2000,
+      "h": 2000,
+      "x": 6654,
+      "y": 0
+    },
+    {
+      "name": "Core_4_L0",
+      "w": 2000,
+      "h": 2000,
+      "x": 8980,
+      "y": 132
+    },
+    {
+      "name": "Core_5_L0",
+      "w": 2000,
+      "h": 2000,
+      "x": 11064,
+      "y": 52
+    },
+    {
+      "name": "Core_6_L0",
+      "w": 4000,
+      "h": 4000,
+      "x": 157,
+      "y": 2137
+    },
+    {
+      "name": "Core_7_L0",
+      "w": 4000,
+      "h": 4000,
+      "x": 4162,
+      "y": 2125
+    },
+    {
+      "name": "FILL_0_L0",
+      "w": 2218,
+      "h": 101,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "name": "FILL_1_L0",
+      "w": 218,
+      "h": 2000,
+      "x": 4218,
+      "y": 0
+    },
+    {
+      "name": "FILL_2_L0",
+      "w": 218,
+      "h": 2000,
+      "x": 6436,
+      "y": 0
+    },
+    {
+      "name": "FILL_3_L0",
+      "w": 4633,
+      "h": 52,
+      "x": 8654,
+      "y": 0
+    },
+    {
+      "name": "FILL_4_L0",
+      "w": 2410,
+      "h": 80,
+      "x": 8654,
+      "y": 52
+    },
+    {
+      "name": "FILL_5_L0",
+      "w": 223,
+      "h": 2000,
+      "x": 13064,
+      "y": 52
+    },
+    {
+      "name": "FILL_6_L0",
+      "w": 122,
+      "h": 2000,
+      "x": 0,
+      "y": 101
+    },
+    {
+      "name": "FILL_7_L0",
+      "w": 96,
+      "h": 1899,
+      "x": 2122,
+      "y": 101
+    },
+    {
+      "name": "FILL_8_L0",
+      "w": 326,
+      "h": 1868,
+      "x": 8654,
+      "y": 132
+    },
+    {
+      "name": "FILL_9_L0",
+      "w": 84,
+      "h": 1920,
+      "x": 10980,
+      "y": 132
+    },
+    {
+      "name": "FILL_10_L0",
+      "w": 6858,
+      "h": 101,
+      "x": 2122,
+      "y": 2000
+    },
+    {
+      "name": "FILL_11_L0",
+      "w": 2307,
+      "h": 80,
+      "x": 10980,
+      "y": 2052
+    },
+    {
+      "name": "FILL_12_L0",
+      "w": 8980,
+      "h": 24,
+      "x": 0,
+      "y": 2101
+    },
+    {
+      "name": "FILL_13_L0",
+      "w": 4162,
+      "h": 12,
+      "x": 0,
+      "y": 2125
+    },
+    {
+      "name": "FILL_14_L0",
+      "w": 818,
+      "h": 7,
+      "x": 8162,
+      "y": 2125
+    },
+    {
+      "name": "FILL_15_L0",
+      "w": 5125,
+      "h": 3993,
+      "x": 8162,
+      "y": 2132
+    },
+    {
+      "name": "FILL_16_L0",
+      "w": 157,
+      "h": 4000,
+      "x": 0,
+      "y": 2137
+    },
+    {
+      "name": "FILL_17_L0",
+      "w": 5,
+      "h": 3988,
+      "x": 4157,
+      "y": 2137
+    },
+    {
+      "name": "FILL_18_L0",
+      "w": 9130,
+      "h": 12,
+      "x": 4157,
+      "y": 6125
+    },
+    {
+      "name": "FILL_19_L0",
+      "w": 13287,
+      "h": 141,
+      "x": 0,
+      "y": 6137
+    }
+  ],
+  "validation": "PASS: bounds, non-overlap, full coverage, core dimensions/count, file roundtrip",
+  "hotspot_runtime": "NOT RUN",
+  "parameters": {
+    "source": "/workspace/work/temperature-predictor/temperature_project/dataset/Sample_dataset/2D_floorplans",
+    "output": "/workspace/work/temperature-predictor/temperature_project/stage_b/pilot",
+    "count": 5,
+    "seed": 20261107,
+    "styles": [
+      "Style_1",
+      "Style_2",
+      "Style_3",
+      "Style_4"
+    ],
+    "die_um": null,
+    "spacing_um": 400,
+    "margin_um": 800,
+    "jitter_um": 600,
+    "min_gap_um": 0,
+    "min_distance_um": 150,
+    "positions_json": null
+  }
+}

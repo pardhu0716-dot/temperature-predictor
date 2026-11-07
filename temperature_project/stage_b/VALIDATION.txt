@@ -1,0 +1,67 @@
+test_diversity_invariance (test_generate_floorplans.GeometryTests.test_diversity_invariance) ... ok
+test_fill_and_roundtrip (test_generate_floorplans.GeometryTests.test_fill_and_roundtrip) ... ok
+test_invalid_geometries (test_generate_floorplans.GeometryTests.test_invalid_geometries) ... ok
+test_malformed_file (test_generate_floorplans.GeometryTests.test_malformed_file) ... ok
+test_original_catalog (test_generate_floorplans.GeometryTests.test_original_catalog) ... ok
+test_pilot (test_generate_floorplans.GeometryTests.test_pilot) ... ok
+test_reproducible_and_safe_output (test_generate_floorplans.GeometryTests.test_reproducible_and_safe_output) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.070s
+
+OK
+[
+  {
+    "id": "b_fp_001",
+    "style": "Style_1",
+    "die_um": [
+      17466,
+      8423
+    ],
+    "fills": 22,
+    "nearest_um": 934.01
+  },
+  {
+    "id": "b_fp_002",
+    "style": "Style_2",
+    "die_um": [
+      13287,
+      6278
+    ],
+    "fills": 20,
+    "nearest_um": 553.52
+  },
+  {
+    "id": "b_fp_003",
+    "style": "Style_3",
+    "die_um": [
+      8031,
+      16422
+    ],
+    "fills": 25,
+    "nearest_um": 891.11
+  },
+  {
+    "id": "b_fp_004",
+    "style": "Style_4",
+    "die_um": [
+      15556,
+      14670
+    ],
+    "fills": 25,
+    "nearest_um": 682.96
+  },
+  {
+    "id": "b_fp_005",
+    "style": "Style_1",
+    "die_um": [
+      10076,
+      10700
+    ],
+    "fills": 25,
+    "nearest_um": 841.01
+  }
+]
+
+All 1338 original tracked files verified unchanged against HEAD.
+No commits, pushes, simulations, or training performed.
