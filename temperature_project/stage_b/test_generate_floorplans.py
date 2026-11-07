@@ -85,7 +85,7 @@ class GeometryTests(unittest.TestCase):
             args=parser().parse_args(['--output',str(out)])
             generate(args)
             for source in (HERE/'pilot').glob('b_fp_*/*'):
-                if source.suffix in ('.flp','.lcf','.ptrace'):
+                if source.suffix in ('.flp','.lcf') or source.name.endswith('_zero.ptrace'):
                     self.assertEqual(source.read_bytes(),(out/source.parent.name/source.name).read_bytes())
             with self.assertRaises(FileExistsError):generate(args)
         args=parser().parse_args(['--output',str(SOURCE/'do_not_write')])
