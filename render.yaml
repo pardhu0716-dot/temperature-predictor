@@ -1,0 +1,23 @@
+# Local preparation only: committing, pushing and public service creation need approval.
+services:
+  - type: web
+    name: lightweight-temperature-predictor-stage-a
+    runtime: python
+    repo: https://github.com/pardhu0716-dot/temperature-predictor
+    branch: stage-a-render-additive
+    plan: free
+    buildCommand: pip install -r deployment/requirements.txt && python deployment/check_assets.py
+    startCommand: gunicorn --config deployment/gunicorn.conf.py wsgi:app
+    healthCheckPath: /healthz
+    autoDeployTrigger: "off"
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.14
+      - key: PYTHONUNBUFFERED
+        value: "1"
+      - key: PYTHONDONTWRITEBYTECODE
+        value: "1"
+      - key: OPENBLAS_NUM_THREADS
+        value: "1"
+      - key: OMP_NUM_THREADS
+        value: "1"
