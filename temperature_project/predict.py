@@ -181,7 +181,7 @@ def locate_and_load_thermal_matrix(
       - col_core_names: list of core names in exact matrix column order
       - R_rows: N x N nested float list
       - csv_size_bytes: file size on disk in bytes
-      - raw_float64_bytes: in-memory raw float64 size (N * N * 8 bytes)
+      - raw_float64_bytes: raw float64 parameter storage size (N * N * 8 bytes)
     """
     gen_dir = os.path.join(fp_dir, "generated_samples")
     expected_name = f"thermal_matrix_{fp_id.replace('_', '')}.csv"
@@ -696,8 +696,20 @@ def main() -> None:
     print(f"  Total Active Core Power    : {total_power_w:.2f} W (Ambient: {AMBIENT_TEMP_C:.2f} °C / {AMBIENT_TEMP_K:.2f} K)")
     print(f"  Maximum Predicted Temp     : {max_temp_c:.2f} °C ({max_temp_c:.6f} °C | {max_temp_k:.6f} K)")
     print(f"  Hottest Core               : {hottest_core} ({hottest_type})")
+    num_params_per_fp = num_cores * num_cores
+    total_fps = len(catalog)
+    total_params_all_fps = total_fps * num_params_per_fp
+    total_raw_bytes_all_fps = total_fps * raw_float64_bytes
+    total_csv_bytes_all_fps = total_fps * csv_size_bytes
     print(f"  Prediction Time            : {pred_time_us:.3f} us")
-    print(f"  Loaded Model Size          : {csv_size_bytes} bytes (CSV on disk) / {raw_float64_bytes} bytes (raw float64 in memory)")
+    print(
+        f"  Model Size (Per Floorplan) : {num_params_per_fp} parameters (8x8), "
+        f"{raw_float64_bytes} B raw float64 / {csv_size_bytes} B CSV on disk"
+    )
+    print(
+        f"  Model Size (All 23 FPs)    : {total_params_all_fps:,} parameters (23x8x8), "
+        f"{total_raw_bytes_all_fps:,} B raw float64 / {total_csv_bytes_all_fps:,} B CSV on disk"
+    )
     print("=" * 86)
 
 

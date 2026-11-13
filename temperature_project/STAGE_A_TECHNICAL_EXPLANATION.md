@@ -231,7 +231,7 @@ Our measured validation RMSE (`0.003032 K`) and MAE (`0.002598 K`) match the the
 
 ---
 
-## 8. Runtime Latency & Memory Footprint
+## 8. Runtime Latency & Model Parameter Storage Size
 
 ### Inference Latency Comparison
 
@@ -243,12 +243,16 @@ Our measured validation RMSE (`0.003032 K`) and MAE (`0.002598 K`) match the the
 | **Python Standard Library** | Pure Python list comprehension (no NumPy) | `~17.5 µs` | $104,125\times$ faster |
 | **Pure NumPy (`R @ P`)** | In-memory BLAS matrix-vector product | **`~2.01 µs`** | **`906,277× faster`** |
 
-### Memory Footprint
-- An $8 \times 8$ matrix of 64-bit IEEE 754 floating point numbers occupies:
-  $$8 \times 8 \times 8\text{ bytes} = \mathbf{512\text{ bytes}}$$
-- All 23 calibrated floorplan matrices take:
-  $$23 \times 512\text{ bytes} = 11,776\text{ bytes} = \mathbf{11.50\text{ KiB}}$$
-- Standard modern L1 data caches are 32 KiB to 48 KiB per core. The entire 23-floorplan model library fits comfortably inside a single CPU L1 data cache, guaranteeing near-zero cache miss latency during OS scheduling operations.
+### Model Size (Parameter Storage — Not Runtime RAM)
+- **Model Size** measures the storage occupied by the calibrated model parameters required for prediction ($T = T_{\text{ambient}} + R \times P$), rather than runtime RAM usage.
+- **Per-Floorplan Model Size**: Each floorplan's $8 \times 8$ thermal resistance matrix $R$ contains **$64$ parameters** (64-bit IEEE 754 `float64` numbers):
+  - **Raw `float64` parameter storage**: $8 \times 8 \times 8\text{ bytes} = \mathbf{512\text{ B}}$
+  - **Serialized CSV file on disk (`thermal_matrix_fpXXX.csv`)**: $\mathbf{771\text{ B}}$
+  - **Serialized NumPy `.npy` binary**: $640\text{ B}$ (`512 B` payload + `128 B` header)
+- **Total Stored Model Size Across All 23 Floorplans**: Across all 23 calibrated floorplans, the total parameter count is $23 \times 64 = \mathbf{1,472\text{ parameters}}$:
+  - **Raw `float64` parameter storage**: $23 \times 512\text{ B} = \mathbf{11,776\text{ B}}$ ($\mathbf{11.50\text{ KiB}}$)
+  - **Serialized CSV files on disk**: $23 \times 771\text{ B} = \mathbf{17,733\text{ B}}$ ($\mathbf{17.32\text{ KiB}}$)
+  - **Serialized NumPy `.npy` binaries**: $23 \times 640\text{ B} = 14,720\text{ B}$ ($14.38\text{ KiB}$)
 
 ---
 
@@ -257,4 +261,4 @@ Our measured validation RMSE (`0.003032 K`) and MAE (`0.002598 K`) match the the
 1. **Physical Soundness**: Heat conduction in silicon under steady-state conditions is linear. A calibrated matrix $R$ is an exact physical reduction of the finite-difference conductance equations.
 2. **Extreme Speedup**: Computing $T = 45 + R \times P$ takes $2.01\text{ µs}$, enabling real-time OS thread placement and DVFS decisions ($>900,000\times$ faster than HotSpot).
 3. **Provable Accuracy**: The model predicts HotSpot temperatures with $<0.008^\circ\text{C}$ worst-case error, matching the theoretical precision floor of HotSpot's output files.
-4. **Negligible Footprint**: $512\text{ bytes}$ per floorplan allows the model to reside in L1 CPU cache without consuming RAM.
+4. **Compact Parameter Storage**: Each floorplan requires only $64$ parameters ($512\text{ B}$ raw `float64`, $771\text{ B}$ CSV on disk), and all 23 floorplan models require only $1,472$ parameters ($11,776\text{ B} = 11.50\text{ KiB}$ raw `float64`, $17,733\text{ B} = 17.32\text{ KiB}$ CSV on disk).

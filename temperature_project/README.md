@@ -43,7 +43,7 @@ $$T_{\text{predicted}} = 45.0^\circ\text{C} + R \times P$$
 Key achievements:
 - **Accuracy**: Pooled validation RMSE of **0.003032 °C** and MAE of **0.002598 °C** across 460 unseen test configurations (3,680 core comparisons), matching HotSpot's 2-decimal output rounding quantization floor.
 - **Inference Speed**: **2.01 µs** median inference time via NumPy, achieving a **906,277× speedup** over HotSpot.
-- **Compactness**: Just **512 bytes** (raw float64) per floorplan, allowing all 23 floorplan models to fit in **11.5 KiB**—smaller than a single L1 data cache.
+- **Compactness**: Just **64 parameters (`512 B` raw `float64` / `771 B` CSV)** per floorplan, and **1,472 parameters (`11,776 B` = `11.50 KiB` raw `float64` / `17,733 B` = `17.32 KiB` CSV)** across all 23 floorplans.
 
 ---
 
@@ -60,7 +60,7 @@ Key achievements:
 - **Transient / Time-Dependent Simulation**: Temperature variation over time steps ($\frac{dT}{dt}$ using thermal capacitance $C$) is reserved for future stages.
 - **Dynamic Thermal Management (DTM)**: Active throttling policies, DVFS controllers, or governor logic.
 - **Machine Learning / Neural Networks**: Non-linear models, deep networks, or surrogate neural approximations (linear matrix theory perfectly captures steady-state heat conduction).
-- **HotSpot Runtime Memory Profiling**: Direct RAM profiling of HotSpot's internal C data structures is omitted awaiting explicit TA guidelines.
+- **Runtime RAM Profiling**: The evaluation metric *Model Size* measures the storage size of the calibrated model parameters (not runtime process RAM consumption).
 
 ---
 
@@ -266,12 +266,13 @@ All results reported below were measured across all **23 calibrated floorplans**
 
 ### 3. Model Storage Footprint
 
-| Format | Per Floorplan | Total (All 23 Floorplans) | Comparison / Context |
-| :--- | :---: | :---: | :--- |
-| **Raw float64 ($8 \times 8$)** | **512 bytes** | **11,776 bytes (11.50 KiB)** | Fits entirely in L1 CPU data cache (typically 32–48 KiB) |
-| **NumPy `.npy` Binary** | `640 bytes` | `14,720 bytes (14.38 KiB)` | Standard binary container with shape/dtype header |
-| **Serialized CSV File** | `771 bytes` | `17,733 bytes (17.32 KiB)` | Human-readable ASCII table with column headers |
-| **HotSpot Storage / Memory** | *Not measured* | *Awaiting TA clarification* | Grid solver binary + C structures + layer files |
+Model size measures the **storage size of the calibrated model parameters** required for prediction ($T = T_{\text{ambient}} + R \times P$), not runtime RAM usage. Each floorplan uses an $8 \times 8$ thermal resistance matrix $R$ ($64$ `float64` coefficients), totaling $23 \times 64 = 1,472$ calibrated parameters across all 23 floorplans:
+
+| Storage Format | Parameters (Per FP / All 23 FPs) | Per Floorplan | Total (All 23 Floorplans) | Description |
+| :--- | :---: | :---: | :---: | :--- |
+| **Raw `float64` Parameters ($8 \times 8$)** | **64** / **1,472** | **512 B** | **11,776 B (11.50 KiB)** | $8 \times 8 \times 8\text{ bytes/float64}$ binary parameter storage |
+| **Serialized CSV File (`thermal_matrix_fpXXX.csv`)** | **64** / **1,472** | **771 B** | **17,733 B (17.32 KiB)** | On-disk ASCII CSV table with core column/row headers and 6-decimal `K/W` values |
+| **Serialized NumPy `.npy` Binary** | **64** / **1,472** | `640 B` | `14,720 B (14.38 KiB)` | `512 B` raw `float64` parameter payload + `128 B` standard `.npy` array header |
 
 ---
 

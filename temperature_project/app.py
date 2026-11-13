@@ -196,6 +196,14 @@ def _load_floorplan_bundle(style: str, floorplan: str) -> Dict[str, Any]:
     # 7. Load precomputed Stage A evaluation benchmark metrics if available
     bench_lookup = _load_benchmark_per_fp_lookup()
     bench_row = bench_lookup.get(full_name)
+    num_params_per_fp = len(col_core_names) * len(col_core_names)
+    total_fps = len(catalog)
+    total_params_all_fps = total_fps * num_params_per_fp
+    total_raw_bytes_all_fps = total_fps * raw_float64_bytes
+    total_csv_bytes_all_fps = sum(
+        int(r.get("serialized_csv_bytes", 771)) for r in bench_lookup.values()
+    ) if bench_lookup else total_fps * csv_size_bytes
+
     if bench_row:
         benchmark_data = {
             "available": True,
@@ -215,9 +223,13 @@ def _load_floorplan_bundle(style: str, floorplan: str) -> Dict[str, Any]:
             "hotspot_median_time_ms": float(bench_row.get("hotspot_median_time_ms", 0.0)),
             "hotspot_mean_time_ms": float(bench_row.get("hotspot_mean_time_ms", 0.0)),
             "speedup_vs_hotspot_median_x": float(bench_row.get("speedup_vs_hotspot_median_x", 0.0)),
+            "num_parameters": num_params_per_fp,
             "raw_float64_bytes": int(bench_row.get("raw_float64_bytes", raw_float64_bytes)),
             "serialized_csv_bytes": int(bench_row.get("serialized_csv_bytes", csv_size_bytes)),
             "serialized_npy_bytes": int(bench_row.get("serialized_npy_bytes", 640)),
+            "total_parameters_all_floorplans": total_params_all_fps,
+            "total_raw_float64_bytes_all_floorplans": total_raw_bytes_all_fps,
+            "total_csv_size_bytes_all_floorplans": total_csv_bytes_all_fps,
             "val_samples": int(bench_row.get("val_samples", 20)),
             "val_comparisons": int(bench_row.get("val_comparisons", 160)),
         }
@@ -249,8 +261,12 @@ def _load_floorplan_bundle(style: str, floorplan: str) -> Dict[str, Any]:
         "cores_by_number": cores_by_number,
         "fill_blocks": fill_blocks,
         "thermal_matrix_k_per_w": R_rows,
+        "model_parameters_per_floorplan": num_params_per_fp,
         "model_csv_size_bytes": csv_size_bytes,
         "model_raw_float64_bytes": raw_float64_bytes,
+        "total_model_parameters_all_floorplans": total_params_all_fps,
+        "total_raw_float64_bytes_all_floorplans": total_raw_bytes_all_fps,
+        "total_csv_size_bytes_all_floorplans": total_csv_bytes_all_fps,
         "validation_metrics": {
             "train_rmse_k": float(summary_row["train_rmse_K"]) if "train_rmse_K" in summary_row else None,
             "val_rmse_k": float(summary_row["val_rmse_K"]) if "val_rmse_K" in summary_row else None,
@@ -348,8 +364,12 @@ def api_get_benchmark(style: str, floorplan: str):
         "numpy_median_time_us": float(row.get("numpy_median_time_us", 0.0)),
         "hotspot_median_time_ms": float(row.get("hotspot_median_time_ms", 0.0)),
         "speedup_vs_hotspot_median_x": float(row.get("speedup_vs_hotspot_median_x", 0.0)),
+        "num_parameters": 64,
         "raw_float64_bytes": int(row.get("raw_float64_bytes", 512)),
         "serialized_csv_bytes": int(row.get("serialized_csv_bytes", 771)),
+        "total_parameters_all_floorplans": 1472,
+        "total_raw_float64_bytes_all_floorplans": 11776,
+        "total_csv_size_bytes_all_floorplans": 17733,
         "metrics": row,
     }
     return jsonify(bench_data)
@@ -630,8 +650,12 @@ def api_predict():
                 "min_temp_k": round(temp_k_list[min_idx], 6),
                 "live_prediction_time_us": round(live_pred_time_us, 3),
                 "prediction_time_us": round(live_pred_time_us, 3),
+                "model_parameters_per_floorplan": bundle["model_parameters_per_floorplan"],
                 "model_csv_size_bytes": bundle["model_csv_size_bytes"],
                 "model_raw_float64_bytes": bundle["model_raw_float64_bytes"],
+                "total_model_parameters_all_floorplans": bundle["total_model_parameters_all_floorplans"],
+                "total_raw_float64_bytes_all_floorplans": bundle["total_raw_float64_bytes_all_floorplans"],
+                "total_csv_size_bytes_all_floorplans": bundle["total_csv_size_bytes_all_floorplans"],
             }
         )
 
@@ -716,8 +740,12 @@ def api_predict():
                 "predictions_by_core": {target_core_name: single_entry},
                 "live_prediction_time_us": round(live_pred_time_us, 3),
                 "prediction_time_us": round(live_pred_time_us, 3),
+                "model_parameters_per_floorplan": bundle["model_parameters_per_floorplan"],
                 "model_csv_size_bytes": bundle["model_csv_size_bytes"],
                 "model_raw_float64_bytes": bundle["model_raw_float64_bytes"],
+                "total_model_parameters_all_floorplans": bundle["total_model_parameters_all_floorplans"],
+                "total_raw_float64_bytes_all_floorplans": bundle["total_raw_float64_bytes_all_floorplans"],
+                "total_csv_size_bytes_all_floorplans": bundle["total_csv_size_bytes_all_floorplans"],
             }
         )
 

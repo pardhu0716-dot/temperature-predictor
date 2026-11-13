@@ -12,10 +12,10 @@ Evaluates the three mandatory Stage A metrics across all 23 calibrated 2D floorp
      - End-to-end Flask Web API request latency (POST /api/predict)
      - End-to-end CLI subprocess invocation latency (predict.py)
      - Equivalent HotSpot grid steady-state simulation runtime
-  3. Model Size
-     - Raw in-memory float64 matrix footprint (8 x 8 x 8 = 512 bytes per floorplan)
-     - Serialized CSV file size on disk (thermal_matrix_fpXXX.csv)
-     - Serialized NumPy .npy binary size
+  3. Model Size (Parameter Storage — Not Runtime RAM)
+     - Raw float64 parameter storage (8 x 8 = 64 parameters = 512 bytes per floorplan; 1,472 parameters = 11,776 bytes across 23 floorplans)
+     - Serialized CSV file size on disk (thermal_matrix_fpXXX.csv: 771 bytes per floorplan; 17,733 bytes across 23 floorplans)
+     - Serialized NumPy .npy binary size (640 bytes per floorplan; 14,720 bytes across 23 floorplans)
 
 IMPORTANT:
   - Reuses existing calibrated matrices and held-out validation datasets.
@@ -776,9 +776,9 @@ def run_benchmark(
         f"{overall_speedup_median_x:,.1f}x (Median) | {overall_speedup_mean_x:,.1f}x (Mean)"
     )
     print(
-        f"3. Model Size                            : "
-        f"512 bytes raw float64/FP ({total_raw_bytes:,} B = {total_raw_bytes/1024:.2f} KiB total) | "
-        f"771 bytes CSV/FP ({total_csv_bytes:,} B = {total_csv_bytes/1024:.2f} KiB total)"
+        f"3. Model Size (Parameter Storage)        : "
+        f"64 params/FP, 512 B raw float64/FP ({total_raw_bytes:,} B = {total_raw_bytes/1024:.2f} KiB across 23 FPs, 1,472 params) | "
+        f"771 B CSV/FP ({total_csv_bytes:,} B = {total_csv_bytes/1024:.2f} KiB total)"
     )
     print("-" * 88)
     print(f"Saved Per-Floorplan CSV : {per_fp_csv_path}")
@@ -843,7 +843,7 @@ def write_markdown_report(
         "| :--- | :--- | :--- |",
         f"| **1. Predictor Accuracy** (Held-out Validation: 460 samples, 3,680 core comparisons) | **RMSE**: `{overall['pooled_val_rmse_K']:.6f} K` (`{overall['pooled_val_rmse_K']:.6f} °C`)<br>**MAE**: `{overall['pooled_val_mae_K']:.6f} K` (`{overall['pooled_val_mae_K']:.6f} °C`)<br>**Max Error**: `{overall['pooled_val_max_error_K']:.6f} K` (`{overall['pooled_val_max_error_K']:.6f} °C`) | Matches HotSpot steady-state solver up to HotSpot's 2-decimal (`0.01 K`) output rounding precision ($\\sigma_{{\\text{{quant}}}} = 0.01/\\sqrt{{12}} \\approx 0.002887\\text{{ K}}$). |",
         f"| **2. Prediction Time & Speedup** | **Pure Matrix Inference (NumPy `R @ P`)**: `{overall['numpy_median_inference_time_us']:.4f} µs` median (`{overall['numpy_mean_inference_time_us']:.4f} µs` mean)<br>**Pure Matrix Inference (Python stdlib)**: `{overall['stdlib_median_inference_time_us']:.4f} µs` median<br>**HotSpot Steady-State Simulation**: `{overall['hotspot_median_simulation_time_ms']:.3f} ms` median (`{overall['hotspot_mean_simulation_time_ms']:.3f} ms` mean)<br>**Median Speedup Factor**: **`{overall['speedup_numpy_median_x']:,.1f}×`** (`{overall['speedup_numpy_mean_x']:,.1f}×` mean) | Over **5 orders of magnitude faster** than running a HotSpot grid steady-state simulation (`~0.2 s` vs. `~1 µs`). |",
-        f"| **3. Model Size** | **Raw Matrix (`8×8 float64`)**: `512 bytes` per floorplan (`{overall['total_raw_float64_bytes_23_floorplans']:,} bytes` = `11.50 KiB` total)<br>**Serialized CSV on Disk**: `771 bytes` per floorplan (`{overall['total_serialized_csv_bytes_23_floorplans']:,} bytes` = `17.32 KiB` total)<br>**Serialized NumPy `.npy`**: `640 bytes` per floorplan (`{overall['total_serialized_npy_bytes_23_floorplans']:,} bytes` = `14.38 KiB` total) | Entire 23-floorplan calibrated model library fits inside a single L1 CPU data cache (`11.50 KiB` raw). |",
+        f"| **3. Model Size (Parameter Storage — Not Runtime RAM)** | **Per Floorplan (`8×8` = `64` params)**: `512 B` raw `float64` (`771 B` CSV on disk / `640 B` `.npy`)<br>**All 23 Floorplans (`23×8×8` = `1,472` params)**: `{overall['total_raw_float64_bytes_23_floorplans']:,} B` (`11.50 KiB`) raw `float64` (`{overall['total_serialized_csv_bytes_23_floorplans']:,} B` = `17.32 KiB` CSV on disk / `{overall['total_serialized_npy_bytes_23_floorplans']:,} B` = `14.38 KiB` `.npy`) | Measures actual storage size of the calibrated thermal resistance matrix parameters (not runtime RAM consumption). |",
         "",
         "---",
         "",
@@ -892,13 +892,15 @@ def write_markdown_report(
         "",
         "---",
         "",
-        "## 3. Model Size & Storage Footprint",
+        "## 3. Model Size (Parameter Storage — Not Runtime RAM)",
         "",
-        "| Representation Format | Size per Floorplan (Bytes) | Total Size Across All 23 Floorplans | Notes |",
-        "| :--- | ---: | ---: | :--- |",
-        f"| **Raw Matrix in Memory (`8×8 float64`)** | **`512 B`** | **`{overall['total_raw_float64_bytes_23_floorplans']:,} B`** (`11.50 KiB`) | $8 \\text{{ rows}} \\times 8 \\text{{ cols}} \\times 8 \\text{{ bytes/float64}} = 512 \\text{{ bytes}}$ |",
-        f"| **Serialized NumPy Binary (`.npy`)** | **`640 B`** | **`{overall['total_serialized_npy_bytes_23_floorplans']:,} B`** (`14.38 KiB`) | `128 B` standard `.npy` array header + `512 B` raw `float64` payload |",
-        f"| **Serialized CSV File (`thermal_matrix_fpXXX.csv`)** | **`771 B`** | **`{overall['total_serialized_csv_bytes_23_floorplans']:,} B`** (`17.32 KiB`) | Human-readable CSV with row/column core headers and 6-decimal `K/W` values |",
+        "Model size is defined as the **storage size of the calibrated model parameters** required for prediction ($\\hat{T} = T_{\\text{ambient}} + R \\times P$), rather than runtime RAM usage. Each floorplan uses an $8\\times8$ thermal resistance matrix $R$ ($64$ `float64` parameters), giving $23 \\times 64 = 1,472$ total parameters across all 23 floorplans:",
+        "",
+        "| Representation Format | Parameters (Per FP / All 23 FPs) | Size per Floorplan (Bytes) | Total Size Across All 23 Floorplans | Notes |",
+        "| :--- | :---: | ---: | ---: | :--- |",
+        f"| **Raw Parameter Storage (`8×8 float64`)** | **`64`** / **`1,472`** | **`512 B`** | **`{overall['total_raw_float64_bytes_23_floorplans']:,} B`** (`11.50 KiB`) | $8 \\text{{ rows}} \\times 8 \\text{{ cols}} \\times 8 \\text{{ bytes/float64}} = 512 \\text{{ bytes}}$ per floorplan |",
+        f"| **Serialized CSV File (`thermal_matrix_fpXXX.csv`)** | **`64`** / **`1,472`** | **`771 B`** | **`{overall['total_serialized_csv_bytes_23_floorplans']:,} B`** (`17.32 KiB`) | On-disk CSV file with row/column core headers and 6-decimal `K/W` values |",
+        f"| **Serialized NumPy Binary (`.npy`)** | **`64`** / **`1,472`** | **`640 B`** | **`{overall['total_serialized_npy_bytes_23_floorplans']:,} B`** (`14.38 KiB`) | `128 B` standard `.npy` array header + `512 B` raw `float64` payload |",
         "",
         "---",
         "",

@@ -8,7 +8,7 @@ This report presents the reproducible Stage A evaluation benchmark across all **
 | :--- | :--- | :--- |
 | **1. Predictor Accuracy** (Held-out Validation: 460 samples, 3,680 core comparisons) | **RMSE**: `0.003032 K` (`0.003032 °C`)<br>**MAE**: `0.002598 K` (`0.002598 °C`)<br>**Max Error**: `0.007784 K` (`0.007784 °C`) | Matches HotSpot steady-state solver up to HotSpot's 2-decimal (`0.01 K`) output rounding precision ($\sigma_{\text{quant}} = 0.01/\sqrt{12} \approx 0.002887\text{ K}$). |
 | **2. Prediction Time & Speedup** | **Pure Matrix Inference (NumPy `R @ P`)**: `2.0096 µs` median (`2.3545 µs` mean)<br>**Pure Matrix Inference (Python stdlib)**: `17.4910 µs` median<br>**HotSpot Steady-State Simulation**: `1821.255 ms` median (`2400.135 ms` mean)<br>**Median Speedup Factor**: **`906,277.2×`** (`1,019,392.4×` mean) | Over **5 orders of magnitude faster** than running a HotSpot grid steady-state simulation (`~0.2 s` vs. `~1 µs`). |
-| **3. Model Size** | **Raw Matrix (`8×8 float64`)**: `512 bytes` per floorplan (`11,776 bytes` = `11.50 KiB` total)<br>**Serialized CSV on Disk**: `771 bytes` per floorplan (`17,733 bytes` = `17.32 KiB` total)<br>**Serialized NumPy `.npy`**: `640 bytes` per floorplan (`14,720 bytes` = `14.38 KiB` total) | Entire 23-floorplan calibrated model library fits inside a single L1 CPU data cache (`11.50 KiB` raw). |
+| **3. Model Size (Parameter Storage — Not Runtime RAM)** | **Per Floorplan (`8×8` = `64` params)**: `512 B` raw `float64` (`771 B` CSV on disk / `640 B` `.npy`)<br>**All 23 Floorplans (`23×8×8` = `1,472` params)**: `11,776 B` (`11.50 KiB`) raw `float64` (`17,733 B` = `17.32 KiB` CSV on disk / `14,720 B` = `14.38 KiB` `.npy`) | Measures actual storage size of the calibrated thermal resistance matrix parameters (not runtime RAM consumption). |
 
 ---
 
@@ -57,13 +57,15 @@ where $R \in \mathbb{R}^{8\times8}$ is the floorplan-specific pre-calibrated the
 
 ---
 
-## 3. Model Size & Storage Footprint
+## 3. Model Size (Parameter Storage — Not Runtime RAM)
 
-| Representation Format | Size per Floorplan (Bytes) | Total Size Across All 23 Floorplans | Notes |
-| :--- | ---: | ---: | :--- |
-| **Raw Matrix in Memory (`8×8 float64`)** | **`512 B`** | **`11,776 B`** (`11.50 KiB`) | $8 \text{ rows} \times 8 \text{ cols} \times 8 \text{ bytes/float64} = 512 \text{ bytes}$ |
-| **Serialized NumPy Binary (`.npy`)** | **`640 B`** | **`14,720 B`** (`14.38 KiB`) | `128 B` standard `.npy` array header + `512 B` raw `float64` payload |
-| **Serialized CSV File (`thermal_matrix_fpXXX.csv`)** | **`771 B`** | **`17,733 B`** (`17.32 KiB`) | Human-readable CSV with row/column core headers and 6-decimal `K/W` values |
+Model size is defined as the **storage size of the calibrated model parameters** required for prediction ($\hat{T} = T_{\text{ambient}} + R \times P$), rather than runtime RAM usage. Each floorplan uses an $8\times8$ thermal resistance matrix $R$ ($64$ `float64` parameters), giving $23 \times 64 = 1,472$ total parameters across all 23 floorplans:
+
+| Representation Format | Parameters (Per FP / All 23 FPs) | Size per Floorplan (Bytes) | Total Size Across All 23 Floorplans | Notes |
+| :--- | :---: | ---: | ---: | :--- |
+| **Raw Parameter Storage (`8×8 float64`)** | **`64`** / **`1,472`** | **`512 B`** | **`11,776 B`** (`11.50 KiB`) | $8 \text{ rows} \times 8 \text{ cols} \times 8 \text{ bytes/float64} = 512 \text{ bytes}$ per floorplan |
+| **Serialized CSV File (`thermal_matrix_fpXXX.csv`)** | **`64`** / **`1,472`** | **`771 B`** | **`17,733 B`** (`17.32 KiB`) | On-disk CSV file with row/column core headers and 6-decimal `K/W` values |
+| **Serialized NumPy Binary (`.npy`)** | **`64`** / **`1,472`** | **`640 B`** | **`14,720 B`** (`14.38 KiB`) | `128 B` standard `.npy` array header + `512 B` raw `float64` payload |
 
 ---
 

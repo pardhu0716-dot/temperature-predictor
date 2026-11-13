@@ -93,8 +93,10 @@ const dom = {
   evalBarNumpyVal: document.getElementById("eval-bar-numpy-val"),
   evalBarStoragePredictor: document.getElementById("eval-bar-storage-predictor"),
   evalBarStoragePredictorVal: document.getElementById("eval-bar-storage-predictor-val"),
-  evalBarStorageHotspot: document.getElementById("eval-bar-storage-hotspot"),
-  evalBarStorageHotspotVal: document.getElementById("eval-bar-storage-hotspot-val"),
+  evalBarStoragePredictorMeta: document.getElementById("eval-bar-storage-predictor-meta"),
+  evalBarStorageTotal: document.getElementById("eval-bar-storage-total"),
+  evalBarStorageTotalVal: document.getElementById("eval-bar-storage-total-val"),
+  evalBarStorageTotalMeta: document.getElementById("eval-bar-storage-total-meta"),
   evalUnavailableBanner: document.getElementById("eval-unavailable-banner"),
 };
 
@@ -429,7 +431,13 @@ function clearStalePredictionDisplay(bundle, statusMessage) {
   dom.kpiTotalPower.textContent = "-- W";
   dom.kpiPredTime.textContent = "-- µs";
   dom.kpiRoundtripTime.textContent = AppState.isOutdated ? "Stale (inputs modified)" : "Awaiting prediction";
-  dom.kpiModelSize.textContent = `${bundle.model_csv_size_bytes} bytes (CSV) / ${bundle.model_raw_float64_bytes} bytes (8×8 float64)`;
+  const perFpParams = bundle.model_parameters_per_floorplan || 64;
+  const totalParams = bundle.total_model_parameters_all_floorplans || 1472;
+  const totalRawBytes = bundle.total_raw_float64_bytes_all_floorplans || 11776;
+  const totalCsvBytes = bundle.total_csv_size_bytes_all_floorplans || 17733;
+  dom.kpiModelSize.textContent =
+    `Per floorplan: ${perFpParams} params, ${bundle.model_raw_float64_bytes} B raw float64 (${bundle.model_csv_size_bytes} B CSV) · ` +
+    `All 23 floorplans: ${totalParams.toLocaleString()} params, ${totalRawBytes.toLocaleString()} B raw (${totalCsvBytes.toLocaleString()} B CSV)`;
   dom.kpiMatrixPath.textContent = bundle.matrix_file;
 
   dom.tableCardTitle.textContent = "Predicted Core Temperatures";
@@ -1384,7 +1392,13 @@ function renderPredictionResults(bundle, data, roundtripMs) {
   } else {
     dom.kpiRoundtripTime.textContent = `Live single-call (HTTP: ${roundtripMs.toFixed(1)} ms)`;
   }
-  dom.kpiModelSize.textContent = `${data.model_csv_size_bytes} bytes (CSV) / ${data.model_raw_float64_bytes} bytes (8×8 float64)`;
+  const perFpParams = data.model_parameters_per_floorplan || bundle.model_parameters_per_floorplan || 64;
+  const totalParams = data.total_model_parameters_all_floorplans || bundle.total_model_parameters_all_floorplans || 1472;
+  const totalRawBytes = data.total_raw_float64_bytes_all_floorplans || bundle.total_raw_float64_bytes_all_floorplans || 11776;
+  const totalCsvBytes = data.total_csv_size_bytes_all_floorplans || bundle.total_csv_size_bytes_all_floorplans || 17733;
+  dom.kpiModelSize.textContent =
+    `Per floorplan: ${perFpParams} params, ${data.model_raw_float64_bytes} B raw float64 (${data.model_csv_size_bytes} B CSV) · ` +
+    `All 23 floorplans: ${totalParams.toLocaleString()} params, ${totalRawBytes.toLocaleString()} B raw (${totalCsvBytes.toLocaleString()} B CSV)`;
   dom.kpiMatrixPath.textContent = bundle.matrix_file;
 
   if (data.mode === "all") {
@@ -1494,7 +1508,8 @@ function renderThermalMatrixTable(bundle) {
 /**
  * Render precomputed Stage A evaluation benchmark comparisons:
  * A. Execution Time Comparison (Logarithmic 1 µs – 10 s horizontal bars)
- * B. Storage Comparison (Predictor model 512 B raw vs HotSpot unmeasured)
+ * B. Model Size (Parameter Storage: 64 params / 512 B raw / 771 B CSV per floorplan vs.
+ *    1,472 params / 11,776 B raw / 17,733 B CSV across all 23 floorplans)
  * Automatically called whenever a floorplan is loaded.
  */
 function renderBenchmarkSection(bundle) {
@@ -1552,23 +1567,33 @@ function renderBenchmarkSection(bundle) {
     dom.evalBarNumpyVal.innerHTML = `${npTimeUs.toFixed(3)} &mu;s <span class="eval-bar-unit-sub">(${((npTimeUs / 1000).toFixed(4))} ms)</span>`;
   }
 
-  // Storage Comparison
-  const rawBytes = bench.raw_float64_bytes || 512;
-  const csvBytes = bench.serialized_csv_bytes || 771;
+  // Model Size (Parameter Storage — Not Runtime RAM)
+  const perFpParams = bench.num_parameters || bundle.model_parameters_per_floorplan || 64;
+  const rawBytes = bench.raw_float64_bytes || bundle.model_raw_float64_bytes || 512;
+  const csvBytes = bench.serialized_csv_bytes || bundle.model_csv_size_bytes || 771;
+
+  const totalParams = bench.total_parameters_all_floorplans || bundle.total_model_parameters_all_floorplans || 1472;
+  const totalRawBytes = bench.total_raw_float64_bytes_all_floorplans || bundle.total_raw_float64_bytes_all_floorplans || 11776;
+  const totalCsvBytes = bench.total_csv_size_bytes_all_floorplans || bundle.total_csv_size_bytes_all_floorplans || 17733;
+
   if (dom.evalBarStoragePredictor) {
     dom.evalBarStoragePredictor.style.width = "30%";
   }
+  if (dom.evalBarStoragePredictorMeta) {
+    dom.evalBarStoragePredictorMeta.textContent = `1 floorplan (${bundle.full_name}) • 8×8 matrix (${perFpParams} float64 params)`;
+  }
   if (dom.evalBarStoragePredictorVal) {
-    dom.evalBarStoragePredictorVal.innerHTML = `${rawBytes} B raw <span class="eval-bar-unit-sub">(${csvBytes} B CSV)</span>`;
+    dom.evalBarStoragePredictorVal.innerHTML = `${rawBytes} B raw (${perFpParams} params) <span class="eval-bar-unit-sub">&middot; ${csvBytes} B CSV</span>`;
   }
 
-  // HotSpot storage is not measured — awaiting TA clarification (do not invent a number)
-  if (dom.evalBarStorageHotspot) {
-    dom.evalBarStorageHotspot.style.width = "0%";
-    dom.evalBarStorageHotspot.classList.add("hidden");
+  if (dom.evalBarStorageTotal) {
+    dom.evalBarStorageTotal.style.width = "68%";
   }
-  if (dom.evalBarStorageHotspotVal) {
-    dom.evalBarStorageHotspotVal.textContent = "Not measured — awaiting TA clarification";
+  if (dom.evalBarStorageTotalMeta) {
+    dom.evalBarStorageTotalMeta.textContent = `All 23 floorplans • 23×8×8 (${totalParams.toLocaleString()} float64 params)`;
+  }
+  if (dom.evalBarStorageTotalVal) {
+    dom.evalBarStorageTotalVal.innerHTML = `${totalRawBytes.toLocaleString()} B raw (${totalParams.toLocaleString()} params) <span class="eval-bar-unit-sub">&middot; ${totalCsvBytes.toLocaleString()} B CSV</span>`;
   }
 }
 
