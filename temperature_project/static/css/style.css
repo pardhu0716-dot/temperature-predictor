@@ -1301,3 +1301,34 @@ body {
   display: block;
   margin-bottom: 0.2rem;
 }
+
+/* Keep the existing dashboard within the viewport; wide tables scroll locally. */
+.panel,
+.card,
+.kpi-box,
+.brand-titles {
+  min-width: 0;
+}
+
+.kpi-subvalue,
+.matrix-inspector-note {
+  overflow-wrap: anywhere;
+}
+
+.card-header,
+.details-summary {
+  flex-wrap: wrap;
+}
+
+.eval-bar-val-col,
+.badge-awaiting {
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 640px) {
+  .power-core-inline {
+    flex-wrap: wrap;
+    white-space: normal;
+  }
+}

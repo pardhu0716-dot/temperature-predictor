@@ -1,5 +1,7 @@
 # Thermal Management — Temperature Predictor
 
+Production deployment preparation and local Gunicorn commands: [Render deployment guide](DEPLOYMENT.md). The live demo link will be added after a public deployment is approved and verified.
+
 An academic project implementing **Stage A: a steady-state linear thermal predictor** for heterogeneous multicore floorplans. HotSpot supplies reference temperatures during calibration and evaluation; prediction uses saved thermal coupling matrices.
 
 ## Model and calibration
