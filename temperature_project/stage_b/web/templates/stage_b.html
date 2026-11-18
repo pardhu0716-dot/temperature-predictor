@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lightweight Temperature Predictor — Stage B</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<link rel="stylesheet" href="{{ url_for('stage_b_web.static', filename='stage_b.css') }}"></head>
+<body class="stage-b">
+<header class="app-header"><div class="header-left"><div class="brand-badge">STAGE B</div><div class="brand-titles"><h1>Lightweight Temperature Predictor — Stage B</h1><p class="subtitle">Geometry-aware steady-state prediction · 2 Big + 6 Little cores · mm / W / °C</p></div></div><div class="meta-chip"><span class="meta-label">Approved model</span><span class="meta-val">Lasso · α = 0.001 · 11,197 B bundle</span></div></header>
+{% with current_stage='b' %}{% include 'stage_navigation.html' %}{% endwith %}
+<main class="stage-b-dashboard">
+<section class="card b-controls" aria-label="Stage B geometry and powers"><div class="card-header"><h2>1. Floorplan &amp; power inputs</h2></div>
+<label for="b-mode">Input mode</label><select id="b-mode"><option value="existing">Existing Stage B floorplan</option><option value="custom">Custom eight-core floorplan</option></select>
+<label for="b-floorplan">Repository floorplan</label><select id="b-floorplan" disabled></select>
+<p id="b-floorplan-note" class="b-muted">Loading original geometry…</p>
+<div class="b-die"><label>Die width (mm)<input id="b-die-width" type="number" min="0" step="0.001" readonly></label><label>Die height (mm)<input id="b-die-height" type="number" min="0" step="0.001" readonly></label></div>
+<p class="b-muted">Big: 4×4 mm, 10–20 W · Little: 2×2 mm, 5–10 W. Coordinates use the die’s bottom-left origin.</p>
+<div class="b-table-wrap"><table class="b-core-table"><caption>Eight core inputs — geometry in mm, power in W</caption><thead><tr><th>Core ID</th><th>Width</th><th>Height</th><th>X</th><th>Y</th><th>Power</th></tr></thead><tbody id="b-inputs"></tbody></table></div>
+<div class="b-actions"><button id="b-predict" class="btn-predict-all" type="button" disabled>Predict temperatures</button><button id="b-reset" class="btn-preset" type="button">Reset inputs</button></div>
+<p id="b-status" role="status" aria-live="polite">Select a floorplan to begin.</p><div id="b-error" class="error-banner hidden" role="alert"></div>
+</section>
+<section class="b-visuals" aria-label="Stage B visualizations"><div class="card"><div class="card-header"><h2>2. Geometry &amp; temperature heatmap</h2></div><p class="b-muted">Edit custom coordinates to update the preview. Each colored rectangle shows its core’s predicted value; whitespace stays neutral.</p><svg id="b-heatmap" role="img" aria-label="Stage B floorplan preview"></svg><div class="b-scale"><span id="b-low">No prediction</span><span class="b-gradient" aria-hidden="true"></span><span id="b-high"></span></div></div>
+<div class="card"><div class="card-header"><h2>3. Per-core temperatures</h2></div><svg id="b-bars" role="img" aria-label="Per-core temperature bar chart"></svg><div class="b-table-wrap"><table class="b-results-table"><caption>Predicted steady-state temperatures</caption><thead><tr><th>Core</th><th>Temperature (°C)</th></tr></thead><tbody id="b-results"></tbody></table></div></div></section>
+<aside class="b-summary"><div class="card"><div class="card-header"><h2>Prediction summary</h2></div><dl><dt>Maximum temperature</dt><dd id="b-max">—</dd><dt>Minimum temperature</dt><dd id="b-min">—</dd><dt>Hottest core</dt><dd id="b-hot">—</dd><dt>Model inference latency</dt><dd id="b-latency">—</dd></dl><p class="b-muted">Latency includes scaling and model prediction; it excludes feature engineering, network and rendering time.</p></div><div class="card"><div class="card-header"><h2>Model scope</h2></div><p>One geometry-aware Lasso model for the supported 2D eight-core configuration. Fixed 45°C ambient and original training material settings. No per-floorplan calibration or online HotSpot run.</p><p class="b-warning">Custom layouts may differ from training coverage. Valid geometry does not guarantee accuracy.</p><details><summary>Historical held-out evaluation</summary><p>MAE 1.070281°C · RMSE 1.339064°C · Max error 4.974435°C. Historical median inference 0.063297 ms. These are evaluation results, not website guarantees.</p></details></div></aside>
+</main><script src="{{ url_for('stage_b_web.static', filename='stage_b.js') }}" defer></script></body></html>

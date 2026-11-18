@@ -1,0 +1,49 @@
+/* Shared navigation is additive; all remaining rules are scoped to Stage B. */
+.stage-nav {display:flex;flex-wrap:wrap;gap:.5rem;padding:.7rem 1.5rem;background:#0f172a;border-bottom:1px solid #334155}
+.stage-nav a {padding:.45rem .75rem;border:1px solid #334155;border-radius:6px;color:#cbd5e1;text-decoration:none;font-size:.85rem}
+.stage-nav a[aria-current="page"] {background:#0c4a6e;border-color:#38bdf8;color:#f8fafc}
+.stage-nav a:focus-visible,.stage-b button:focus-visible,.stage-b input:focus-visible,.stage-b select:focus-visible {outline:3px solid #38bdf8;outline-offset:2px}
+.stage-b-dashboard {display:grid;grid-template-columns:minmax(440px,1.2fr) minmax(340px,1.1fr) minmax(220px,.65fr);gap:1rem;padding:1rem;align-items:start}
+.stage-b .card {padding:1rem;margin-bottom:1rem;min-width:0}
+.stage-b .b-controls,.stage-b .b-visuals,.stage-b .b-summary {min-width:0}
+.stage-b label {display:block;font-size:.82rem;color:var(--text-secondary);margin:.5rem 0 .3rem}
+.stage-b select,.stage-b input {width:100%;min-width:0;padding:.45rem;background:#0f172a;border:1px solid #475569;border-radius:5px;color:#f8fafc;font-family:inherit;font-size:.82rem}
+.stage-b input[readonly] {color:#94a3b8;background:#172235}
+.stage-b .b-die {display:grid;grid-template-columns:1fr 1fr;gap:.75rem}
+.stage-b .b-table-wrap {overflow:auto;max-width:100%;margin:.8rem 0}
+.stage-b table {width:100%;border-collapse:collapse;font-size:.8rem}
+.stage-b caption {text-align:left;color:#94a3b8;font-size:.78rem;padding-bottom:.5rem}
+.stage-b th,.stage-b td {text-align:left;padding:.35rem;border-bottom:1px solid #334155;vertical-align:middle}
+.stage-b th {color:#94a3b8;font-weight:500}
+.stage-b .b-core-table {min-width:420px;table-layout:fixed}
+.stage-b .b-core-table th:first-child {width:112px}
+.stage-b .b-core-table input {padding:.3rem .2rem;font-size:.76rem}
+.stage-b .b-core-table select {padding:.3rem .1rem;font-size:.72rem}
+.stage-b .b-actions {display:flex;align-items:center;gap:.6rem;margin-top:1rem}
+.stage-b .b-actions .btn-predict-all {flex:1;margin:0}
+.stage-b button:disabled {opacity:.5;cursor:wait}
+.stage-b .b-muted {color:#94a3b8;font-size:.78rem;margin:.5rem 0;line-height:1.6}
+.stage-b #b-status {margin-top:.8rem;font-size:.82rem;color:#7dd3fc}
+.stage-b .b-warning {color:#fcd34d;margin:1rem 0;font-size:.85rem}
+.stage-b dl {display:grid;gap:.4rem}.stage-b dt {color:#94a3b8;font-size:.8rem}.stage-b dd {margin:0 0 .6rem;font-family:var(--font-mono);font-size:1.05rem}
+.stage-b #b-heatmap {display:block;width:100%;height:320px;background:#111827;border:1px solid #334155;border-radius:8px;margin:.6rem 0}
+.stage-b #b-bars {display:block;width:100%;height:235px}
+.stage-b .b-scale {display:flex;align-items:center;gap:.5rem;font-size:.75rem;color:#cbd5e1}
+.stage-b .b-gradient {height:10px;flex:1;background:linear-gradient(90deg,hsl(220 75% 48%),hsl(110 75% 48%),hsl(0 75% 48%));border-radius:4px}
+.stage-b details {font-size:.8rem;color:#cbd5e1;line-height:1.7;margin-top:.8rem}
+.stage-b .error-banner {margin:.8rem 0 0}
+@media(max-width:1180px){.stage-b-dashboard{grid-template-columns:minmax(420px,1fr) minmax(320px,1fr)}.stage-b .b-summary{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;gap:1rem}}
+@media(max-width:760px){.stage-b-dashboard{grid-template-columns:minmax(0,1fr);padding:.6rem;gap:.5rem}.stage-b .b-summary{grid-column:auto;display:block}.stage-b .app-header{padding:.8rem}.stage-b .header-left{align-items:flex-start}.stage-b .brand-titles h1{font-size:1rem}.stage-nav{padding:.6rem;gap:.4rem}.stage-nav a{font-size:.76rem;flex:1;text-align:center}.stage-b #b-heatmap{height:300px}.stage-b .card{padding:.8rem}}
+
+@media(max-width:760px){
+.stage-b .b-core-table{display:block;min-width:0;table-layout:auto}
+.stage-b .b-core-table caption{display:block}
+.stage-b .b-core-table thead{display:none}
+.stage-b .b-core-table tbody{display:grid;gap:.7rem}
+.stage-b .b-core-table tr{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:.35rem;padding:.6rem;background:#111c30;border:1px solid #334155;border-radius:6px}
+.stage-b .b-core-table td{display:block;padding:0;border:0;min-width:0}
+.stage-b .b-core-table td:first-child{grid-column:1/-1}
+.stage-b .b-core-table td[data-label]::before{content:attr(data-label);display:block;color:#94a3b8;font-size:.65rem;margin-bottom:.2rem}
+.stage-b .b-core-table select{font-size:.82rem;padding:.4rem}
+.stage-b .brand-badge{white-space:nowrap}
+}
