@@ -1,0 +1,31 @@
+{
+  "seven_models": {
+    "files_verified": 47,
+    "original_checksum_manifest_sha256": "8057615cf470815a8df10c04e59b1789c4a4314fa204771c3458fb63b746b0d2"
+  },
+  "optimizer_regularization": {
+    "files_verified": 157,
+    "original_checksum_manifest_sha256": "5c26532364b279c6653636df3d1877d002a8e077ca37a717021c024b53484a4d"
+  },
+  "final_lasso": {
+    "files_verified": 25,
+    "original_checksum_manifest_sha256": "ad55b62688896ca63e90335c5c0259abce55a2f27ee472587532d3b681376386"
+  },
+  "ridge_smoke": {
+    "files_verified": 25,
+    "original_checksum_manifest_sha256": "9333e3f4daff251a6868ce826a0ddc8930cd3053ea0c281102ce6756deab7cdd"
+  },
+  "final_model_sha256": "db1b49992c8a11b95c85a98be861b95502b00b0d3ec680709778236484d9ae80",
+  "model_bytes": 11197,
+  "approved_model_predictions_exact_match": true,
+  "prediction_samples": 240,
+  "per_core_predictions": 1920,
+  "training_rerun": false,
+  "other_test_candidates_evaluated": false,
+  "core_families": 7,
+  "additional_entries": 40,
+  "unique_fits": 32,
+  "reused_entries": 8,
+  "epoch_limited_fits": 16,
+  "missing_original_artifacts": []
+}

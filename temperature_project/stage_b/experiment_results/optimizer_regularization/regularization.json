@@ -1,0 +1,2100 @@
+[
+  {
+    "group": "regularization",
+    "experiment": {
+      "name": "ols",
+      "kind": "ols",
+      "parameters": {}
+    },
+    "report": {
+      "experiment": {
+        "name": "ols",
+        "kind": "ols",
+        "parameters": {}
+      },
+      "seed": 42,
+      "train_seconds": 0.019717007999133784,
+      "validation": {
+        "mae_c": 2.472768778946917,
+        "rmse_c": 3.1165861846611533,
+        "max_absolute_error_c": 10.258924860455664,
+        "samples": 240,
+        "core_comparisons": 1920,
+        "per_core": {
+          "Core_0_L0": {
+            "mae_c": 2.0446191385062593,
+            "rmse_c": 2.658694343752912,
+            "max_absolute_error_c": 6.769079680179232
+          },
+          "Core_1_L0": {
+            "mae_c": 4.284321970270716,
+            "rmse_c": 5.01018222657931,
+            "max_absolute_error_c": 10.258924860455664
+          },
+          "Core_2_L0": {
+            "mae_c": 2.1174951594305385,
+            "rmse_c": 2.6785971536447453,
+            "max_absolute_error_c": 6.438770713410861
+          },
+          "Core_3_L0": {
+            "mae_c": 3.6139232756778674,
+            "rmse_c": 4.03765697607221,
+            "max_absolute_error_c": 6.9912654761687065
+          },
+          "Core_4_L0": {
+            "mae_c": 1.5644946625611946,
+            "rmse_c": 2.152176074000037,
+            "max_absolute_error_c": 6.212963317381821
+          },
+          "Core_5_L0": {
+            "mae_c": 2.0059457879201785,
+            "rmse_c": 2.48306036137816,
+            "max_absolute_error_c": 6.453323148074475
+          },
+          "Core_6_L0": {
+            "mae_c": 1.987899643413212,
+            "rmse_c": 2.2207283477251436,
+            "max_absolute_error_c": 4.58150836798734
+          },
+          "Core_7_L0": {
+            "mae_c": 2.1634505937953743,
+            "rmse_c": 2.5154825462040398,
+            "max_absolute_error_c": 5.2098366641986615
+          }
+        }
+      },
+      "latency": {
+        "single_sample_median_ms": 0.0573885,
+        "single_sample_p95_ms": 0.15364399999999998,
+        "batch_samples": 240,
+        "batch_ms": 0.329629,
+        "repeats": 50,
+        "boundary": "Engineered feature array through X scaling, regressor, inverse Y scaling; excludes CSV loading and feature engineering"
+      },
+      "serialized_model_bytes": 21006,
+      "model_sha256": "5939d960a8b7db9a42df19f99fe4a9fe1372fd8e303e16d530c149492e902492",
+      "versions": {
+        "python": "3.12.14",
+        "platform": {
+          "system": "Linux",
+          "release": "6.18.57",
+          "machine": "x86_64"
+        },
+        "numpy": "2.3.5",
+        "scikit-learn": "1.8.0",
+        "joblib": "1.5.3",
+        "xgboost": null,
+        "xgboost-cpu": "3.4.1"
+      },
+      "prepared_manifest_sha256": "bcabf27285b98bbda358949ec9f3e72124029a9fca341fb59f870b851dde401d",
+      "source_csv_sha256": "ad78ac968292966a6b68e558f61aff3a1e2e185a553037e23fcd39c63e8bbc70",
+      "split_floorplans": {
+        "test": [
+          "b_fp_014",
+          "b_fp_018",
+          "b_fp_019",
+          "b_fp_020",
+          "b_fp_025",
+          "b_fp_041",
+          "b_fp_042",
+          "b_fp_053",
+          "b_fp_059",
+          "b_fp_070",
+          "b_fp_071",
+          "b_fp_072"
+        ],
+        "train": [
+          "b_fp_006",
+          "b_fp_007",
+          "b_fp_008",
+          "b_fp_009",
+          "b_fp_010",
+          "b_fp_011",
+          "b_fp_013",
+          "b_fp_015",
+          "b_fp_016",
+          "b_fp_021",
+          "b_fp_022",
+          "b_fp_023",
+          "b_fp_024",
+          "b_fp_026",
+          "b_fp_027",
+          "b_fp_029",
+          "b_fp_030",
+          "b_fp_031",
+          "b_fp_032",
+          "b_fp_033",
+          "b_fp_034",
+          "b_fp_035",
+          "b_fp_036",
+          "b_fp_037",
+          "b_fp_038",
+          "b_fp_039",
+          "b_fp_040",
+          "b_fp_043",
+          "b_fp_045",
+          "b_fp_046",
+          "b_fp_048",
+          "b_fp_049",
+          "b_fp_050",
+          "b_fp_051",
+          "b_fp_054",
+          "b_fp_056",
+          "b_fp_057",
+          "b_fp_058",
+          "b_fp_061",
+          "b_fp_062",
+          "b_fp_063",
+          "b_fp_064",
+          "b_fp_065",
+          "b_fp_066",
+          "b_fp_067",
+          "b_fp_069",
+          "b_fp_073",
+          "b_fp_075",
+          "b_fp_076",
+          "b_fp_077",
+          "b_fp_080",
+          "b_fp_081",
+          "b_fp_082"
+        ],
+        "validation": [
+          "b_fp_012",
+          "b_fp_017",
+          "b_fp_028",
+          "b_fp_044",
+          "b_fp_047",
+          "b_fp_052",
+          "b_fp_055",
+          "b_fp_060",
+          "b_fp_068",
+          "b_fp_074",
+          "b_fp_078",
+          "b_fp_079"
+        ]
+      },
+      "test_evaluated": false
+    },
+    "effective_parameters": {
+      "copy_X": true,
+      "fit_intercept": true,
+      "n_jobs": null,
+      "positive": false,
+      "tol": 1e-06
+    },
+    "warnings": [],
+    "training_details": {
+      "nonzero_coefficients": 2016
+    },
+    "run_name": "ols",
+    "model_relative_path": "runs/ols/ols/model.joblib",
+    "reused": false
+  },
+  {
+    "group": "regularization",
+    "experiment": {
+      "name": "ridge_weak",
+      "kind": "ridge",
+      "parameters": {
+        "alpha": 0.1
+      }
+    },
+    "report": {
+      "experiment": {
+        "name": "ridge_weak",
+        "kind": "ridge",
+        "parameters": {
+          "alpha": 0.1
+        }
+      },
+      "seed": 42,
+      "train_seconds": 0.005953448002401274,
+      "validation": {
+        "mae_c": 2.3202259569332115,
+        "rmse_c": 2.864985958463065,
+        "max_absolute_error_c": 8.93610222809204,
+        "samples": 240,
+        "core_comparisons": 1920,
+        "per_core": {
+          "Core_0_L0": {
+            "mae_c": 1.9358394903517404,
+            "rmse_c": 2.4750111503264924,
+            "max_absolute_error_c": 6.214906175032269
+          },
+          "Core_1_L0": {
+            "mae_c": 3.790542795768112,
+            "rmse_c": 4.38838085053516,
+            "max_absolute_error_c": 8.93610222809204
+          },
+          "Core_2_L0": {
+            "mae_c": 1.9652624217978139,
+            "rmse_c": 2.4177930581565645,
+            "max_absolute_error_c": 5.8454233121992445
+          },
+          "Core_3_L0": {
+            "mae_c": 3.376700418236491,
+            "rmse_c": 3.7773572765962866,
+            "max_absolute_error_c": 6.795728437082673
+          },
+          "Core_4_L0": {
+            "mae_c": 1.549818343260019,
+            "rmse_c": 1.956958307419634,
+            "max_absolute_error_c": 5.352506882302123
+          },
+          "Core_5_L0": {
+            "mae_c": 1.9942389823899795,
+            "rmse_c": 2.469218663872696,
+            "max_absolute_error_c": 6.364530083495367
+          },
+          "Core_6_L0": {
+            "mae_c": 1.9928587463896983,
+            "rmse_c": 2.2372479019207145,
+            "max_absolute_error_c": 4.657862610200567
+          },
+          "Core_7_L0": {
+            "mae_c": 1.9565464572718385,
+            "rmse_c": 2.2881069872648974,
+            "max_absolute_error_c": 4.499861752088208
+          }
+        }
+      },
+      "latency": {
+        "single_sample_median_ms": 0.05986,
+        "single_sample_p95_ms": 0.23130634999999977,
+        "batch_samples": 240,
+        "batch_ms": 0.500893,
+        "repeats": 50,
+        "boundary": "Engineered feature array through X scaling, regressor, inverse Y scaling; excludes CSV loading and feature engineering"
+      },
+      "serialized_model_bytes": 19951,
+      "model_sha256": "965c27139903c50c5b6549f9105cec7219090000f01f5997ce7e4ec72459ea39",
+      "versions": {
+        "python": "3.12.14",
+        "platform": {
+          "system": "Linux",
+          "release": "6.18.57",
+          "machine": "x86_64"
+        },
+        "numpy": "2.3.5",
+        "scikit-learn": "1.8.0",
+        "joblib": "1.5.3",
+        "xgboost": null,
+        "xgboost-cpu": "3.4.1"
+      },
+      "prepared_manifest_sha256": "bcabf27285b98bbda358949ec9f3e72124029a9fca341fb59f870b851dde401d",
+      "source_csv_sha256": "ad78ac968292966a6b68e558f61aff3a1e2e185a553037e23fcd39c63e8bbc70",
+      "split_floorplans": {
+        "test": [
+          "b_fp_014",
+          "b_fp_018",
+          "b_fp_019",
+          "b_fp_020",
+          "b_fp_025",
+          "b_fp_041",
+          "b_fp_042",
+          "b_fp_053",
+          "b_fp_059",
+          "b_fp_070",
+          "b_fp_071",
+          "b_fp_072"
+        ],
+        "train": [
+          "b_fp_006",
+          "b_fp_007",
+          "b_fp_008",
+          "b_fp_009",
+          "b_fp_010",
+          "b_fp_011",
+          "b_fp_013",
+          "b_fp_015",
+          "b_fp_016",
+          "b_fp_021",
+          "b_fp_022",
+          "b_fp_023",
+          "b_fp_024",
+          "b_fp_026",
+          "b_fp_027",
+          "b_fp_029",
+          "b_fp_030",
+          "b_fp_031",
+          "b_fp_032",
+          "b_fp_033",
+          "b_fp_034",
+          "b_fp_035",
+          "b_fp_036",
+          "b_fp_037",
+          "b_fp_038",
+          "b_fp_039",
+          "b_fp_040",
+          "b_fp_043",
+          "b_fp_045",
+          "b_fp_046",
+          "b_fp_048",
+          "b_fp_049",
+          "b_fp_050",
+          "b_fp_051",
+          "b_fp_054",
+          "b_fp_056",
+          "b_fp_057",
+          "b_fp_058",
+          "b_fp_061",
+          "b_fp_062",
+          "b_fp_063",
+          "b_fp_064",
+          "b_fp_065",
+          "b_fp_066",
+          "b_fp_067",
+          "b_fp_069",
+          "b_fp_073",
+          "b_fp_075",
+          "b_fp_076",
+          "b_fp_077",
+          "b_fp_080",
+          "b_fp_081",
+          "b_fp_082"
+        ],
+        "validation": [
+          "b_fp_012",
+          "b_fp_017",
+          "b_fp_028",
+          "b_fp_044",
+          "b_fp_047",
+          "b_fp_052",
+          "b_fp_055",
+          "b_fp_060",
+          "b_fp_068",
+          "b_fp_074",
+          "b_fp_078",
+          "b_fp_079"
+        ]
+      },
+      "test_evaluated": false
+    },
+    "effective_parameters": {
+      "alpha": 0.1,
+      "copy_X": true,
+      "fit_intercept": true,
+      "max_iter": null,
+      "positive": false,
+      "random_state": null,
+      "solver": "auto",
+      "tol": 0.0001
+    },
+    "warnings": [],
+    "training_details": {
+      "n_iter_": null,
+      "nonzero_coefficients": 2016
+    },
+    "run_name": "ridge_weak",
+    "model_relative_path": "runs/ridge_weak/ridge_weak/model.joblib",
+    "reused": false
+  },
+  {
+    "group": "regularization",
+    "experiment": {
+      "name": "ridge",
+      "kind": "ridge",
+      "parameters": {
+        "alpha": 1.0
+      }
+    },
+    "report": {
+      "experiment": {
+        "name": "ridge",
+        "kind": "ridge",
+        "parameters": {
+          "alpha": 1.0
+        }
+      },
+      "seed": 42,
+      "train_seconds": 0.004817177999939304,
+      "validation": {
+        "mae_c": 1.8515805672394103,
+        "rmse_c": 2.2485624172703402,
+        "max_absolute_error_c": 6.226269234829886,
+        "samples": 240,
+        "core_comparisons": 1920,
+        "per_core": {
+          "Core_0_L0": {
+            "mae_c": 1.4227017119978234,
+            "rmse_c": 1.7197957834139734,
+            "max_absolute_error_c": 3.7351031589991806
+          },
+          "Core_1_L0": {
+            "mae_c": 2.1750038772083267,
+            "rmse_c": 2.4895246623335336,
+            "max_absolute_error_c": 4.375720168998839
+          },
+          "Core_2_L0": {
+            "mae_c": 1.7002337598241666,
+            "rmse_c": 2.0729831178634113,
+            "max_absolute_error_c": 5.016660005984619
+          },
+          "Core_3_L0": {
+            "mae_c": 2.413391263277264,
+            "rmse_c": 2.8255683977014368,
+            "max_absolute_error_c": 5.815309001259038
+          },
+          "Core_4_L0": {
+            "mae_c": 1.5193441570053343,
+            "rmse_c": 1.7160001288355815,
+            "max_absolute_error_c": 3.68001934635663
+          },
+          "Core_5_L0": {
+            "mae_c": 2.0569720120368706,
+            "rmse_c": 2.603353865549704,
+            "max_absolute_error_c": 6.226269234829886
+          },
+          "Core_6_L0": {
+            "mae_c": 2.0063752207261163,
+            "rmse_c": 2.4019175419785097,
+            "max_absolute_error_c": 5.551254614231141
+          },
+          "Core_7_L0": {
+            "mae_c": 1.5186225358393828,
+            "rmse_c": 1.876278637871657,
+            "max_absolute_error_c": 4.124759876813513
+          }
+        }
+      },
+      "latency": {
+        "single_sample_median_ms": 0.0625135,
+        "single_sample_p95_ms": 0.2882313999999998,
+        "batch_samples": 240,
+        "batch_ms": 0.870166,
+        "repeats": 50,
+        "boundary": "Engineered feature array through X scaling, regressor, inverse Y scaling; excludes CSV loading and feature engineering"
+      },
+      "serialized_model_bytes": 19882,
+      "model_sha256": "b2b96c648a89b6be853335618f48854c035e0c5d5ff783bd70480005f928095d",
+      "versions": {
+        "python": "3.12.14",
+        "platform": {
+          "system": "Linux",
+          "release": "6.18.57",
+          "machine": "x86_64"
+        },
+        "numpy": "2.3.5",
+        "scikit-learn": "1.8.0",
+        "joblib": "1.5.3",
+        "xgboost": null,
+        "xgboost-cpu": "3.4.1"
+      },
+      "prepared_manifest_sha256": "bcabf27285b98bbda358949ec9f3e72124029a9fca341fb59f870b851dde401d",
+      "source_csv_sha256": "ad78ac968292966a6b68e558f61aff3a1e2e185a553037e23fcd39c63e8bbc70",
+      "split_floorplans": {
+        "test": [
+          "b_fp_014",
+          "b_fp_018",
+          "b_fp_019",
+          "b_fp_020",
+          "b_fp_025",
+          "b_fp_041",
+          "b_fp_042",
+          "b_fp_053",
+          "b_fp_059",
+          "b_fp_070",
+          "b_fp_071",
+          "b_fp_072"
+        ],
+        "train": [
+          "b_fp_006",
+          "b_fp_007",
+          "b_fp_008",
+          "b_fp_009",
+          "b_fp_010",
+          "b_fp_011",
+          "b_fp_013",
+          "b_fp_015",
+          "b_fp_016",
+          "b_fp_021",
+          "b_fp_022",
+          "b_fp_023",
+          "b_fp_024",
+          "b_fp_026",
+          "b_fp_027",
+          "b_fp_029",
+          "b_fp_030",
+          "b_fp_031",
+          "b_fp_032",
+          "b_fp_033",
+          "b_fp_034",
+          "b_fp_035",
+          "b_fp_036",
+          "b_fp_037",
+          "b_fp_038",
+          "b_fp_039",
+          "b_fp_040",
+          "b_fp_043",
+          "b_fp_045",
+          "b_fp_046",
+          "b_fp_048",
+          "b_fp_049",
+          "b_fp_050",
+          "b_fp_051",
+          "b_fp_054",
+          "b_fp_056",
+          "b_fp_057",
+          "b_fp_058",
+          "b_fp_061",
+          "b_fp_062",
+          "b_fp_063",
+          "b_fp_064",
+          "b_fp_065",
+          "b_fp_066",
+          "b_fp_067",
+          "b_fp_069",
+          "b_fp_073",
+          "b_fp_075",
+          "b_fp_076",
+          "b_fp_077",
+          "b_fp_080",
+          "b_fp_081",
+          "b_fp_082"
+        ],
+        "validation": [
+          "b_fp_012",
+          "b_fp_017",
+          "b_fp_028",
+          "b_fp_044",
+          "b_fp_047",
+          "b_fp_052",
+          "b_fp_055",
+          "b_fp_060",
+          "b_fp_068",
+          "b_fp_074",
+          "b_fp_078",
+          "b_fp_079"
+        ]
+      },
+      "test_evaluated": false
+    },
+    "effective_parameters": {
+      "alpha": 1.0,
+      "copy_X": true,
+      "fit_intercept": true,
+      "max_iter": null,
+      "positive": false,
+      "random_state": null,
+      "solver": "auto",
+      "tol": 0.0001
+    },
+    "warnings": [],
+    "training_details": {
+      "n_iter_": null,
+      "nonzero_coefficients": 2016
+    },
+    "run_name": "ridge",
+    "model_relative_path": "runs/ridge/ridge/model.joblib",
+    "reused": false
+  },
+  {
+    "group": "regularization",
+    "experiment": {
+      "name": "lasso_weak",
+      "kind": "lasso",
+      "parameters": {
+        "alpha": 0.0001
+      }
+    },
+    "report": {
+      "experiment": {
+        "name": "lasso_weak",
+        "kind": "lasso",
+        "parameters": {
+          "alpha": 0.0001
+        }
+      },
+      "seed": 42,
+      "train_seconds": 3.176017874000536,
+      "validation": {
+        "mae_c": 1.5723893152889052,
+        "rmse_c": 1.9951221174820952,
+        "max_absolute_error_c": 6.667774035914505,
+        "samples": 240,
+        "core_comparisons": 1920,
+        "per_core": {
+          "Core_0_L0": {
+            "mae_c": 1.1762597766227645,
+            "rmse_c": 1.4948437387454712,
+            "max_absolute_error_c": 3.435175806588603
+          },
+          "Core_1_L0": {
+            "mae_c": 1.7102366989465239,
+            "rmse_c": 2.0782608604555697,
+            "max_absolute_error_c": 3.9671806492110306
+          },
+          "Core_2_L0": {
+            "mae_c": 1.3853384070914896,
+            "rmse_c": 1.8585159265856017,
+            "max_absolute_error_c": 4.385065774507865
+          },
+          "Core_3_L0": {
+            "mae_c": 2.039602013767608,
+            "rmse_c": 2.664011270633227,
+            "max_absolute_error_c": 6.667774035914505
+          },
+          "Core_4_L0": {
+            "mae_c": 1.3066140751215622,
+            "rmse_c": 1.5099629614306787,
+            "max_absolute_error_c": 3.2876615518640904
+          },
+          "Core_5_L0": {
+            "mae_c": 1.9399838005493872,
+            "rmse_c": 2.4665400593003195,
+            "max_absolute_error_c": 6.298089711967663
+          },
+          "Core_6_L0": {
+            "mae_c": 1.7540426285375692,
+            "rmse_c": 2.0378982650022333,
+            "max_absolute_error_c": 4.794291683756825
+          },
+          "Core_7_L0": {
+            "mae_c": 1.2670371216743368,
+            "rmse_c": 1.4908042309450977,
+            "max_absolute_error_c": 3.0745157245362122
+          }
+        }
+      },
+      "latency": {
+        "single_sample_median_ms": 0.074416,
+        "single_sample_p95_ms": 0.5417763999999998,
+        "batch_samples": 240,
+        "batch_ms": 1.463373,
+        "repeats": 50,
+        "boundary": "Engineered feature array through X scaling, regressor, inverse Y scaling; excludes CSV loading and feature engineering"
+      },
+      "serialized_model_bytes": 14216,
+      "model_sha256": "34b5d2c9aef85086f7002f8f74c70fd4268c81588eab030b9f83ed29ee3ca0e3",
+      "versions": {
+        "python": "3.12.14",
+        "platform": {
+          "system": "Linux",
+          "release": "6.18.57",
+          "machine": "x86_64"
+        },
+        "numpy": "2.3.5",
+        "scikit-learn": "1.8.0",
+        "joblib": "1.5.3",
+        "xgboost": null,
+        "xgboost-cpu": "3.4.1"
+      },
+      "prepared_manifest_sha256": "bcabf27285b98bbda358949ec9f3e72124029a9fca341fb59f870b851dde401d",
+      "source_csv_sha256": "ad78ac968292966a6b68e558f61aff3a1e2e185a553037e23fcd39c63e8bbc70",
+      "split_floorplans": {
+        "test": [
+          "b_fp_014",
+          "b_fp_018",
+          "b_fp_019",
+          "b_fp_020",
+          "b_fp_025",
+          "b_fp_041",
+          "b_fp_042",
+          "b_fp_053",
+          "b_fp_059",
+          "b_fp_070",
+          "b_fp_071",
+          "b_fp_072"
+        ],
+        "train": [
+          "b_fp_006",
+          "b_fp_007",
+          "b_fp_008",
+          "b_fp_009",
+          "b_fp_010",
+          "b_fp_011",
+          "b_fp_013",
+          "b_fp_015",
+          "b_fp_016",
+          "b_fp_021",
+          "b_fp_022",
+          "b_fp_023",
+          "b_fp_024",
+          "b_fp_026",
+          "b_fp_027",
+          "b_fp_029",
+          "b_fp_030",
+          "b_fp_031",
+          "b_fp_032",
+          "b_fp_033",
+          "b_fp_034",
+          "b_fp_035",
+          "b_fp_036",
+          "b_fp_037",
+          "b_fp_038",
+          "b_fp_039",
+          "b_fp_040",
+          "b_fp_043",
+          "b_fp_045",
+          "b_fp_046",
+          "b_fp_048",
+          "b_fp_049",
+          "b_fp_050",
+          "b_fp_051",
+          "b_fp_054",
+          "b_fp_056",
+          "b_fp_057",
+          "b_fp_058",
+          "b_fp_061",
+          "b_fp_062",
+          "b_fp_063",
+          "b_fp_064",
+          "b_fp_065",
+          "b_fp_066",
+          "b_fp_067",
+          "b_fp_069",
+          "b_fp_073",
+          "b_fp_075",
+          "b_fp_076",
+          "b_fp_077",
+          "b_fp_080",
+          "b_fp_081",
+          "b_fp_082"
+        ],
+        "validation": [
+          "b_fp_012",
+          "b_fp_017",
+          "b_fp_028",
+          "b_fp_044",
+          "b_fp_047",
+          "b_fp_052",
+          "b_fp_055",
+          "b_fp_060",
+          "b_fp_068",
+          "b_fp_074",
+          "b_fp_078",
+          "b_fp_079"
+        ]
+      },
+      "test_evaluated": false
+    },
+    "effective_parameters": {
+      "alpha": 0.0001,
+      "copy_X": true,
+      "fit_intercept": true,
+      "max_iter": 10000,
+      "positive": false,
+      "precompute": false,
+      "random_state": 42,
+      "selection": "cyclic",
+      "tol": 0.0001,
+      "warm_start": false
+    },
+    "warnings": [],
+    "training_details": {
+      "n_iter_": [
+        3379,
+        3386,
+        3577,
+        3260,
+        3055,
+        3645,
+        3548,
+        3174
+      ],
+      "dual_gap_": [
+        9.91591927109026e-05,
+        9.99551123768992e-05,
+        9.991099443585275e-05,
+        9.987042817434946e-05,
+        9.412394777305788e-05,
+        9.995922262309815e-05,
+        9.975999255372369e-05,
+        9.983884760867109e-05
+      ],
+      "nonzero_coefficients": 1025
+    },
+    "run_name": "lasso_weak",
+    "model_relative_path": "runs/lasso_weak/lasso_weak/model.joblib",
+    "reused": false
+  },
+  {
+    "group": "regularization",
+    "experiment": {
+      "name": "lasso",
+      "kind": "lasso",
+      "parameters": {
+        "alpha": 0.001
+      }
+    },
+    "report": {
+      "experiment": {
+        "name": "lasso",
+        "kind": "lasso",
+        "parameters": {
+          "alpha": 0.001
+        }
+      },
+      "seed": 42,
+      "train_seconds": 0.5442672819990548,
+      "validation": {
+        "mae_c": 1.1443370113106028,
+        "rmse_c": 1.4638169804539238,
+        "max_absolute_error_c": 5.068595295218614,
+        "samples": 240,
+        "core_comparisons": 1920,
+        "per_core": {
+          "Core_0_L0": {
+            "mae_c": 0.6127760851939247,
+            "rmse_c": 0.7311323113382119,
+            "max_absolute_error_c": 1.801340385853024
+          },
+          "Core_1_L0": {
+            "mae_c": 1.0962339415718765,
+            "rmse_c": 1.4048317984982137,
+            "max_absolute_error_c": 3.4777913344898366
+          },
+          "Core_2_L0": {
+            "mae_c": 1.121720533935123,
+            "rmse_c": 1.4921599830366097,
+            "max_absolute_error_c": 4.780897163652639
+          },
+          "Core_3_L0": {
+            "mae_c": 1.2190200622232656,
+            "rmse_c": 1.521635511631546,
+            "max_absolute_error_c": 3.6436649861905153
+          },
+          "Core_4_L0": {
+            "mae_c": 0.9758932987997061,
+            "rmse_c": 1.1922503792917472,
+            "max_absolute_error_c": 3.442351450241631
+          },
+          "Core_5_L0": {
+            "mae_c": 1.3167478304228457,
+            "rmse_c": 1.7012091932784519,
+            "max_absolute_error_c": 4.272601516064356
+          },
+          "Core_6_L0": {
+            "mae_c": 1.631784570118302,
+            "rmse_c": 1.8984539422379083,
+            "max_absolute_error_c": 5.068595295218614
+          },
+          "Core_7_L0": {
+            "mae_c": 1.1805197682197792,
+            "rmse_c": 1.4738918810816346,
+            "max_absolute_error_c": 3.4461891310057524
+          }
+        }
+      },
+      "latency": {
+        "single_sample_median_ms": 0.06763250000000001,
+        "single_sample_p95_ms": 0.44511179999999995,
+        "batch_samples": 240,
+        "batch_ms": 0.330078,
+        "repeats": 50,
+        "boundary": "Engineered feature array through X scaling, regressor, inverse Y scaling; excludes CSV loading and feature engineering"
+      },
+      "serialized_model_bytes": 11197,
+      "model_sha256": "db1b49992c8a11b95c85a98be861b95502b00b0d3ec680709778236484d9ae80",
+      "versions": {
+        "python": "3.12.14",
+        "platform": {
+          "system": "Linux",
+          "release": "6.18.57",
+          "machine": "x86_64"
+        },
+        "numpy": "2.3.5",
+        "scikit-learn": "1.8.0",
+        "joblib": "1.5.3",
+        "xgboost": null,
+        "xgboost-cpu": "3.4.1"
+      },
+      "prepared_manifest_sha256": "bcabf27285b98bbda358949ec9f3e72124029a9fca341fb59f870b851dde401d",
+      "source_csv_sha256": "ad78ac968292966a6b68e558f61aff3a1e2e185a553037e23fcd39c63e8bbc70",
+      "split_floorplans": {
+        "test": [
+          "b_fp_014",
+          "b_fp_018",
+          "b_fp_019",
+          "b_fp_020",
+          "b_fp_025",
+          "b_fp_041",
+          "b_fp_042",
+          "b_fp_053",
+          "b_fp_059",
+          "b_fp_070",
+          "b_fp_071",
+          "b_fp_072"
+        ],
+        "train": [
+          "b_fp_006",
+          "b_fp_007",
+          "b_fp_008",
+          "b_fp_009",
+          "b_fp_010",
+          "b_fp_011",
+          "b_fp_013",
+          "b_fp_015",
+          "b_fp_016",
+          "b_fp_021",
+          "b_fp_022",
+          "b_fp_023",
+          "b_fp_024",
+          "b_fp_026",
+          "b_fp_027",
+          "b_fp_029",
+          "b_fp_030",
+          "b_fp_031",
+          "b_fp_032",
+          "b_fp_033",
+          "b_fp_034",
+          "b_fp_035",
+          "b_fp_036",
+          "b_fp_037",
+          "b_fp_038",
+          "b_fp_039",
+          "b_fp_040",
+          "b_fp_043",
+          "b_fp_045",
+          "b_fp_046",
+          "b_fp_048",
+          "b_fp_049",
+          "b_fp_050",
+          "b_fp_051",
+          "b_fp_054",
+          "b_fp_056",
+          "b_fp_057",
+          "b_fp_058",
+          "b_fp_061",
+          "b_fp_062",
+          "b_fp_063",
+          "b_fp_064",
+          "b_fp_065",
+          "b_fp_066",
+          "b_fp_067",
+          "b_fp_069",
+          "b_fp_073",
+          "b_fp_075",
+          "b_fp_076",
+          "b_fp_077",
+          "b_fp_080",
+          "b_fp_081",
+          "b_fp_082"
+        ],
+        "validation": [
+          "b_fp_012",
+          "b_fp_017",
+          "b_fp_028",
+          "b_fp_044",
+          "b_fp_047",
+          "b_fp_052",
+          "b_fp_055",
+          "b_fp_060",
+          "b_fp_068",
+          "b_fp_074",
+          "b_fp_078",
+          "b_fp_079"
+        ]
+      },
+      "test_evaluated": false
+    },
+    "effective_parameters": {
+      "alpha": 0.001,
+      "copy_X": true,
+      "fit_intercept": true,
+      "max_iter": 10000,
+      "positive": false,
+      "precompute": false,
+      "random_state": 42,
+      "selection": "cyclic",
+      "tol": 0.0001,
+      "warm_start": false
+    },
+    "warnings": [],
+    "training_details": {
+      "n_iter_": [
+        571,
+        570,
+        678,
+        739,
+        647,
+        667,
+        704,
+        699
+      ],
+      "dual_gap_": [
+        9.93538550272106e-05,
+        9.923639338334333e-05,
+        9.290063312199252e-05,
+        9.91755022568382e-05,
+        9.76439225308384e-05,
+        9.879136099133993e-05,
+        7.695939499259327e-05,
+        9.925614630712363e-05
+      ],
+      "nonzero_coefficients": 621
+    },
+    "run_name": "lasso",
+    "model_relative_path": "runs/lasso/lasso/model.joblib",
+    "reused": false
+  },
+  {
+    "group": "regularization",
+    "experiment": {
+      "name": "elastic_net",
+      "kind": "elastic_net",
+      "parameters": {
+        "alpha": 0.001,
+        "l1_ratio": 0.5
+      }
+    },
+    "report": {
+      "experiment": {
+        "name": "elastic_net",
+        "kind": "elastic_net",
+        "parameters": {
+          "alpha": 0.001,
+          "l1_ratio": 0.5
+        }
+      },
+      "seed": 42,
+      "train_seconds": 0.8504040560001158,
+      "validation": {
+        "mae_c": 1.2569175178298855,
+        "rmse_c": 1.61338262236843,
+        "max_absolute_error_c": 5.211665341195101,
+        "samples": 240,
+        "core_comparisons": 1920,
+        "per_core": {
+          "Core_0_L0": {
+            "mae_c": 0.6110459482830969,
+            "rmse_c": 0.7331966625534239,
+            "max_absolute_error_c": 1.9082023806228676
+          },
+          "Core_1_L0": {
+            "mae_c": 1.1661808969633822,
+            "rmse_c": 1.509526956541289,
+            "max_absolute_error_c": 3.5787906059009913
+          },
+          "Core_2_L0": {
+            "mae_c": 1.2333232364187683,
+            "rmse_c": 1.6046296614899027,
+            "max_absolute_error_c": 5.035406481217734
+          },
+          "Core_3_L0": {
+            "mae_c": 1.4496160824925879,
+            "rmse_c": 1.8245996830227027,
+            "max_absolute_error_c": 4.307453690796649
+          },
+          "Core_4_L0": {
+            "mae_c": 0.9547726642274419,
+            "rmse_c": 1.163971639950632,
+            "max_absolute_error_c": 2.983592786336061
+          },
+          "Core_5_L0": {
+            "mae_c": 1.550424107631135,
+            "rmse_c": 2.053209713525493,
+            "max_absolute_error_c": 5.211665341195101
+          },
+          "Core_6_L0": {
+            "mae_c": 1.7182022533308874,
+            "rmse_c": 1.9672690201834762,
+            "max_absolute_error_c": 5.029369215545728
+          },
+          "Core_7_L0": {
+            "mae_c": 1.3717749532917838,
+            "rmse_c": 1.6319102465702482,
+            "max_absolute_error_c": 3.5938411766038314
+          }
+        }
+      },
+      "latency": {
+        "single_sample_median_ms": 0.06170249999999999,
+        "single_sample_p95_ms": 0.19358989999999981,
+        "batch_samples": 240,
+        "batch_ms": 0.322378,
+        "repeats": 50,
+        "boundary": "Engineered feature array through X scaling, regressor, inverse Y scaling; excludes CSV loading and feature engineering"
+      },
+      "serialized_model_bytes": 12464,
+      "model_sha256": "ba23ee5c0ea1fc30465070b77c7d92583b793f451c269f09a501eeafdf2c005a",
+      "versions": {
+        "python": "3.12.14",
+        "platform": {
+          "system": "Linux",
+          "release": "6.18.57",
+          "machine": "x86_64"
+        },
+        "numpy": "2.3.5",
+        "scikit-learn": "1.8.0",
+        "joblib": "1.5.3",
+        "xgboost": null,
+        "xgboost-cpu": "3.4.1"
+      },
+      "prepared_manifest_sha256": "bcabf27285b98bbda358949ec9f3e72124029a9fca341fb59f870b851dde401d",
+      "source_csv_sha256": "ad78ac968292966a6b68e558f61aff3a1e2e185a553037e23fcd39c63e8bbc70",
+      "split_floorplans": {
+        "test": [
+          "b_fp_014",
+          "b_fp_018",
+          "b_fp_019",
+          "b_fp_020",
+          "b_fp_025",
+          "b_fp_041",
+          "b_fp_042",
+          "b_fp_053",
+          "b_fp_059",
+          "b_fp_070",
+          "b_fp_071",
+          "b_fp_072"
+        ],
+        "train": [
+          "b_fp_006",
+          "b_fp_007",
+          "b_fp_008",
+          "b_fp_009",
+          "b_fp_010",
+          "b_fp_011",
+          "b_fp_013",
+          "b_fp_015",
+          "b_fp_016",
+          "b_fp_021",
+          "b_fp_022",
+          "b_fp_023",
+          "b_fp_024",
+          "b_fp_026",
+          "b_fp_027",
+          "b_fp_029",
+          "b_fp_030",
+          "b_fp_031",
+          "b_fp_032",
+          "b_fp_033",
+          "b_fp_034",
+          "b_fp_035",
+          "b_fp_036",
+          "b_fp_037",
+          "b_fp_038",
+          "b_fp_039",
+          "b_fp_040",
+          "b_fp_043",
+          "b_fp_045",
+          "b_fp_046",
+          "b_fp_048",
+          "b_fp_049",
+          "b_fp_050",
+          "b_fp_051",
+          "b_fp_054",
+          "b_fp_056",
+          "b_fp_057",
+          "b_fp_058",
+          "b_fp_061",
+          "b_fp_062",
+          "b_fp_063",
+          "b_fp_064",
+          "b_fp_065",
+          "b_fp_066",
+          "b_fp_067",
+          "b_fp_069",
+          "b_fp_073",
+          "b_fp_075",
+          "b_fp_076",
+          "b_fp_077",
+          "b_fp_080",
+          "b_fp_081",
+          "b_fp_082"
+        ],
+        "validation": [
+          "b_fp_012",
+          "b_fp_017",
+          "b_fp_028",
+          "b_fp_044",
+          "b_fp_047",
+          "b_fp_052",
+          "b_fp_055",
+          "b_fp_060",
+          "b_fp_068",
+          "b_fp_074",
+          "b_fp_078",
+          "b_fp_079"
+        ]
+      },
+      "test_evaluated": false
+    },
+    "effective_parameters": {
+      "alpha": 0.001,
+      "copy_X": true,
+      "fit_intercept": true,
+      "l1_ratio": 0.5,
+      "max_iter": 10000,
+      "positive": false,
+      "precompute": false,
+      "random_state": 42,
+      "selection": "cyclic",
+      "tol": 0.0001,
+      "warm_start": false
+    },
+    "warnings": [],
+    "training_details": {
+      "n_iter_": [
+        968,
+        1007,
+        1131,
+        1299,
+        894,
+        1054,
+        956,
+        1261
+      ],
+      "dual_gap_": [
+        9.939265754040476e-05,
+        4.5594036723675835e-05,
+        9.991586960363093e-05,
+        9.97101720309193e-05,
+        9.983685530430379e-05,
+        9.959267114454646e-05,
+        8.042878778882359e-05,
+        8.684446371022867e-05
+      ],
+      "nonzero_coefficients": 788
+    },
+    "run_name": "elastic_net",
+    "model_relative_path": "runs/elastic_net/elastic_net/model.joblib",
+    "reused": false
+  },
+  {
+    "group": "regularization",
+    "experiment": {
+      "name": "rf_shallow",
+      "kind": "random_forest",
+      "parameters": {
+        "n_estimators": 128,
+        "max_depth": 5,
+        "min_samples_leaf": 4
+      }
+    },
+    "report": {
+      "experiment": {
+        "name": "rf_shallow",
+        "kind": "random_forest",
+        "parameters": {
+          "n_estimators": 128,
+          "max_depth": 5,
+          "min_samples_leaf": 4
+        }
+      },
+      "seed": 42,
+      "train_seconds": 5.684812373001478,
+      "validation": {
+        "mae_c": 4.345948508300323,
+        "rmse_c": 5.502127119612165,
+        "max_absolute_error_c": 17.543137204821278,
+        "samples": 240,
+        "core_comparisons": 1920,
+        "per_core": {
+          "Core_0_L0": {
+            "mae_c": 4.509128462660599,
+            "rmse_c": 5.596387300785957,
+            "max_absolute_error_c": 16.77642237684738
+          },
+          "Core_1_L0": {
+            "mae_c": 4.2025186973935975,
+            "rmse_c": 5.330094088280058,
+            "max_absolute_error_c": 14.621551960276392
+          },
+          "Core_2_L0": {
+            "mae_c": 4.291681198957046,
+            "rmse_c": 5.606425681322441,
+            "max_absolute_error_c": 16.013203865719916
+          },
+          "Core_3_L0": {
+            "mae_c": 4.293023598865745,
+            "rmse_c": 5.454303414825027,
+            "max_absolute_error_c": 16.477556697936336
+          },
+          "Core_4_L0": {
+            "mae_c": 4.365449650702468,
+            "rmse_c": 5.49603029785968,
+            "max_absolute_error_c": 14.584466807136295
+          },
+          "Core_5_L0": {
+            "mae_c": 4.446817052636803,
+            "rmse_c": 5.58064351859103,
+            "max_absolute_error_c": 14.722253105684047
+          },
+          "Core_6_L0": {
+            "mae_c": 4.467425951064083,
+            "rmse_c": 5.573554015891398,
+            "max_absolute_error_c": 17.543137204821278
+          },
+          "Core_7_L0": {
+            "mae_c": 4.191543454122244,
+            "rmse_c": 5.372327127684096,
+            "max_absolute_error_c": 15.580477607758183
+          }
+        }
+      },
+      "latency": {
+        "single_sample_median_ms": 6.390382,
+        "single_sample_p95_ms": 8.88659365,
+        "batch_samples": 240,
+        "batch_ms": 10.318,
+        "repeats": 50,
+        "boundary": "Engineered feature array through X scaling, regressor, inverse Y scaling; excludes CSV loading and feature engineering"
+      },
+      "serialized_model_bytes": 560594,
+      "model_sha256": "94d0f822e4b1e3456880286c8950c13606972977a592b6d8ddfc92fe18c6f91b",
+      "versions": {
+        "python": "3.12.14",
+        "platform": {
+          "system": "Linux",
+          "release": "6.18.57",
+          "machine": "x86_64"
+        },
+        "numpy": "2.3.5",
+        "scikit-learn": "1.8.0",
+        "joblib": "1.5.3",
+        "xgboost": null,
+        "xgboost-cpu": "3.4.1"
+      },
+      "prepared_manifest_sha256": "bcabf27285b98bbda358949ec9f3e72124029a9fca341fb59f870b851dde401d",
+      "source_csv_sha256": "ad78ac968292966a6b68e558f61aff3a1e2e185a553037e23fcd39c63e8bbc70",
+      "split_floorplans": {
+        "test": [
+          "b_fp_014",
+          "b_fp_018",
+          "b_fp_019",
+          "b_fp_020",
+          "b_fp_025",
+          "b_fp_041",
+          "b_fp_042",
+          "b_fp_053",
+          "b_fp_059",
+          "b_fp_070",
+          "b_fp_071",
+          "b_fp_072"
+        ],
+        "train": [
+          "b_fp_006",
+          "b_fp_007",
+          "b_fp_008",
+          "b_fp_009",
+          "b_fp_010",
+          "b_fp_011",
+          "b_fp_013",
+          "b_fp_015",
+          "b_fp_016",
+          "b_fp_021",
+          "b_fp_022",
+          "b_fp_023",
+          "b_fp_024",
+          "b_fp_026",
+          "b_fp_027",
+          "b_fp_029",
+          "b_fp_030",
+          "b_fp_031",
+          "b_fp_032",
+          "b_fp_033",
+          "b_fp_034",
+          "b_fp_035",
+          "b_fp_036",
+          "b_fp_037",
+          "b_fp_038",
+          "b_fp_039",
+          "b_fp_040",
+          "b_fp_043",
+          "b_fp_045",
+          "b_fp_046",
+          "b_fp_048",
+          "b_fp_049",
+          "b_fp_050",
+          "b_fp_051",
+          "b_fp_054",
+          "b_fp_056",
+          "b_fp_057",
+          "b_fp_058",
+          "b_fp_061",
+          "b_fp_062",
+          "b_fp_063",
+          "b_fp_064",
+          "b_fp_065",
+          "b_fp_066",
+          "b_fp_067",
+          "b_fp_069",
+          "b_fp_073",
+          "b_fp_075",
+          "b_fp_076",
+          "b_fp_077",
+          "b_fp_080",
+          "b_fp_081",
+          "b_fp_082"
+        ],
+        "validation": [
+          "b_fp_012",
+          "b_fp_017",
+          "b_fp_028",
+          "b_fp_044",
+          "b_fp_047",
+          "b_fp_052",
+          "b_fp_055",
+          "b_fp_060",
+          "b_fp_068",
+          "b_fp_074",
+          "b_fp_078",
+          "b_fp_079"
+        ]
+      },
+      "test_evaluated": false
+    },
+    "effective_parameters": {
+      "bootstrap": true,
+      "ccp_alpha": 0.0,
+      "criterion": "squared_error",
+      "max_depth": 5,
+      "max_features": 1.0,
+      "max_leaf_nodes": null,
+      "max_samples": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 4,
+      "min_samples_split": 2,
+      "min_weight_fraction_leaf": 0.0,
+      "monotonic_cst": null,
+      "n_estimators": 128,
+      "n_jobs": 1,
+      "oob_score": false,
+      "random_state": 42,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "warnings": [],
+    "training_details": {},
+    "run_name": "rf_shallow",
+    "model_relative_path": "runs/rf_shallow/rf_shallow/model.joblib",
+    "reused": false
+  },
+  {
+    "group": "regularization",
+    "experiment": {
+      "name": "random_forest",
+      "kind": "random_forest",
+      "parameters": {
+        "n_estimators": 128,
+        "max_depth": 10,
+        "min_samples_leaf": 2
+      }
+    },
+    "report": {
+      "experiment": {
+        "name": "random_forest",
+        "kind": "random_forest",
+        "parameters": {
+          "n_estimators": 128,
+          "max_depth": 10,
+          "min_samples_leaf": 2
+        }
+      },
+      "seed": 42,
+      "train_seconds": 10.301780518002488,
+      "validation": {
+        "mae_c": 3.8430188148709643,
+        "rmse_c": 4.868436216587063,
+        "max_absolute_error_c": 14.760765133371706,
+        "samples": 240,
+        "core_comparisons": 1920,
+        "per_core": {
+          "Core_0_L0": {
+            "mae_c": 3.9743362378180582,
+            "rmse_c": 4.905886096102277,
+            "max_absolute_error_c": 13.908340077782938
+          },
+          "Core_1_L0": {
+            "mae_c": 3.7520260088753465,
+            "rmse_c": 4.761350678391063,
+            "max_absolute_error_c": 13.288978043059629
+          },
+          "Core_2_L0": {
+            "mae_c": 3.7655277772572644,
+            "rmse_c": 4.9589678420712096,
+            "max_absolute_error_c": 14.760765133371706
+          },
+          "Core_3_L0": {
+            "mae_c": 3.8281824137738822,
+            "rmse_c": 4.836796775498714,
+            "max_absolute_error_c": 14.736892526614469
+          },
+          "Core_4_L0": {
+            "mae_c": 3.8299092970916817,
+            "rmse_c": 4.827755757174067,
+            "max_absolute_error_c": 12.864752646330615
+          },
+          "Core_5_L0": {
+            "mae_c": 3.932263434014794,
+            "rmse_c": 4.962172145721137,
+            "max_absolute_error_c": 14.306999865946267
+          },
+          "Core_6_L0": {
+            "mae_c": 3.986665944627242,
+            "rmse_c": 4.961769558154102,
+            "max_absolute_error_c": 14.516030456334192
+          },
+          "Core_7_L0": {
+            "mae_c": 3.6752394055094446,
+            "rmse_c": 4.726488186822624,
+            "max_absolute_error_c": 13.9567558484556
+          }
+        }
+      },
+      "latency": {
+        "single_sample_median_ms": 6.992583,
+        "single_sample_p95_ms": 10.749512949999998,
+        "batch_samples": 240,
+        "batch_ms": 12.070661,
+        "repeats": 50,
+        "boundary": "Engineered feature array through X scaling, regressor, inverse Y scaling; excludes CSV loading and feature engineering"
+      },
+      "serialized_model_bytes": 4015608,
+      "model_sha256": "8ea7d0e247a6ad7646319fda63b79fad753a73c78236239dd77879c6741557b3",
+      "versions": {
+        "python": "3.12.14",
+        "platform": {
+          "system": "Linux",
+          "release": "6.18.57",
+          "machine": "x86_64"
+        },
+        "numpy": "2.3.5",
+        "scikit-learn": "1.8.0",
+        "joblib": "1.5.3",
+        "xgboost": null,
+        "xgboost-cpu": "3.4.1"
+      },
+      "prepared_manifest_sha256": "bcabf27285b98bbda358949ec9f3e72124029a9fca341fb59f870b851dde401d",
+      "source_csv_sha256": "ad78ac968292966a6b68e558f61aff3a1e2e185a553037e23fcd39c63e8bbc70",
+      "split_floorplans": {
+        "test": [
+          "b_fp_014",
+          "b_fp_018",
+          "b_fp_019",
+          "b_fp_020",
+          "b_fp_025",
+          "b_fp_041",
+          "b_fp_042",
+          "b_fp_053",
+          "b_fp_059",
+          "b_fp_070",
+          "b_fp_071",
+          "b_fp_072"
+        ],
+        "train": [
+          "b_fp_006",
+          "b_fp_007",
+          "b_fp_008",
+          "b_fp_009",
+          "b_fp_010",
+          "b_fp_011",
+          "b_fp_013",
+          "b_fp_015",
+          "b_fp_016",
+          "b_fp_021",
+          "b_fp_022",
+          "b_fp_023",
+          "b_fp_024",
+          "b_fp_026",
+          "b_fp_027",
+          "b_fp_029",
+          "b_fp_030",
+          "b_fp_031",
+          "b_fp_032",
+          "b_fp_033",
+          "b_fp_034",
+          "b_fp_035",
+          "b_fp_036",
+          "b_fp_037",
+          "b_fp_038",
+          "b_fp_039",
+          "b_fp_040",
+          "b_fp_043",
+          "b_fp_045",
+          "b_fp_046",
+          "b_fp_048",
+          "b_fp_049",
+          "b_fp_050",
+          "b_fp_051",
+          "b_fp_054",
+          "b_fp_056",
+          "b_fp_057",
+          "b_fp_058",
+          "b_fp_061",
+          "b_fp_062",
+          "b_fp_063",
+          "b_fp_064",
+          "b_fp_065",
+          "b_fp_066",
+          "b_fp_067",
+          "b_fp_069",
+          "b_fp_073",
+          "b_fp_075",
+          "b_fp_076",
+          "b_fp_077",
+          "b_fp_080",
+          "b_fp_081",
+          "b_fp_082"
+        ],
+        "validation": [
+          "b_fp_012",
+          "b_fp_017",
+          "b_fp_028",
+          "b_fp_044",
+          "b_fp_047",
+          "b_fp_052",
+          "b_fp_055",
+          "b_fp_060",
+          "b_fp_068",
+          "b_fp_074",
+          "b_fp_078",
+          "b_fp_079"
+        ]
+      },
+      "test_evaluated": false
+    },
+    "effective_parameters": {
+      "bootstrap": true,
+      "ccp_alpha": 0.0,
+      "criterion": "squared_error",
+      "max_depth": 10,
+      "max_features": 1.0,
+      "max_leaf_nodes": null,
+      "max_samples": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 2,
+      "min_samples_split": 2,
+      "min_weight_fraction_leaf": 0.0,
+      "monotonic_cst": null,
+      "n_estimators": 128,
+      "n_jobs": 1,
+      "oob_score": false,
+      "random_state": 42,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "warnings": [],
+    "training_details": {},
+    "run_name": "random_forest",
+    "model_relative_path": "runs/random_forest/random_forest/model.joblib",
+    "reused": false
+  },
+  {
+    "group": "regularization",
+    "experiment": {
+      "name": "mlp_no_penalty",
+      "kind": "mlp",
+      "parameters": {
+        "optimizer": "adam",
+        "epochs": 300,
+        "l2": 0.0
+      }
+    },
+    "report": {
+      "experiment": {
+        "name": "mlp_adam",
+        "kind": "mlp",
+        "parameters": {
+          "optimizer": "adam",
+          "learning_rate": 0.003,
+          "epochs": 300,
+          "batch_size": 32
+        }
+      },
+      "seed": 42,
+      "train_seconds": 0.8841015329999209,
+      "validation": {
+        "mae_c": 2.9726764161303576,
+        "rmse_c": 3.6643736275015577,
+        "max_absolute_error_c": 12.429757278005454,
+        "samples": 240,
+        "core_comparisons": 1920,
+        "per_core": {
+          "Core_0_L0": {
+            "mae_c": 2.33265675046024,
+            "rmse_c": 3.075743106982804,
+            "max_absolute_error_c": 8.028339162802979
+          },
+          "Core_1_L0": {
+            "mae_c": 2.28424216250309,
+            "rmse_c": 2.825791862177104,
+            "max_absolute_error_c": 8.594389837504096
+          },
+          "Core_2_L0": {
+            "mae_c": 3.6633470746743417,
+            "rmse_c": 4.321608987234459,
+            "max_absolute_error_c": 10.821091236324747
+          },
+          "Core_3_L0": {
+            "mae_c": 3.181793124399671,
+            "rmse_c": 3.921660014485727,
+            "max_absolute_error_c": 12.223541772333022
+          },
+          "Core_4_L0": {
+            "mae_c": 2.4759864289340348,
+            "rmse_c": 3.0076044949608955,
+            "max_absolute_error_c": 7.093792174541733
+          },
+          "Core_5_L0": {
+            "mae_c": 3.0012595511380327,
+            "rmse_c": 3.5073701176792755,
+            "max_absolute_error_c": 8.524835705480939
+          },
+          "Core_6_L0": {
+            "mae_c": 3.3905881169823706,
+            "rmse_c": 4.198271440040015,
+            "max_absolute_error_c": 12.429757278005454
+          },
+          "Core_7_L0": {
+            "mae_c": 3.451538119951082,
+            "rmse_c": 4.116702905775054,
+            "max_absolute_error_c": 9.879444302533443
+          }
+        }
+      },
+      "latency": {
+        "single_sample_median_ms": 0.034283,
+        "single_sample_p95_ms": 0.1009405999999999,
+        "batch_samples": 240,
+        "batch_ms": 0.434941,
+        "repeats": 50,
+        "boundary": "Engineered feature array through X scaling, regressor, inverse Y scaling; excludes CSV loading and feature engineering"
+      },
+      "serialized_model_bytes": 69984,
+      "model_sha256": "d131061c0a3432e6d7ae9b80120d4f20d3d386c2417066e41f338ca7af1e4e0c",
+      "versions": {
+        "python": "3.12.14",
+        "platform": {
+          "system": "Linux",
+          "release": "6.18.57",
+          "machine": "x86_64"
+        },
+        "numpy": "2.3.5",
+        "scikit-learn": "1.8.0",
+        "joblib": "1.5.3",
+        "xgboost": null,
+        "xgboost-cpu": "3.4.1"
+      },
+      "prepared_manifest_sha256": "bcabf27285b98bbda358949ec9f3e72124029a9fca341fb59f870b851dde401d",
+      "source_csv_sha256": "ad78ac968292966a6b68e558f61aff3a1e2e185a553037e23fcd39c63e8bbc70",
+      "split_floorplans": {
+        "test": [
+          "b_fp_014",
+          "b_fp_018",
+          "b_fp_019",
+          "b_fp_020",
+          "b_fp_025",
+          "b_fp_041",
+          "b_fp_042",
+          "b_fp_053",
+          "b_fp_059",
+          "b_fp_070",
+          "b_fp_071",
+          "b_fp_072"
+        ],
+        "train": [
+          "b_fp_006",
+          "b_fp_007",
+          "b_fp_008",
+          "b_fp_009",
+          "b_fp_010",
+          "b_fp_011",
+          "b_fp_013",
+          "b_fp_015",
+          "b_fp_016",
+          "b_fp_021",
+          "b_fp_022",
+          "b_fp_023",
+          "b_fp_024",
+          "b_fp_026",
+          "b_fp_027",
+          "b_fp_029",
+          "b_fp_030",
+          "b_fp_031",
+          "b_fp_032",
+          "b_fp_033",
+          "b_fp_034",
+          "b_fp_035",
+          "b_fp_036",
+          "b_fp_037",
+          "b_fp_038",
+          "b_fp_039",
+          "b_fp_040",
+          "b_fp_043",
+          "b_fp_045",
+          "b_fp_046",
+          "b_fp_048",
+          "b_fp_049",
+          "b_fp_050",
+          "b_fp_051",
+          "b_fp_054",
+          "b_fp_056",
+          "b_fp_057",
+          "b_fp_058",
+          "b_fp_061",
+          "b_fp_062",
+          "b_fp_063",
+          "b_fp_064",
+          "b_fp_065",
+          "b_fp_066",
+          "b_fp_067",
+          "b_fp_069",
+          "b_fp_073",
+          "b_fp_075",
+          "b_fp_076",
+          "b_fp_077",
+          "b_fp_080",
+          "b_fp_081",
+          "b_fp_082"
+        ],
+        "validation": [
+          "b_fp_012",
+          "b_fp_017",
+          "b_fp_028",
+          "b_fp_044",
+          "b_fp_047",
+          "b_fp_052",
+          "b_fp_055",
+          "b_fp_060",
+          "b_fp_068",
+          "b_fp_074",
+          "b_fp_078",
+          "b_fp_079"
+        ]
+      },
+      "test_evaluated": false
+    },
+    "effective_parameters": {
+      "batch_size": 32,
+      "epochs": 300,
+      "gradient_clip": 10.0,
+      "hidden_layers": [
+        32
+      ],
+      "l1": 0.0,
+      "l2": 0.0,
+      "learning_rate": 0.003,
+      "optimizer": "adam",
+      "patience": 20,
+      "random_state": 42,
+      "tolerance": 1e-07
+    },
+    "warnings": [],
+    "training_details": {
+      "n_iter_": 87,
+      "training_epochs": 87,
+      "training_loss_initial": 0.30086571140944673,
+      "training_loss_best": 0.005379623416620947,
+      "training_loss_last": 0.009297548269346532,
+      "epoch_cap_reached": false
+    },
+    "run_name": "mlp_adam",
+    "model_relative_path": "runs/mlp_adam/mlp_adam/model.joblib",
+    "reused": true,
+    "reused_from": "mlp_adam"
+  },
+  {
+    "group": "regularization",
+    "experiment": {
+      "name": "mlp_l2",
+      "kind": "mlp",
+      "parameters": {
+        "optimizer": "adam",
+        "epochs": 300,
+        "l2": 0.001
+      }
+    },
+    "report": {
+      "experiment": {
+        "name": "mlp_l2",
+        "kind": "mlp",
+        "parameters": {
+          "optimizer": "adam",
+          "epochs": 300,
+          "l2": 0.001
+        }
+      },
+      "seed": 42,
+      "train_seconds": 0.9826979059980658,
+      "validation": {
+        "mae_c": 2.744256370264565,
+        "rmse_c": 3.4361077473273265,
+        "max_absolute_error_c": 10.922784364736913,
+        "samples": 240,
+        "core_comparisons": 1920,
+        "per_core": {
+          "Core_0_L0": {
+            "mae_c": 2.456806168190037,
+            "rmse_c": 3.042260398297833,
+            "max_absolute_error_c": 7.6950430594295085
+          },
+          "Core_1_L0": {
+            "mae_c": 1.8525908657517627,
+            "rmse_c": 2.5641188509245874,
+            "max_absolute_error_c": 7.473814551925429
+          },
+          "Core_2_L0": {
+            "mae_c": 2.7583323049018724,
+            "rmse_c": 3.415110111114835,
+            "max_absolute_error_c": 9.541791436626596
+          },
+          "Core_3_L0": {
+            "mae_c": 2.8537183491238696,
+            "rmse_c": 3.285378619093617,
+            "max_absolute_error_c": 7.608284891899245
+          },
+          "Core_4_L0": {
+            "mae_c": 2.937825918296468,
+            "rmse_c": 3.7595948463756454,
+            "max_absolute_error_c": 8.823445194247967
+          },
+          "Core_5_L0": {
+            "mae_c": 3.1534792074415767,
+            "rmse_c": 3.717250071318518,
+            "max_absolute_error_c": 8.339392883430179
+          },
+          "Core_6_L0": {
+            "mae_c": 3.1941487660149397,
+            "rmse_c": 4.045363489178766,
+            "max_absolute_error_c": 10.922784364736913
+          },
+          "Core_7_L0": {
+            "mae_c": 2.747149382395996,
+            "rmse_c": 3.442452729406196,
+            "max_absolute_error_c": 8.348308191801806
+          }
+        }
+      },
+      "latency": {
+        "single_sample_median_ms": 0.035388,
+        "single_sample_p95_ms": 0.06198719999999998,
+        "batch_samples": 240,
+        "batch_ms": 0.437476,
+        "repeats": 50,
+        "boundary": "Engineered feature array through X scaling, regressor, inverse Y scaling; excludes CSV loading and feature engineering"
+      },
+      "serialized_model_bytes": 69862,
+      "model_sha256": "c04814fa29f77679a48d441139032b0e7230b516ef3ebbfabedef21271b98f80",
+      "versions": {
+        "python": "3.12.14",
+        "platform": {
+          "system": "Linux",
+          "release": "6.18.57",
+          "machine": "x86_64"
+        },
+        "numpy": "2.3.5",
+        "scikit-learn": "1.8.0",
+        "joblib": "1.5.3",
+        "xgboost": null,
+        "xgboost-cpu": "3.4.1"
+      },
+      "prepared_manifest_sha256": "bcabf27285b98bbda358949ec9f3e72124029a9fca341fb59f870b851dde401d",
+      "source_csv_sha256": "ad78ac968292966a6b68e558f61aff3a1e2e185a553037e23fcd39c63e8bbc70",
+      "split_floorplans": {
+        "test": [
+          "b_fp_014",
+          "b_fp_018",
+          "b_fp_019",
+          "b_fp_020",
+          "b_fp_025",
+          "b_fp_041",
+          "b_fp_042",
+          "b_fp_053",
+          "b_fp_059",
+          "b_fp_070",
+          "b_fp_071",
+          "b_fp_072"
+        ],
+        "train": [
+          "b_fp_006",
+          "b_fp_007",
+          "b_fp_008",
+          "b_fp_009",
+          "b_fp_010",
+          "b_fp_011",
+          "b_fp_013",
+          "b_fp_015",
+          "b_fp_016",
+          "b_fp_021",
+          "b_fp_022",
+          "b_fp_023",
+          "b_fp_024",
+          "b_fp_026",
+          "b_fp_027",
+          "b_fp_029",
+          "b_fp_030",
+          "b_fp_031",
+          "b_fp_032",
+          "b_fp_033",
+          "b_fp_034",
+          "b_fp_035",
+          "b_fp_036",
+          "b_fp_037",
+          "b_fp_038",
+          "b_fp_039",
+          "b_fp_040",
+          "b_fp_043",
+          "b_fp_045",
+          "b_fp_046",
+          "b_fp_048",
+          "b_fp_049",
+          "b_fp_050",
+          "b_fp_051",
+          "b_fp_054",
+          "b_fp_056",
+          "b_fp_057",
+          "b_fp_058",
+          "b_fp_061",
+          "b_fp_062",
+          "b_fp_063",
+          "b_fp_064",
+          "b_fp_065",
+          "b_fp_066",
+          "b_fp_067",
+          "b_fp_069",
+          "b_fp_073",
+          "b_fp_075",
+          "b_fp_076",
+          "b_fp_077",
+          "b_fp_080",
+          "b_fp_081",
+          "b_fp_082"
+        ],
+        "validation": [
+          "b_fp_012",
+          "b_fp_017",
+          "b_fp_028",
+          "b_fp_044",
+          "b_fp_047",
+          "b_fp_052",
+          "b_fp_055",
+          "b_fp_060",
+          "b_fp_068",
+          "b_fp_074",
+          "b_fp_078",
+          "b_fp_079"
+        ]
+      },
+      "test_evaluated": false
+    },
+    "effective_parameters": {
+      "batch_size": 32,
+      "epochs": 300,
+      "gradient_clip": 10.0,
+      "hidden_layers": [
+        32
+      ],
+      "l1": 0.0,
+      "l2": 0.001,
+      "learning_rate": 0.003,
+      "optimizer": "adam",
+      "patience": 20,
+      "random_state": 42,
+      "tolerance": 1e-07
+    },
+    "warnings": [],
+    "training_details": {
+      "n_iter_": 67,
+      "training_epochs": 67,
+      "training_loss_initial": 0.3684973556658202,
+      "training_loss_best": 0.027307390613912626,
+      "training_loss_last": 0.027689288329131624,
+      "epoch_cap_reached": false
+    },
+    "run_name": "mlp_l2",
+    "model_relative_path": "runs/mlp_l2/mlp_l2/model.joblib",
+    "reused": false
+  }
+]

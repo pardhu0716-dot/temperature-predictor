@@ -1,0 +1,19 @@
+{
+  "training_only_scalers_exact_match": true,
+  "split_seed42_reproduced": true,
+  "disjoint_floorplan_groups": true,
+  "validation_metrics_independently_recomputed": {
+    "mae_c": 1.8515805672394103,
+    "rmse_c": 2.2485624172703402,
+    "max_absolute_error_c": 6.226269234829886
+  },
+  "saved_model_predictions_verified": true,
+  "test_evaluated": false,
+  "worst_validation_case": {
+    "floorplan_id": "b_fp_079",
+    "sample_id": "sample_019",
+    "core_id": "Core_5_L0",
+    "actual_c": 148.28,
+    "predicted_c": 154.5062692348299
+  }
+}

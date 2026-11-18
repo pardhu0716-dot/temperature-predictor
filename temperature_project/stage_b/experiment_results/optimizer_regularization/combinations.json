@@ -1,0 +1,5226 @@
+[
+  {
+    "group": "combinations",
+    "penalty": "none",
+    "experiment": {
+      "name": "linear_gradient_batch_gd_none",
+      "kind": "linear_gradient",
+      "parameters": {
+        "optimizer": "batch_gd",
+        "learning_rate": 0.01,
+        "epochs": 300,
+        "batch_size": 32,
+        "l1": 0.0,
+        "l2": 0.0
+      }
+    },
+    "report": {
+      "experiment": {
+        "name": "linear_gradient_batch_gd",
+        "kind": "linear_gradient",
+        "parameters": {
+          "optimizer": "batch_gd",
+          "learning_rate": 0.01,
+          "epochs": 300,
+          "batch_size": 32
+        }
+      },
+      "seed": 42,
+      "train_seconds": 0.4702947529985977,
+      "validation": {
+        "mae_c": 4.9130466560191355,
+        "rmse_c": 6.131625512938092,
+        "max_absolute_error_c": 19.75343898285206,
+        "samples": 240,
+        "core_comparisons": 1920,
+        "per_core": {
+          "Core_0_L0": {
+            "mae_c": 5.17892304770985,
+            "rmse_c": 6.3547528213988755,
+            "max_absolute_error_c": 16.984585649188915
+          },
+          "Core_1_L0": {
+            "mae_c": 3.886067186300674,
+            "rmse_c": 4.846630786879527,
+            "max_absolute_error_c": 13.234136908216726
+          },
+          "Core_2_L0": {
+            "mae_c": 4.499768140693101,
+            "rmse_c": 5.458481141844921,
+            "max_absolute_error_c": 15.729339483944159
+          },
+          "Core_3_L0": {
+            "mae_c": 5.087275806148875,
+            "rmse_c": 5.992102255537973,
+            "max_absolute_error_c": 16.560878172949188
+          },
+          "Core_4_L0": {
+            "mae_c": 4.821226505788604,
+            "rmse_c": 6.085555258824961,
+            "max_absolute_error_c": 17.554803848810366
+          },
+          "Core_5_L0": {
+            "mae_c": 7.138435486485304,
+            "rmse_c": 8.511841016013275,
+            "max_absolute_error_c": 18.86192658252287
+          },
+          "Core_6_L0": {
+            "mae_c": 5.221641330999847,
+            "rmse_c": 6.5904363692647525,
+            "max_absolute_error_c": 19.75343898285206
+          },
+          "Core_7_L0": {
+            "mae_c": 3.4710357440268305,
+            "rmse_c": 4.27578769325321,
+            "max_absolute_error_c": 10.329375213331161
+          }
+        }
+      },
+      "latency": {
+        "single_sample_median_ms": 0.0311945,
+        "single_sample_p95_ms": 0.06792244999999997,
+        "batch_samples": 240,
+        "batch_ms": 0.292649,
+        "repeats": 50,
+        "boundary": "Engineered feature array through X scaling, regressor, inverse Y scaling; excludes CSV loading and feature engineering"
+      },
+      "serialized_model_bytes": 22783,
+      "model_sha256": "569407ed5044ea179af1706f8f60be713bf0c2e043c49d95a5d2ca6f29548faa",
+      "versions": {
+        "python": "3.12.14",
+        "platform": {
+          "system": "Linux",
+          "release": "6.18.57",
+          "machine": "x86_64"
+        },
+        "numpy": "2.3.5",
+        "scikit-learn": "1.8.0",
+        "joblib": "1.5.3",
+        "xgboost": null,
+        "xgboost-cpu": "3.4.1"
+      },
+      "prepared_manifest_sha256": "bcabf27285b98bbda358949ec9f3e72124029a9fca341fb59f870b851dde401d",
+      "source_csv_sha256": "ad78ac968292966a6b68e558f61aff3a1e2e185a553037e23fcd39c63e8bbc70",
+      "split_floorplans": {
+        "test": [
+          "b_fp_014",
+          "b_fp_018",
+          "b_fp_019",
+          "b_fp_020",
+          "b_fp_025",
+          "b_fp_041",
+          "b_fp_042",
+          "b_fp_053",
+          "b_fp_059",
+          "b_fp_070",
+          "b_fp_071",
+          "b_fp_072"
+        ],
+        "train": [
+          "b_fp_006",
+          "b_fp_007",
+          "b_fp_008",
+          "b_fp_009",
+          "b_fp_010",
+          "b_fp_011",
+          "b_fp_013",
+          "b_fp_015",
+          "b_fp_016",
+          "b_fp_021",
+          "b_fp_022",
+          "b_fp_023",
+          "b_fp_024",
+          "b_fp_026",
+          "b_fp_027",
+          "b_fp_029",
+          "b_fp_030",
+          "b_fp_031",
+          "b_fp_032",
+          "b_fp_033",
+          "b_fp_034",
+          "b_fp_035",
+          "b_fp_036",
+          "b_fp_037",
+          "b_fp_038",
+          "b_fp_039",
+          "b_fp_040",
+          "b_fp_043",
+          "b_fp_045",
+          "b_fp_046",
+          "b_fp_048",
+          "b_fp_049",
+          "b_fp_050",
+          "b_fp_051",
+          "b_fp_054",
+          "b_fp_056",
+          "b_fp_057",
+          "b_fp_058",
+          "b_fp_061",
+          "b_fp_062",
+          "b_fp_063",
+          "b_fp_064",
+          "b_fp_065",
+          "b_fp_066",
+          "b_fp_067",
+          "b_fp_069",
+          "b_fp_073",
+          "b_fp_075",
+          "b_fp_076",
+          "b_fp_077",
+          "b_fp_080",
+          "b_fp_081",
+          "b_fp_082"
+        ],
+        "validation": [
+          "b_fp_012",
+          "b_fp_017",
+          "b_fp_028",
+          "b_fp_044",
+          "b_fp_047",
+          "b_fp_052",
+          "b_fp_055",
+          "b_fp_060",
+          "b_fp_068",
+          "b_fp_074",
+          "b_fp_078",
+          "b_fp_079"
+        ]
+      },
+      "test_evaluated": false
+    },
+    "effective_parameters": {
+      "batch_size": 32,
+      "epochs": 300,
+      "gradient_clip": 10.0,
+      "hidden_layers": [],
+      "l1": 0.0,
+      "l2": 0.0,
+      "learning_rate": 0.01,
+      "optimizer": "batch_gd",
+      "patience": 20,
+      "random_state": 42,
+      "tolerance": 1e-07
+    },
+    "warnings": [],
+    "training_details": {
+      "n_iter_": 300,
+      "training_epochs": 300,
+      "training_loss_initial": 2.7365811969077547,
+      "training_loss_best": 0.19562551844756587,
+      "training_loss_last": 0.19562551844756587,
+      "epoch_cap_reached": true
+    },
+    "run_name": "linear_gradient_batch_gd",
+    "model_relative_path": "runs/linear_gradient_batch_gd/linear_gradient_batch_gd/model.joblib",
+    "reused": true,
+    "reused_from": "linear_gradient_batch_gd"
+  },
+  {
+    "group": "combinations",
+    "penalty": "l1",
+    "experiment": {
+      "name": "linear_gradient_batch_gd_l1",
+      "kind": "linear_gradient",
+      "parameters": {
+        "optimizer": "batch_gd",
+        "learning_rate": 0.01,
+        "epochs": 300,
+        "batch_size": 32,
+        "l1": 0.0001,
+        "l2": 0.0
+      }
+    },
+    "report": {
+      "experiment": {
+        "name": "linear_gradient_batch_gd_l1",
+        "kind": "linear_gradient",
+        "parameters": {
+          "optimizer": "batch_gd",
+          "learning_rate": 0.01,
+          "epochs": 300,
+          "batch_size": 32,
+          "l1": 0.0001,
+          "l2": 0.0
+        }
+      },
+      "seed": 42,
+      "train_seconds": 0.6405466910000541,
+      "validation": {
+        "mae_c": 4.906362515476224,
+        "rmse_c": 6.122904585254175,
+        "max_absolute_error_c": 19.704411632296143,
+        "samples": 240,
+        "core_comparisons": 1920,
+        "per_core": {
+          "Core_0_L0": {
+            "mae_c": 5.172081541725527,
+            "rmse_c": 6.345259937437946,
+            "max_absolute_error_c": 16.960911528459917
+          },
+          "Core_1_L0": {
+            "mae_c": 3.8787890355679036,
+            "rmse_c": 4.838957291723848,
+            "max_absolute_error_c": 13.212629218535966
+          },
+          "Core_2_L0": {
+            "mae_c": 4.494634463984071,
+            "rmse_c": 5.453310778578063,
+            "max_absolute_error_c": 15.723192666443737
+          },
+          "Core_3_L0": {
+            "mae_c": 5.0810990022993145,
+            "rmse_c": 5.984726052830913,
+            "max_absolute_error_c": 16.551441421096015
+          },
+          "Core_4_L0": {
+            "mae_c": 4.815887814894207,
+            "rmse_c": 6.07780059547905,
+            "max_absolute_error_c": 17.533297437193482
+          },
+          "Core_5_L0": {
+            "mae_c": 7.126906046538369,
+            "rmse_c": 8.498424539213522,
+            "max_absolute_error_c": 18.853323105446577
+          },
+          "Core_6_L0": {
+            "mae_c": 5.211006684477453,
+            "rmse_c": 6.576196437617731,
+            "max_absolute_error_c": 19.704411632296143
+          },
+          "Core_7_L0": {
+            "mae_c": 3.47049553432295,
+            "rmse_c": 4.275168937924369,
+            "max_absolute_error_c": 10.332242458558568
+          }
+        }
+      },
+      "latency": {
+        "single_sample_median_ms": 0.031027,
+        "single_sample_p95_ms": 0.05736614999999998,
+        "batch_samples": 240,
+        "batch_ms": 0.423718,
+        "repeats": 50,
+        "boundary": "Engineered feature array through X scaling, regressor, inverse Y scaling; excludes CSV loading and feature engineering"
+      },
+      "serialized_model_bytes": 22801,
+      "model_sha256": "22fa92208dbcdc17f7d7b46a4da8a54838e24d6216c2bcb52b2e2109cca32201",
+      "versions": {
+        "python": "3.12.14",
+        "platform": {
+          "system": "Linux",
+          "release": "6.18.57",
+          "machine": "x86_64"
+        },
+        "numpy": "2.3.5",
+        "scikit-learn": "1.8.0",
+        "joblib": "1.5.3",
+        "xgboost": null,
+        "xgboost-cpu": "3.4.1"
+      },
+      "prepared_manifest_sha256": "bcabf27285b98bbda358949ec9f3e72124029a9fca341fb59f870b851dde401d",
+      "source_csv_sha256": "ad78ac968292966a6b68e558f61aff3a1e2e185a553037e23fcd39c63e8bbc70",
+      "split_floorplans": {
+        "test": [
+          "b_fp_014",
+          "b_fp_018",
+          "b_fp_019",
+          "b_fp_020",
+          "b_fp_025",
+          "b_fp_041",
+          "b_fp_042",
+          "b_fp_053",
+          "b_fp_059",
+          "b_fp_070",
+          "b_fp_071",
+          "b_fp_072"
+        ],
+        "train": [
+          "b_fp_006",
+          "b_fp_007",
+          "b_fp_008",
+          "b_fp_009",
+          "b_fp_010",
+          "b_fp_011",
+          "b_fp_013",
+          "b_fp_015",
+          "b_fp_016",
+          "b_fp_021",
+          "b_fp_022",
+          "b_fp_023",
+          "b_fp_024",
+          "b_fp_026",
+          "b_fp_027",
+          "b_fp_029",
+          "b_fp_030",
+          "b_fp_031",
+          "b_fp_032",
+          "b_fp_033",
+          "b_fp_034",
+          "b_fp_035",
+          "b_fp_036",
+          "b_fp_037",
+          "b_fp_038",
+          "b_fp_039",
+          "b_fp_040",
+          "b_fp_043",
+          "b_fp_045",
+          "b_fp_046",
+          "b_fp_048",
+          "b_fp_049",
+          "b_fp_050",
+          "b_fp_051",
+          "b_fp_054",
+          "b_fp_056",
+          "b_fp_057",
+          "b_fp_058",
+          "b_fp_061",
+          "b_fp_062",
+          "b_fp_063",
+          "b_fp_064",
+          "b_fp_065",
+          "b_fp_066",
+          "b_fp_067",
+          "b_fp_069",
+          "b_fp_073",
+          "b_fp_075",
+          "b_fp_076",
+          "b_fp_077",
+          "b_fp_080",
+          "b_fp_081",
+          "b_fp_082"
+        ],
+        "validation": [
+          "b_fp_012",
+          "b_fp_017",
+          "b_fp_028",
+          "b_fp_044",
+          "b_fp_047",
+          "b_fp_052",
+          "b_fp_055",
+          "b_fp_060",
+          "b_fp_068",
+          "b_fp_074",
+          "b_fp_078",
+          "b_fp_079"
+        ]
+      },
+      "test_evaluated": false
+    },
+    "effective_parameters": {
+      "batch_size": 32,
+      "epochs": 300,
+      "gradient_clip": 10.0,
+      "hidden_layers": [],
+      "l1": 0.0001,
+      "l2": 0.0,
+      "learning_rate": 0.01,
+      "optimizer": "batch_gd",
+      "patience": 20,
+      "random_state": 42,
+      "tolerance": 1e-07
+    },
+    "warnings": [],
+    "training_details": {
+      "n_iter_": 300,
+      "training_epochs": 300,
+      "training_loss_initial": 2.7505702972767607,
+      "training_loss_best": 0.20929592637269614,
+      "training_loss_last": 0.20929592637269614,
+      "epoch_cap_reached": true
+    },
+    "run_name": "linear_gradient_batch_gd_l1",
+    "model_relative_path": "runs/linear_gradient_batch_gd_l1/linear_gradient_batch_gd_l1/model.joblib",
+    "reused": false
+  },
+  {
+    "group": "combinations",
+    "penalty": "l2",
+    "experiment": {
+      "name": "linear_gradient_batch_gd_l2",
+      "kind": "linear_gradient",
+      "parameters": {
+        "optimizer": "batch_gd",
+        "learning_rate": 0.01,
+        "epochs": 300,
+        "batch_size": 32,
+        "l1": 0.0,
+        "l2": 0.001
+      }
+    },
+    "report": {
+      "experiment": {
+        "name": "linear_gradient_batch_gd_l2",
+        "kind": "linear_gradient",
+        "parameters": {
+          "optimizer": "batch_gd",
+          "learning_rate": 0.01,
+          "epochs": 300,
+          "batch_size": 32,
+          "l1": 0.0,
+          "l2": 0.001
+        }
+      },
+      "seed": 42,
+      "train_seconds": 0.42834943699926953,
+      "validation": {
+        "mae_c": 4.895774629267051,
+        "rmse_c": 6.109899167323876,
+        "max_absolute_error_c": 19.680247639816855,
+        "samples": 240,
+        "core_comparisons": 1920,
+        "per_core": {
+          "Core_0_L0": {
+            "mae_c": 5.161813295353212,
+            "rmse_c": 6.33248027515389,
+            "max_absolute_error_c": 16.932661269633314
+          },
+          "Core_1_L0": {
+            "mae_c": 3.876281989556641,
+            "rmse_c": 4.836606737841625,
+            "max_absolute_error_c": 13.200572721223864
+          },
+          "Core_2_L0": {
+            "mae_c": 4.486090672254412,
+            "rmse_c": 5.444803753390487,
+            "max_absolute_error_c": 15.712788627057563
+          },
+          "Core_3_L0": {
+            "mae_c": 5.067020421743174,
+            "rmse_c": 5.970586693066975,
+            "max_absolute_error_c": 16.5386142472952
+          },
+          "Core_4_L0": {
+            "mae_c": 4.80381941872061,
+            "rmse_c": 6.065447907505527,
+            "max_absolute_error_c": 17.512271766397106
+          },
+          "Core_5_L0": {
+            "mae_c": 7.10037252648782,
+            "rmse_c": 8.467416292393537,
+            "max_absolute_error_c": 18.796543661166595
+          },
+          "Core_6_L0": {
+            "mae_c": 5.204592510695045,
+            "rmse_c": 6.568491761522744,
+            "max_absolute_error_c": 19.680247639816855
+          },
+          "Core_7_L0": {
+            "mae_c": 3.466206199325498,
+            "rmse_c": 4.26944927669382,
+            "max_absolute_error_c": 10.299810087398441
+          }
+        }
+      },
+      "latency": {
+        "single_sample_median_ms": 0.0325125,
+        "single_sample_p95_ms": 0.13671914999999993,
+        "batch_samples": 240,
+        "batch_ms": 0.362354,
+        "repeats": 50,
+        "boundary": "Engineered feature array through X scaling, regressor, inverse Y scaling; excludes CSV loading and feature engineering"
+      },
+      "serialized_model_bytes": 22808,
+      "model_sha256": "73bc4ebeeb42086fea59e6480fb06ebf066cb40f3e2caef6caf255896cd742ec",
+      "versions": {
+        "python": "3.12.14",
+        "platform": {
+          "system": "Linux",
+          "release": "6.18.57",
+          "machine": "x86_64"
+        },
+        "numpy": "2.3.5",
+        "scikit-learn": "1.8.0",
+        "joblib": "1.5.3",
+        "xgboost": null,
+        "xgboost-cpu": "3.4.1"
+      },
+      "prepared_manifest_sha256": "bcabf27285b98bbda358949ec9f3e72124029a9fca341fb59f870b851dde401d",
+      "source_csv_sha256": "ad78ac968292966a6b68e558f61aff3a1e2e185a553037e23fcd39c63e8bbc70",
+      "split_floorplans": {
+        "test": [
+          "b_fp_014",
+          "b_fp_018",
+          "b_fp_019",
+          "b_fp_020",
+          "b_fp_025",
+          "b_fp_041",
+          "b_fp_042",
+          "b_fp_053",
+          "b_fp_059",
+          "b_fp_070",
+          "b_fp_071",
+          "b_fp_072"
+        ],
+        "train": [
+          "b_fp_006",
+          "b_fp_007",
+          "b_fp_008",
+          "b_fp_009",
+          "b_fp_010",
+          "b_fp_011",
+          "b_fp_013",
+          "b_fp_015",
+          "b_fp_016",
+          "b_fp_021",
+          "b_fp_022",
+          "b_fp_023",
+          "b_fp_024",
+          "b_fp_026",
+          "b_fp_027",
+          "b_fp_029",
+          "b_fp_030",
+          "b_fp_031",
+          "b_fp_032",
+          "b_fp_033",
+          "b_fp_034",
+          "b_fp_035",
+          "b_fp_036",
+          "b_fp_037",
+          "b_fp_038",
+          "b_fp_039",
+          "b_fp_040",
+          "b_fp_043",
+          "b_fp_045",
+          "b_fp_046",
+          "b_fp_048",
+          "b_fp_049",
+          "b_fp_050",
+          "b_fp_051",
+          "b_fp_054",
+          "b_fp_056",
+          "b_fp_057",
+          "b_fp_058",
+          "b_fp_061",
+          "b_fp_062",
+          "b_fp_063",
+          "b_fp_064",
+          "b_fp_065",
+          "b_fp_066",
+          "b_fp_067",
+          "b_fp_069",
+          "b_fp_073",
+          "b_fp_075",
+          "b_fp_076",
+          "b_fp_077",
+          "b_fp_080",
+          "b_fp_081",
+          "b_fp_082"
+        ],
+        "validation": [
+          "b_fp_012",
+          "b_fp_017",
+          "b_fp_028",
+          "b_fp_044",
+          "b_fp_047",
+          "b_fp_052",
+          "b_fp_055",
+          "b_fp_060",
+          "b_fp_068",
+          "b_fp_074",
+          "b_fp_078",
+          "b_fp_079"
+        ]
+      },
+      "test_evaluated": false
+    },
+    "effective_parameters": {
+      "batch_size": 32,
+      "epochs": 300,
+      "gradient_clip": 10.0,
+      "hidden_layers": [],
+      "l1": 0.0,
+      "l2": 0.001,
+      "learning_rate": 0.01,
+      "optimizer": "batch_gd",
+      "patience": 20,
+      "random_state": 42,
+      "tolerance": 1e-07
+    },
+    "warnings": [],
+    "training_details": {
+      "n_iter_": 300,
+      "training_epochs": 300,
+      "training_loss_initial": 2.752043676225689,
+      "training_loss_best": 0.21022992473180252,
+      "training_loss_last": 0.21022992473180252,
+      "epoch_cap_reached": true
+    },
+    "run_name": "linear_gradient_batch_gd_l2",
+    "model_relative_path": "runs/linear_gradient_batch_gd_l2/linear_gradient_batch_gd_l2/model.joblib",
+    "reused": false
+  },
+  {
+    "group": "combinations",
+    "penalty": "l1_l2",
+    "experiment": {
+      "name": "linear_gradient_batch_gd_l1_l2",
+      "kind": "linear_gradient",
+      "parameters": {
+        "optimizer": "batch_gd",
+        "learning_rate": 0.01,
+        "epochs": 300,
+        "batch_size": 32,
+        "l1": 0.0001,
+        "l2": 0.001
+      }
+    },
+    "report": {
+      "experiment": {
+        "name": "linear_gradient_batch_gd_l1_l2",
+        "kind": "linear_gradient",
+        "parameters": {
+          "optimizer": "batch_gd",
+          "learning_rate": 0.01,
+          "epochs": 300,
+          "batch_size": 32,
+          "l1": 0.0001,
+          "l2": 0.001
+        }
+      },
+      "seed": 42,
+      "train_seconds": 0.42750557500039577,
+      "validation": {
+        "mae_c": 4.889140146209632,
+        "rmse_c": 6.10125253207715,
+        "max_absolute_error_c": 19.631415856785452,
+        "samples": 240,
+        "core_comparisons": 1920,
+        "per_core": {
+          "Core_0_L0": {
+            "mae_c": 5.154989318078685,
+            "rmse_c": 6.323048152753111,
+            "max_absolute_error_c": 16.908991635642337
+          },
+          "Core_1_L0": {
+            "mae_c": 3.869078056618737,
+            "rmse_c": 4.829029657459426,
+            "max_absolute_error_c": 13.179173343116247
+          },
+          "Core_2_L0": {
+            "mae_c": 4.480986034194111,
+            "rmse_c": 5.439703844366318,
+            "max_absolute_error_c": 15.706662640399173
+          },
+          "Core_3_L0": {
+            "mae_c": 5.060873027459325,
+            "rmse_c": 5.96329363470631,
+            "max_absolute_error_c": 16.529289075928958
+          },
+          "Core_4_L0": {
+            "mae_c": 4.798626554614554,
+            "rmse_c": 6.057714715129179,
+            "max_absolute_error_c": 17.4908280503916
+          },
+          "Core_5_L0": {
+            "mae_c": 7.088888089091853,
+            "rmse_c": 8.45409625166465,
+            "max_absolute_error_c": 18.787993066345194
+          },
+          "Core_6_L0": {
+            "mae_c": 5.19400593826036,
+            "rmse_c": 6.554362406062589,
+            "max_absolute_error_c": 19.631415856785452
+          },
+          "Core_7_L0": {
+            "mae_c": 3.4656741513594365,
+            "rmse_c": 4.268867281412432,
+            "max_absolute_error_c": 10.302697673797212
+          }
+        }
+      },
+      "latency": {
+        "single_sample_median_ms": 0.030246000000000002,
+        "single_sample_p95_ms": 0.12019159999999969,
+        "batch_samples": 240,
+        "batch_ms": 0.315934,
+        "repeats": 50,
+        "boundary": "Engineered feature array through X scaling, regressor, inverse Y scaling; excludes CSV loading and feature engineering"
+      },
+      "serialized_model_bytes": 22799,
+      "model_sha256": "e13d305a5f33e05427e080ba04953c4a54c6bfe39cc05ca37b2c084e65ffa42b",
+      "versions": {
+        "python": "3.12.14",
+        "platform": {
+          "system": "Linux",
+          "release": "6.18.57",
+          "machine": "x86_64"
+        },
+        "numpy": "2.3.5",
+        "scikit-learn": "1.8.0",
+        "joblib": "1.5.3",
+        "xgboost": null,
+        "xgboost-cpu": "3.4.1"
+      },
+      "prepared_manifest_sha256": "bcabf27285b98bbda358949ec9f3e72124029a9fca341fb59f870b851dde401d",
+      "source_csv_sha256": "ad78ac968292966a6b68e558f61aff3a1e2e185a553037e23fcd39c63e8bbc70",
+      "split_floorplans": {
+        "test": [
+          "b_fp_014",
+          "b_fp_018",
+          "b_fp_019",
+          "b_fp_020",
+          "b_fp_025",
+          "b_fp_041",
+          "b_fp_042",
+          "b_fp_053",
+          "b_fp_059",
+          "b_fp_070",
+          "b_fp_071",
+          "b_fp_072"
+        ],
+        "train": [
+          "b_fp_006",
+          "b_fp_007",
+          "b_fp_008",
+          "b_fp_009",
+          "b_fp_010",
+          "b_fp_011",
+          "b_fp_013",
+          "b_fp_015",
+          "b_fp_016",
+          "b_fp_021",
+          "b_fp_022",
+          "b_fp_023",
+          "b_fp_024",
+          "b_fp_026",
+          "b_fp_027",
+          "b_fp_029",
+          "b_fp_030",
+          "b_fp_031",
+          "b_fp_032",
+          "b_fp_033",
+          "b_fp_034",
+          "b_fp_035",
+          "b_fp_036",
+          "b_fp_037",
+          "b_fp_038",
+          "b_fp_039",
+          "b_fp_040",
+          "b_fp_043",
+          "b_fp_045",
+          "b_fp_046",
+          "b_fp_048",
+          "b_fp_049",
+          "b_fp_050",
+          "b_fp_051",
+          "b_fp_054",
+          "b_fp_056",
+          "b_fp_057",
+          "b_fp_058",
+          "b_fp_061",
+          "b_fp_062",
+          "b_fp_063",
+          "b_fp_064",
+          "b_fp_065",
+          "b_fp_066",
+          "b_fp_067",
+          "b_fp_069",
+          "b_fp_073",
+          "b_fp_075",
+          "b_fp_076",
+          "b_fp_077",
+          "b_fp_080",
+          "b_fp_081",
+          "b_fp_082"
+        ],
+        "validation": [
+          "b_fp_012",
+          "b_fp_017",
+          "b_fp_028",
+          "b_fp_044",
+          "b_fp_047",
+          "b_fp_052",
+          "b_fp_055",
+          "b_fp_060",
+          "b_fp_068",
+          "b_fp_074",
+          "b_fp_078",
+          "b_fp_079"
+        ]
+      },
+      "test_evaluated": false
+    },
+    "effective_parameters": {
+      "batch_size": 32,
+      "epochs": 300,
+      "gradient_clip": 10.0,
+      "hidden_layers": [],
+      "l1": 0.0001,
+      "l2": 0.001,
+      "learning_rate": 0.01,
+      "optimizer": "batch_gd",
+      "patience": 20,
+      "random_state": 42,
+      "tolerance": 1e-07
+    },
+    "warnings": [],
+    "training_details": {
+      "n_iter_": 300,
+      "training_epochs": 300,
+      "training_loss_initial": 2.766032215785723,
+      "training_loss_best": 0.22375518867264585,
+      "training_loss_last": 0.22375518867264585,
+      "epoch_cap_reached": true
+    },
+    "run_name": "linear_gradient_batch_gd_l1_l2",
+    "model_relative_path": "runs/linear_gradient_batch_gd_l1_l2/linear_gradient_batch_gd_l1_l2/model.joblib",
+    "reused": false
+  },
+  {
+    "group": "combinations",
+    "penalty": "none",
+    "experiment": {
+      "name": "linear_gradient_sgd_none",
+      "kind": "linear_gradient",
+      "parameters": {
+        "optimizer": "sgd",
+        "learning_rate": 0.001,
+        "epochs": 300,
+        "batch_size": 32,
+        "l1": 0.0,
+        "l2": 0.0
+      }
+    },
+    "report": {
+      "experiment": {
+        "name": "linear_gradient_sgd",
+        "kind": "linear_gradient",
+        "parameters": {
+          "optimizer": "sgd",
+          "learning_rate": 0.001,
+          "epochs": 300,
+          "batch_size": 32
+        }
+      },
+      "seed": 42,
+      "train_seconds": 14.884705469001347,
+      "validation": {
+        "mae_c": 2.6097343978070002,
+        "rmse_c": 3.339235763265755,
+        "max_absolute_error_c": 11.450524440638418,
+        "samples": 240,
+        "core_comparisons": 1920,
+        "per_core": {
+          "Core_0_L0": {
+            "mae_c": 2.099770037018826,
+            "rmse_c": 2.5336800347050175,
+            "max_absolute_error_c": 5.73378087509721
+          },
+          "Core_1_L0": {
+            "mae_c": 2.5066463088911166,
+            "rmse_c": 3.0955512395877545,
+            "max_absolute_error_c": 7.253564699735307
+          },
+          "Core_2_L0": {
+            "mae_c": 2.8498247519628164,
+            "rmse_c": 4.015150735158093,
+            "max_absolute_error_c": 11.450524440638418
+          },
+          "Core_3_L0": {
+            "mae_c": 2.6575328324865124,
+            "rmse_c": 3.093519499910983,
+            "max_absolute_error_c": 6.356763987815256
+          },
+          "Core_4_L0": {
+            "mae_c": 1.809703116785381,
+            "rmse_c": 2.144919242029195,
+            "max_absolute_error_c": 4.951558720215871
+          },
+          "Core_5_L0": {
+            "mae_c": 2.2562013095646822,
+            "rmse_c": 2.848096385927302,
+            "max_absolute_error_c": 7.808745187258282
+          },
+          "Core_6_L0": {
+            "mae_c": 3.971000380612001,
+            "rmse_c": 4.901042132497282,
+            "max_absolute_error_c": 9.929183174388186
+          },
+          "Core_7_L0": {
+            "mae_c": 2.7271964451346604,
+            "rmse_c": 3.283008982772557,
+            "max_absolute_error_c": 7.257844693788698
+          }
+        }
+      },
+      "latency": {
+        "single_sample_median_ms": 0.0317075,
+        "single_sample_p95_ms": 0.11196594999999998,
+        "batch_samples": 240,
+        "batch_ms": 0.358851,
+        "repeats": 50,
+        "boundary": "Engineered feature array through X scaling, regressor, inverse Y scaling; excludes CSV loading and feature engineering"
+      },
+      "serialized_model_bytes": 22794,
+      "model_sha256": "b4d156f4030ca1a46b9809dd821841d22b28b81b9fb284651ab0f28a2e5406bc",
+      "versions": {
+        "python": "3.12.14",
+        "platform": {
+          "system": "Linux",
+          "release": "6.18.57",
+          "machine": "x86_64"
+        },
+        "numpy": "2.3.5",
+        "scikit-learn": "1.8.0",
+        "joblib": "1.5.3",
+        "xgboost": null,
+        "xgboost-cpu": "3.4.1"
+      },
+      "prepared_manifest_sha256": "bcabf27285b98bbda358949ec9f3e72124029a9fca341fb59f870b851dde401d",
+      "source_csv_sha256": "ad78ac968292966a6b68e558f61aff3a1e2e185a553037e23fcd39c63e8bbc70",
+      "split_floorplans": {
+        "test": [
+          "b_fp_014",
+          "b_fp_018",
+          "b_fp_019",
+          "b_fp_020",
+          "b_fp_025",
+          "b_fp_041",
+          "b_fp_042",
+          "b_fp_053",
+          "b_fp_059",
+          "b_fp_070",
+          "b_fp_071",
+          "b_fp_072"
+        ],
+        "train": [
+          "b_fp_006",
+          "b_fp_007",
+          "b_fp_008",
+          "b_fp_009",
+          "b_fp_010",
+          "b_fp_011",
+          "b_fp_013",
+          "b_fp_015",
+          "b_fp_016",
+          "b_fp_021",
+          "b_fp_022",
+          "b_fp_023",
+          "b_fp_024",
+          "b_fp_026",
+          "b_fp_027",
+          "b_fp_029",
+          "b_fp_030",
+          "b_fp_031",
+          "b_fp_032",
+          "b_fp_033",
+          "b_fp_034",
+          "b_fp_035",
+          "b_fp_036",
+          "b_fp_037",
+          "b_fp_038",
+          "b_fp_039",
+          "b_fp_040",
+          "b_fp_043",
+          "b_fp_045",
+          "b_fp_046",
+          "b_fp_048",
+          "b_fp_049",
+          "b_fp_050",
+          "b_fp_051",
+          "b_fp_054",
+          "b_fp_056",
+          "b_fp_057",
+          "b_fp_058",
+          "b_fp_061",
+          "b_fp_062",
+          "b_fp_063",
+          "b_fp_064",
+          "b_fp_065",
+          "b_fp_066",
+          "b_fp_067",
+          "b_fp_069",
+          "b_fp_073",
+          "b_fp_075",
+          "b_fp_076",
+          "b_fp_077",
+          "b_fp_080",
+          "b_fp_081",
+          "b_fp_082"
+        ],
+        "validation": [
+          "b_fp_012",
+          "b_fp_017",
+          "b_fp_028",
+          "b_fp_044",
+          "b_fp_047",
+          "b_fp_052",
+          "b_fp_055",
+          "b_fp_060",
+          "b_fp_068",
+          "b_fp_074",
+          "b_fp_078",
+          "b_fp_079"
+        ]
+      },
+      "test_evaluated": false
+    },
+    "effective_parameters": {
+      "batch_size": 32,
+      "epochs": 300,
+      "gradient_clip": 10.0,
+      "hidden_layers": [],
+      "l1": 0.0,
+      "l2": 0.0,
+      "learning_rate": 0.001,
+      "optimizer": "sgd",
+      "patience": 20,
+      "random_state": 42,
+      "tolerance": 1e-07
+    },
+    "warnings": [],
+    "training_details": {
+      "n_iter_": 300,
+      "training_epochs": 300,
+      "training_loss_initial": 0.9156725216037954,
+      "training_loss_best": 0.004221966443202195,
+      "training_loss_last": 0.004230742636249827,
+      "epoch_cap_reached": true
+    },
+    "run_name": "linear_gradient_sgd",
+    "model_relative_path": "runs/linear_gradient_sgd/linear_gradient_sgd/model.joblib",
+    "reused": true,
+    "reused_from": "linear_gradient_sgd"
+  },
+  {
+    "group": "combinations",
+    "penalty": "l1",
+    "experiment": {
+      "name": "linear_gradient_sgd_l1",
+      "kind": "linear_gradient",
+      "parameters": {
+        "optimizer": "sgd",
+        "learning_rate": 0.001,
+        "epochs": 300,
+        "batch_size": 32,
+        "l1": 0.0001,
+        "l2": 0.0
+      }
+    },
+    "report": {
+      "experiment": {
+        "name": "linear_gradient_sgd_l1",
+        "kind": "linear_gradient",
+        "parameters": {
+          "optimizer": "sgd",
+          "learning_rate": 0.001,
+          "epochs": 300,
+          "batch_size": 32,
+          "l1": 0.0001,
+          "l2": 0.0
+        }
+      },
+      "seed": 42,
+      "train_seconds": 15.951351519001037,
+      "validation": {
+        "mae_c": 2.2785890280830627,
+        "rmse_c": 2.9031419990359995,
+        "max_absolute_error_c": 10.535188022547146,
+        "samples": 240,
+        "core_comparisons": 1920,
+        "per_core": {
+          "Core_0_L0": {
+            "mae_c": 1.7302310084809975,
+            "rmse_c": 2.057180371589219,
+            "max_absolute_error_c": 4.133867899104928
+          },
+          "Core_1_L0": {
+            "mae_c": 2.203656679192974,
+            "rmse_c": 2.7311463916216625,
+            "max_absolute_error_c": 7.155227313672327
+          },
+          "Core_2_L0": {
+            "mae_c": 2.521898924352452,
+            "rmse_c": 3.631585677514883,
+            "max_absolute_error_c": 10.535188022547146
+          },
+          "Core_3_L0": {
+            "mae_c": 2.3442518303489277,
+            "rmse_c": 2.709591672241739,
+            "max_absolute_error_c": 5.471355904718209
+          },
+          "Core_4_L0": {
+            "mae_c": 1.7438313888659505,
+            "rmse_c": 2.1185468973754005,
+            "max_absolute_error_c": 4.94423614291145
+          },
+          "Core_5_L0": {
+            "mae_c": 1.8258785788621021,
+            "rmse_c": 2.360545761490184,
+            "max_absolute_error_c": 6.893551176601974
+          },
+          "Core_6_L0": {
+            "mae_c": 3.457682286692771,
+            "rmse_c": 4.139675072551561,
+            "max_absolute_error_c": 8.347201340823915
+          },
+          "Core_7_L0": {
+            "mae_c": 2.4012815278683286,
+            "rmse_c": 2.82967975584304,
+            "max_absolute_error_c": 5.386703663200862
+          }
+        }
+      },
+      "latency": {
+        "single_sample_median_ms": 0.031810500000000005,
+        "single_sample_p95_ms": 0.04821929999999994,
+        "batch_samples": 240,
+        "batch_ms": 0.488563,
+        "repeats": 50,
+        "boundary": "Engineered feature array through X scaling, regressor, inverse Y scaling; excludes CSV loading and feature engineering"
+      },
+      "serialized_model_bytes": 22841,
+      "model_sha256": "aa72c8eff80d001fe5c7e655e84fc339f604e3b6e5b5a1bc715d3828900f06f3",
+      "versions": {
+        "python": "3.12.14",
+        "platform": {
+          "system": "Linux",
+          "release": "6.18.57",
+          "machine": "x86_64"
+        },
+        "numpy": "2.3.5",
+        "scikit-learn": "1.8.0",
+        "joblib": "1.5.3",
+        "xgboost": null,
+        "xgboost-cpu": "3.4.1"
+      },
+      "prepared_manifest_sha256": "bcabf27285b98bbda358949ec9f3e72124029a9fca341fb59f870b851dde401d",
+      "source_csv_sha256": "ad78ac968292966a6b68e558f61aff3a1e2e185a553037e23fcd39c63e8bbc70",
+      "split_floorplans": {
+        "test": [
+          "b_fp_014",
+          "b_fp_018",
+          "b_fp_019",
+          "b_fp_020",
+          "b_fp_025",
+          "b_fp_041",
+          "b_fp_042",
+          "b_fp_053",
+          "b_fp_059",
+          "b_fp_070",
+          "b_fp_071",
+          "b_fp_072"
+        ],
+        "train": [
+          "b_fp_006",
+          "b_fp_007",
+          "b_fp_008",
+          "b_fp_009",
+          "b_fp_010",
+          "b_fp_011",
+          "b_fp_013",
+          "b_fp_015",
+          "b_fp_016",
+          "b_fp_021",
+          "b_fp_022",
+          "b_fp_023",
+          "b_fp_024",
+          "b_fp_026",
+          "b_fp_027",
+          "b_fp_029",
+          "b_fp_030",
+          "b_fp_031",
+          "b_fp_032",
+          "b_fp_033",
+          "b_fp_034",
+          "b_fp_035",
+          "b_fp_036",
+          "b_fp_037",
+          "b_fp_038",
+          "b_fp_039",
+          "b_fp_040",
+          "b_fp_043",
+          "b_fp_045",
+          "b_fp_046",
+          "b_fp_048",
+          "b_fp_049",
+          "b_fp_050",
+          "b_fp_051",
+          "b_fp_054",
+          "b_fp_056",
+          "b_fp_057",
+          "b_fp_058",
+          "b_fp_061",
+          "b_fp_062",
+          "b_fp_063",
+          "b_fp_064",
+          "b_fp_065",
+          "b_fp_066",
+          "b_fp_067",
+          "b_fp_069",
+          "b_fp_073",
+          "b_fp_075",
+          "b_fp_076",
+          "b_fp_077",
+          "b_fp_080",
+          "b_fp_081",
+          "b_fp_082"
+        ],
+        "validation": [
+          "b_fp_012",
+          "b_fp_017",
+          "b_fp_028",
+          "b_fp_044",
+          "b_fp_047",
+          "b_fp_052",
+          "b_fp_055",
+          "b_fp_060",
+          "b_fp_068",
+          "b_fp_074",
+          "b_fp_078",
+          "b_fp_079"
+        ]
+      },
+      "test_evaluated": false
+    },
+    "effective_parameters": {
+      "batch_size": 32,
+      "epochs": 300,
+      "gradient_clip": 10.0,
+      "hidden_layers": [],
+      "l1": 0.0001,
+      "l2": 0.0,
+      "learning_rate": 0.001,
+      "optimizer": "sgd",
+      "patience": 20,
+      "random_state": 42,
+      "tolerance": 1e-07
+    },
+    "warnings": [],
+    "training_details": {
+      "n_iter_": 300,
+      "training_epochs": 300,
+      "training_loss_initial": 0.9284294338765735,
+      "training_loss_best": 0.014007708855805209,
+      "training_loss_last": 0.014007708855805209,
+      "epoch_cap_reached": true
+    },
+    "run_name": "linear_gradient_sgd_l1",
+    "model_relative_path": "runs/linear_gradient_sgd_l1/linear_gradient_sgd_l1/model.joblib",
+    "reused": false
+  },
+  {
+    "group": "combinations",
+    "penalty": "l2",
+    "experiment": {
+      "name": "linear_gradient_sgd_l2",
+      "kind": "linear_gradient",
+      "parameters": {
+        "optimizer": "sgd",
+        "learning_rate": 0.001,
+        "epochs": 300,
+        "batch_size": 32,
+        "l1": 0.0,
+        "l2": 0.001
+      }
+    },
+    "report": {
+      "experiment": {
+        "name": "linear_gradient_sgd_l2",
+        "kind": "linear_gradient",
+        "parameters": {
+          "optimizer": "sgd",
+          "learning_rate": 0.001,
+          "epochs": 300,
+          "batch_size": 32,
+          "l1": 0.0,
+          "l2": 0.001
+        }
+      },
+      "seed": 42,
+      "train_seconds": 14.500877972001035,
+      "validation": {
+        "mae_c": 2.3210355096936603,
+        "rmse_c": 2.941862927220431,
+        "max_absolute_error_c": 10.660858682679219,
+        "samples": 240,
+        "core_comparisons": 1920,
+        "per_core": {
+          "Core_0_L0": {
+            "mae_c": 1.9569207623783862,
+            "rmse_c": 2.230652664467355,
+            "max_absolute_error_c": 5.234348137859456
+          },
+          "Core_1_L0": {
+            "mae_c": 1.9097483903548358,
+            "rmse_c": 2.5025805379969444,
+            "max_absolute_error_c": 7.195414935666605
+          },
+          "Core_2_L0": {
+            "mae_c": 2.4298527951998987,
+            "rmse_c": 3.534355698775552,
+            "max_absolute_error_c": 10.660858682679219
+          },
+          "Core_3_L0": {
+            "mae_c": 2.295085626802773,
+            "rmse_c": 2.715156099185426,
+            "max_absolute_error_c": 5.996559480432069
+          },
+          "Core_4_L0": {
+            "mae_c": 2.092066297537681,
+            "rmse_c": 2.5377727601293625,
+            "max_absolute_error_c": 5.910367924414032
+          },
+          "Core_5_L0": {
+            "mae_c": 2.0058886937796445,
+            "rmse_c": 2.434534788099854,
+            "max_absolute_error_c": 6.056447136183792
+          },
+          "Core_6_L0": {
+            "mae_c": 3.438998322723192,
+            "rmse_c": 4.12675241683772,
+            "max_absolute_error_c": 8.576356985805546
+          },
+          "Core_7_L0": {
+            "mae_c": 2.439723188772871,
+            "rmse_c": 2.955784265971609,
+            "max_absolute_error_c": 5.938213029691269
+          }
+        }
+      },
+      "latency": {
+        "single_sample_median_ms": 0.0311465,
+        "single_sample_p95_ms": 0.07714709999999993,
+        "batch_samples": 240,
+        "batch_ms": 0.298643,
+        "repeats": 50,
+        "boundary": "Engineered feature array through X scaling, regressor, inverse Y scaling; excludes CSV loading and feature engineering"
+      },
+      "serialized_model_bytes": 22780,
+      "model_sha256": "38f6562d0d2aa6462d887d00cb46d4d2f84561d53f17e4bf8563eea3199af6a9",
+      "versions": {
+        "python": "3.12.14",
+        "platform": {
+          "system": "Linux",
+          "release": "6.18.57",
+          "machine": "x86_64"
+        },
+        "numpy": "2.3.5",
+        "scikit-learn": "1.8.0",
+        "joblib": "1.5.3",
+        "xgboost": null,
+        "xgboost-cpu": "3.4.1"
+      },
+      "prepared_manifest_sha256": "bcabf27285b98bbda358949ec9f3e72124029a9fca341fb59f870b851dde401d",
+      "source_csv_sha256": "ad78ac968292966a6b68e558f61aff3a1e2e185a553037e23fcd39c63e8bbc70",
+      "split_floorplans": {
+        "test": [
+          "b_fp_014",
+          "b_fp_018",
+          "b_fp_019",
+          "b_fp_020",
+          "b_fp_025",
+          "b_fp_041",
+          "b_fp_042",
+          "b_fp_053",
+          "b_fp_059",
+          "b_fp_070",
+          "b_fp_071",
+          "b_fp_072"
+        ],
+        "train": [
+          "b_fp_006",
+          "b_fp_007",
+          "b_fp_008",
+          "b_fp_009",
+          "b_fp_010",
+          "b_fp_011",
+          "b_fp_013",
+          "b_fp_015",
+          "b_fp_016",
+          "b_fp_021",
+          "b_fp_022",
+          "b_fp_023",
+          "b_fp_024",
+          "b_fp_026",
+          "b_fp_027",
+          "b_fp_029",
+          "b_fp_030",
+          "b_fp_031",
+          "b_fp_032",
+          "b_fp_033",
+          "b_fp_034",
+          "b_fp_035",
+          "b_fp_036",
+          "b_fp_037",
+          "b_fp_038",
+          "b_fp_039",
+          "b_fp_040",
+          "b_fp_043",
+          "b_fp_045",
+          "b_fp_046",
+          "b_fp_048",
+          "b_fp_049",
+          "b_fp_050",
+          "b_fp_051",
+          "b_fp_054",
+          "b_fp_056",
+          "b_fp_057",
+          "b_fp_058",
+          "b_fp_061",
+          "b_fp_062",
+          "b_fp_063",
+          "b_fp_064",
+          "b_fp_065",
+          "b_fp_066",
+          "b_fp_067",
+          "b_fp_069",
+          "b_fp_073",
+          "b_fp_075",
+          "b_fp_076",
+          "b_fp_077",
+          "b_fp_080",
+          "b_fp_081",
+          "b_fp_082"
+        ],
+        "validation": [
+          "b_fp_012",
+          "b_fp_017",
+          "b_fp_028",
+          "b_fp_044",
+          "b_fp_047",
+          "b_fp_052",
+          "b_fp_055",
+          "b_fp_060",
+          "b_fp_068",
+          "b_fp_074",
+          "b_fp_078",
+          "b_fp_079"
+        ]
+      },
+      "test_evaluated": false
+    },
+    "effective_parameters": {
+      "batch_size": 32,
+      "epochs": 300,
+      "gradient_clip": 10.0,
+      "hidden_layers": [],
+      "l1": 0.0,
+      "l2": 0.001,
+      "learning_rate": 0.001,
+      "optimizer": "sgd",
+      "patience": 20,
+      "random_state": 42,
+      "tolerance": 1e-07
+    },
+    "warnings": [],
+    "training_details": {
+      "n_iter_": 300,
+      "training_epochs": 300,
+      "training_loss_initial": 0.9285334549474648,
+      "training_loss_best": 0.016114776310461213,
+      "training_loss_last": 0.016139528125974835,
+      "epoch_cap_reached": true
+    },
+    "run_name": "linear_gradient_sgd_l2",
+    "model_relative_path": "runs/linear_gradient_sgd_l2/linear_gradient_sgd_l2/model.joblib",
+    "reused": false
+  },
+  {
+    "group": "combinations",
+    "penalty": "l1_l2",
+    "experiment": {
+      "name": "linear_gradient_sgd_l1_l2",
+      "kind": "linear_gradient",
+      "parameters": {
+        "optimizer": "sgd",
+        "learning_rate": 0.001,
+        "epochs": 300,
+        "batch_size": 32,
+        "l1": 0.0001,
+        "l2": 0.001
+      }
+    },
+    "report": {
+      "experiment": {
+        "name": "linear_gradient_sgd_l1_l2",
+        "kind": "linear_gradient",
+        "parameters": {
+          "optimizer": "sgd",
+          "learning_rate": 0.001,
+          "epochs": 300,
+          "batch_size": 32,
+          "l1": 0.0001,
+          "l2": 0.001
+        }
+      },
+      "seed": 42,
+      "train_seconds": 15.158117643997684,
+      "validation": {
+        "mae_c": 2.1626963561812165,
+        "rmse_c": 2.7152506304154262,
+        "max_absolute_error_c": 9.68595216479713,
+        "samples": 240,
+        "core_comparisons": 1920,
+        "per_core": {
+          "Core_0_L0": {
+            "mae_c": 1.788584057389919,
+            "rmse_c": 2.03553044214789,
+            "max_absolute_error_c": 4.694316096171406
+          },
+          "Core_1_L0": {
+            "mae_c": 1.6750991304867773,
+            "rmse_c": 2.2776382053790876,
+            "max_absolute_error_c": 7.127642628015195
+          },
+          "Core_2_L0": {
+            "mae_c": 2.2879124471048446,
+            "rmse_c": 3.22758057273414,
+            "max_absolute_error_c": 9.68595216479713
+          },
+          "Core_3_L0": {
+            "mae_c": 2.061749280848389,
+            "rmse_c": 2.459326367310624,
+            "max_absolute_error_c": 5.708758671819368
+          },
+          "Core_4_L0": {
+            "mae_c": 1.9866090656729203,
+            "rmse_c": 2.4341378861077785,
+            "max_absolute_error_c": 5.646449412786211
+          },
+          "Core_5_L0": {
+            "mae_c": 2.0956927720338965,
+            "rmse_c": 2.463716086010932,
+            "max_absolute_error_c": 5.307752416921957
+          },
+          "Core_6_L0": {
+            "mae_c": 3.072121118715171,
+            "rmse_c": 3.660225386241791,
+            "max_absolute_error_c": 8.2537719359172
+          },
+          "Core_7_L0": {
+            "mae_c": 2.3338029771978186,
+            "rmse_c": 2.791403105729171,
+            "max_absolute_error_c": 6.099205208867659
+          }
+        }
+      },
+      "latency": {
+        "single_sample_median_ms": 0.032546,
+        "single_sample_p95_ms": 0.06719389999999999,
+        "batch_samples": 240,
+        "batch_ms": 0.362558,
+        "repeats": 50,
+        "boundary": "Engineered feature array through X scaling, regressor, inverse Y scaling; excludes CSV loading and feature engineering"
+      },
+      "serialized_model_bytes": 22789,
+      "model_sha256": "44502e7b1f3a995ea0e5c42a339195792c4c3de9b9f8fa8750e2cf6bcafe420c",
+      "versions": {
+        "python": "3.12.14",
+        "platform": {
+          "system": "Linux",
+          "release": "6.18.57",
+          "machine": "x86_64"
+        },
+        "numpy": "2.3.5",
+        "scikit-learn": "1.8.0",
+        "joblib": "1.5.3",
+        "xgboost": null,
+        "xgboost-cpu": "3.4.1"
+      },
+      "prepared_manifest_sha256": "bcabf27285b98bbda358949ec9f3e72124029a9fca341fb59f870b851dde401d",
+      "source_csv_sha256": "ad78ac968292966a6b68e558f61aff3a1e2e185a553037e23fcd39c63e8bbc70",
+      "split_floorplans": {
+        "test": [
+          "b_fp_014",
+          "b_fp_018",
+          "b_fp_019",
+          "b_fp_020",
+          "b_fp_025",
+          "b_fp_041",
+          "b_fp_042",
+          "b_fp_053",
+          "b_fp_059",
+          "b_fp_070",
+          "b_fp_071",
+          "b_fp_072"
+        ],
+        "train": [
+          "b_fp_006",
+          "b_fp_007",
+          "b_fp_008",
+          "b_fp_009",
+          "b_fp_010",
+          "b_fp_011",
+          "b_fp_013",
+          "b_fp_015",
+          "b_fp_016",
+          "b_fp_021",
+          "b_fp_022",
+          "b_fp_023",
+          "b_fp_024",
+          "b_fp_026",
+          "b_fp_027",
+          "b_fp_029",
+          "b_fp_030",
+          "b_fp_031",
+          "b_fp_032",
+          "b_fp_033",
+          "b_fp_034",
+          "b_fp_035",
+          "b_fp_036",
+          "b_fp_037",
+          "b_fp_038",
+          "b_fp_039",
+          "b_fp_040",
+          "b_fp_043",
+          "b_fp_045",
+          "b_fp_046",
+          "b_fp_048",
+          "b_fp_049",
+          "b_fp_050",
+          "b_fp_051",
+          "b_fp_054",
+          "b_fp_056",
+          "b_fp_057",
+          "b_fp_058",
+          "b_fp_061",
+          "b_fp_062",
+          "b_fp_063",
+          "b_fp_064",
+          "b_fp_065",
+          "b_fp_066",
+          "b_fp_067",
+          "b_fp_069",
+          "b_fp_073",
+          "b_fp_075",
+          "b_fp_076",
+          "b_fp_077",
+          "b_fp_080",
+          "b_fp_081",
+          "b_fp_082"
+        ],
+        "validation": [
+          "b_fp_012",
+          "b_fp_017",
+          "b_fp_028",
+          "b_fp_044",
+          "b_fp_047",
+          "b_fp_052",
+          "b_fp_055",
+          "b_fp_060",
+          "b_fp_068",
+          "b_fp_074",
+          "b_fp_078",
+          "b_fp_079"
+        ]
+      },
+      "test_evaluated": false
+    },
+    "effective_parameters": {
+      "batch_size": 32,
+      "epochs": 300,
+      "gradient_clip": 10.0,
+      "hidden_layers": [],
+      "l1": 0.0001,
+      "l2": 0.001,
+      "learning_rate": 0.001,
+      "optimizer": "sgd",
+      "patience": 20,
+      "random_state": 42,
+      "tolerance": 1e-07
+    },
+    "warnings": [],
+    "training_details": {
+      "n_iter_": 300,
+      "training_epochs": 300,
+      "training_loss_initial": 0.9412480846420743,
+      "training_loss_best": 0.02199271425049289,
+      "training_loss_last": 0.022006705449047672,
+      "epoch_cap_reached": true
+    },
+    "run_name": "linear_gradient_sgd_l1_l2",
+    "model_relative_path": "runs/linear_gradient_sgd_l1_l2/linear_gradient_sgd_l1_l2/model.joblib",
+    "reused": false
+  },
+  {
+    "group": "combinations",
+    "penalty": "none",
+    "experiment": {
+      "name": "linear_gradient_adam_none",
+      "kind": "linear_gradient",
+      "parameters": {
+        "optimizer": "adam",
+        "learning_rate": 0.003,
+        "epochs": 300,
+        "batch_size": 32,
+        "l1": 0.0,
+        "l2": 0.0
+      }
+    },
+    "report": {
+      "experiment": {
+        "name": "linear_gradient_adam",
+        "kind": "linear_gradient",
+        "parameters": {
+          "optimizer": "adam",
+          "learning_rate": 0.003,
+          "epochs": 300,
+          "batch_size": 32
+        }
+      },
+      "seed": 42,
+      "train_seconds": 0.5914993080004933,
+      "validation": {
+        "mae_c": 2.042144505253116,
+        "rmse_c": 2.6243048212340185,
+        "max_absolute_error_c": 8.210626485675647,
+        "samples": 240,
+        "core_comparisons": 1920,
+        "per_core": {
+          "Core_0_L0": {
+            "mae_c": 1.8159688112417174,
+            "rmse_c": 2.1762638770665124,
+            "max_absolute_error_c": 4.512429076571863
+          },
+          "Core_1_L0": {
+            "mae_c": 1.9497281515509461,
+            "rmse_c": 2.2201606751013454,
+            "max_absolute_error_c": 4.525356366544258
+          },
+          "Core_2_L0": {
+            "mae_c": 2.5338324803960135,
+            "rmse_c": 3.2898437337230018,
+            "max_absolute_error_c": 8.210626485675647
+          },
+          "Core_3_L0": {
+            "mae_c": 2.1525465861234236,
+            "rmse_c": 2.546672590812592,
+            "max_absolute_error_c": 5.568574238367347
+          },
+          "Core_4_L0": {
+            "mae_c": 1.2337369120110275,
+            "rmse_c": 1.405309263247949,
+            "max_absolute_error_c": 2.6518785183369573
+          },
+          "Core_5_L0": {
+            "mae_c": 1.9726978937852024,
+            "rmse_c": 2.657763643259051,
+            "max_absolute_error_c": 7.46697168154401
+          },
+          "Core_6_L0": {
+            "mae_c": 2.9800291139463524,
+            "rmse_c": 3.797195126415008,
+            "max_absolute_error_c": 7.935290852094454
+          },
+          "Core_7_L0": {
+            "mae_c": 1.6986160929702465,
+            "rmse_c": 2.1597830581202477,
+            "max_absolute_error_c": 4.803672220922266
+          }
+        }
+      },
+      "latency": {
+        "single_sample_median_ms": 0.0322155,
+        "single_sample_p95_ms": 0.2917540499999992,
+        "batch_samples": 240,
+        "batch_ms": 0.27366,
+        "repeats": 50,
+        "boundary": "Engineered feature array through X scaling, regressor, inverse Y scaling; excludes CSV loading and feature engineering"
+      },
+      "serialized_model_bytes": 21534,
+      "model_sha256": "ddab7b0630907d84427ada915ed945bdf4b6f3986db88ecf2b2f50c3d97d7967",
+      "versions": {
+        "python": "3.12.14",
+        "platform": {
+          "system": "Linux",
+          "release": "6.18.57",
+          "machine": "x86_64"
+        },
+        "numpy": "2.3.5",
+        "scikit-learn": "1.8.0",
+        "joblib": "1.5.3",
+        "xgboost": null,
+        "xgboost-cpu": "3.4.1"
+      },
+      "prepared_manifest_sha256": "bcabf27285b98bbda358949ec9f3e72124029a9fca341fb59f870b851dde401d",
+      "source_csv_sha256": "ad78ac968292966a6b68e558f61aff3a1e2e185a553037e23fcd39c63e8bbc70",
+      "split_floorplans": {
+        "test": [
+          "b_fp_014",
+          "b_fp_018",
+          "b_fp_019",
+          "b_fp_020",
+          "b_fp_025",
+          "b_fp_041",
+          "b_fp_042",
+          "b_fp_053",
+          "b_fp_059",
+          "b_fp_070",
+          "b_fp_071",
+          "b_fp_072"
+        ],
+        "train": [
+          "b_fp_006",
+          "b_fp_007",
+          "b_fp_008",
+          "b_fp_009",
+          "b_fp_010",
+          "b_fp_011",
+          "b_fp_013",
+          "b_fp_015",
+          "b_fp_016",
+          "b_fp_021",
+          "b_fp_022",
+          "b_fp_023",
+          "b_fp_024",
+          "b_fp_026",
+          "b_fp_027",
+          "b_fp_029",
+          "b_fp_030",
+          "b_fp_031",
+          "b_fp_032",
+          "b_fp_033",
+          "b_fp_034",
+          "b_fp_035",
+          "b_fp_036",
+          "b_fp_037",
+          "b_fp_038",
+          "b_fp_039",
+          "b_fp_040",
+          "b_fp_043",
+          "b_fp_045",
+          "b_fp_046",
+          "b_fp_048",
+          "b_fp_049",
+          "b_fp_050",
+          "b_fp_051",
+          "b_fp_054",
+          "b_fp_056",
+          "b_fp_057",
+          "b_fp_058",
+          "b_fp_061",
+          "b_fp_062",
+          "b_fp_063",
+          "b_fp_064",
+          "b_fp_065",
+          "b_fp_066",
+          "b_fp_067",
+          "b_fp_069",
+          "b_fp_073",
+          "b_fp_075",
+          "b_fp_076",
+          "b_fp_077",
+          "b_fp_080",
+          "b_fp_081",
+          "b_fp_082"
+        ],
+        "validation": [
+          "b_fp_012",
+          "b_fp_017",
+          "b_fp_028",
+          "b_fp_044",
+          "b_fp_047",
+          "b_fp_052",
+          "b_fp_055",
+          "b_fp_060",
+          "b_fp_068",
+          "b_fp_074",
+          "b_fp_078",
+          "b_fp_079"
+        ]
+      },
+      "test_evaluated": false
+    },
+    "effective_parameters": {
+      "batch_size": 32,
+      "epochs": 300,
+      "gradient_clip": 10.0,
+      "hidden_layers": [],
+      "l1": 0.0,
+      "l2": 0.0,
+      "learning_rate": 0.003,
+      "optimizer": "adam",
+      "patience": 20,
+      "random_state": 42,
+      "tolerance": 1e-07
+    },
+    "warnings": [],
+    "training_details": {
+      "n_iter_": 135,
+      "training_epochs": 135,
+      "training_loss_initial": 0.548683337594936,
+      "training_loss_best": 0.0019253388510730004,
+      "training_loss_last": 0.0028994742915711288,
+      "epoch_cap_reached": false
+    },
+    "run_name": "linear_gradient_adam",
+    "model_relative_path": "runs/linear_gradient_adam/linear_gradient_adam/model.joblib",
+    "reused": true,
+    "reused_from": "linear_gradient_adam"
+  },
+  {
+    "group": "combinations",
+    "penalty": "l1",
+    "experiment": {
+      "name": "linear_gradient_adam_l1",
+      "kind": "linear_gradient",
+      "parameters": {
+        "optimizer": "adam",
+        "learning_rate": 0.003,
+        "epochs": 300,
+        "batch_size": 32,
+        "l1": 0.0001,
+        "l2": 0.0
+      }
+    },
+    "report": {
+      "experiment": {
+        "name": "linear_gradient_adam_l1",
+        "kind": "linear_gradient",
+        "parameters": {
+          "optimizer": "adam",
+          "learning_rate": 0.003,
+          "epochs": 300,
+          "batch_size": 32,
+          "l1": 0.0001,
+          "l2": 0.0
+        }
+      },
+      "seed": 42,
+      "train_seconds": 0.5012869610000052,
+      "validation": {
+        "mae_c": 1.3488419161833367,
+        "rmse_c": 1.73955239851191,
+        "max_absolute_error_c": 6.026972271145837,
+        "samples": 240,
+        "core_comparisons": 1920,
+        "per_core": {
+          "Core_0_L0": {
+            "mae_c": 0.7314414133532271,
+            "rmse_c": 0.950696996263568,
+            "max_absolute_error_c": 2.510113637268489
+          },
+          "Core_1_L0": {
+            "mae_c": 1.0798514773356955,
+            "rmse_c": 1.36549736529966,
+            "max_absolute_error_c": 3.3432362480669156
+          },
+          "Core_2_L0": {
+            "mae_c": 1.3709218602761213,
+            "rmse_c": 1.9705744938161343,
+            "max_absolute_error_c": 6.026972271145837
+          },
+          "Core_3_L0": {
+            "mae_c": 1.6043416842386917,
+            "rmse_c": 1.929389668679105,
+            "max_absolute_error_c": 4.2816800825019925
+          },
+          "Core_4_L0": {
+            "mae_c": 0.9589863284757676,
+            "rmse_c": 1.1199713755542913,
+            "max_absolute_error_c": 2.6701321401113773
+          },
+          "Core_5_L0": {
+            "mae_c": 1.5762466072466026,
+            "rmse_c": 2.145469735250944,
+            "max_absolute_error_c": 5.933159532824533
+          },
+          "Core_6_L0": {
+            "mae_c": 1.8718171258597167,
+            "rmse_c": 2.1711481300207653,
+            "max_absolute_error_c": 5.4191980257386945
+          },
+          "Core_7_L0": {
+            "mae_c": 1.5971288326808712,
+            "rmse_c": 1.8063675554237721,
+            "max_absolute_error_c": 4.143354777371371
+          }
+        }
+      },
+      "latency": {
+        "single_sample_median_ms": 0.031744999999999995,
+        "single_sample_p95_ms": 0.04711474999999995,
+        "batch_samples": 240,
+        "batch_ms": 0.317001,
+        "repeats": 50,
+        "boundary": "Engineered feature array through X scaling, regressor, inverse Y scaling; excludes CSV loading and feature engineering"
+      },
+      "serialized_model_bytes": 21566,
+      "model_sha256": "cf8007aad9f16ac056698785f7c34428508d8574a22f1e18999985a590d33dae",
+      "versions": {
+        "python": "3.12.14",
+        "platform": {
+          "system": "Linux",
+          "release": "6.18.57",
+          "machine": "x86_64"
+        },
+        "numpy": "2.3.5",
+        "scikit-learn": "1.8.0",
+        "joblib": "1.5.3",
+        "xgboost": null,
+        "xgboost-cpu": "3.4.1"
+      },
+      "prepared_manifest_sha256": "bcabf27285b98bbda358949ec9f3e72124029a9fca341fb59f870b851dde401d",
+      "source_csv_sha256": "ad78ac968292966a6b68e558f61aff3a1e2e185a553037e23fcd39c63e8bbc70",
+      "split_floorplans": {
+        "test": [
+          "b_fp_014",
+          "b_fp_018",
+          "b_fp_019",
+          "b_fp_020",
+          "b_fp_025",
+          "b_fp_041",
+          "b_fp_042",
+          "b_fp_053",
+          "b_fp_059",
+          "b_fp_070",
+          "b_fp_071",
+          "b_fp_072"
+        ],
+        "train": [
+          "b_fp_006",
+          "b_fp_007",
+          "b_fp_008",
+          "b_fp_009",
+          "b_fp_010",
+          "b_fp_011",
+          "b_fp_013",
+          "b_fp_015",
+          "b_fp_016",
+          "b_fp_021",
+          "b_fp_022",
+          "b_fp_023",
+          "b_fp_024",
+          "b_fp_026",
+          "b_fp_027",
+          "b_fp_029",
+          "b_fp_030",
+          "b_fp_031",
+          "b_fp_032",
+          "b_fp_033",
+          "b_fp_034",
+          "b_fp_035",
+          "b_fp_036",
+          "b_fp_037",
+          "b_fp_038",
+          "b_fp_039",
+          "b_fp_040",
+          "b_fp_043",
+          "b_fp_045",
+          "b_fp_046",
+          "b_fp_048",
+          "b_fp_049",
+          "b_fp_050",
+          "b_fp_051",
+          "b_fp_054",
+          "b_fp_056",
+          "b_fp_057",
+          "b_fp_058",
+          "b_fp_061",
+          "b_fp_062",
+          "b_fp_063",
+          "b_fp_064",
+          "b_fp_065",
+          "b_fp_066",
+          "b_fp_067",
+          "b_fp_069",
+          "b_fp_073",
+          "b_fp_075",
+          "b_fp_076",
+          "b_fp_077",
+          "b_fp_080",
+          "b_fp_081",
+          "b_fp_082"
+        ],
+        "validation": [
+          "b_fp_012",
+          "b_fp_017",
+          "b_fp_028",
+          "b_fp_044",
+          "b_fp_047",
+          "b_fp_052",
+          "b_fp_055",
+          "b_fp_060",
+          "b_fp_068",
+          "b_fp_074",
+          "b_fp_078",
+          "b_fp_079"
+        ]
+      },
+      "test_evaluated": false
+    },
+    "effective_parameters": {
+      "batch_size": 32,
+      "epochs": 300,
+      "gradient_clip": 10.0,
+      "hidden_layers": [],
+      "l1": 0.0001,
+      "l2": 0.0,
+      "learning_rate": 0.003,
+      "optimizer": "adam",
+      "patience": 20,
+      "random_state": 42,
+      "tolerance": 1e-07
+    },
+    "warnings": [],
+    "training_details": {
+      "n_iter_": 135,
+      "training_epochs": 135,
+      "training_loss_initial": 0.5617872185715628,
+      "training_loss_best": 0.007516056584740773,
+      "training_loss_last": 0.008379291324395759,
+      "epoch_cap_reached": false
+    },
+    "run_name": "linear_gradient_adam_l1",
+    "model_relative_path": "runs/linear_gradient_adam_l1/linear_gradient_adam_l1/model.joblib",
+    "reused": false
+  },
+  {
+    "group": "combinations",
+    "penalty": "l2",
+    "experiment": {
+      "name": "linear_gradient_adam_l2",
+      "kind": "linear_gradient",
+      "parameters": {
+        "optimizer": "adam",
+        "learning_rate": 0.003,
+        "epochs": 300,
+        "batch_size": 32,
+        "l1": 0.0,
+        "l2": 0.001
+      }
+    },
+    "report": {
+      "experiment": {
+        "name": "linear_gradient_adam_l2",
+        "kind": "linear_gradient",
+        "parameters": {
+          "optimizer": "adam",
+          "learning_rate": 0.003,
+          "epochs": 300,
+          "batch_size": 32,
+          "l1": 0.0,
+          "l2": 0.001
+        }
+      },
+      "seed": 42,
+      "train_seconds": 0.36290217799978564,
+      "validation": {
+        "mae_c": 2.184940644685915,
+        "rmse_c": 2.728168777027466,
+        "max_absolute_error_c": 9.023958659788605,
+        "samples": 240,
+        "core_comparisons": 1920,
+        "per_core": {
+          "Core_0_L0": {
+            "mae_c": 1.6561352498271822,
+            "rmse_c": 1.9218676703213453,
+            "max_absolute_error_c": 4.551796667022501
+          },
+          "Core_1_L0": {
+            "mae_c": 1.4797257504773735,
+            "rmse_c": 2.0602327903694313,
+            "max_absolute_error_c": 6.469033174690708
+          },
+          "Core_2_L0": {
+            "mae_c": 2.226136699652305,
+            "rmse_c": 3.0635623103140492,
+            "max_absolute_error_c": 9.023958659788605
+          },
+          "Core_3_L0": {
+            "mae_c": 2.0329907172997617,
+            "rmse_c": 2.43219869012271,
+            "max_absolute_error_c": 5.570020603099607
+          },
+          "Core_4_L0": {
+            "mae_c": 2.1476377861293217,
+            "rmse_c": 2.588795192937512,
+            "max_absolute_error_c": 5.81149255475367
+          },
+          "Core_5_L0": {
+            "mae_c": 2.674484720520515,
+            "rmse_c": 3.1054100413802423,
+            "max_absolute_error_c": 6.25701552589436
+          },
+          "Core_6_L0": {
+            "mae_c": 2.950608315678106,
+            "rmse_c": 3.566511002325505,
+            "max_absolute_error_c": 8.346500179016516
+          },
+          "Core_7_L0": {
+            "mae_c": 2.311805917902755,
+            "rmse_c": 2.6904771345690066,
+            "max_absolute_error_c": 5.487737640417635
+          }
+        }
+      },
+      "latency": {
+        "single_sample_median_ms": 0.031258,
+        "single_sample_p95_ms": 0.3310083499999992,
+        "batch_samples": 240,
+        "batch_ms": 0.315239,
+        "repeats": 50,
+        "boundary": "Engineered feature array through X scaling, regressor, inverse Y scaling; excludes CSV loading and feature engineering"
+      },
+      "serialized_model_bytes": 21225,
+      "model_sha256": "11095ab206889a19c231376e1e76da56b350a4938c8817de92962290068a260b",
+      "versions": {
+        "python": "3.12.14",
+        "platform": {
+          "system": "Linux",
+          "release": "6.18.57",
+          "machine": "x86_64"
+        },
+        "numpy": "2.3.5",
+        "scikit-learn": "1.8.0",
+        "joblib": "1.5.3",
+        "xgboost": null,
+        "xgboost-cpu": "3.4.1"
+      },
+      "prepared_manifest_sha256": "bcabf27285b98bbda358949ec9f3e72124029a9fca341fb59f870b851dde401d",
+      "source_csv_sha256": "ad78ac968292966a6b68e558f61aff3a1e2e185a553037e23fcd39c63e8bbc70",
+      "split_floorplans": {
+        "test": [
+          "b_fp_014",
+          "b_fp_018",
+          "b_fp_019",
+          "b_fp_020",
+          "b_fp_025",
+          "b_fp_041",
+          "b_fp_042",
+          "b_fp_053",
+          "b_fp_059",
+          "b_fp_070",
+          "b_fp_071",
+          "b_fp_072"
+        ],
+        "train": [
+          "b_fp_006",
+          "b_fp_007",
+          "b_fp_008",
+          "b_fp_009",
+          "b_fp_010",
+          "b_fp_011",
+          "b_fp_013",
+          "b_fp_015",
+          "b_fp_016",
+          "b_fp_021",
+          "b_fp_022",
+          "b_fp_023",
+          "b_fp_024",
+          "b_fp_026",
+          "b_fp_027",
+          "b_fp_029",
+          "b_fp_030",
+          "b_fp_031",
+          "b_fp_032",
+          "b_fp_033",
+          "b_fp_034",
+          "b_fp_035",
+          "b_fp_036",
+          "b_fp_037",
+          "b_fp_038",
+          "b_fp_039",
+          "b_fp_040",
+          "b_fp_043",
+          "b_fp_045",
+          "b_fp_046",
+          "b_fp_048",
+          "b_fp_049",
+          "b_fp_050",
+          "b_fp_051",
+          "b_fp_054",
+          "b_fp_056",
+          "b_fp_057",
+          "b_fp_058",
+          "b_fp_061",
+          "b_fp_062",
+          "b_fp_063",
+          "b_fp_064",
+          "b_fp_065",
+          "b_fp_066",
+          "b_fp_067",
+          "b_fp_069",
+          "b_fp_073",
+          "b_fp_075",
+          "b_fp_076",
+          "b_fp_077",
+          "b_fp_080",
+          "b_fp_081",
+          "b_fp_082"
+        ],
+        "validation": [
+          "b_fp_012",
+          "b_fp_017",
+          "b_fp_028",
+          "b_fp_044",
+          "b_fp_047",
+          "b_fp_052",
+          "b_fp_055",
+          "b_fp_060",
+          "b_fp_068",
+          "b_fp_074",
+          "b_fp_078",
+          "b_fp_079"
+        ]
+      },
+      "test_evaluated": false
+    },
+    "effective_parameters": {
+      "batch_size": 32,
+      "epochs": 300,
+      "gradient_clip": 10.0,
+      "hidden_layers": [],
+      "l1": 0.0,
+      "l2": 0.001,
+      "learning_rate": 0.003,
+      "optimizer": "adam",
+      "patience": 20,
+      "random_state": 42,
+      "tolerance": 1e-07
+    },
+    "warnings": [],
+    "training_details": {
+      "n_iter_": 96,
+      "training_epochs": 96,
+      "training_loss_initial": 0.5621808308609705,
+      "training_loss_best": 0.015303374181646017,
+      "training_loss_last": 0.01652752680292776,
+      "epoch_cap_reached": false
+    },
+    "run_name": "linear_gradient_adam_l2",
+    "model_relative_path": "runs/linear_gradient_adam_l2/linear_gradient_adam_l2/model.joblib",
+    "reused": false
+  },
+  {
+    "group": "combinations",
+    "penalty": "l1_l2",
+    "experiment": {
+      "name": "linear_gradient_adam_l1_l2",
+      "kind": "linear_gradient",
+      "parameters": {
+        "optimizer": "adam",
+        "learning_rate": 0.003,
+        "epochs": 300,
+        "batch_size": 32,
+        "l1": 0.0001,
+        "l2": 0.001
+      }
+    },
+    "report": {
+      "experiment": {
+        "name": "linear_gradient_adam_l1_l2",
+        "kind": "linear_gradient",
+        "parameters": {
+          "optimizer": "adam",
+          "learning_rate": 0.003,
+          "epochs": 300,
+          "batch_size": 32,
+          "l1": 0.0001,
+          "l2": 0.001
+        }
+      },
+      "seed": 42,
+      "train_seconds": 0.3622558970018872,
+      "validation": {
+        "mae_c": 1.9927957784219414,
+        "rmse_c": 2.500118443179124,
+        "max_absolute_error_c": 8.384366109192399,
+        "samples": 240,
+        "core_comparisons": 1920,
+        "per_core": {
+          "Core_0_L0": {
+            "mae_c": 1.5462999137830868,
+            "rmse_c": 1.8191840750444905,
+            "max_absolute_error_c": 4.330652111708076
+          },
+          "Core_1_L0": {
+            "mae_c": 1.3058231901410542,
+            "rmse_c": 1.9192930707116946,
+            "max_absolute_error_c": 6.008291554873807
+          },
+          "Core_2_L0": {
+            "mae_c": 2.087504182242793,
+            "rmse_c": 2.706386760008677,
+            "max_absolute_error_c": 7.697738767981605
+          },
+          "Core_3_L0": {
+            "mae_c": 1.7611281462363901,
+            "rmse_c": 2.112467762035171,
+            "max_absolute_error_c": 5.5275923653350105
+          },
+          "Core_4_L0": {
+            "mae_c": 1.9078836348047215,
+            "rmse_c": 2.2593858490943335,
+            "max_absolute_error_c": 5.007246708613337
+          },
+          "Core_5_L0": {
+            "mae_c": 2.664157661485019,
+            "rmse_c": 3.1398910089600456,
+            "max_absolute_error_c": 6.4369573277235475
+          },
+          "Core_6_L0": {
+            "mae_c": 2.550714100681628,
+            "rmse_c": 3.206441739178775,
+            "max_absolute_error_c": 8.384366109192399
+          },
+          "Core_7_L0": {
+            "mae_c": 2.1188553980008407,
+            "rmse_c": 2.445314564395761,
+            "max_absolute_error_c": 5.8142671523396245
+          }
+        }
+      },
+      "latency": {
+        "single_sample_median_ms": 0.030875,
+        "single_sample_p95_ms": 0.05675974999999996,
+        "batch_samples": 240,
+        "batch_ms": 0.310063,
+        "repeats": 50,
+        "boundary": "Engineered feature array through X scaling, regressor, inverse Y scaling; excludes CSV loading and feature engineering"
+      },
+      "serialized_model_bytes": 21212,
+      "model_sha256": "3bc8a324c421e18422834465f53d23d5fab462ddcb72bd5b3e0ff81bd4aa6277",
+      "versions": {
+        "python": "3.12.14",
+        "platform": {
+          "system": "Linux",
+          "release": "6.18.57",
+          "machine": "x86_64"
+        },
+        "numpy": "2.3.5",
+        "scikit-learn": "1.8.0",
+        "joblib": "1.5.3",
+        "xgboost": null,
+        "xgboost-cpu": "3.4.1"
+      },
+      "prepared_manifest_sha256": "bcabf27285b98bbda358949ec9f3e72124029a9fca341fb59f870b851dde401d",
+      "source_csv_sha256": "ad78ac968292966a6b68e558f61aff3a1e2e185a553037e23fcd39c63e8bbc70",
+      "split_floorplans": {
+        "test": [
+          "b_fp_014",
+          "b_fp_018",
+          "b_fp_019",
+          "b_fp_020",
+          "b_fp_025",
+          "b_fp_041",
+          "b_fp_042",
+          "b_fp_053",
+          "b_fp_059",
+          "b_fp_070",
+          "b_fp_071",
+          "b_fp_072"
+        ],
+        "train": [
+          "b_fp_006",
+          "b_fp_007",
+          "b_fp_008",
+          "b_fp_009",
+          "b_fp_010",
+          "b_fp_011",
+          "b_fp_013",
+          "b_fp_015",
+          "b_fp_016",
+          "b_fp_021",
+          "b_fp_022",
+          "b_fp_023",
+          "b_fp_024",
+          "b_fp_026",
+          "b_fp_027",
+          "b_fp_029",
+          "b_fp_030",
+          "b_fp_031",
+          "b_fp_032",
+          "b_fp_033",
+          "b_fp_034",
+          "b_fp_035",
+          "b_fp_036",
+          "b_fp_037",
+          "b_fp_038",
+          "b_fp_039",
+          "b_fp_040",
+          "b_fp_043",
+          "b_fp_045",
+          "b_fp_046",
+          "b_fp_048",
+          "b_fp_049",
+          "b_fp_050",
+          "b_fp_051",
+          "b_fp_054",
+          "b_fp_056",
+          "b_fp_057",
+          "b_fp_058",
+          "b_fp_061",
+          "b_fp_062",
+          "b_fp_063",
+          "b_fp_064",
+          "b_fp_065",
+          "b_fp_066",
+          "b_fp_067",
+          "b_fp_069",
+          "b_fp_073",
+          "b_fp_075",
+          "b_fp_076",
+          "b_fp_077",
+          "b_fp_080",
+          "b_fp_081",
+          "b_fp_082"
+        ],
+        "validation": [
+          "b_fp_012",
+          "b_fp_017",
+          "b_fp_028",
+          "b_fp_044",
+          "b_fp_047",
+          "b_fp_052",
+          "b_fp_055",
+          "b_fp_060",
+          "b_fp_068",
+          "b_fp_074",
+          "b_fp_078",
+          "b_fp_079"
+        ]
+      },
+      "test_evaluated": false
+    },
+    "effective_parameters": {
+      "batch_size": 32,
+      "epochs": 300,
+      "gradient_clip": 10.0,
+      "hidden_layers": [],
+      "l1": 0.0001,
+      "l2": 0.001,
+      "learning_rate": 0.003,
+      "optimizer": "adam",
+      "patience": 20,
+      "random_state": 42,
+      "tolerance": 1e-07
+    },
+    "warnings": [],
+    "training_details": {
+      "n_iter_": 96,
+      "training_epochs": 96,
+      "training_loss_initial": 0.5753659012493928,
+      "training_loss_best": 0.02067377247305221,
+      "training_loss_last": 0.022283931392726313,
+      "epoch_cap_reached": false
+    },
+    "run_name": "linear_gradient_adam_l1_l2",
+    "model_relative_path": "runs/linear_gradient_adam_l1_l2/linear_gradient_adam_l1_l2/model.joblib",
+    "reused": false
+  },
+  {
+    "group": "combinations",
+    "penalty": "none",
+    "experiment": {
+      "name": "mlp_batch_gd_none",
+      "kind": "mlp",
+      "parameters": {
+        "optimizer": "batch_gd",
+        "learning_rate": 0.01,
+        "epochs": 300,
+        "batch_size": 32,
+        "l1": 0.0,
+        "l2": 0.0
+      }
+    },
+    "report": {
+      "experiment": {
+        "name": "mlp_batch_gd",
+        "kind": "mlp",
+        "parameters": {
+          "optimizer": "batch_gd",
+          "learning_rate": 0.01,
+          "epochs": 300,
+          "batch_size": 32
+        }
+      },
+      "seed": 42,
+      "train_seconds": 0.8542582510017382,
+      "validation": {
+        "mae_c": 4.560222903438872,
+        "rmse_c": 5.641335834352292,
+        "max_absolute_error_c": 18.663507186781672,
+        "samples": 240,
+        "core_comparisons": 1920,
+        "per_core": {
+          "Core_0_L0": {
+            "mae_c": 4.812012349319868,
+            "rmse_c": 5.776173969024786,
+            "max_absolute_error_c": 14.446453229569912
+          },
+          "Core_1_L0": {
+            "mae_c": 4.4113484953505635,
+            "rmse_c": 5.554988133549576,
+            "max_absolute_error_c": 14.582779827330455
+          },
+          "Core_2_L0": {
+            "mae_c": 4.547451774750333,
+            "rmse_c": 5.455738125090526,
+            "max_absolute_error_c": 14.536821070577716
+          },
+          "Core_3_L0": {
+            "mae_c": 5.603853403868291,
+            "rmse_c": 6.7136930650724755,
+            "max_absolute_error_c": 18.663507186781672
+          },
+          "Core_4_L0": {
+            "mae_c": 4.375850796459832,
+            "rmse_c": 5.381277623813205,
+            "max_absolute_error_c": 14.570005106553737
+          },
+          "Core_5_L0": {
+            "mae_c": 3.8442206772525527,
+            "rmse_c": 4.846684795146655,
+            "max_absolute_error_c": 13.356570316835672
+          },
+          "Core_6_L0": {
+            "mae_c": 5.213581539751553,
+            "rmse_c": 6.434392436156808,
+            "max_absolute_error_c": 17.48630555571458
+          },
+          "Core_7_L0": {
+            "mae_c": 3.673464190757978,
+            "rmse_c": 4.656889480239262,
+            "max_absolute_error_c": 14.358896636296365
+          }
+        }
+      },
+      "latency": {
+        "single_sample_median_ms": 0.034923,
+        "single_sample_p95_ms": 0.06923284999999993,
+        "batch_samples": 240,
+        "batch_ms": 0.337353,
+        "repeats": 50,
+        "boundary": "Engineered feature array through X scaling, regressor, inverse Y scaling; excludes CSV loading and feature engineering"
+      },
+      "serialized_model_bytes": 71615,
+      "model_sha256": "38a528ece7005add68394ce3b46ee788b45d34203dc0270aa94281ed6a8abeb8",
+      "versions": {
+        "python": "3.12.14",
+        "platform": {
+          "system": "Linux",
+          "release": "6.18.57",
+          "machine": "x86_64"
+        },
+        "numpy": "2.3.5",
+        "scikit-learn": "1.8.0",
+        "joblib": "1.5.3",
+        "xgboost": null,
+        "xgboost-cpu": "3.4.1"
+      },
+      "prepared_manifest_sha256": "bcabf27285b98bbda358949ec9f3e72124029a9fca341fb59f870b851dde401d",
+      "source_csv_sha256": "ad78ac968292966a6b68e558f61aff3a1e2e185a553037e23fcd39c63e8bbc70",
+      "split_floorplans": {
+        "test": [
+          "b_fp_014",
+          "b_fp_018",
+          "b_fp_019",
+          "b_fp_020",
+          "b_fp_025",
+          "b_fp_041",
+          "b_fp_042",
+          "b_fp_053",
+          "b_fp_059",
+          "b_fp_070",
+          "b_fp_071",
+          "b_fp_072"
+        ],
+        "train": [
+          "b_fp_006",
+          "b_fp_007",
+          "b_fp_008",
+          "b_fp_009",
+          "b_fp_010",
+          "b_fp_011",
+          "b_fp_013",
+          "b_fp_015",
+          "b_fp_016",
+          "b_fp_021",
+          "b_fp_022",
+          "b_fp_023",
+          "b_fp_024",
+          "b_fp_026",
+          "b_fp_027",
+          "b_fp_029",
+          "b_fp_030",
+          "b_fp_031",
+          "b_fp_032",
+          "b_fp_033",
+          "b_fp_034",
+          "b_fp_035",
+          "b_fp_036",
+          "b_fp_037",
+          "b_fp_038",
+          "b_fp_039",
+          "b_fp_040",
+          "b_fp_043",
+          "b_fp_045",
+          "b_fp_046",
+          "b_fp_048",
+          "b_fp_049",
+          "b_fp_050",
+          "b_fp_051",
+          "b_fp_054",
+          "b_fp_056",
+          "b_fp_057",
+          "b_fp_058",
+          "b_fp_061",
+          "b_fp_062",
+          "b_fp_063",
+          "b_fp_064",
+          "b_fp_065",
+          "b_fp_066",
+          "b_fp_067",
+          "b_fp_069",
+          "b_fp_073",
+          "b_fp_075",
+          "b_fp_076",
+          "b_fp_077",
+          "b_fp_080",
+          "b_fp_081",
+          "b_fp_082"
+        ],
+        "validation": [
+          "b_fp_012",
+          "b_fp_017",
+          "b_fp_028",
+          "b_fp_044",
+          "b_fp_047",
+          "b_fp_052",
+          "b_fp_055",
+          "b_fp_060",
+          "b_fp_068",
+          "b_fp_074",
+          "b_fp_078",
+          "b_fp_079"
+        ]
+      },
+      "test_evaluated": false
+    },
+    "effective_parameters": {
+      "batch_size": 32,
+      "epochs": 300,
+      "gradient_clip": 10.0,
+      "hidden_layers": [
+        32
+      ],
+      "l1": 0.0,
+      "l2": 0.0,
+      "learning_rate": 0.01,
+      "optimizer": "batch_gd",
+      "patience": 20,
+      "random_state": 42,
+      "tolerance": 1e-07
+    },
+    "warnings": [],
+    "training_details": {
+      "n_iter_": 300,
+      "training_epochs": 300,
+      "training_loss_initial": 1.6220450098124866,
+      "training_loss_best": 0.2822544740076771,
+      "training_loss_last": 0.2822544740076771,
+      "epoch_cap_reached": true
+    },
+    "run_name": "mlp_batch_gd",
+    "model_relative_path": "runs/mlp_batch_gd/mlp_batch_gd/model.joblib",
+    "reused": true,
+    "reused_from": "mlp_batch_gd"
+  },
+  {
+    "group": "combinations",
+    "penalty": "l1",
+    "experiment": {
+      "name": "mlp_batch_gd_l1",
+      "kind": "mlp",
+      "parameters": {
+        "optimizer": "batch_gd",
+        "learning_rate": 0.01,
+        "epochs": 300,
+        "batch_size": 32,
+        "l1": 0.0001,
+        "l2": 0.0
+      }
+    },
+    "report": {
+      "experiment": {
+        "name": "mlp_batch_gd_l1",
+        "kind": "mlp",
+        "parameters": {
+          "optimizer": "batch_gd",
+          "learning_rate": 0.01,
+          "epochs": 300,
+          "batch_size": 32,
+          "l1": 0.0001,
+          "l2": 0.0
+        }
+      },
+      "seed": 42,
+      "train_seconds": 0.8411624250002205,
+      "validation": {
+        "mae_c": 4.5541326496307075,
+        "rmse_c": 5.634340917429305,
+        "max_absolute_error_c": 18.650753141297557,
+        "samples": 240,
+        "core_comparisons": 1920,
+        "per_core": {
+          "Core_0_L0": {
+            "mae_c": 4.8037469675242335,
+            "rmse_c": 5.766309635909001,
+            "max_absolute_error_c": 14.408629307442865
+          },
+          "Core_1_L0": {
+            "mae_c": 4.409273978100057,
+            "rmse_c": 5.552291134255653,
+            "max_absolute_error_c": 14.560401504542426
+          },
+          "Core_2_L0": {
+            "mae_c": 4.53958481589704,
+            "rmse_c": 5.448179539599746,
+            "max_absolute_error_c": 14.527054902404714
+          },
+          "Core_3_L0": {
+            "mae_c": 5.590861405661091,
+            "rmse_c": 6.6990359551916665,
+            "max_absolute_error_c": 18.650753141297557
+          },
+          "Core_4_L0": {
+            "mae_c": 4.365381053036186,
+            "rmse_c": 5.370494429057729,
+            "max_absolute_error_c": 14.56306239943649
+          },
+          "Core_5_L0": {
+            "mae_c": 3.842669309614485,
+            "rmse_c": 4.844686991566446,
+            "max_absolute_error_c": 13.371522465820732
+          },
+          "Core_6_L0": {
+            "mae_c": 5.211030641257421,
+            "rmse_c": 6.4313128869481275,
+            "max_absolute_error_c": 17.481486942443695
+          },
+          "Core_7_L0": {
+            "mae_c": 3.670513025955148,
+            "rmse_c": 4.6533198902022175,
+            "max_absolute_error_c": 14.337347993992054
+          }
+        }
+      },
+      "latency": {
+        "single_sample_median_ms": 0.035269499999999995,
+        "single_sample_p95_ms": 0.15832974999999994,
+        "batch_samples": 240,
+        "batch_ms": 0.36207,
+        "repeats": 50,
+        "boundary": "Engineered feature array through X scaling, regressor, inverse Y scaling; excludes CSV loading and feature engineering"
+      },
+      "serialized_model_bytes": 71610,
+      "model_sha256": "af84267a9e9be8b8b8103355658f33eb393ebb0b1b55008f5a646a0ae47e56dd",
+      "versions": {
+        "python": "3.12.14",
+        "platform": {
+          "system": "Linux",
+          "release": "6.18.57",
+          "machine": "x86_64"
+        },
+        "numpy": "2.3.5",
+        "scikit-learn": "1.8.0",
+        "joblib": "1.5.3",
+        "xgboost": null,
+        "xgboost-cpu": "3.4.1"
+      },
+      "prepared_manifest_sha256": "bcabf27285b98bbda358949ec9f3e72124029a9fca341fb59f870b851dde401d",
+      "source_csv_sha256": "ad78ac968292966a6b68e558f61aff3a1e2e185a553037e23fcd39c63e8bbc70",
+      "split_floorplans": {
+        "test": [
+          "b_fp_014",
+          "b_fp_018",
+          "b_fp_019",
+          "b_fp_020",
+          "b_fp_025",
+          "b_fp_041",
+          "b_fp_042",
+          "b_fp_053",
+          "b_fp_059",
+          "b_fp_070",
+          "b_fp_071",
+          "b_fp_072"
+        ],
+        "train": [
+          "b_fp_006",
+          "b_fp_007",
+          "b_fp_008",
+          "b_fp_009",
+          "b_fp_010",
+          "b_fp_011",
+          "b_fp_013",
+          "b_fp_015",
+          "b_fp_016",
+          "b_fp_021",
+          "b_fp_022",
+          "b_fp_023",
+          "b_fp_024",
+          "b_fp_026",
+          "b_fp_027",
+          "b_fp_029",
+          "b_fp_030",
+          "b_fp_031",
+          "b_fp_032",
+          "b_fp_033",
+          "b_fp_034",
+          "b_fp_035",
+          "b_fp_036",
+          "b_fp_037",
+          "b_fp_038",
+          "b_fp_039",
+          "b_fp_040",
+          "b_fp_043",
+          "b_fp_045",
+          "b_fp_046",
+          "b_fp_048",
+          "b_fp_049",
+          "b_fp_050",
+          "b_fp_051",
+          "b_fp_054",
+          "b_fp_056",
+          "b_fp_057",
+          "b_fp_058",
+          "b_fp_061",
+          "b_fp_062",
+          "b_fp_063",
+          "b_fp_064",
+          "b_fp_065",
+          "b_fp_066",
+          "b_fp_067",
+          "b_fp_069",
+          "b_fp_073",
+          "b_fp_075",
+          "b_fp_076",
+          "b_fp_077",
+          "b_fp_080",
+          "b_fp_081",
+          "b_fp_082"
+        ],
+        "validation": [
+          "b_fp_012",
+          "b_fp_017",
+          "b_fp_028",
+          "b_fp_044",
+          "b_fp_047",
+          "b_fp_052",
+          "b_fp_055",
+          "b_fp_060",
+          "b_fp_068",
+          "b_fp_074",
+          "b_fp_078",
+          "b_fp_079"
+        ]
+      },
+      "test_evaluated": false
+    },
+    "effective_parameters": {
+      "batch_size": 32,
+      "epochs": 300,
+      "gradient_clip": 10.0,
+      "hidden_layers": [
+        32
+      ],
+      "l1": 0.0001,
+      "l2": 0.0,
+      "learning_rate": 0.01,
+      "optimizer": "batch_gd",
+      "patience": 20,
+      "random_state": 42,
+      "tolerance": 1e-07
+    },
+    "warnings": [],
+    "training_details": {
+      "n_iter_": 300,
+      "training_epochs": 300,
+      "training_loss_initial": 1.6801868238452213,
+      "training_loss_best": 0.33982297948568474,
+      "training_loss_last": 0.33982297948568474,
+      "epoch_cap_reached": true
+    },
+    "run_name": "mlp_batch_gd_l1",
+    "model_relative_path": "runs/mlp_batch_gd_l1/mlp_batch_gd_l1/model.joblib",
+    "reused": false
+  },
+  {
+    "group": "combinations",
+    "penalty": "l2",
+    "experiment": {
+      "name": "mlp_batch_gd_l2",
+      "kind": "mlp",
+      "parameters": {
+        "optimizer": "batch_gd",
+        "learning_rate": 0.01,
+        "epochs": 300,
+        "batch_size": 32,
+        "l1": 0.0,
+        "l2": 0.001
+      }
+    },
+    "report": {
+      "experiment": {
+        "name": "mlp_batch_gd_l2",
+        "kind": "mlp",
+        "parameters": {
+          "optimizer": "batch_gd",
+          "learning_rate": 0.01,
+          "epochs": 300,
+          "batch_size": 32,
+          "l1": 0.0,
+          "l2": 0.001
+        }
+      },
+      "seed": 42,
+      "train_seconds": 1.0535032480001973,
+      "validation": {
+        "mae_c": 4.544466809041081,
+        "rmse_c": 5.622681826242416,
+        "max_absolute_error_c": 18.627883098247608,
+        "samples": 240,
+        "core_comparisons": 1920,
+        "per_core": {
+          "Core_0_L0": {
+            "mae_c": 4.797945356844873,
+            "rmse_c": 5.75960332904469,
+            "max_absolute_error_c": 14.417047829745215
+          },
+          "Core_1_L0": {
+            "mae_c": 4.403166431266965,
+            "rmse_c": 5.544294419111299,
+            "max_absolute_error_c": 14.561165662439436
+          },
+          "Core_2_L0": {
+            "mae_c": 4.532870088401095,
+            "rmse_c": 5.443159227698224,
+            "max_absolute_error_c": 14.528559468065154
+          },
+          "Core_3_L0": {
+            "mae_c": 5.569837391429451,
+            "rmse_c": 6.67486538176143,
+            "max_absolute_error_c": 18.627883098247608
+          },
+          "Core_4_L0": {
+            "mae_c": 4.356828051427368,
+            "rmse_c": 5.361528381834901,
+            "max_absolute_error_c": 14.58250175798085
+          },
+          "Core_5_L0": {
+            "mae_c": 3.833475446006469,
+            "rmse_c": 4.834141792464993,
+            "max_absolute_error_c": 13.368089994499172
+          },
+          "Core_6_L0": {
+            "mae_c": 5.195811300920172,
+            "rmse_c": 6.412344531530933,
+            "max_absolute_error_c": 17.470791379032136
+          },
+          "Core_7_L0": {
+            "mae_c": 3.6658004060322527,
+            "rmse_c": 4.646427675846967,
+            "max_absolute_error_c": 14.355904514913831
+          }
+        }
+      },
+      "latency": {
+        "single_sample_median_ms": 0.035544,
+        "single_sample_p95_ms": 0.14217999999999997,
+        "batch_samples": 240,
+        "batch_ms": 0.402032,
+        "repeats": 50,
+        "boundary": "Engineered feature array through X scaling, regressor, inverse Y scaling; excludes CSV loading and feature engineering"
+      },
+      "serialized_model_bytes": 71648,
+      "model_sha256": "ad2138049ae17cd976c862854d3a355ecb3e8a65ae8b5faaee37964bf7f74c0b",
+      "versions": {
+        "python": "3.12.14",
+        "platform": {
+          "system": "Linux",
+          "release": "6.18.57",
+          "machine": "x86_64"
+        },
+        "numpy": "2.3.5",
+        "scikit-learn": "1.8.0",
+        "joblib": "1.5.3",
+        "xgboost": null,
+        "xgboost-cpu": "3.4.1"
+      },
+      "prepared_manifest_sha256": "bcabf27285b98bbda358949ec9f3e72124029a9fca341fb59f870b851dde401d",
+      "source_csv_sha256": "ad78ac968292966a6b68e558f61aff3a1e2e185a553037e23fcd39c63e8bbc70",
+      "split_floorplans": {
+        "test": [
+          "b_fp_014",
+          "b_fp_018",
+          "b_fp_019",
+          "b_fp_020",
+          "b_fp_025",
+          "b_fp_041",
+          "b_fp_042",
+          "b_fp_053",
+          "b_fp_059",
+          "b_fp_070",
+          "b_fp_071",
+          "b_fp_072"
+        ],
+        "train": [
+          "b_fp_006",
+          "b_fp_007",
+          "b_fp_008",
+          "b_fp_009",
+          "b_fp_010",
+          "b_fp_011",
+          "b_fp_013",
+          "b_fp_015",
+          "b_fp_016",
+          "b_fp_021",
+          "b_fp_022",
+          "b_fp_023",
+          "b_fp_024",
+          "b_fp_026",
+          "b_fp_027",
+          "b_fp_029",
+          "b_fp_030",
+          "b_fp_031",
+          "b_fp_032",
+          "b_fp_033",
+          "b_fp_034",
+          "b_fp_035",
+          "b_fp_036",
+          "b_fp_037",
+          "b_fp_038",
+          "b_fp_039",
+          "b_fp_040",
+          "b_fp_043",
+          "b_fp_045",
+          "b_fp_046",
+          "b_fp_048",
+          "b_fp_049",
+          "b_fp_050",
+          "b_fp_051",
+          "b_fp_054",
+          "b_fp_056",
+          "b_fp_057",
+          "b_fp_058",
+          "b_fp_061",
+          "b_fp_062",
+          "b_fp_063",
+          "b_fp_064",
+          "b_fp_065",
+          "b_fp_066",
+          "b_fp_067",
+          "b_fp_069",
+          "b_fp_073",
+          "b_fp_075",
+          "b_fp_076",
+          "b_fp_077",
+          "b_fp_080",
+          "b_fp_081",
+          "b_fp_082"
+        ],
+        "validation": [
+          "b_fp_012",
+          "b_fp_017",
+          "b_fp_028",
+          "b_fp_044",
+          "b_fp_047",
+          "b_fp_052",
+          "b_fp_055",
+          "b_fp_060",
+          "b_fp_068",
+          "b_fp_074",
+          "b_fp_078",
+          "b_fp_079"
+        ]
+      },
+      "test_evaluated": false
+    },
+    "effective_parameters": {
+      "batch_size": 32,
+      "epochs": 300,
+      "gradient_clip": 10.0,
+      "hidden_layers": [
+        32
+      ],
+      "l1": 0.0,
+      "l2": 0.001,
+      "learning_rate": 0.01,
+      "optimizer": "batch_gd",
+      "patience": 20,
+      "random_state": 42,
+      "tolerance": 1e-07
+    },
+    "warnings": [],
+    "training_details": {
+      "n_iter_": 300,
+      "training_epochs": 300,
+      "training_loss_initial": 1.6904837678642142,
+      "training_loss_best": 0.3499681376711626,
+      "training_loss_last": 0.3499681376711626,
+      "epoch_cap_reached": true
+    },
+    "run_name": "mlp_batch_gd_l2",
+    "model_relative_path": "runs/mlp_batch_gd_l2/mlp_batch_gd_l2/model.joblib",
+    "reused": false
+  },
+  {
+    "group": "combinations",
+    "penalty": "l1_l2",
+    "experiment": {
+      "name": "mlp_batch_gd_l1_l2",
+      "kind": "mlp",
+      "parameters": {
+        "optimizer": "batch_gd",
+        "learning_rate": 0.01,
+        "epochs": 300,
+        "batch_size": 32,
+        "l1": 0.0001,
+        "l2": 0.001
+      }
+    },
+    "report": {
+      "experiment": {
+        "name": "mlp_batch_gd_l1_l2",
+        "kind": "mlp",
+        "parameters": {
+          "optimizer": "batch_gd",
+          "learning_rate": 0.01,
+          "epochs": 300,
+          "batch_size": 32,
+          "l1": 0.0001,
+          "l2": 0.001
+        }
+      },
+      "seed": 42,
+      "train_seconds": 0.870853394997539,
+      "validation": {
+        "mae_c": 4.538443309382712,
+        "rmse_c": 5.615775775946808,
+        "max_absolute_error_c": 18.61527415989447,
+        "samples": 240,
+        "core_comparisons": 1920,
+        "per_core": {
+          "Core_0_L0": {
+            "mae_c": 4.789728439348335,
+            "rmse_c": 5.749823260703336,
+            "max_absolute_error_c": 14.379452143983755
+          },
+          "Core_1_L0": {
+            "mae_c": 4.401120308286731,
+            "rmse_c": 5.541654473320695,
+            "max_absolute_error_c": 14.538836143764797
+          },
+          "Core_2_L0": {
+            "mae_c": 4.5251437370190315,
+            "rmse_c": 5.435717595516958,
+            "max_absolute_error_c": 14.518901271147982
+          },
+          "Core_3_L0": {
+            "mae_c": 5.556910924762008,
+            "rmse_c": 6.660336343860293,
+            "max_absolute_error_c": 18.61527415989447
+          },
+          "Core_4_L0": {
+            "mae_c": 4.346505234705407,
+            "rmse_c": 5.350859375415405,
+            "max_absolute_error_c": 14.575457614172166
+          },
+          "Core_5_L0": {
+            "mae_c": 3.8319347692716095,
+            "rmse_c": 4.832195037075912,
+            "max_absolute_error_c": 13.382902694584345
+          },
+          "Core_6_L0": {
+            "mae_c": 5.193252067340301,
+            "rmse_c": 6.409298834027627,
+            "max_absolute_error_c": 17.466019432385934
+          },
+          "Core_7_L0": {
+            "mae_c": 3.662950994328272,
+            "rmse_c": 4.642959856325332,
+            "max_absolute_error_c": 14.334534721401283
+          }
+        }
+      },
+      "latency": {
+        "single_sample_median_ms": 0.035237500000000005,
+        "single_sample_p95_ms": 0.05684974999999997,
+        "batch_samples": 240,
+        "batch_ms": 0.337497,
+        "repeats": 50,
+        "boundary": "Engineered feature array through X scaling, regressor, inverse Y scaling; excludes CSV loading and feature engineering"
+      },
+      "serialized_model_bytes": 71613,
+      "model_sha256": "11b151d8d77201ad6543a4b778966dc901165dc198dc4688d0e83ac5e584b362",
+      "versions": {
+        "python": "3.12.14",
+        "platform": {
+          "system": "Linux",
+          "release": "6.18.57",
+          "machine": "x86_64"
+        },
+        "numpy": "2.3.5",
+        "scikit-learn": "1.8.0",
+        "joblib": "1.5.3",
+        "xgboost": null,
+        "xgboost-cpu": "3.4.1"
+      },
+      "prepared_manifest_sha256": "bcabf27285b98bbda358949ec9f3e72124029a9fca341fb59f870b851dde401d",
+      "source_csv_sha256": "ad78ac968292966a6b68e558f61aff3a1e2e185a553037e23fcd39c63e8bbc70",
+      "split_floorplans": {
+        "test": [
+          "b_fp_014",
+          "b_fp_018",
+          "b_fp_019",
+          "b_fp_020",
+          "b_fp_025",
+          "b_fp_041",
+          "b_fp_042",
+          "b_fp_053",
+          "b_fp_059",
+          "b_fp_070",
+          "b_fp_071",
+          "b_fp_072"
+        ],
+        "train": [
+          "b_fp_006",
+          "b_fp_007",
+          "b_fp_008",
+          "b_fp_009",
+          "b_fp_010",
+          "b_fp_011",
+          "b_fp_013",
+          "b_fp_015",
+          "b_fp_016",
+          "b_fp_021",
+          "b_fp_022",
+          "b_fp_023",
+          "b_fp_024",
+          "b_fp_026",
+          "b_fp_027",
+          "b_fp_029",
+          "b_fp_030",
+          "b_fp_031",
+          "b_fp_032",
+          "b_fp_033",
+          "b_fp_034",
+          "b_fp_035",
+          "b_fp_036",
+          "b_fp_037",
+          "b_fp_038",
+          "b_fp_039",
+          "b_fp_040",
+          "b_fp_043",
+          "b_fp_045",
+          "b_fp_046",
+          "b_fp_048",
+          "b_fp_049",
+          "b_fp_050",
+          "b_fp_051",
+          "b_fp_054",
+          "b_fp_056",
+          "b_fp_057",
+          "b_fp_058",
+          "b_fp_061",
+          "b_fp_062",
+          "b_fp_063",
+          "b_fp_064",
+          "b_fp_065",
+          "b_fp_066",
+          "b_fp_067",
+          "b_fp_069",
+          "b_fp_073",
+          "b_fp_075",
+          "b_fp_076",
+          "b_fp_077",
+          "b_fp_080",
+          "b_fp_081",
+          "b_fp_082"
+        ],
+        "validation": [
+          "b_fp_012",
+          "b_fp_017",
+          "b_fp_028",
+          "b_fp_044",
+          "b_fp_047",
+          "b_fp_052",
+          "b_fp_055",
+          "b_fp_060",
+          "b_fp_068",
+          "b_fp_074",
+          "b_fp_078",
+          "b_fp_079"
+        ]
+      },
+      "test_evaluated": false
+    },
+    "effective_parameters": {
+      "batch_size": 32,
+      "epochs": 300,
+      "gradient_clip": 10.0,
+      "hidden_layers": [
+        32
+      ],
+      "l1": 0.0001,
+      "l2": 0.001,
+      "learning_rate": 0.01,
+      "optimizer": "batch_gd",
+      "patience": 20,
+      "random_state": 42,
+      "tolerance": 1e-07
+    },
+    "warnings": [],
+    "training_details": {
+      "n_iter_": 300,
+      "training_epochs": 300,
+      "training_loss_initial": 1.7486232559004369,
+      "training_loss_best": 0.4068649139895208,
+      "training_loss_last": 0.4068649139895208,
+      "epoch_cap_reached": true
+    },
+    "run_name": "mlp_batch_gd_l1_l2",
+    "model_relative_path": "runs/mlp_batch_gd_l1_l2/mlp_batch_gd_l1_l2/model.joblib",
+    "reused": false
+  },
+  {
+    "group": "combinations",
+    "penalty": "none",
+    "experiment": {
+      "name": "mlp_sgd_none",
+      "kind": "mlp",
+      "parameters": {
+        "optimizer": "sgd",
+        "learning_rate": 0.001,
+        "epochs": 300,
+        "batch_size": 32,
+        "l1": 0.0,
+        "l2": 0.0
+      }
+    },
+    "report": {
+      "experiment": {
+        "name": "mlp_sgd",
+        "kind": "mlp",
+        "parameters": {
+          "optimizer": "sgd",
+          "learning_rate": 0.001,
+          "epochs": 300,
+          "batch_size": 32
+        }
+      },
+      "seed": 42,
+      "train_seconds": 38.10413442799836,
+      "validation": {
+        "mae_c": 3.4872891117521645,
+        "rmse_c": 4.344457071597322,
+        "max_absolute_error_c": 13.00018768339541,
+        "samples": 240,
+        "core_comparisons": 1920,
+        "per_core": {
+          "Core_0_L0": {
+            "mae_c": 3.1136296354915314,
+            "rmse_c": 3.734020133566756,
+            "max_absolute_error_c": 7.639575423247663
+          },
+          "Core_1_L0": {
+            "mae_c": 1.8074362669981194,
+            "rmse_c": 2.1967795637572602,
+            "max_absolute_error_c": 5.372379286395528
+          },
+          "Core_2_L0": {
+            "mae_c": 4.717684212210184,
+            "rmse_c": 5.26326480465283,
+            "max_absolute_error_c": 11.123289654691405
+          },
+          "Core_3_L0": {
+            "mae_c": 3.611251182344576,
+            "rmse_c": 4.584512527526954,
+            "max_absolute_error_c": 12.890055266804524
+          },
+          "Core_4_L0": {
+            "mae_c": 3.344814146937849,
+            "rmse_c": 4.097831742901959,
+            "max_absolute_error_c": 12.70133297058669
+          },
+          "Core_5_L0": {
+            "mae_c": 3.2753823095388577,
+            "rmse_c": 4.236809966180433,
+            "max_absolute_error_c": 10.906983933746119
+          },
+          "Core_6_L0": {
+            "mae_c": 4.237326652964525,
+            "rmse_c": 5.33924819091058,
+            "max_absolute_error_c": 13.00018768339541
+          },
+          "Core_7_L0": {
+            "mae_c": 3.7907884875316737,
+            "rmse_c": 4.500627147436341,
+            "max_absolute_error_c": 9.861941161483003
+          }
+        }
+      },
+      "latency": {
+        "single_sample_median_ms": 0.035047499999999995,
+        "single_sample_p95_ms": 0.0714523,
+        "batch_samples": 240,
+        "batch_ms": 0.434766,
+        "repeats": 50,
+        "boundary": "Engineered feature array through X scaling, regressor, inverse Y scaling; excludes CSV loading and feature engineering"
+      },
+      "serialized_model_bytes": 71680,
+      "model_sha256": "6a41c4bb531d9d5be5c5e7a439e73a933880fdad22a905d8af0adf9cb4fa4919",
+      "versions": {
+        "python": "3.12.14",
+        "platform": {
+          "system": "Linux",
+          "release": "6.18.57",
+          "machine": "x86_64"
+        },
+        "numpy": "2.3.5",
+        "scikit-learn": "1.8.0",
+        "joblib": "1.5.3",
+        "xgboost": null,
+        "xgboost-cpu": "3.4.1"
+      },
+      "prepared_manifest_sha256": "bcabf27285b98bbda358949ec9f3e72124029a9fca341fb59f870b851dde401d",
+      "source_csv_sha256": "ad78ac968292966a6b68e558f61aff3a1e2e185a553037e23fcd39c63e8bbc70",
+      "split_floorplans": {
+        "test": [
+          "b_fp_014",
+          "b_fp_018",
+          "b_fp_019",
+          "b_fp_020",
+          "b_fp_025",
+          "b_fp_041",
+          "b_fp_042",
+          "b_fp_053",
+          "b_fp_059",
+          "b_fp_070",
+          "b_fp_071",
+          "b_fp_072"
+        ],
+        "train": [
+          "b_fp_006",
+          "b_fp_007",
+          "b_fp_008",
+          "b_fp_009",
+          "b_fp_010",
+          "b_fp_011",
+          "b_fp_013",
+          "b_fp_015",
+          "b_fp_016",
+          "b_fp_021",
+          "b_fp_022",
+          "b_fp_023",
+          "b_fp_024",
+          "b_fp_026",
+          "b_fp_027",
+          "b_fp_029",
+          "b_fp_030",
+          "b_fp_031",
+          "b_fp_032",
+          "b_fp_033",
+          "b_fp_034",
+          "b_fp_035",
+          "b_fp_036",
+          "b_fp_037",
+          "b_fp_038",
+          "b_fp_039",
+          "b_fp_040",
+          "b_fp_043",
+          "b_fp_045",
+          "b_fp_046",
+          "b_fp_048",
+          "b_fp_049",
+          "b_fp_050",
+          "b_fp_051",
+          "b_fp_054",
+          "b_fp_056",
+          "b_fp_057",
+          "b_fp_058",
+          "b_fp_061",
+          "b_fp_062",
+          "b_fp_063",
+          "b_fp_064",
+          "b_fp_065",
+          "b_fp_066",
+          "b_fp_067",
+          "b_fp_069",
+          "b_fp_073",
+          "b_fp_075",
+          "b_fp_076",
+          "b_fp_077",
+          "b_fp_080",
+          "b_fp_081",
+          "b_fp_082"
+        ],
+        "validation": [
+          "b_fp_012",
+          "b_fp_017",
+          "b_fp_028",
+          "b_fp_044",
+          "b_fp_047",
+          "b_fp_052",
+          "b_fp_055",
+          "b_fp_060",
+          "b_fp_068",
+          "b_fp_074",
+          "b_fp_078",
+          "b_fp_079"
+        ]
+      },
+      "test_evaluated": false
+    },
+    "effective_parameters": {
+      "batch_size": 32,
+      "epochs": 300,
+      "gradient_clip": 10.0,
+      "hidden_layers": [
+        32
+      ],
+      "l1": 0.0,
+      "l2": 0.0,
+      "learning_rate": 0.001,
+      "optimizer": "sgd",
+      "patience": 20,
+      "random_state": 42,
+      "tolerance": 1e-07
+    },
+    "warnings": [],
+    "training_details": {
+      "n_iter_": 300,
+      "training_epochs": 300,
+      "training_loss_initial": 0.8216336398798337,
+      "training_loss_best": 0.003911600653358412,
+      "training_loss_last": 0.003966117736712369,
+      "epoch_cap_reached": true
+    },
+    "run_name": "mlp_sgd",
+    "model_relative_path": "runs/mlp_sgd/mlp_sgd/model.joblib",
+    "reused": true,
+    "reused_from": "mlp_sgd"
+  },
+  {
+    "group": "combinations",
+    "penalty": "l1",
+    "experiment": {
+      "name": "mlp_sgd_l1",
+      "kind": "mlp",
+      "parameters": {
+        "optimizer": "sgd",
+        "learning_rate": 0.001,
+        "epochs": 300,
+        "batch_size": 32,
+        "l1": 0.0001,
+        "l2": 0.0
+      }
+    },
+    "report": {
+      "experiment": {
+        "name": "mlp_sgd_l1",
+        "kind": "mlp",
+        "parameters": {
+          "optimizer": "sgd",
+          "learning_rate": 0.001,
+          "epochs": 300,
+          "batch_size": 32,
+          "l1": 0.0001,
+          "l2": 0.0
+        }
+      },
+      "seed": 42,
+      "train_seconds": 36.42506846800097,
+      "validation": {
+        "mae_c": 2.8772735626454478,
+        "rmse_c": 3.6324597778965257,
+        "max_absolute_error_c": 11.379377447858332,
+        "samples": 240,
+        "core_comparisons": 1920,
+        "per_core": {
+          "Core_0_L0": {
+            "mae_c": 2.37975265525304,
+            "rmse_c": 2.784476624581792,
+            "max_absolute_error_c": 5.5590276264300655
+          },
+          "Core_1_L0": {
+            "mae_c": 1.4017548529050403,
+            "rmse_c": 1.738974119135826,
+            "max_absolute_error_c": 5.087832367113151
+          },
+          "Core_2_L0": {
+            "mae_c": 3.992832446688775,
+            "rmse_c": 4.52336768281181,
+            "max_absolute_error_c": 10.875007953760502
+          },
+          "Core_3_L0": {
+            "mae_c": 2.7761011974376095,
+            "rmse_c": 3.5510682138881347,
+            "max_absolute_error_c": 10.240048506897011
+          },
+          "Core_4_L0": {
+            "mae_c": 2.964981158468845,
+            "rmse_c": 3.5655606093641268,
+            "max_absolute_error_c": 10.628158292495101
+          },
+          "Core_5_L0": {
+            "mae_c": 2.9714316140208252,
+            "rmse_c": 3.8034351086443654,
+            "max_absolute_error_c": 9.585854302637443
+          },
+          "Core_6_L0": {
+            "mae_c": 3.5851119866502095,
+            "rmse_c": 4.594096942035443,
+            "max_absolute_error_c": 11.379377447858332
+          },
+          "Core_7_L0": {
+            "mae_c": 2.9462225897392367,
+            "rmse_c": 3.6639818221836156,
+            "max_absolute_error_c": 9.441336359785623
+          }
+        }
+      },
+      "latency": {
+        "single_sample_median_ms": 0.0355715,
+        "single_sample_p95_ms": 0.1534699999999999,
+        "batch_samples": 240,
+        "batch_ms": 0.556493,
+        "repeats": 50,
+        "boundary": "Engineered feature array through X scaling, regressor, inverse Y scaling; excludes CSV loading and feature engineering"
+      },
+      "serialized_model_bytes": 71995,
+      "model_sha256": "d6f8433165173b01abf6d052a948dddd27926257d5c1b1c39a68edb957f679fb",
+      "versions": {
+        "python": "3.12.14",
+        "platform": {
+          "system": "Linux",
+          "release": "6.18.57",
+          "machine": "x86_64"
+        },
+        "numpy": "2.3.5",
+        "scikit-learn": "1.8.0",
+        "joblib": "1.5.3",
+        "xgboost": null,
+        "xgboost-cpu": "3.4.1"
+      },
+      "prepared_manifest_sha256": "bcabf27285b98bbda358949ec9f3e72124029a9fca341fb59f870b851dde401d",
+      "source_csv_sha256": "ad78ac968292966a6b68e558f61aff3a1e2e185a553037e23fcd39c63e8bbc70",
+      "split_floorplans": {
+        "test": [
+          "b_fp_014",
+          "b_fp_018",
+          "b_fp_019",
+          "b_fp_020",
+          "b_fp_025",
+          "b_fp_041",
+          "b_fp_042",
+          "b_fp_053",
+          "b_fp_059",
+          "b_fp_070",
+          "b_fp_071",
+          "b_fp_072"
+        ],
+        "train": [
+          "b_fp_006",
+          "b_fp_007",
+          "b_fp_008",
+          "b_fp_009",
+          "b_fp_010",
+          "b_fp_011",
+          "b_fp_013",
+          "b_fp_015",
+          "b_fp_016",
+          "b_fp_021",
+          "b_fp_022",
+          "b_fp_023",
+          "b_fp_024",
+          "b_fp_026",
+          "b_fp_027",
+          "b_fp_029",
+          "b_fp_030",
+          "b_fp_031",
+          "b_fp_032",
+          "b_fp_033",
+          "b_fp_034",
+          "b_fp_035",
+          "b_fp_036",
+          "b_fp_037",
+          "b_fp_038",
+          "b_fp_039",
+          "b_fp_040",
+          "b_fp_043",
+          "b_fp_045",
+          "b_fp_046",
+          "b_fp_048",
+          "b_fp_049",
+          "b_fp_050",
+          "b_fp_051",
+          "b_fp_054",
+          "b_fp_056",
+          "b_fp_057",
+          "b_fp_058",
+          "b_fp_061",
+          "b_fp_062",
+          "b_fp_063",
+          "b_fp_064",
+          "b_fp_065",
+          "b_fp_066",
+          "b_fp_067",
+          "b_fp_069",
+          "b_fp_073",
+          "b_fp_075",
+          "b_fp_076",
+          "b_fp_077",
+          "b_fp_080",
+          "b_fp_081",
+          "b_fp_082"
+        ],
+        "validation": [
+          "b_fp_012",
+          "b_fp_017",
+          "b_fp_028",
+          "b_fp_044",
+          "b_fp_047",
+          "b_fp_052",
+          "b_fp_055",
+          "b_fp_060",
+          "b_fp_068",
+          "b_fp_074",
+          "b_fp_078",
+          "b_fp_079"
+        ]
+      },
+      "test_evaluated": false
+    },
+    "effective_parameters": {
+      "batch_size": 32,
+      "epochs": 300,
+      "gradient_clip": 10.0,
+      "hidden_layers": [
+        32
+      ],
+      "l1": 0.0001,
+      "l2": 0.0,
+      "learning_rate": 0.001,
+      "optimizer": "sgd",
+      "patience": 20,
+      "random_state": 42,
+      "tolerance": 1e-07
+    },
+    "warnings": [],
+    "training_details": {
+      "n_iter_": 300,
+      "training_epochs": 300,
+      "training_loss_initial": 0.8791812058467408,
+      "training_loss_best": 0.04025339890892609,
+      "training_loss_last": 0.04025339890892609,
+      "epoch_cap_reached": true
+    },
+    "run_name": "mlp_sgd_l1",
+    "model_relative_path": "runs/mlp_sgd_l1/mlp_sgd_l1/model.joblib",
+    "reused": false
+  },
+  {
+    "group": "combinations",
+    "penalty": "l2",
+    "experiment": {
+      "name": "mlp_sgd_l2",
+      "kind": "mlp",
+      "parameters": {
+        "optimizer": "sgd",
+        "learning_rate": 0.001,
+        "epochs": 300,
+        "batch_size": 32,
+        "l1": 0.0,
+        "l2": 0.001
+      }
+    },
+    "report": {
+      "experiment": {
+        "name": "mlp_sgd_l2",
+        "kind": "mlp",
+        "parameters": {
+          "optimizer": "sgd",
+          "learning_rate": 0.001,
+          "epochs": 300,
+          "batch_size": 32,
+          "l1": 0.0,
+          "l2": 0.001
+        }
+      },
+      "seed": 42,
+      "train_seconds": 35.05683989099998,
+      "validation": {
+        "mae_c": 2.559414630652039,
+        "rmse_c": 3.2592064741932836,
+        "max_absolute_error_c": 10.930467072286177,
+        "samples": 240,
+        "core_comparisons": 1920,
+        "per_core": {
+          "Core_0_L0": {
+            "mae_c": 2.2836012348570818,
+            "rmse_c": 2.7177151258761847,
+            "max_absolute_error_c": 5.892940596680319
+          },
+          "Core_1_L0": {
+            "mae_c": 1.5536504222241696,
+            "rmse_c": 1.968933141276556,
+            "max_absolute_error_c": 6.438197497522509
+          },
+          "Core_2_L0": {
+            "mae_c": 3.2564219523738616,
+            "rmse_c": 3.903125796034691,
+            "max_absolute_error_c": 10.930467072286177
+          },
+          "Core_3_L0": {
+            "mae_c": 2.211810162938531,
+            "rmse_c": 2.7181517615976123,
+            "max_absolute_error_c": 8.702474322547488
+          },
+          "Core_4_L0": {
+            "mae_c": 2.5556100727127222,
+            "rmse_c": 3.122627402878384,
+            "max_absolute_error_c": 9.065364529158558
+          },
+          "Core_5_L0": {
+            "mae_c": 2.8131756151975416,
+            "rmse_c": 3.5001941662119482,
+            "max_absolute_error_c": 9.023056183633543
+          },
+          "Core_6_L0": {
+            "mae_c": 3.119575500634515,
+            "rmse_c": 4.193433859720875,
+            "max_absolute_error_c": 10.833837997815749
+          },
+          "Core_7_L0": {
+            "mae_c": 2.6814720842778903,
+            "rmse_c": 3.392189985564141,
+            "max_absolute_error_c": 8.982319909749094
+          }
+        }
+      },
+      "latency": {
+        "single_sample_median_ms": 0.0346655,
+        "single_sample_p95_ms": 0.050237399999999925,
+        "batch_samples": 240,
+        "batch_ms": 0.481294,
+        "repeats": 50,
+        "boundary": "Engineered feature array through X scaling, regressor, inverse Y scaling; excludes CSV loading and feature engineering"
+      },
+      "serialized_model_bytes": 71626,
+      "model_sha256": "fa51a343477755f4b7cef40c36992e4725315f53ee2c9d6190c3f7beaad3778c",
+      "versions": {
+        "python": "3.12.14",
+        "platform": {
+          "system": "Linux",
+          "release": "6.18.57",
+          "machine": "x86_64"
+        },
+        "numpy": "2.3.5",
+        "scikit-learn": "1.8.0",
+        "joblib": "1.5.3",
+        "xgboost": null,
+        "xgboost-cpu": "3.4.1"
+      },
+      "prepared_manifest_sha256": "bcabf27285b98bbda358949ec9f3e72124029a9fca341fb59f870b851dde401d",
+      "source_csv_sha256": "ad78ac968292966a6b68e558f61aff3a1e2e185a553037e23fcd39c63e8bbc70",
+      "split_floorplans": {
+        "test": [
+          "b_fp_014",
+          "b_fp_018",
+          "b_fp_019",
+          "b_fp_020",
+          "b_fp_025",
+          "b_fp_041",
+          "b_fp_042",
+          "b_fp_053",
+          "b_fp_059",
+          "b_fp_070",
+          "b_fp_071",
+          "b_fp_072"
+        ],
+        "train": [
+          "b_fp_006",
+          "b_fp_007",
+          "b_fp_008",
+          "b_fp_009",
+          "b_fp_010",
+          "b_fp_011",
+          "b_fp_013",
+          "b_fp_015",
+          "b_fp_016",
+          "b_fp_021",
+          "b_fp_022",
+          "b_fp_023",
+          "b_fp_024",
+          "b_fp_026",
+          "b_fp_027",
+          "b_fp_029",
+          "b_fp_030",
+          "b_fp_031",
+          "b_fp_032",
+          "b_fp_033",
+          "b_fp_034",
+          "b_fp_035",
+          "b_fp_036",
+          "b_fp_037",
+          "b_fp_038",
+          "b_fp_039",
+          "b_fp_040",
+          "b_fp_043",
+          "b_fp_045",
+          "b_fp_046",
+          "b_fp_048",
+          "b_fp_049",
+          "b_fp_050",
+          "b_fp_051",
+          "b_fp_054",
+          "b_fp_056",
+          "b_fp_057",
+          "b_fp_058",
+          "b_fp_061",
+          "b_fp_062",
+          "b_fp_063",
+          "b_fp_064",
+          "b_fp_065",
+          "b_fp_066",
+          "b_fp_067",
+          "b_fp_069",
+          "b_fp_073",
+          "b_fp_075",
+          "b_fp_076",
+          "b_fp_077",
+          "b_fp_080",
+          "b_fp_081",
+          "b_fp_082"
+        ],
+        "validation": [
+          "b_fp_012",
+          "b_fp_017",
+          "b_fp_028",
+          "b_fp_044",
+          "b_fp_047",
+          "b_fp_052",
+          "b_fp_055",
+          "b_fp_060",
+          "b_fp_068",
+          "b_fp_074",
+          "b_fp_078",
+          "b_fp_079"
+        ]
+      },
+      "test_evaluated": false
+    },
+    "effective_parameters": {
+      "batch_size": 32,
+      "epochs": 300,
+      "gradient_clip": 10.0,
+      "hidden_layers": [
+        32
+      ],
+      "l1": 0.0,
+      "l2": 0.001,
+      "learning_rate": 0.001,
+      "optimizer": "sgd",
+      "patience": 20,
+      "random_state": 42,
+      "tolerance": 1e-07
+    },
+    "warnings": [],
+    "training_details": {
+      "n_iter_": 300,
+      "training_epochs": 300,
+      "training_loss_initial": 0.888173075740551,
+      "training_loss_best": 0.030654771614473292,
+      "training_loss_last": 0.030654771614473292,
+      "epoch_cap_reached": true
+    },
+    "run_name": "mlp_sgd_l2",
+    "model_relative_path": "runs/mlp_sgd_l2/mlp_sgd_l2/model.joblib",
+    "reused": false
+  },
+  {
+    "group": "combinations",
+    "penalty": "l1_l2",
+    "experiment": {
+      "name": "mlp_sgd_l1_l2",
+      "kind": "mlp",
+      "parameters": {
+        "optimizer": "sgd",
+        "learning_rate": 0.001,
+        "epochs": 300,
+        "batch_size": 32,
+        "l1": 0.0001,
+        "l2": 0.001
+      }
+    },
+    "report": {
+      "experiment": {
+        "name": "mlp_sgd_l1_l2",
+        "kind": "mlp",
+        "parameters": {
+          "optimizer": "sgd",
+          "learning_rate": 0.001,
+          "epochs": 300,
+          "batch_size": 32,
+          "l1": 0.0001,
+          "l2": 0.001
+        }
+      },
+      "seed": 42,
+      "train_seconds": 36.1472554130014,
+      "validation": {
+        "mae_c": 2.2106661655347684,
+        "rmse_c": 2.818907455692553,
+        "max_absolute_error_c": 9.44893178203597,
+        "samples": 240,
+        "core_comparisons": 1920,
+        "per_core": {
+          "Core_0_L0": {
+            "mae_c": 1.8944079796841513,
+            "rmse_c": 2.248942617369851,
+            "max_absolute_error_c": 4.540013375894148
+          },
+          "Core_1_L0": {
+            "mae_c": 1.2746083642932746,
+            "rmse_c": 1.6768421778919231,
+            "max_absolute_error_c": 5.454863259426077
+          },
+          "Core_2_L0": {
+            "mae_c": 2.564200086983494,
+            "rmse_c": 3.2209477387604317,
+            "max_absolute_error_c": 9.44893178203597
+          },
+          "Core_3_L0": {
+            "mae_c": 1.9480306076997456,
+            "rmse_c": 2.2980039675857427,
+            "max_absolute_error_c": 6.631722826070018
+          },
+          "Core_4_L0": {
+            "mae_c": 2.4265860692461327,
+            "rmse_c": 2.9391037663434956,
+            "max_absolute_error_c": 6.990959588320891
+          },
+          "Core_5_L0": {
+            "mae_c": 2.611412853541754,
+            "rmse_c": 3.1653163328213996,
+            "max_absolute_error_c": 7.5944977655098285
+          },
+          "Core_6_L0": {
+            "mae_c": 2.799887352279233,
+            "rmse_c": 3.695146731673308,
+            "max_absolute_error_c": 9.439742757350416
+          },
+          "Core_7_L0": {
+            "mae_c": 2.1661960105503626,
+            "rmse_c": 2.780894997778716,
+            "max_absolute_error_c": 8.241607558726713
+          }
+        }
+      },
+      "latency": {
+        "single_sample_median_ms": 0.0353645,
+        "single_sample_p95_ms": 0.10756154999999995,
+        "batch_samples": 240,
+        "batch_ms": 0.508367,
+        "repeats": 50,
+        "boundary": "Engineered feature array through X scaling, regressor, inverse Y scaling; excludes CSV loading and feature engineering"
+      },
+      "serialized_model_bytes": 72069,
+      "model_sha256": "47a383365c72304b001d805be8bc1cf0d43fefd4263b319ab68c9f47e0314f62",
+      "versions": {
+        "python": "3.12.14",
+        "platform": {
+          "system": "Linux",
+          "release": "6.18.57",
+          "machine": "x86_64"
+        },
+        "numpy": "2.3.5",
+        "scikit-learn": "1.8.0",
+        "joblib": "1.5.3",
+        "xgboost": null,
+        "xgboost-cpu": "3.4.1"
+      },
+      "prepared_manifest_sha256": "bcabf27285b98bbda358949ec9f3e72124029a9fca341fb59f870b851dde401d",
+      "source_csv_sha256": "ad78ac968292966a6b68e558f61aff3a1e2e185a553037e23fcd39c63e8bbc70",
+      "split_floorplans": {
+        "test": [
+          "b_fp_014",
+          "b_fp_018",
+          "b_fp_019",
+          "b_fp_020",
+          "b_fp_025",
+          "b_fp_041",
+          "b_fp_042",
+          "b_fp_053",
+          "b_fp_059",
+          "b_fp_070",
+          "b_fp_071",
+          "b_fp_072"
+        ],
+        "train": [
+          "b_fp_006",
+          "b_fp_007",
+          "b_fp_008",
+          "b_fp_009",
+          "b_fp_010",
+          "b_fp_011",
+          "b_fp_013",
+          "b_fp_015",
+          "b_fp_016",
+          "b_fp_021",
+          "b_fp_022",
+          "b_fp_023",
+          "b_fp_024",
+          "b_fp_026",
+          "b_fp_027",
+          "b_fp_029",
+          "b_fp_030",
+          "b_fp_031",
+          "b_fp_032",
+          "b_fp_033",
+          "b_fp_034",
+          "b_fp_035",
+          "b_fp_036",
+          "b_fp_037",
+          "b_fp_038",
+          "b_fp_039",
+          "b_fp_040",
+          "b_fp_043",
+          "b_fp_045",
+          "b_fp_046",
+          "b_fp_048",
+          "b_fp_049",
+          "b_fp_050",
+          "b_fp_051",
+          "b_fp_054",
+          "b_fp_056",
+          "b_fp_057",
+          "b_fp_058",
+          "b_fp_061",
+          "b_fp_062",
+          "b_fp_063",
+          "b_fp_064",
+          "b_fp_065",
+          "b_fp_066",
+          "b_fp_067",
+          "b_fp_069",
+          "b_fp_073",
+          "b_fp_075",
+          "b_fp_076",
+          "b_fp_077",
+          "b_fp_080",
+          "b_fp_081",
+          "b_fp_082"
+        ],
+        "validation": [
+          "b_fp_012",
+          "b_fp_017",
+          "b_fp_028",
+          "b_fp_044",
+          "b_fp_047",
+          "b_fp_052",
+          "b_fp_055",
+          "b_fp_060",
+          "b_fp_068",
+          "b_fp_074",
+          "b_fp_078",
+          "b_fp_079"
+        ]
+      },
+      "test_evaluated": false
+    },
+    "effective_parameters": {
+      "batch_size": 32,
+      "epochs": 300,
+      "gradient_clip": 10.0,
+      "hidden_layers": [
+        32
+      ],
+      "l1": 0.0001,
+      "l2": 0.001,
+      "learning_rate": 0.001,
+      "optimizer": "sgd",
+      "patience": 20,
+      "random_state": 42,
+      "tolerance": 1e-07
+    },
+    "warnings": [],
+    "training_details": {
+      "n_iter_": 300,
+      "training_epochs": 300,
+      "training_loss_initial": 0.9454902747759465,
+      "training_loss_best": 0.04306789287607297,
+      "training_loss_last": 0.04306789287607297,
+      "epoch_cap_reached": true
+    },
+    "run_name": "mlp_sgd_l1_l2",
+    "model_relative_path": "runs/mlp_sgd_l1_l2/mlp_sgd_l1_l2/model.joblib",
+    "reused": false
+  },
+  {
+    "group": "combinations",
+    "penalty": "none",
+    "experiment": {
+      "name": "mlp_adam_none",
+      "kind": "mlp",
+      "parameters": {
+        "optimizer": "adam",
+        "learning_rate": 0.003,
+        "epochs": 300,
+        "batch_size": 32,
+        "l1": 0.0,
+        "l2": 0.0
+      }
+    },
+    "report": {
+      "experiment": {
+        "name": "mlp_adam",
+        "kind": "mlp",
+        "parameters": {
+          "optimizer": "adam",
+          "learning_rate": 0.003,
+          "epochs": 300,
+          "batch_size": 32
+        }
+      },
+      "seed": 42,
+      "train_seconds": 0.8841015329999209,
+      "validation": {
+        "mae_c": 2.9726764161303576,
+        "rmse_c": 3.6643736275015577,
+        "max_absolute_error_c": 12.429757278005454,
+        "samples": 240,
+        "core_comparisons": 1920,
+        "per_core": {
+          "Core_0_L0": {
+            "mae_c": 2.33265675046024,
+            "rmse_c": 3.075743106982804,
+            "max_absolute_error_c": 8.028339162802979
+          },
+          "Core_1_L0": {
+            "mae_c": 2.28424216250309,
+            "rmse_c": 2.825791862177104,
+            "max_absolute_error_c": 8.594389837504096
+          },
+          "Core_2_L0": {
+            "mae_c": 3.6633470746743417,
+            "rmse_c": 4.321608987234459,
+            "max_absolute_error_c": 10.821091236324747
+          },
+          "Core_3_L0": {
+            "mae_c": 3.181793124399671,
+            "rmse_c": 3.921660014485727,
+            "max_absolute_error_c": 12.223541772333022
+          },
+          "Core_4_L0": {
+            "mae_c": 2.4759864289340348,
+            "rmse_c": 3.0076044949608955,
+            "max_absolute_error_c": 7.093792174541733
+          },
+          "Core_5_L0": {
+            "mae_c": 3.0012595511380327,
+            "rmse_c": 3.5073701176792755,
+            "max_absolute_error_c": 8.524835705480939
+          },
+          "Core_6_L0": {
+            "mae_c": 3.3905881169823706,
+            "rmse_c": 4.198271440040015,
+            "max_absolute_error_c": 12.429757278005454
+          },
+          "Core_7_L0": {
+            "mae_c": 3.451538119951082,
+            "rmse_c": 4.116702905775054,
+            "max_absolute_error_c": 9.879444302533443
+          }
+        }
+      },
+      "latency": {
+        "single_sample_median_ms": 0.034283,
+        "single_sample_p95_ms": 0.1009405999999999,
+        "batch_samples": 240,
+        "batch_ms": 0.434941,
+        "repeats": 50,
+        "boundary": "Engineered feature array through X scaling, regressor, inverse Y scaling; excludes CSV loading and feature engineering"
+      },
+      "serialized_model_bytes": 69984,
+      "model_sha256": "d131061c0a3432e6d7ae9b80120d4f20d3d386c2417066e41f338ca7af1e4e0c",
+      "versions": {
+        "python": "3.12.14",
+        "platform": {
+          "system": "Linux",
+          "release": "6.18.57",
+          "machine": "x86_64"
+        },
+        "numpy": "2.3.5",
+        "scikit-learn": "1.8.0",
+        "joblib": "1.5.3",
+        "xgboost": null,
+        "xgboost-cpu": "3.4.1"
+      },
+      "prepared_manifest_sha256": "bcabf27285b98bbda358949ec9f3e72124029a9fca341fb59f870b851dde401d",
+      "source_csv_sha256": "ad78ac968292966a6b68e558f61aff3a1e2e185a553037e23fcd39c63e8bbc70",
+      "split_floorplans": {
+        "test": [
+          "b_fp_014",
+          "b_fp_018",
+          "b_fp_019",
+          "b_fp_020",
+          "b_fp_025",
+          "b_fp_041",
+          "b_fp_042",
+          "b_fp_053",
+          "b_fp_059",
+          "b_fp_070",
+          "b_fp_071",
+          "b_fp_072"
+        ],
+        "train": [
+          "b_fp_006",
+          "b_fp_007",
+          "b_fp_008",
+          "b_fp_009",
+          "b_fp_010",
+          "b_fp_011",
+          "b_fp_013",
+          "b_fp_015",
+          "b_fp_016",
+          "b_fp_021",
+          "b_fp_022",
+          "b_fp_023",
+          "b_fp_024",
+          "b_fp_026",
+          "b_fp_027",
+          "b_fp_029",
+          "b_fp_030",
+          "b_fp_031",
+          "b_fp_032",
+          "b_fp_033",
+          "b_fp_034",
+          "b_fp_035",
+          "b_fp_036",
+          "b_fp_037",
+          "b_fp_038",
+          "b_fp_039",
+          "b_fp_040",
+          "b_fp_043",
+          "b_fp_045",
+          "b_fp_046",
+          "b_fp_048",
+          "b_fp_049",
+          "b_fp_050",
+          "b_fp_051",
+          "b_fp_054",
+          "b_fp_056",
+          "b_fp_057",
+          "b_fp_058",
+          "b_fp_061",
+          "b_fp_062",
+          "b_fp_063",
+          "b_fp_064",
+          "b_fp_065",
+          "b_fp_066",
+          "b_fp_067",
+          "b_fp_069",
+          "b_fp_073",
+          "b_fp_075",
+          "b_fp_076",
+          "b_fp_077",
+          "b_fp_080",
+          "b_fp_081",
+          "b_fp_082"
+        ],
+        "validation": [
+          "b_fp_012",
+          "b_fp_017",
+          "b_fp_028",
+          "b_fp_044",
+          "b_fp_047",
+          "b_fp_052",
+          "b_fp_055",
+          "b_fp_060",
+          "b_fp_068",
+          "b_fp_074",
+          "b_fp_078",
+          "b_fp_079"
+        ]
+      },
+      "test_evaluated": false
+    },
+    "effective_parameters": {
+      "batch_size": 32,
+      "epochs": 300,
+      "gradient_clip": 10.0,
+      "hidden_layers": [
+        32
+      ],
+      "l1": 0.0,
+      "l2": 0.0,
+      "learning_rate": 0.003,
+      "optimizer": "adam",
+      "patience": 20,
+      "random_state": 42,
+      "tolerance": 1e-07
+    },
+    "warnings": [],
+    "training_details": {
+      "n_iter_": 87,
+      "training_epochs": 87,
+      "training_loss_initial": 0.30086571140944673,
+      "training_loss_best": 0.005379623416620947,
+      "training_loss_last": 0.009297548269346532,
+      "epoch_cap_reached": false
+    },
+    "run_name": "mlp_adam",
+    "model_relative_path": "runs/mlp_adam/mlp_adam/model.joblib",
+    "reused": true,
+    "reused_from": "mlp_adam"
+  },
+  {
+    "group": "combinations",
+    "penalty": "l1",
+    "experiment": {
+      "name": "mlp_adam_l1",
+      "kind": "mlp",
+      "parameters": {
+        "optimizer": "adam",
+        "learning_rate": 0.003,
+        "epochs": 300,
+        "batch_size": 32,
+        "l1": 0.0001,
+        "l2": 0.0
+      }
+    },
+    "report": {
+      "experiment": {
+        "name": "mlp_adam_l1",
+        "kind": "mlp",
+        "parameters": {
+          "optimizer": "adam",
+          "learning_rate": 0.003,
+          "epochs": 300,
+          "batch_size": 32,
+          "l1": 0.0001,
+          "l2": 0.0
+        }
+      },
+      "seed": 42,
+      "train_seconds": 1.016104763999465,
+      "validation": {
+        "mae_c": 2.197660038155944,
+        "rmse_c": 2.7982600578994146,
+        "max_absolute_error_c": 10.514853452774759,
+        "samples": 240,
+        "core_comparisons": 1920,
+        "per_core": {
+          "Core_0_L0": {
+            "mae_c": 1.8805417730345595,
+            "rmse_c": 2.232946562484433,
+            "max_absolute_error_c": 5.507669872354711
+          },
+          "Core_1_L0": {
+            "mae_c": 1.6734215048302516,
+            "rmse_c": 2.029382986696058,
+            "max_absolute_error_c": 4.854204437786677
+          },
+          "Core_2_L0": {
+            "mae_c": 2.492530593426115,
+            "rmse_c": 3.2372678532226202,
+            "max_absolute_error_c": 9.763497105719154
+          },
+          "Core_3_L0": {
+            "mae_c": 2.1789406279782253,
+            "rmse_c": 2.727107369759326,
+            "max_absolute_error_c": 7.3765065270356445
+          },
+          "Core_4_L0": {
+            "mae_c": 2.3248211895378432,
+            "rmse_c": 2.890572701457036,
+            "max_absolute_error_c": 7.9825833040105465
+          },
+          "Core_5_L0": {
+            "mae_c": 2.3708180283805977,
+            "rmse_c": 2.87291279301277,
+            "max_absolute_error_c": 7.0377534161011965
+          },
+          "Core_6_L0": {
+            "mae_c": 2.449196563084697,
+            "rmse_c": 3.2528624601865457,
+            "max_absolute_error_c": 10.514853452774759
+          },
+          "Core_7_L0": {
+            "mae_c": 2.2110100249752644,
+            "rmse_c": 2.9035252284454622,
+            "max_absolute_error_c": 8.7739035855721
+          }
+        }
+      },
+      "latency": {
+        "single_sample_median_ms": 0.035222,
+        "single_sample_p95_ms": 0.06584689999999999,
+        "batch_samples": 240,
+        "batch_ms": 0.827382,
+        "repeats": 50,
+        "boundary": "Engineered feature array through X scaling, regressor, inverse Y scaling; excludes CSV loading and feature engineering"
+      },
+      "serialized_model_bytes": 70076,
+      "model_sha256": "a2815d4226f152e289a3808c0b2d0aa8bdd5678c17cf046170a05ac60360d22a",
+      "versions": {
+        "python": "3.12.14",
+        "platform": {
+          "system": "Linux",
+          "release": "6.18.57",
+          "machine": "x86_64"
+        },
+        "numpy": "2.3.5",
+        "scikit-learn": "1.8.0",
+        "joblib": "1.5.3",
+        "xgboost": null,
+        "xgboost-cpu": "3.4.1"
+      },
+      "prepared_manifest_sha256": "bcabf27285b98bbda358949ec9f3e72124029a9fca341fb59f870b851dde401d",
+      "source_csv_sha256": "ad78ac968292966a6b68e558f61aff3a1e2e185a553037e23fcd39c63e8bbc70",
+      "split_floorplans": {
+        "test": [
+          "b_fp_014",
+          "b_fp_018",
+          "b_fp_019",
+          "b_fp_020",
+          "b_fp_025",
+          "b_fp_041",
+          "b_fp_042",
+          "b_fp_053",
+          "b_fp_059",
+          "b_fp_070",
+          "b_fp_071",
+          "b_fp_072"
+        ],
+        "train": [
+          "b_fp_006",
+          "b_fp_007",
+          "b_fp_008",
+          "b_fp_009",
+          "b_fp_010",
+          "b_fp_011",
+          "b_fp_013",
+          "b_fp_015",
+          "b_fp_016",
+          "b_fp_021",
+          "b_fp_022",
+          "b_fp_023",
+          "b_fp_024",
+          "b_fp_026",
+          "b_fp_027",
+          "b_fp_029",
+          "b_fp_030",
+          "b_fp_031",
+          "b_fp_032",
+          "b_fp_033",
+          "b_fp_034",
+          "b_fp_035",
+          "b_fp_036",
+          "b_fp_037",
+          "b_fp_038",
+          "b_fp_039",
+          "b_fp_040",
+          "b_fp_043",
+          "b_fp_045",
+          "b_fp_046",
+          "b_fp_048",
+          "b_fp_049",
+          "b_fp_050",
+          "b_fp_051",
+          "b_fp_054",
+          "b_fp_056",
+          "b_fp_057",
+          "b_fp_058",
+          "b_fp_061",
+          "b_fp_062",
+          "b_fp_063",
+          "b_fp_064",
+          "b_fp_065",
+          "b_fp_066",
+          "b_fp_067",
+          "b_fp_069",
+          "b_fp_073",
+          "b_fp_075",
+          "b_fp_076",
+          "b_fp_077",
+          "b_fp_080",
+          "b_fp_081",
+          "b_fp_082"
+        ],
+        "validation": [
+          "b_fp_012",
+          "b_fp_017",
+          "b_fp_028",
+          "b_fp_044",
+          "b_fp_047",
+          "b_fp_052",
+          "b_fp_055",
+          "b_fp_060",
+          "b_fp_068",
+          "b_fp_074",
+          "b_fp_078",
+          "b_fp_079"
+        ]
+      },
+      "test_evaluated": false
+    },
+    "effective_parameters": {
+      "batch_size": 32,
+      "epochs": 300,
+      "gradient_clip": 10.0,
+      "hidden_layers": [
+        32
+      ],
+      "l1": 0.0001,
+      "l2": 0.0,
+      "learning_rate": 0.003,
+      "optimizer": "adam",
+      "patience": 20,
+      "random_state": 42,
+      "tolerance": 1e-07
+    },
+    "warnings": [],
+    "training_details": {
+      "n_iter_": 91,
+      "training_epochs": 91,
+      "training_loss_initial": 0.3591144401044535,
+      "training_loss_best": 0.025422304832658997,
+      "training_loss_last": 0.031008417542653093,
+      "epoch_cap_reached": false
+    },
+    "run_name": "mlp_adam_l1",
+    "model_relative_path": "runs/mlp_adam_l1/mlp_adam_l1/model.joblib",
+    "reused": false
+  },
+  {
+    "group": "combinations",
+    "penalty": "l2",
+    "experiment": {
+      "name": "mlp_adam_l2",
+      "kind": "mlp",
+      "parameters": {
+        "optimizer": "adam",
+        "learning_rate": 0.003,
+        "epochs": 300,
+        "batch_size": 32,
+        "l1": 0.0,
+        "l2": 0.001
+      }
+    },
+    "report": {
+      "experiment": {
+        "name": "mlp_l2",
+        "kind": "mlp",
+        "parameters": {
+          "optimizer": "adam",
+          "epochs": 300,
+          "l2": 0.001
+        }
+      },
+      "seed": 42,
+      "train_seconds": 0.9826979059980658,
+      "validation": {
+        "mae_c": 2.744256370264565,
+        "rmse_c": 3.4361077473273265,
+        "max_absolute_error_c": 10.922784364736913,
+        "samples": 240,
+        "core_comparisons": 1920,
+        "per_core": {
+          "Core_0_L0": {
+            "mae_c": 2.456806168190037,
+            "rmse_c": 3.042260398297833,
+            "max_absolute_error_c": 7.6950430594295085
+          },
+          "Core_1_L0": {
+            "mae_c": 1.8525908657517627,
+            "rmse_c": 2.5641188509245874,
+            "max_absolute_error_c": 7.473814551925429
+          },
+          "Core_2_L0": {
+            "mae_c": 2.7583323049018724,
+            "rmse_c": 3.415110111114835,
+            "max_absolute_error_c": 9.541791436626596
+          },
+          "Core_3_L0": {
+            "mae_c": 2.8537183491238696,
+            "rmse_c": 3.285378619093617,
+            "max_absolute_error_c": 7.608284891899245
+          },
+          "Core_4_L0": {
+            "mae_c": 2.937825918296468,
+            "rmse_c": 3.7595948463756454,
+            "max_absolute_error_c": 8.823445194247967
+          },
+          "Core_5_L0": {
+            "mae_c": 3.1534792074415767,
+            "rmse_c": 3.717250071318518,
+            "max_absolute_error_c": 8.339392883430179
+          },
+          "Core_6_L0": {
+            "mae_c": 3.1941487660149397,
+            "rmse_c": 4.045363489178766,
+            "max_absolute_error_c": 10.922784364736913
+          },
+          "Core_7_L0": {
+            "mae_c": 2.747149382395996,
+            "rmse_c": 3.442452729406196,
+            "max_absolute_error_c": 8.348308191801806
+          }
+        }
+      },
+      "latency": {
+        "single_sample_median_ms": 0.035388,
+        "single_sample_p95_ms": 0.06198719999999998,
+        "batch_samples": 240,
+        "batch_ms": 0.437476,
+        "repeats": 50,
+        "boundary": "Engineered feature array through X scaling, regressor, inverse Y scaling; excludes CSV loading and feature engineering"
+      },
+      "serialized_model_bytes": 69862,
+      "model_sha256": "c04814fa29f77679a48d441139032b0e7230b516ef3ebbfabedef21271b98f80",
+      "versions": {
+        "python": "3.12.14",
+        "platform": {
+          "system": "Linux",
+          "release": "6.18.57",
+          "machine": "x86_64"
+        },
+        "numpy": "2.3.5",
+        "scikit-learn": "1.8.0",
+        "joblib": "1.5.3",
+        "xgboost": null,
+        "xgboost-cpu": "3.4.1"
+      },
+      "prepared_manifest_sha256": "bcabf27285b98bbda358949ec9f3e72124029a9fca341fb59f870b851dde401d",
+      "source_csv_sha256": "ad78ac968292966a6b68e558f61aff3a1e2e185a553037e23fcd39c63e8bbc70",
+      "split_floorplans": {
+        "test": [
+          "b_fp_014",
+          "b_fp_018",
+          "b_fp_019",
+          "b_fp_020",
+          "b_fp_025",
+          "b_fp_041",
+          "b_fp_042",
+          "b_fp_053",
+          "b_fp_059",
+          "b_fp_070",
+          "b_fp_071",
+          "b_fp_072"
+        ],
+        "train": [
+          "b_fp_006",
+          "b_fp_007",
+          "b_fp_008",
+          "b_fp_009",
+          "b_fp_010",
+          "b_fp_011",
+          "b_fp_013",
+          "b_fp_015",
+          "b_fp_016",
+          "b_fp_021",
+          "b_fp_022",
+          "b_fp_023",
+          "b_fp_024",
+          "b_fp_026",
+          "b_fp_027",
+          "b_fp_029",
+          "b_fp_030",
+          "b_fp_031",
+          "b_fp_032",
+          "b_fp_033",
+          "b_fp_034",
+          "b_fp_035",
+          "b_fp_036",
+          "b_fp_037",
+          "b_fp_038",
+          "b_fp_039",
+          "b_fp_040",
+          "b_fp_043",
+          "b_fp_045",
+          "b_fp_046",
+          "b_fp_048",
+          "b_fp_049",
+          "b_fp_050",
+          "b_fp_051",
+          "b_fp_054",
+          "b_fp_056",
+          "b_fp_057",
+          "b_fp_058",
+          "b_fp_061",
+          "b_fp_062",
+          "b_fp_063",
+          "b_fp_064",
+          "b_fp_065",
+          "b_fp_066",
+          "b_fp_067",
+          "b_fp_069",
+          "b_fp_073",
+          "b_fp_075",
+          "b_fp_076",
+          "b_fp_077",
+          "b_fp_080",
+          "b_fp_081",
+          "b_fp_082"
+        ],
+        "validation": [
+          "b_fp_012",
+          "b_fp_017",
+          "b_fp_028",
+          "b_fp_044",
+          "b_fp_047",
+          "b_fp_052",
+          "b_fp_055",
+          "b_fp_060",
+          "b_fp_068",
+          "b_fp_074",
+          "b_fp_078",
+          "b_fp_079"
+        ]
+      },
+      "test_evaluated": false
+    },
+    "effective_parameters": {
+      "batch_size": 32,
+      "epochs": 300,
+      "gradient_clip": 10.0,
+      "hidden_layers": [
+        32
+      ],
+      "l1": 0.0,
+      "l2": 0.001,
+      "learning_rate": 0.003,
+      "optimizer": "adam",
+      "patience": 20,
+      "random_state": 42,
+      "tolerance": 1e-07
+    },
+    "warnings": [],
+    "training_details": {
+      "n_iter_": 67,
+      "training_epochs": 67,
+      "training_loss_initial": 0.3684973556658202,
+      "training_loss_best": 0.027307390613912626,
+      "training_loss_last": 0.027689288329131624,
+      "epoch_cap_reached": false
+    },
+    "run_name": "mlp_l2",
+    "model_relative_path": "runs/mlp_l2/mlp_l2/model.joblib",
+    "reused": true,
+    "reused_from": "mlp_l2"
+  },
+  {
+    "group": "combinations",
+    "penalty": "l1_l2",
+    "experiment": {
+      "name": "mlp_adam_l1_l2",
+      "kind": "mlp",
+      "parameters": {
+        "optimizer": "adam",
+        "learning_rate": 0.003,
+        "epochs": 300,
+        "batch_size": 32,
+        "l1": 0.0001,
+        "l2": 0.001
+      }
+    },
+    "report": {
+      "experiment": {
+        "name": "mlp_adam_l1_l2",
+        "kind": "mlp",
+        "parameters": {
+          "optimizer": "adam",
+          "learning_rate": 0.003,
+          "epochs": 300,
+          "batch_size": 32,
+          "l1": 0.0001,
+          "l2": 0.001
+        }
+      },
+      "seed": 42,
+      "train_seconds": 0.8323626720011816,
+      "validation": {
+        "mae_c": 2.079679299711809,
+        "rmse_c": 2.6722084882089954,
+        "max_absolute_error_c": 9.208479307284563,
+        "samples": 240,
+        "core_comparisons": 1920,
+        "per_core": {
+          "Core_0_L0": {
+            "mae_c": 1.9691530519141642,
+            "rmse_c": 2.373816395982668,
+            "max_absolute_error_c": 6.308777299423184
+          },
+          "Core_1_L0": {
+            "mae_c": 1.5827514342535574,
+            "rmse_c": 2.118398289628352,
+            "max_absolute_error_c": 6.2534180599231775
+          },
+          "Core_2_L0": {
+            "mae_c": 2.0883020804816246,
+            "rmse_c": 2.8014342909623955,
+            "max_absolute_error_c": 7.764174916573353
+          },
+          "Core_3_L0": {
+            "mae_c": 1.7303263159219877,
+            "rmse_c": 2.1738094404993418,
+            "max_absolute_error_c": 5.557252431394701
+          },
+          "Core_4_L0": {
+            "mae_c": 2.366703063321736,
+            "rmse_c": 2.9224787087324824,
+            "max_absolute_error_c": 6.3360828619600795
+          },
+          "Core_5_L0": {
+            "mae_c": 2.2492393933365538,
+            "rmse_c": 2.7369205419758043,
+            "max_absolute_error_c": 6.2875524461020404
+          },
+          "Core_6_L0": {
+            "mae_c": 2.6396592810102915,
+            "rmse_c": 3.41952921854919,
+            "max_absolute_error_c": 9.208479307284563
+          },
+          "Core_7_L0": {
+            "mae_c": 2.0112997774545573,
+            "rmse_c": 2.5893421051559966,
+            "max_absolute_error_c": 6.82355663382981
+          }
+        }
+      },
+      "latency": {
+        "single_sample_median_ms": 0.035376,
+        "single_sample_p95_ms": 0.11597594999999995,
+        "batch_samples": 240,
+        "batch_ms": 0.374647,
+        "repeats": 50,
+        "boundary": "Engineered feature array through X scaling, regressor, inverse Y scaling; excludes CSV loading and feature engineering"
+      },
+      "serialized_model_bytes": 70071,
+      "model_sha256": "e8ee5a8d1c9c14bde16d23f550796da8a3cc842b88e476e1bbe9e870963ad469",
+      "versions": {
+        "python": "3.12.14",
+        "platform": {
+          "system": "Linux",
+          "release": "6.18.57",
+          "machine": "x86_64"
+        },
+        "numpy": "2.3.5",
+        "scikit-learn": "1.8.0",
+        "joblib": "1.5.3",
+        "xgboost": null,
+        "xgboost-cpu": "3.4.1"
+      },
+      "prepared_manifest_sha256": "bcabf27285b98bbda358949ec9f3e72124029a9fca341fb59f870b851dde401d",
+      "source_csv_sha256": "ad78ac968292966a6b68e558f61aff3a1e2e185a553037e23fcd39c63e8bbc70",
+      "split_floorplans": {
+        "test": [
+          "b_fp_014",
+          "b_fp_018",
+          "b_fp_019",
+          "b_fp_020",
+          "b_fp_025",
+          "b_fp_041",
+          "b_fp_042",
+          "b_fp_053",
+          "b_fp_059",
+          "b_fp_070",
+          "b_fp_071",
+          "b_fp_072"
+        ],
+        "train": [
+          "b_fp_006",
+          "b_fp_007",
+          "b_fp_008",
+          "b_fp_009",
+          "b_fp_010",
+          "b_fp_011",
+          "b_fp_013",
+          "b_fp_015",
+          "b_fp_016",
+          "b_fp_021",
+          "b_fp_022",
+          "b_fp_023",
+          "b_fp_024",
+          "b_fp_026",
+          "b_fp_027",
+          "b_fp_029",
+          "b_fp_030",
+          "b_fp_031",
+          "b_fp_032",
+          "b_fp_033",
+          "b_fp_034",
+          "b_fp_035",
+          "b_fp_036",
+          "b_fp_037",
+          "b_fp_038",
+          "b_fp_039",
+          "b_fp_040",
+          "b_fp_043",
+          "b_fp_045",
+          "b_fp_046",
+          "b_fp_048",
+          "b_fp_049",
+          "b_fp_050",
+          "b_fp_051",
+          "b_fp_054",
+          "b_fp_056",
+          "b_fp_057",
+          "b_fp_058",
+          "b_fp_061",
+          "b_fp_062",
+          "b_fp_063",
+          "b_fp_064",
+          "b_fp_065",
+          "b_fp_066",
+          "b_fp_067",
+          "b_fp_069",
+          "b_fp_073",
+          "b_fp_075",
+          "b_fp_076",
+          "b_fp_077",
+          "b_fp_080",
+          "b_fp_081",
+          "b_fp_082"
+        ],
+        "validation": [
+          "b_fp_012",
+          "b_fp_017",
+          "b_fp_028",
+          "b_fp_044",
+          "b_fp_047",
+          "b_fp_052",
+          "b_fp_055",
+          "b_fp_060",
+          "b_fp_068",
+          "b_fp_074",
+          "b_fp_078",
+          "b_fp_079"
+        ]
+      },
+      "test_evaluated": false
+    },
+    "effective_parameters": {
+      "batch_size": 32,
+      "epochs": 300,
+      "gradient_clip": 10.0,
+      "hidden_layers": [
+        32
+      ],
+      "l1": 0.0001,
+      "l2": 0.001,
+      "learning_rate": 0.003,
+      "optimizer": "adam",
+      "patience": 20,
+      "random_state": 42,
+      "tolerance": 1e-07
+    },
+    "warnings": [],
+    "training_details": {
+      "n_iter_": 89,
+      "training_epochs": 89,
+      "training_loss_initial": 0.4249664161382342,
+      "training_loss_best": 0.03765982229934806,
+      "training_loss_last": 0.03922252103638148,
+      "epoch_cap_reached": false
+    },
+    "run_name": "mlp_adam_l1_l2",
+    "model_relative_path": "runs/mlp_adam_l1_l2/mlp_adam_l1_l2/model.joblib",
+    "reused": false
+  }
+]

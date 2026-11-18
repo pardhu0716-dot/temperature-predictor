@@ -1,0 +1,169 @@
+{
+  "models": [
+    {
+      "run": "linear_gradient_batch_gd",
+      "model_hash_verified": true,
+      "validation_metrics_exact_after_reload": true
+    },
+    {
+      "run": "linear_gradient_sgd",
+      "model_hash_verified": true,
+      "validation_metrics_exact_after_reload": true
+    },
+    {
+      "run": "linear_gradient_adam",
+      "model_hash_verified": true,
+      "validation_metrics_exact_after_reload": true
+    },
+    {
+      "run": "mlp_batch_gd",
+      "model_hash_verified": true,
+      "validation_metrics_exact_after_reload": true
+    },
+    {
+      "run": "mlp_sgd",
+      "model_hash_verified": true,
+      "validation_metrics_exact_after_reload": true
+    },
+    {
+      "run": "mlp_adam",
+      "model_hash_verified": true,
+      "validation_metrics_exact_after_reload": true
+    },
+    {
+      "run": "ols",
+      "model_hash_verified": true,
+      "validation_metrics_exact_after_reload": true
+    },
+    {
+      "run": "ridge_weak",
+      "model_hash_verified": true,
+      "validation_metrics_exact_after_reload": true
+    },
+    {
+      "run": "ridge",
+      "model_hash_verified": true,
+      "validation_metrics_exact_after_reload": true
+    },
+    {
+      "run": "lasso_weak",
+      "model_hash_verified": true,
+      "validation_metrics_exact_after_reload": true
+    },
+    {
+      "run": "lasso",
+      "model_hash_verified": true,
+      "validation_metrics_exact_after_reload": true
+    },
+    {
+      "run": "elastic_net",
+      "model_hash_verified": true,
+      "validation_metrics_exact_after_reload": true
+    },
+    {
+      "run": "rf_shallow",
+      "model_hash_verified": true,
+      "validation_metrics_exact_after_reload": true
+    },
+    {
+      "run": "random_forest",
+      "model_hash_verified": true,
+      "validation_metrics_exact_after_reload": true
+    },
+    {
+      "run": "mlp_l2",
+      "model_hash_verified": true,
+      "validation_metrics_exact_after_reload": true
+    },
+    {
+      "run": "linear_gradient_batch_gd_l1",
+      "model_hash_verified": true,
+      "validation_metrics_exact_after_reload": true
+    },
+    {
+      "run": "linear_gradient_batch_gd_l2",
+      "model_hash_verified": true,
+      "validation_metrics_exact_after_reload": true
+    },
+    {
+      "run": "linear_gradient_batch_gd_l1_l2",
+      "model_hash_verified": true,
+      "validation_metrics_exact_after_reload": true
+    },
+    {
+      "run": "linear_gradient_sgd_l1",
+      "model_hash_verified": true,
+      "validation_metrics_exact_after_reload": true
+    },
+    {
+      "run": "linear_gradient_sgd_l2",
+      "model_hash_verified": true,
+      "validation_metrics_exact_after_reload": true
+    },
+    {
+      "run": "linear_gradient_sgd_l1_l2",
+      "model_hash_verified": true,
+      "validation_metrics_exact_after_reload": true
+    },
+    {
+      "run": "linear_gradient_adam_l1",
+      "model_hash_verified": true,
+      "validation_metrics_exact_after_reload": true
+    },
+    {
+      "run": "linear_gradient_adam_l2",
+      "model_hash_verified": true,
+      "validation_metrics_exact_after_reload": true
+    },
+    {
+      "run": "linear_gradient_adam_l1_l2",
+      "model_hash_verified": true,
+      "validation_metrics_exact_after_reload": true
+    },
+    {
+      "run": "mlp_batch_gd_l1",
+      "model_hash_verified": true,
+      "validation_metrics_exact_after_reload": true
+    },
+    {
+      "run": "mlp_batch_gd_l2",
+      "model_hash_verified": true,
+      "validation_metrics_exact_after_reload": true
+    },
+    {
+      "run": "mlp_batch_gd_l1_l2",
+      "model_hash_verified": true,
+      "validation_metrics_exact_after_reload": true
+    },
+    {
+      "run": "mlp_sgd_l1",
+      "model_hash_verified": true,
+      "validation_metrics_exact_after_reload": true
+    },
+    {
+      "run": "mlp_sgd_l2",
+      "model_hash_verified": true,
+      "validation_metrics_exact_after_reload": true
+    },
+    {
+      "run": "mlp_sgd_l1_l2",
+      "model_hash_verified": true,
+      "validation_metrics_exact_after_reload": true
+    },
+    {
+      "run": "mlp_adam_l1",
+      "model_hash_verified": true,
+      "validation_metrics_exact_after_reload": true
+    },
+    {
+      "run": "mlp_adam_l1_l2",
+      "model_hash_verified": true,
+      "validation_metrics_exact_after_reload": true
+    }
+  ],
+  "source_git_status_clean": true,
+  "previous_experiments_preserved": true,
+  "lasso_baseline_reproduced": true,
+  "test_npz_reads": 0,
+  "test_evaluated": false
+}

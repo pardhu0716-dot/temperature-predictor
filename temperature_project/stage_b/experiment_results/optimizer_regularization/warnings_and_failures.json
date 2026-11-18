@@ -1,0 +1,22 @@
+{
+  "failures": [],
+  "warnings": [],
+  "epoch_budget_limits": [
+    "linear_gradient_sgd_l1_l2",
+    "mlp_sgd_l1_l2",
+    "linear_gradient_sgd_l1",
+    "linear_gradient_sgd_l2",
+    "mlp_sgd_l2",
+    "linear_gradient_sgd",
+    "mlp_sgd_l1",
+    "mlp_sgd",
+    "mlp_batch_gd_l1_l2",
+    "mlp_batch_gd_l2",
+    "mlp_batch_gd_l1",
+    "mlp_batch_gd",
+    "linear_gradient_batch_gd_l1_l2",
+    "linear_gradient_batch_gd_l2",
+    "linear_gradient_batch_gd_l1",
+    "linear_gradient_batch_gd"
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "models": [
+    {
+      "model": "lasso",
+      "metrics_exact_match_after_reload": true,
+      "model_hash_verified": true,
+      "convergence_details": {
+        "n_iter_": [
+          571,
+          570,
+          678,
+          739,
+          647,
+          667,
+          704,
+          699
+        ],
+        "dual_gap_": [
+          9.93538550272106e-05,
+          9.923639338334333e-05,
+          9.290063312199252e-05,
+          9.91755022568382e-05,
+          9.76439225308384e-05,
+          9.879136099133993e-05,
+          7.695939499259327e-05,
+          9.925614630712363e-05
+        ],
+        "nonzero_coefficients": 621
+      }
+    },
+    {
+      "model": "elastic_net",
+      "metrics_exact_match_after_reload": true,
+      "model_hash_verified": true,
+      "convergence_details": {
+        "n_iter_": [
+          968,
+          1007,
+          1131,
+          1299,
+          894,
+          1054,
+          956,
+          1261
+        ],
+        "dual_gap_": [
+          9.939265754040476e-05,
+          4.5594036723675835e-05,
+          9.991586960363093e-05,
+          9.97101720309193e-05,
+          9.983685530430379e-05,
+          9.959267114454646e-05,
+          8.042878778882359e-05,
+          8.684446371022867e-05
+        ],
+        "nonzero_coefficients": 788
+      }
+    },
+    {
+      "model": "ridge",
+      "metrics_exact_match_after_reload": true,
+      "model_hash_verified": true,
+      "convergence_details": {
+        "n_iter_": null,
+        "nonzero_coefficients": 2016
+      }
+    },
+    {
+      "model": "ols",
+      "metrics_exact_match_after_reload": true,
+      "model_hash_verified": true,
+      "convergence_details": {
+        "nonzero_coefficients": 2016
+      }
+    },
+    {
+      "model": "mlp",
+      "metrics_exact_match_after_reload": true,
+      "model_hash_verified": true,
+      "convergence_details": {
+        "n_iter_": 87
+      }
+    },
+    {
+      "model": "xgboost",
+      "metrics_exact_match_after_reload": true,
+      "model_hash_verified": true,
+      "convergence_details": {}
+    },
+    {
+      "model": "random_forest",
+      "metrics_exact_match_after_reload": true,
+      "model_hash_verified": true,
+      "convergence_details": {}
+    }
+  ],
+  "original_ridge_metrics_identical": true,
+  "original_ridge_model_byte_identical": true,
+  "original_ridge_artifacts_preserved": true,
+  "source_git_status_clean": true,
+  "test_npz_reads": 0,
+  "test_evaluated": false
+}

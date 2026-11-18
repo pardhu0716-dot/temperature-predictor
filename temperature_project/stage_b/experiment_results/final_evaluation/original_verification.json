@@ -1,0 +1,18 @@
+{
+  "model_and_previous_artifacts_unchanged": true,
+  "source_git_status_clean": true,
+  "pre_test_configuration_frozen": true,
+  "training_only_scalers_verified": true,
+  "train_validation_test_disjoint": true,
+  "only_selected_lasso_evaluated": true,
+  "retraining_blocked": true,
+  "test_partition_loaded_once": true,
+  "test_file_opens_including_hash_and_copy": 4,
+  "opened_model_paths": [
+    "/workspace/artifacts/stage-b-final-lasso-test-39b5494/selected_run/lasso/model.joblib",
+    "/workspace/artifacts/stage-b-model-comparison-39b5494/runs/lasso/lasso/model.joblib"
+  ],
+  "test_samples": 240,
+  "core_comparisons": 1920,
+  "test_metric_recomputation_exact": true
+}

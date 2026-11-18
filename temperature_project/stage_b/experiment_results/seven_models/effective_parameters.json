@@ -1,0 +1,164 @@
+{
+  "lasso": {
+    "effective_parameters": {
+      "alpha": 0.001,
+      "copy_X": true,
+      "fit_intercept": true,
+      "max_iter": 10000,
+      "positive": false,
+      "precompute": false,
+      "random_state": 42,
+      "selection": "cyclic",
+      "tol": 0.0001,
+      "warm_start": false
+    },
+    "actual_n_iter": [
+      571,
+      570,
+      678,
+      739,
+      647,
+      667,
+      704,
+      699
+    ]
+  },
+  "elastic_net": {
+    "effective_parameters": {
+      "alpha": 0.001,
+      "copy_X": true,
+      "fit_intercept": true,
+      "l1_ratio": 0.5,
+      "max_iter": 10000,
+      "positive": false,
+      "precompute": false,
+      "random_state": 42,
+      "selection": "cyclic",
+      "tol": 0.0001,
+      "warm_start": false
+    },
+    "actual_n_iter": [
+      968,
+      1007,
+      1131,
+      1299,
+      894,
+      1054,
+      956,
+      1261
+    ]
+  },
+  "ridge": {
+    "effective_parameters": {
+      "alpha": 1.0,
+      "copy_X": true,
+      "fit_intercept": true,
+      "max_iter": null,
+      "positive": false,
+      "random_state": null,
+      "solver": "auto",
+      "tol": 0.0001
+    },
+    "actual_n_iter": null
+  },
+  "ols": {
+    "effective_parameters": {
+      "copy_X": true,
+      "fit_intercept": true,
+      "n_jobs": null,
+      "positive": false,
+      "tol": 1e-06
+    },
+    "actual_n_iter": null
+  },
+  "mlp": {
+    "effective_parameters": {
+      "batch_size": 32,
+      "epochs": 300,
+      "gradient_clip": 10.0,
+      "hidden_layers": [
+        32
+      ],
+      "l1": 0.0,
+      "l2": 0.0001,
+      "learning_rate": 0.003,
+      "optimizer": "adam",
+      "patience": 20,
+      "random_state": 42,
+      "tolerance": 1e-07
+    },
+    "actual_n_iter": 87
+  },
+  "xgboost": {
+    "effective_parameters": {
+      "wrapper": "MultiOutputRegressor",
+      "n_jobs": 1,
+      "estimator": {
+        "objective": "reg:squarederror",
+        "base_score": null,
+        "booster": null,
+        "callbacks": null,
+        "colsample_bylevel": null,
+        "colsample_bynode": null,
+        "colsample_bytree": null,
+        "device": null,
+        "early_stopping_rounds": null,
+        "enable_categorical": true,
+        "eval_metric": null,
+        "feature_types": null,
+        "feature_weights": null,
+        "gamma": null,
+        "grow_policy": null,
+        "importance_type": null,
+        "interaction_constraints": null,
+        "learning_rate": 0.05,
+        "max_bin": null,
+        "max_cat_threshold": null,
+        "max_cat_to_onehot": null,
+        "max_delta_step": null,
+        "max_depth": 3,
+        "max_leaves": null,
+        "min_child_weight": null,
+        "missing": "NaN (XGBoost missing-value sentinel)",
+        "monotone_constraints": null,
+        "multi_strategy": null,
+        "n_estimators": 128,
+        "n_jobs": 1,
+        "num_parallel_tree": null,
+        "random_state": 42,
+        "reg_alpha": null,
+        "reg_lambda": null,
+        "sampling_method": null,
+        "scale_pos_weight": null,
+        "subsample": null,
+        "tree_method": "hist",
+        "validate_parameters": null,
+        "verbosity": null
+      }
+    },
+    "actual_n_iter": null
+  },
+  "random_forest": {
+    "effective_parameters": {
+      "bootstrap": true,
+      "ccp_alpha": 0.0,
+      "criterion": "squared_error",
+      "max_depth": 10,
+      "max_features": 1.0,
+      "max_leaf_nodes": null,
+      "max_samples": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 2,
+      "min_samples_split": 2,
+      "min_weight_fraction_leaf": 0.0,
+      "monotonic_cst": null,
+      "n_estimators": 128,
+      "n_jobs": 1,
+      "oob_score": false,
+      "random_state": 42,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "actual_n_iter": null
+  }
+}

@@ -1,0 +1,571 @@
+[
+  {
+    "group": "optimizers",
+    "experiment": {
+      "name": "linear_gradient_batch_gd",
+      "kind": "linear_gradient",
+      "parameters": {
+        "optimizer": "batch_gd",
+        "learning_rate": 0.01,
+        "epochs": 300,
+        "batch_size": 32
+      }
+    }
+  },
+  {
+    "group": "optimizers",
+    "experiment": {
+      "name": "linear_gradient_sgd",
+      "kind": "linear_gradient",
+      "parameters": {
+        "optimizer": "sgd",
+        "learning_rate": 0.001,
+        "epochs": 300,
+        "batch_size": 32
+      }
+    }
+  },
+  {
+    "group": "optimizers",
+    "experiment": {
+      "name": "linear_gradient_adam",
+      "kind": "linear_gradient",
+      "parameters": {
+        "optimizer": "adam",
+        "learning_rate": 0.003,
+        "epochs": 300,
+        "batch_size": 32
+      }
+    }
+  },
+  {
+    "group": "optimizers",
+    "experiment": {
+      "name": "mlp_batch_gd",
+      "kind": "mlp",
+      "parameters": {
+        "optimizer": "batch_gd",
+        "learning_rate": 0.01,
+        "epochs": 300,
+        "batch_size": 32
+      }
+    }
+  },
+  {
+    "group": "optimizers",
+    "experiment": {
+      "name": "mlp_sgd",
+      "kind": "mlp",
+      "parameters": {
+        "optimizer": "sgd",
+        "learning_rate": 0.001,
+        "epochs": 300,
+        "batch_size": 32
+      }
+    }
+  },
+  {
+    "group": "optimizers",
+    "experiment": {
+      "name": "mlp_adam",
+      "kind": "mlp",
+      "parameters": {
+        "optimizer": "adam",
+        "learning_rate": 0.003,
+        "epochs": 300,
+        "batch_size": 32
+      }
+    }
+  },
+  {
+    "group": "regularization",
+    "experiment": {
+      "name": "ols",
+      "kind": "ols",
+      "parameters": {}
+    }
+  },
+  {
+    "group": "regularization",
+    "experiment": {
+      "name": "ridge_weak",
+      "kind": "ridge",
+      "parameters": {
+        "alpha": 0.1
+      }
+    }
+  },
+  {
+    "group": "regularization",
+    "experiment": {
+      "name": "ridge",
+      "kind": "ridge",
+      "parameters": {
+        "alpha": 1.0
+      }
+    }
+  },
+  {
+    "group": "regularization",
+    "experiment": {
+      "name": "lasso_weak",
+      "kind": "lasso",
+      "parameters": {
+        "alpha": 0.0001
+      }
+    }
+  },
+  {
+    "group": "regularization",
+    "experiment": {
+      "name": "lasso",
+      "kind": "lasso",
+      "parameters": {
+        "alpha": 0.001
+      }
+    }
+  },
+  {
+    "group": "regularization",
+    "experiment": {
+      "name": "elastic_net",
+      "kind": "elastic_net",
+      "parameters": {
+        "alpha": 0.001,
+        "l1_ratio": 0.5
+      }
+    }
+  },
+  {
+    "group": "regularization",
+    "experiment": {
+      "name": "rf_shallow",
+      "kind": "random_forest",
+      "parameters": {
+        "n_estimators": 128,
+        "max_depth": 5,
+        "min_samples_leaf": 4
+      }
+    }
+  },
+  {
+    "group": "regularization",
+    "experiment": {
+      "name": "random_forest",
+      "kind": "random_forest",
+      "parameters": {
+        "n_estimators": 128,
+        "max_depth": 10,
+        "min_samples_leaf": 2
+      }
+    }
+  },
+  {
+    "group": "regularization",
+    "experiment": {
+      "name": "mlp_no_penalty",
+      "kind": "mlp",
+      "parameters": {
+        "optimizer": "adam",
+        "epochs": 300,
+        "l2": 0.0
+      }
+    }
+  },
+  {
+    "group": "regularization",
+    "experiment": {
+      "name": "mlp_l2",
+      "kind": "mlp",
+      "parameters": {
+        "optimizer": "adam",
+        "epochs": 300,
+        "l2": 0.001
+      }
+    }
+  },
+  {
+    "group": "combinations",
+    "penalty": "none",
+    "experiment": {
+      "name": "linear_gradient_batch_gd_none",
+      "kind": "linear_gradient",
+      "parameters": {
+        "optimizer": "batch_gd",
+        "learning_rate": 0.01,
+        "epochs": 300,
+        "batch_size": 32,
+        "l1": 0.0,
+        "l2": 0.0
+      }
+    }
+  },
+  {
+    "group": "combinations",
+    "penalty": "l1",
+    "experiment": {
+      "name": "linear_gradient_batch_gd_l1",
+      "kind": "linear_gradient",
+      "parameters": {
+        "optimizer": "batch_gd",
+        "learning_rate": 0.01,
+        "epochs": 300,
+        "batch_size": 32,
+        "l1": 0.0001,
+        "l2": 0.0
+      }
+    }
+  },
+  {
+    "group": "combinations",
+    "penalty": "l2",
+    "experiment": {
+      "name": "linear_gradient_batch_gd_l2",
+      "kind": "linear_gradient",
+      "parameters": {
+        "optimizer": "batch_gd",
+        "learning_rate": 0.01,
+        "epochs": 300,
+        "batch_size": 32,
+        "l1": 0.0,
+        "l2": 0.001
+      }
+    }
+  },
+  {
+    "group": "combinations",
+    "penalty": "l1_l2",
+    "experiment": {
+      "name": "linear_gradient_batch_gd_l1_l2",
+      "kind": "linear_gradient",
+      "parameters": {
+        "optimizer": "batch_gd",
+        "learning_rate": 0.01,
+        "epochs": 300,
+        "batch_size": 32,
+        "l1": 0.0001,
+        "l2": 0.001
+      }
+    }
+  },
+  {
+    "group": "combinations",
+    "penalty": "none",
+    "experiment": {
+      "name": "linear_gradient_sgd_none",
+      "kind": "linear_gradient",
+      "parameters": {
+        "optimizer": "sgd",
+        "learning_rate": 0.001,
+        "epochs": 300,
+        "batch_size": 32,
+        "l1": 0.0,
+        "l2": 0.0
+      }
+    }
+  },
+  {
+    "group": "combinations",
+    "penalty": "l1",
+    "experiment": {
+      "name": "linear_gradient_sgd_l1",
+      "kind": "linear_gradient",
+      "parameters": {
+        "optimizer": "sgd",
+        "learning_rate": 0.001,
+        "epochs": 300,
+        "batch_size": 32,
+        "l1": 0.0001,
+        "l2": 0.0
+      }
+    }
+  },
+  {
+    "group": "combinations",
+    "penalty": "l2",
+    "experiment": {
+      "name": "linear_gradient_sgd_l2",
+      "kind": "linear_gradient",
+      "parameters": {
+        "optimizer": "sgd",
+        "learning_rate": 0.001,
+        "epochs": 300,
+        "batch_size": 32,
+        "l1": 0.0,
+        "l2": 0.001
+      }
+    }
+  },
+  {
+    "group": "combinations",
+    "penalty": "l1_l2",
+    "experiment": {
+      "name": "linear_gradient_sgd_l1_l2",
+      "kind": "linear_gradient",
+      "parameters": {
+        "optimizer": "sgd",
+        "learning_rate": 0.001,
+        "epochs": 300,
+        "batch_size": 32,
+        "l1": 0.0001,
+        "l2": 0.001
+      }
+    }
+  },
+  {
+    "group": "combinations",
+    "penalty": "none",
+    "experiment": {
+      "name": "linear_gradient_adam_none",
+      "kind": "linear_gradient",
+      "parameters": {
+        "optimizer": "adam",
+        "learning_rate": 0.003,
+        "epochs": 300,
+        "batch_size": 32,
+        "l1": 0.0,
+        "l2": 0.0
+      }
+    }
+  },
+  {
+    "group": "combinations",
+    "penalty": "l1",
+    "experiment": {
+      "name": "linear_gradient_adam_l1",
+      "kind": "linear_gradient",
+      "parameters": {
+        "optimizer": "adam",
+        "learning_rate": 0.003,
+        "epochs": 300,
+        "batch_size": 32,
+        "l1": 0.0001,
+        "l2": 0.0
+      }
+    }
+  },
+  {
+    "group": "combinations",
+    "penalty": "l2",
+    "experiment": {
+      "name": "linear_gradient_adam_l2",
+      "kind": "linear_gradient",
+      "parameters": {
+        "optimizer": "adam",
+        "learning_rate": 0.003,
+        "epochs": 300,
+        "batch_size": 32,
+        "l1": 0.0,
+        "l2": 0.001
+      }
+    }
+  },
+  {
+    "group": "combinations",
+    "penalty": "l1_l2",
+    "experiment": {
+      "name": "linear_gradient_adam_l1_l2",
+      "kind": "linear_gradient",
+      "parameters": {
+        "optimizer": "adam",
+        "learning_rate": 0.003,
+        "epochs": 300,
+        "batch_size": 32,
+        "l1": 0.0001,
+        "l2": 0.001
+      }
+    }
+  },
+  {
+    "group": "combinations",
+    "penalty": "none",
+    "experiment": {
+      "name": "mlp_batch_gd_none",
+      "kind": "mlp",
+      "parameters": {
+        "optimizer": "batch_gd",
+        "learning_rate": 0.01,
+        "epochs": 300,
+        "batch_size": 32,
+        "l1": 0.0,
+        "l2": 0.0
+      }
+    }
+  },
+  {
+    "group": "combinations",
+    "penalty": "l1",
+    "experiment": {
+      "name": "mlp_batch_gd_l1",
+      "kind": "mlp",
+      "parameters": {
+        "optimizer": "batch_gd",
+        "learning_rate": 0.01,
+        "epochs": 300,
+        "batch_size": 32,
+        "l1": 0.0001,
+        "l2": 0.0
+      }
+    }
+  },
+  {
+    "group": "combinations",
+    "penalty": "l2",
+    "experiment": {
+      "name": "mlp_batch_gd_l2",
+      "kind": "mlp",
+      "parameters": {
+        "optimizer": "batch_gd",
+        "learning_rate": 0.01,
+        "epochs": 300,
+        "batch_size": 32,
+        "l1": 0.0,
+        "l2": 0.001
+      }
+    }
+  },
+  {
+    "group": "combinations",
+    "penalty": "l1_l2",
+    "experiment": {
+      "name": "mlp_batch_gd_l1_l2",
+      "kind": "mlp",
+      "parameters": {
+        "optimizer": "batch_gd",
+        "learning_rate": 0.01,
+        "epochs": 300,
+        "batch_size": 32,
+        "l1": 0.0001,
+        "l2": 0.001
+      }
+    }
+  },
+  {
+    "group": "combinations",
+    "penalty": "none",
+    "experiment": {
+      "name": "mlp_sgd_none",
+      "kind": "mlp",
+      "parameters": {
+        "optimizer": "sgd",
+        "learning_rate": 0.001,
+        "epochs": 300,
+        "batch_size": 32,
+        "l1": 0.0,
+        "l2": 0.0
+      }
+    }
+  },
+  {
+    "group": "combinations",
+    "penalty": "l1",
+    "experiment": {
+      "name": "mlp_sgd_l1",
+      "kind": "mlp",
+      "parameters": {
+        "optimizer": "sgd",
+        "learning_rate": 0.001,
+        "epochs": 300,
+        "batch_size": 32,
+        "l1": 0.0001,
+        "l2": 0.0
+      }
+    }
+  },
+  {
+    "group": "combinations",
+    "penalty": "l2",
+    "experiment": {
+      "name": "mlp_sgd_l2",
+      "kind": "mlp",
+      "parameters": {
+        "optimizer": "sgd",
+        "learning_rate": 0.001,
+        "epochs": 300,
+        "batch_size": 32,
+        "l1": 0.0,
+        "l2": 0.001
+      }
+    }
+  },
+  {
+    "group": "combinations",
+    "penalty": "l1_l2",
+    "experiment": {
+      "name": "mlp_sgd_l1_l2",
+      "kind": "mlp",
+      "parameters": {
+        "optimizer": "sgd",
+        "learning_rate": 0.001,
+        "epochs": 300,
+        "batch_size": 32,
+        "l1": 0.0001,
+        "l2": 0.001
+      }
+    }
+  },
+  {
+    "group": "combinations",
+    "penalty": "none",
+    "experiment": {
+      "name": "mlp_adam_none",
+      "kind": "mlp",
+      "parameters": {
+        "optimizer": "adam",
+        "learning_rate": 0.003,
+        "epochs": 300,
+        "batch_size": 32,
+        "l1": 0.0,
+        "l2": 0.0
+      }
+    }
+  },
+  {
+    "group": "combinations",
+    "penalty": "l1",
+    "experiment": {
+      "name": "mlp_adam_l1",
+      "kind": "mlp",
+      "parameters": {
+        "optimizer": "adam",
+        "learning_rate": 0.003,
+        "epochs": 300,
+        "batch_size": 32,
+        "l1": 0.0001,
+        "l2": 0.0
+      }
+    }
+  },
+  {
+    "group": "combinations",
+    "penalty": "l2",
+    "experiment": {
+      "name": "mlp_adam_l2",
+      "kind": "mlp",
+      "parameters": {
+        "optimizer": "adam",
+        "learning_rate": 0.003,
+        "epochs": 300,
+        "batch_size": 32,
+        "l1": 0.0,
+        "l2": 0.001
+      }
+    }
+  },
+  {
+    "group": "combinations",
+    "penalty": "l1_l2",
+    "experiment": {
+      "name": "mlp_adam_l1_l2",
+      "kind": "mlp",
+      "parameters": {
+        "optimizer": "adam",
+        "learning_rate": 0.003,
+        "epochs": 300,
+        "batch_size": 32,
+        "l1": 0.0001,
+        "l2": 0.001
+      }
+    }
+  }
+]

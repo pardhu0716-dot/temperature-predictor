@@ -1,0 +1,9 @@
+{
+  "selected": "lasso",
+  "criterion": "Lowest validation RMSE; no test evaluation",
+  "model_path": "runs/lasso/lasso/model.joblib",
+  "model_sha256": "db1b49992c8a11b95c85a98be861b95502b00b0d3ec680709778236484d9ae80",
+  "prepared_manifest_sha256": "bcabf27285b98bbda358949ec9f3e72124029a9fca341fb59f870b851dde401d",
+  "seed": 42,
+  "test_evaluated": false
+}

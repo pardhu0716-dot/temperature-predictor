@@ -1,0 +1,1014 @@
+{
+  "definitions": [
+    {
+      "name": "Core_0_L0.power",
+      "unit": "W"
+    },
+    {
+      "name": "Core_0_L0.width",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_0_L0.height",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_0_L0.x",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_0_L0.y",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_0_L0.area",
+      "unit": "mm2"
+    },
+    {
+      "name": "Core_0_L0.power_density",
+      "unit": "W/mm2"
+    },
+    {
+      "name": "Core_0_L0.center_x",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_0_L0.center_y",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_0_L0.is_big",
+      "unit": "binary"
+    },
+    {
+      "name": "Core_1_L0.power",
+      "unit": "W"
+    },
+    {
+      "name": "Core_1_L0.width",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_1_L0.height",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_1_L0.x",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_1_L0.y",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_1_L0.area",
+      "unit": "mm2"
+    },
+    {
+      "name": "Core_1_L0.power_density",
+      "unit": "W/mm2"
+    },
+    {
+      "name": "Core_1_L0.center_x",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_1_L0.center_y",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_1_L0.is_big",
+      "unit": "binary"
+    },
+    {
+      "name": "Core_2_L0.power",
+      "unit": "W"
+    },
+    {
+      "name": "Core_2_L0.width",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_2_L0.height",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_2_L0.x",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_2_L0.y",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_2_L0.area",
+      "unit": "mm2"
+    },
+    {
+      "name": "Core_2_L0.power_density",
+      "unit": "W/mm2"
+    },
+    {
+      "name": "Core_2_L0.center_x",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_2_L0.center_y",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_2_L0.is_big",
+      "unit": "binary"
+    },
+    {
+      "name": "Core_3_L0.power",
+      "unit": "W"
+    },
+    {
+      "name": "Core_3_L0.width",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_3_L0.height",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_3_L0.x",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_3_L0.y",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_3_L0.area",
+      "unit": "mm2"
+    },
+    {
+      "name": "Core_3_L0.power_density",
+      "unit": "W/mm2"
+    },
+    {
+      "name": "Core_3_L0.center_x",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_3_L0.center_y",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_3_L0.is_big",
+      "unit": "binary"
+    },
+    {
+      "name": "Core_4_L0.power",
+      "unit": "W"
+    },
+    {
+      "name": "Core_4_L0.width",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_4_L0.height",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_4_L0.x",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_4_L0.y",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_4_L0.area",
+      "unit": "mm2"
+    },
+    {
+      "name": "Core_4_L0.power_density",
+      "unit": "W/mm2"
+    },
+    {
+      "name": "Core_4_L0.center_x",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_4_L0.center_y",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_4_L0.is_big",
+      "unit": "binary"
+    },
+    {
+      "name": "Core_5_L0.power",
+      "unit": "W"
+    },
+    {
+      "name": "Core_5_L0.width",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_5_L0.height",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_5_L0.x",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_5_L0.y",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_5_L0.area",
+      "unit": "mm2"
+    },
+    {
+      "name": "Core_5_L0.power_density",
+      "unit": "W/mm2"
+    },
+    {
+      "name": "Core_5_L0.center_x",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_5_L0.center_y",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_5_L0.is_big",
+      "unit": "binary"
+    },
+    {
+      "name": "Core_6_L0.power",
+      "unit": "W"
+    },
+    {
+      "name": "Core_6_L0.width",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_6_L0.height",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_6_L0.x",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_6_L0.y",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_6_L0.area",
+      "unit": "mm2"
+    },
+    {
+      "name": "Core_6_L0.power_density",
+      "unit": "W/mm2"
+    },
+    {
+      "name": "Core_6_L0.center_x",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_6_L0.center_y",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_6_L0.is_big",
+      "unit": "binary"
+    },
+    {
+      "name": "Core_7_L0.power",
+      "unit": "W"
+    },
+    {
+      "name": "Core_7_L0.width",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_7_L0.height",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_7_L0.x",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_7_L0.y",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_7_L0.area",
+      "unit": "mm2"
+    },
+    {
+      "name": "Core_7_L0.power_density",
+      "unit": "W/mm2"
+    },
+    {
+      "name": "Core_7_L0.center_x",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_7_L0.center_y",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_7_L0.is_big",
+      "unit": "binary"
+    },
+    {
+      "name": "die.width",
+      "unit": "mm"
+    },
+    {
+      "name": "die.height",
+      "unit": "mm"
+    },
+    {
+      "name": "die.area",
+      "unit": "mm2"
+    },
+    {
+      "name": "die.whitespace_fraction",
+      "unit": "fraction"
+    },
+    {
+      "name": "Core_0_L0--Core_1_L0.dx",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_0_L0--Core_1_L0.dy",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_0_L0--Core_1_L0.center_distance",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_0_L0--Core_1_L0.edge_gap",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_0_L0--Core_2_L0.dx",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_0_L0--Core_2_L0.dy",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_0_L0--Core_2_L0.center_distance",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_0_L0--Core_2_L0.edge_gap",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_1_L0--Core_2_L0.dx",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_1_L0--Core_2_L0.dy",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_1_L0--Core_2_L0.center_distance",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_1_L0--Core_2_L0.edge_gap",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_0_L0--Core_3_L0.dx",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_0_L0--Core_3_L0.dy",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_0_L0--Core_3_L0.center_distance",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_0_L0--Core_3_L0.edge_gap",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_1_L0--Core_3_L0.dx",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_1_L0--Core_3_L0.dy",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_1_L0--Core_3_L0.center_distance",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_1_L0--Core_3_L0.edge_gap",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_2_L0--Core_3_L0.dx",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_2_L0--Core_3_L0.dy",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_2_L0--Core_3_L0.center_distance",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_2_L0--Core_3_L0.edge_gap",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_0_L0--Core_4_L0.dx",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_0_L0--Core_4_L0.dy",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_0_L0--Core_4_L0.center_distance",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_0_L0--Core_4_L0.edge_gap",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_1_L0--Core_4_L0.dx",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_1_L0--Core_4_L0.dy",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_1_L0--Core_4_L0.center_distance",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_1_L0--Core_4_L0.edge_gap",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_2_L0--Core_4_L0.dx",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_2_L0--Core_4_L0.dy",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_2_L0--Core_4_L0.center_distance",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_2_L0--Core_4_L0.edge_gap",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_3_L0--Core_4_L0.dx",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_3_L0--Core_4_L0.dy",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_3_L0--Core_4_L0.center_distance",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_3_L0--Core_4_L0.edge_gap",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_0_L0--Core_5_L0.dx",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_0_L0--Core_5_L0.dy",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_0_L0--Core_5_L0.center_distance",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_0_L0--Core_5_L0.edge_gap",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_1_L0--Core_5_L0.dx",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_1_L0--Core_5_L0.dy",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_1_L0--Core_5_L0.center_distance",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_1_L0--Core_5_L0.edge_gap",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_2_L0--Core_5_L0.dx",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_2_L0--Core_5_L0.dy",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_2_L0--Core_5_L0.center_distance",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_2_L0--Core_5_L0.edge_gap",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_3_L0--Core_5_L0.dx",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_3_L0--Core_5_L0.dy",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_3_L0--Core_5_L0.center_distance",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_3_L0--Core_5_L0.edge_gap",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_4_L0--Core_5_L0.dx",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_4_L0--Core_5_L0.dy",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_4_L0--Core_5_L0.center_distance",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_4_L0--Core_5_L0.edge_gap",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_0_L0--Core_6_L0.dx",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_0_L0--Core_6_L0.dy",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_0_L0--Core_6_L0.center_distance",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_0_L0--Core_6_L0.edge_gap",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_1_L0--Core_6_L0.dx",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_1_L0--Core_6_L0.dy",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_1_L0--Core_6_L0.center_distance",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_1_L0--Core_6_L0.edge_gap",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_2_L0--Core_6_L0.dx",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_2_L0--Core_6_L0.dy",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_2_L0--Core_6_L0.center_distance",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_2_L0--Core_6_L0.edge_gap",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_3_L0--Core_6_L0.dx",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_3_L0--Core_6_L0.dy",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_3_L0--Core_6_L0.center_distance",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_3_L0--Core_6_L0.edge_gap",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_4_L0--Core_6_L0.dx",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_4_L0--Core_6_L0.dy",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_4_L0--Core_6_L0.center_distance",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_4_L0--Core_6_L0.edge_gap",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_5_L0--Core_6_L0.dx",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_5_L0--Core_6_L0.dy",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_5_L0--Core_6_L0.center_distance",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_5_L0--Core_6_L0.edge_gap",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_0_L0--Core_7_L0.dx",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_0_L0--Core_7_L0.dy",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_0_L0--Core_7_L0.center_distance",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_0_L0--Core_7_L0.edge_gap",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_1_L0--Core_7_L0.dx",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_1_L0--Core_7_L0.dy",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_1_L0--Core_7_L0.center_distance",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_1_L0--Core_7_L0.edge_gap",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_2_L0--Core_7_L0.dx",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_2_L0--Core_7_L0.dy",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_2_L0--Core_7_L0.center_distance",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_2_L0--Core_7_L0.edge_gap",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_3_L0--Core_7_L0.dx",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_3_L0--Core_7_L0.dy",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_3_L0--Core_7_L0.center_distance",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_3_L0--Core_7_L0.edge_gap",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_4_L0--Core_7_L0.dx",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_4_L0--Core_7_L0.dy",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_4_L0--Core_7_L0.center_distance",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_4_L0--Core_7_L0.edge_gap",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_5_L0--Core_7_L0.dx",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_5_L0--Core_7_L0.dy",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_5_L0--Core_7_L0.center_distance",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_5_L0--Core_7_L0.edge_gap",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_6_L0--Core_7_L0.dx",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_6_L0--Core_7_L0.dy",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_6_L0--Core_7_L0.center_distance",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_6_L0--Core_7_L0.edge_gap",
+      "unit": "mm"
+    },
+    {
+      "name": "Core_1_L0->Core_0_L0.power_over_distance",
+      "unit": "W/mm"
+    },
+    {
+      "name": "Core_2_L0->Core_0_L0.power_over_distance",
+      "unit": "W/mm"
+    },
+    {
+      "name": "Core_3_L0->Core_0_L0.power_over_distance",
+      "unit": "W/mm"
+    },
+    {
+      "name": "Core_4_L0->Core_0_L0.power_over_distance",
+      "unit": "W/mm"
+    },
+    {
+      "name": "Core_5_L0->Core_0_L0.power_over_distance",
+      "unit": "W/mm"
+    },
+    {
+      "name": "Core_6_L0->Core_0_L0.power_over_distance",
+      "unit": "W/mm"
+    },
+    {
+      "name": "Core_7_L0->Core_0_L0.power_over_distance",
+      "unit": "W/mm"
+    },
+    {
+      "name": "Core_0_L0->Core_1_L0.power_over_distance",
+      "unit": "W/mm"
+    },
+    {
+      "name": "Core_2_L0->Core_1_L0.power_over_distance",
+      "unit": "W/mm"
+    },
+    {
+      "name": "Core_3_L0->Core_1_L0.power_over_distance",
+      "unit": "W/mm"
+    },
+    {
+      "name": "Core_4_L0->Core_1_L0.power_over_distance",
+      "unit": "W/mm"
+    },
+    {
+      "name": "Core_5_L0->Core_1_L0.power_over_distance",
+      "unit": "W/mm"
+    },
+    {
+      "name": "Core_6_L0->Core_1_L0.power_over_distance",
+      "unit": "W/mm"
+    },
+    {
+      "name": "Core_7_L0->Core_1_L0.power_over_distance",
+      "unit": "W/mm"
+    },
+    {
+      "name": "Core_0_L0->Core_2_L0.power_over_distance",
+      "unit": "W/mm"
+    },
+    {
+      "name": "Core_1_L0->Core_2_L0.power_over_distance",
+      "unit": "W/mm"
+    },
+    {
+      "name": "Core_3_L0->Core_2_L0.power_over_distance",
+      "unit": "W/mm"
+    },
+    {
+      "name": "Core_4_L0->Core_2_L0.power_over_distance",
+      "unit": "W/mm"
+    },
+    {
+      "name": "Core_5_L0->Core_2_L0.power_over_distance",
+      "unit": "W/mm"
+    },
+    {
+      "name": "Core_6_L0->Core_2_L0.power_over_distance",
+      "unit": "W/mm"
+    },
+    {
+      "name": "Core_7_L0->Core_2_L0.power_over_distance",
+      "unit": "W/mm"
+    },
+    {
+      "name": "Core_0_L0->Core_3_L0.power_over_distance",
+      "unit": "W/mm"
+    },
+    {
+      "name": "Core_1_L0->Core_3_L0.power_over_distance",
+      "unit": "W/mm"
+    },
+    {
+      "name": "Core_2_L0->Core_3_L0.power_over_distance",
+      "unit": "W/mm"
+    },
+    {
+      "name": "Core_4_L0->Core_3_L0.power_over_distance",
+      "unit": "W/mm"
+    },
+    {
+      "name": "Core_5_L0->Core_3_L0.power_over_distance",
+      "unit": "W/mm"
+    },
+    {
+      "name": "Core_6_L0->Core_3_L0.power_over_distance",
+      "unit": "W/mm"
+    },
+    {
+      "name": "Core_7_L0->Core_3_L0.power_over_distance",
+      "unit": "W/mm"
+    },
+    {
+      "name": "Core_0_L0->Core_4_L0.power_over_distance",
+      "unit": "W/mm"
+    },
+    {
+      "name": "Core_1_L0->Core_4_L0.power_over_distance",
+      "unit": "W/mm"
+    },
+    {
+      "name": "Core_2_L0->Core_4_L0.power_over_distance",
+      "unit": "W/mm"
+    },
+    {
+      "name": "Core_3_L0->Core_4_L0.power_over_distance",
+      "unit": "W/mm"
+    },
+    {
+      "name": "Core_5_L0->Core_4_L0.power_over_distance",
+      "unit": "W/mm"
+    },
+    {
+      "name": "Core_6_L0->Core_4_L0.power_over_distance",
+      "unit": "W/mm"
+    },
+    {
+      "name": "Core_7_L0->Core_4_L0.power_over_distance",
+      "unit": "W/mm"
+    },
+    {
+      "name": "Core_0_L0->Core_5_L0.power_over_distance",
+      "unit": "W/mm"
+    },
+    {
+      "name": "Core_1_L0->Core_5_L0.power_over_distance",
+      "unit": "W/mm"
+    },
+    {
+      "name": "Core_2_L0->Core_5_L0.power_over_distance",
+      "unit": "W/mm"
+    },
+    {
+      "name": "Core_3_L0->Core_5_L0.power_over_distance",
+      "unit": "W/mm"
+    },
+    {
+      "name": "Core_4_L0->Core_5_L0.power_over_distance",
+      "unit": "W/mm"
+    },
+    {
+      "name": "Core_6_L0->Core_5_L0.power_over_distance",
+      "unit": "W/mm"
+    },
+    {
+      "name": "Core_7_L0->Core_5_L0.power_over_distance",
+      "unit": "W/mm"
+    },
+    {
+      "name": "Core_0_L0->Core_6_L0.power_over_distance",
+      "unit": "W/mm"
+    },
+    {
+      "name": "Core_1_L0->Core_6_L0.power_over_distance",
+      "unit": "W/mm"
+    },
+    {
+      "name": "Core_2_L0->Core_6_L0.power_over_distance",
+      "unit": "W/mm"
+    },
+    {
+      "name": "Core_3_L0->Core_6_L0.power_over_distance",
+      "unit": "W/mm"
+    },
+    {
+      "name": "Core_4_L0->Core_6_L0.power_over_distance",
+      "unit": "W/mm"
+    },
+    {
+      "name": "Core_5_L0->Core_6_L0.power_over_distance",
+      "unit": "W/mm"
+    },
+    {
+      "name": "Core_7_L0->Core_6_L0.power_over_distance",
+      "unit": "W/mm"
+    },
+    {
+      "name": "Core_0_L0->Core_7_L0.power_over_distance",
+      "unit": "W/mm"
+    },
+    {
+      "name": "Core_1_L0->Core_7_L0.power_over_distance",
+      "unit": "W/mm"
+    },
+    {
+      "name": "Core_2_L0->Core_7_L0.power_over_distance",
+      "unit": "W/mm"
+    },
+    {
+      "name": "Core_3_L0->Core_7_L0.power_over_distance",
+      "unit": "W/mm"
+    },
+    {
+      "name": "Core_4_L0->Core_7_L0.power_over_distance",
+      "unit": "W/mm"
+    },
+    {
+      "name": "Core_5_L0->Core_7_L0.power_over_distance",
+      "unit": "W/mm"
+    },
+    {
+      "name": "Core_6_L0->Core_7_L0.power_over_distance",
+      "unit": "W/mm"
+    }
+  ],
+  "sha256": "ab53405ed5ee8b983b91c87e9645b1abfed3f559fd825747b0f98bbcf09750e8",
+  "version": 1
+}

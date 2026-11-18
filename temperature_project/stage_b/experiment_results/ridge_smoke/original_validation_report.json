@@ -1,0 +1,171 @@
+{
+  "experiment": {
+    "kind": "ridge",
+    "name": "ridge",
+    "parameters": {
+      "alpha": 1.0
+    }
+  },
+  "latency": {
+    "batch_ms": 0.26582,
+    "batch_samples": 240,
+    "boundary": "Engineered feature array through X scaling, regressor, inverse Y scaling; excludes CSV loading and feature engineering",
+    "repeats": 50,
+    "single_sample_median_ms": 0.0621545,
+    "single_sample_p95_ms": 0.15254674999999995
+  },
+  "model_sha256": "b2b96c648a89b6be853335618f48854c035e0c5d5ff783bd70480005f928095d",
+  "prepared_manifest_sha256": "bcabf27285b98bbda358949ec9f3e72124029a9fca341fb59f870b851dde401d",
+  "seed": 42,
+  "serialized_model_bytes": 19882,
+  "source_csv_sha256": "ad78ac968292966a6b68e558f61aff3a1e2e185a553037e23fcd39c63e8bbc70",
+  "split_floorplans": {
+    "test": [
+      "b_fp_014",
+      "b_fp_018",
+      "b_fp_019",
+      "b_fp_020",
+      "b_fp_025",
+      "b_fp_041",
+      "b_fp_042",
+      "b_fp_053",
+      "b_fp_059",
+      "b_fp_070",
+      "b_fp_071",
+      "b_fp_072"
+    ],
+    "train": [
+      "b_fp_006",
+      "b_fp_007",
+      "b_fp_008",
+      "b_fp_009",
+      "b_fp_010",
+      "b_fp_011",
+      "b_fp_013",
+      "b_fp_015",
+      "b_fp_016",
+      "b_fp_021",
+      "b_fp_022",
+      "b_fp_023",
+      "b_fp_024",
+      "b_fp_026",
+      "b_fp_027",
+      "b_fp_029",
+      "b_fp_030",
+      "b_fp_031",
+      "b_fp_032",
+      "b_fp_033",
+      "b_fp_034",
+      "b_fp_035",
+      "b_fp_036",
+      "b_fp_037",
+      "b_fp_038",
+      "b_fp_039",
+      "b_fp_040",
+      "b_fp_043",
+      "b_fp_045",
+      "b_fp_046",
+      "b_fp_048",
+      "b_fp_049",
+      "b_fp_050",
+      "b_fp_051",
+      "b_fp_054",
+      "b_fp_056",
+      "b_fp_057",
+      "b_fp_058",
+      "b_fp_061",
+      "b_fp_062",
+      "b_fp_063",
+      "b_fp_064",
+      "b_fp_065",
+      "b_fp_066",
+      "b_fp_067",
+      "b_fp_069",
+      "b_fp_073",
+      "b_fp_075",
+      "b_fp_076",
+      "b_fp_077",
+      "b_fp_080",
+      "b_fp_081",
+      "b_fp_082"
+    ],
+    "validation": [
+      "b_fp_012",
+      "b_fp_017",
+      "b_fp_028",
+      "b_fp_044",
+      "b_fp_047",
+      "b_fp_052",
+      "b_fp_055",
+      "b_fp_060",
+      "b_fp_068",
+      "b_fp_074",
+      "b_fp_078",
+      "b_fp_079"
+    ]
+  },
+  "test_evaluated": false,
+  "train_seconds": 0.016809887999443163,
+  "validation": {
+    "core_comparisons": 1920,
+    "mae_c": 1.8515805672394103,
+    "max_absolute_error_c": 6.226269234829886,
+    "per_core": {
+      "Core_0_L0": {
+        "mae_c": 1.4227017119978234,
+        "max_absolute_error_c": 3.7351031589991806,
+        "rmse_c": 1.7197957834139734
+      },
+      "Core_1_L0": {
+        "mae_c": 2.1750038772083267,
+        "max_absolute_error_c": 4.375720168998839,
+        "rmse_c": 2.4895246623335336
+      },
+      "Core_2_L0": {
+        "mae_c": 1.7002337598241666,
+        "max_absolute_error_c": 5.016660005984619,
+        "rmse_c": 2.0729831178634113
+      },
+      "Core_3_L0": {
+        "mae_c": 2.413391263277264,
+        "max_absolute_error_c": 5.815309001259038,
+        "rmse_c": 2.8255683977014368
+      },
+      "Core_4_L0": {
+        "mae_c": 1.5193441570053343,
+        "max_absolute_error_c": 3.68001934635663,
+        "rmse_c": 1.7160001288355815
+      },
+      "Core_5_L0": {
+        "mae_c": 2.0569720120368706,
+        "max_absolute_error_c": 6.226269234829886,
+        "rmse_c": 2.603353865549704
+      },
+      "Core_6_L0": {
+        "mae_c": 2.0063752207261163,
+        "max_absolute_error_c": 5.551254614231141,
+        "rmse_c": 2.4019175419785097
+      },
+      "Core_7_L0": {
+        "mae_c": 1.5186225358393828,
+        "max_absolute_error_c": 4.124759876813513,
+        "rmse_c": 1.876278637871657
+      }
+    },
+    "rmse_c": 2.2485624172703402,
+    "samples": 240
+  },
+  "versions": {
+    "joblib": "1.5.3",
+    "numpy": "2.3.5",
+    "platform": {
+      "machine": "x86_64",
+      "release": "6.18.57",
+      "system": "Linux"
+    },
+    "python": "3.12.14",
+    "scikit-learn": "1.8.0",
+    "xgboost": null,
+    "xgboost-cpu": "3.4.1"
+  }
+}
