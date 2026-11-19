@@ -109,9 +109,32 @@
     } catch(e) { if (token === state.loadToken) {state.floor = null; error(e.message);} }
     finally { if (token === state.loadToken) {state.loading = false; $('b-predict').disabled = !state.floor; setMode(false);} }
   }
+  const MODEL_COPY = {
+    v2: {
+      badge: 'Stage B v2 · Ridge (α = 0.01) · 3,028 B',
+      summary: 'Stage B v2 · Ridge (α = 0.01)',
+      scope: 'Shared per-core physics-informed Ridge model (Stage B v2, 63 features, 3,028 B portable .npz) for the supported 2D eight-core configuration. Fixed 45°C ambient and original training material settings. No per-floorplan calibration or online HotSpot run.',
+      eval: 'Stage B v2 held-out test: MAE 0.350588°C · RMSE 0.445882°C · Max error 1.512353°C · Hottest-core 84.17%. External 23 Stage A layouts: MAE 0.460754°C. Note: these evaluation sets were reused across v1/v2 comparisons and are historical reference metrics, not guarantees for individual predictions.'
+    },
+    v1: {
+      badge: 'Stage B v1 · Lasso (α = 0.001) · 11,197 B',
+      summary: 'Stage B v1 · Lasso (α = 0.001)',
+      scope: 'Baseline multi-output Lasso model (Stage B v1, 252 features, 11,197 B) preserved for direct comparison on identical inputs. Fixed 45°C ambient and original training material settings. No per-floorplan calibration or online HotSpot run.',
+      eval: 'Stage B v1 held-out test: MAE 1.070281°C · RMSE 1.339064°C · Max error 4.974435°C · Hottest-core 56.67%. External 23 Stage A layouts: MAE 1.491469°C. Historical reference metrics, not guarantees for individual predictions.'
+    }
+  };
+  function syncModelInfo() {
+    const ver = $('b-model') ? $('b-model').value : 'v2';
+    const copy = MODEL_COPY[ver] || MODEL_COPY.v2;
+    if ($('b-model-badge')) $('b-model-badge').textContent = copy.badge;
+    if ($('b-active-model')) $('b-active-model').textContent = copy.summary;
+    if ($('b-model-scope')) $('b-model-scope').textContent = copy.scope;
+    if ($('b-model-eval')) $('b-model-eval').textContent = copy.eval;
+  }
   function show(s, result) {
     state.result = result; preview(s, result); $('b-results').replaceChildren();
     IDS.forEach(id => { const row = document.createElement('tr'); [id, `${result.temperatures_c[id].toFixed(3)} °C`].forEach(text => {const cell = document.createElement('td'); cell.textContent = text; row.append(cell);}); $('b-results').append(row); });
+    if ($('b-active-model') && result.model) $('b-active-model').textContent = `${result.model.name} (α = ${result.model.alpha})`;
     $('b-max').textContent = `${result.maximum_c.toFixed(3)} °C`; $('b-min').textContent = `${result.minimum_c.toFixed(3)} °C`; $('b-hot').textContent = result.hottest_core; $('b-latency').textContent = `${result.latency_ms.toFixed(4)} ms`;
     $('b-low').textContent = `${result.minimum_c.toFixed(2)} °C`; $('b-high').textContent = `${result.maximum_c.toFixed(2)} °C`;
     const chart = $('b-bars'); chart.replaceChildren(); chart.setAttribute('viewBox','0 0 440 235');
@@ -126,13 +149,13 @@
       const r=svg('rect',{x,y:Math.min(zero,yt),width:34,height:Math.abs(yt-zero),fill:'#38bdf8','data-core':id,'data-temperature-c':t}); chart.append(r);
       chart.append(svg('text',{x:x+17,y:t>=0?yt-6:yt+12,'text-anchor':'middle',fill:'#e2e8f0','font-size':10},t.toFixed(1)));
       chart.append(svg('text',{x:x+17,y:224,'text-anchor':'middle',fill:'#94a3b8','font-size':10},`Core ${i}`));});
-    $('b-status').textContent = 'Prediction complete. Heatmap colors use this result’s minimum and maximum.';
+    $('b-status').textContent = `Prediction complete (${(result.model_version || 'v2').toUpperCase()}). Heatmap colors use this result’s minimum and maximum.`;
   }
   async function predict() {
     const revision = state.revision, token = ++state.request;
     try {
       error(''); const s = snapshot(); validate(s);
-      const payload = {mode:$('b-mode').value,units};
+      const payload = {mode:$('b-mode').value,units,model_version:$('b-model') ? $('b-model').value : 'v2'};
       if (payload.mode === 'existing') {payload.floorplan_id = state.floor.id; payload.powers_w = Object.fromEntries(s.cores.map(c => [c.id,c.power_w]));}
       else {payload.die=s.die;payload.cores=s.cores;}
       $('b-predict').disabled = true; $('b-status').textContent = 'Predicting…';
@@ -142,8 +165,10 @@
     } catch(e) { if (revision === state.revision && token === state.request) {clearResults(); error(e.message); $('b-status').textContent='Prediction unavailable — check inputs.';} }
     finally {if (token === state.request) $('b-predict').disabled = state.loading || !state.floor;}
   }
+  if ($('b-model')) $('b-model').addEventListener('change', () => {syncModelInfo(); dirty(); $('b-status').textContent = 'Model switched — predict to compare temperatures on the same inputs.';});
   $('b-mode').addEventListener('change', () => {setMode(true);}); $('b-floorplan').addEventListener('change', loadFloor);
   ['b-die-width','b-die-height'].forEach(id => $(id).addEventListener('input',dirty));
   $('b-predict').addEventListener('click',predict); $('b-reset').addEventListener('click',() => {if(state.floor)populate(state.floor);});
+  syncModelInfo();
   api('/api/stage-b/floorplans').then(data => {data.floorplans.forEach(f => $('b-floorplan').add(new Option(f.id,f.id)));return loadFloor();}).catch(e => error(e.message));
 })();

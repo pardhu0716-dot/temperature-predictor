@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1146" height="500" viewBox="0 0 1146 500">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="85" y="30" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" fill="#0f172a">Stage B v1 vs Stage B v2 — Per-Floorplan MAE (°C) on Original 23 Stage A Floorplans</text>
+<text x="85" y="52" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#475569">External 23-FP MAE: v1 = 1.4915 °C -> v2 = 0.4608 °C | Hottest-Core Acc: 48.3% -> 79.8%</text>
+<rect x="85" y="60" width="12" height="12" rx="2" fill="#ea580c"/>
+<text x="103" y="70" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#1e293b">Stage B v1 (Frozen Lasso, 252 features)</text>
+<rect x="398" y="60" width="12" height="12" rx="2" fill="#16a34a"/>
+<text x="416" y="70" font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#1e293b">Stage B v2 (ridge_alpha_0.01, 63 shared physics features)</text>
+<line x1="85" y1="382.0" x2="1111" y2="382.0" stroke="#e2e8f0" stroke-width="1"/>
+<text x="75" y="386.0" text-anchor="end" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#475569">0.00</text>
+<line x1="85" y1="323.2" x2="1111" y2="323.2" stroke="#e2e8f0" stroke-width="1"/>
+<text x="75" y="327.2" text-anchor="end" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#475569">0.69</text>
+<line x1="85" y1="264.4" x2="1111" y2="264.4" stroke="#e2e8f0" stroke-width="1"/>
+<text x="75" y="268.4" text-anchor="end" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#475569">1.38</text>
+<line x1="85" y1="205.6" x2="1111" y2="205.6" stroke="#e2e8f0" stroke-width="1"/>
+<text x="75" y="209.6" text-anchor="end" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#475569">2.07</text>
+<line x1="85" y1="146.8" x2="1111" y2="146.8" stroke="#e2e8f0" stroke-width="1"/>
+<text x="75" y="150.8" text-anchor="end" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#475569">2.76</text>
+<line x1="85" y1="88.0" x2="1111" y2="88.0" stroke="#e2e8f0" stroke-width="1"/>
+<text x="75" y="92.0" text-anchor="end" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#475569">3.45</text>
+<line x1="85" y1="88" x2="85" y2="382" stroke="#334155" stroke-width="1.5"/>
+<line x1="85" y1="382" x2="1111" y2="382" stroke="#334155" stroke-width="1.5"/>
+<text x="20" y="235.0" transform="rotate(-90 20 235.0)" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="600" fill="#1e293b">MAE (°C)</text>
+<rect x="88.9" y="254.7" width="17.4" height="127.3" rx="2" fill="#ea580c"><title>Style_1/fp_001 (Stage B v1 (Frozen Lasso, 252 features)): 1.495469</title></rect>
+<rect x="108.3" y="330.1" width="17.4" height="51.9" rx="2" fill="#16a34a"><title>Style_1/fp_001 (Stage B v2 (ridge_alpha_0.01, 63 shared physics features)): 0.609512</title></rect>
+<text x="107.3" y="396" transform="rotate(-45 107.3 396)" text-anchor="end" font-family="Segoe UI, Arial, sans-serif" font-size="10" fill="#334155">Style_1/fp_001</text>
+<rect x="133.5" y="273.8" width="17.4" height="108.2" rx="2" fill="#ea580c"><title>Style_1/fp_002 (Stage B v1 (Frozen Lasso, 252 features)): 1.271685</title></rect>
+<rect x="152.9" y="332.3" width="17.4" height="49.7" rx="2" fill="#16a34a"><title>Style_1/fp_002 (Stage B v2 (ridge_alpha_0.01, 63 shared physics features)): 0.583622</title></rect>
+<text x="151.9" y="396" transform="rotate(-45 151.9 396)" text-anchor="end" font-family="Segoe UI, Arial, sans-serif" font-size="10" fill="#334155">Style_1/fp_002</text>
+<rect x="178.1" y="231.0" width="17.4" height="151.0" rx="2" fill="#ea580c"><title>Style_1/fp_003 (Stage B v1 (Frozen Lasso, 252 features)): 1.773722</title></rect>
+<rect x="197.5" y="309.6" width="17.4" height="72.4" rx="2" fill="#16a34a"><title>Style_1/fp_003 (Stage B v2 (ridge_alpha_0.01, 63 shared physics features)): 0.851090</title></rect>
+<text x="196.5" y="396" transform="rotate(-45 196.5 396)" text-anchor="end" font-family="Segoe UI, Arial, sans-serif" font-size="10" fill="#334155">Style_1/fp_003</text>
+<rect x="222.7" y="232.6" width="17.4" height="149.4" rx="2" fill="#ea580c"><title>Style_2/fp_001 (Stage B v1 (Frozen Lasso, 252 features)): 1.755068</title></rect>
+<rect x="242.1" y="344.2" width="17.4" height="37.8" rx="2" fill="#16a34a"><title>Style_2/fp_001 (Stage B v2 (ridge_alpha_0.01, 63 shared physics features)): 0.443624</title></rect>
+<text x="241.1" y="396" transform="rotate(-45 241.1 396)" text-anchor="end" font-family="Segoe UI, Arial, sans-serif" font-size="10" fill="#334155">Style_2/fp_001</text>
+<rect x="267.3" y="246.1" width="17.4" height="135.9" rx="2" fill="#ea580c"><title>Style_2/fp_002 (Stage B v1 (Frozen Lasso, 252 features)): 1.597211</title></rect>
+<rect x="286.7" y="350.8" width="17.4" height="31.2" rx="2" fill="#16a34a"><title>Style_2/fp_002 (Stage B v2 (ridge_alpha_0.01, 63 shared physics features)): 0.366762</title></rect>
+<text x="285.7" y="396" transform="rotate(-45 285.7 396)" text-anchor="end" font-family="Segoe UI, Arial, sans-serif" font-size="10" fill="#334155">Style_2/fp_002</text>
+<rect x="312.0" y="126.3" width="17.4" height="255.7" rx="2" fill="#ea580c"><title>Style_2/fp_003 (Stage B v1 (Frozen Lasso, 252 features)): 3.003803</title></rect>
+<rect x="331.3" y="310.8" width="17.4" height="71.2" rx="2" fill="#16a34a"><title>Style_2/fp_003 (Stage B v2 (ridge_alpha_0.01, 63 shared physics features)): 0.836566</title></rect>
+<text x="330.3" y="396" transform="rotate(-45 330.3 396)" text-anchor="end" font-family="Segoe UI, Arial, sans-serif" font-size="10" fill="#334155">Style_2/fp_003</text>
+<rect x="356.6" y="260.1" width="17.4" height="121.9" rx="2" fill="#ea580c"><title>Style_2/fp_004 (Stage B v1 (Frozen Lasso, 252 features)): 1.432627</title></rect>
+<rect x="376.0" y="327.3" width="17.4" height="54.7" rx="2" fill="#16a34a"><title>Style_2/fp_004 (Stage B v2 (ridge_alpha_0.01, 63 shared physics features)): 0.642870</title></rect>
+<text x="375.0" y="396" transform="rotate(-45 375.0 396)" text-anchor="end" font-family="Segoe UI, Arial, sans-serif" font-size="10" fill="#334155">Style_2/fp_004</text>
+<rect x="401.2" y="228.6" width="17.4" height="153.4" rx="2" fill="#ea580c"><title>Style_2/fp_005 (Stage B v1 (Frozen Lasso, 252 features)): 1.801827</title></rect>
+<rect x="420.6" y="329.3" width="17.4" height="52.7" rx="2" fill="#16a34a"><title>Style_2/fp_005 (Stage B v2 (ridge_alpha_0.01, 63 shared physics features)): 0.619040</title></rect>
+<text x="419.6" y="396" transform="rotate(-45 419.6 396)" text-anchor="end" font-family="Segoe UI, Arial, sans-serif" font-size="10" fill="#334155">Style_2/fp_005</text>
+<rect x="445.8" y="253.0" width="17.4" height="129.0" rx="2" fill="#ea580c"><title>Style_3/fp_001 (Stage B v1 (Frozen Lasso, 252 features)): 1.515821</title></rect>
+<rect x="465.2" y="348.2" width="17.4" height="33.8" rx="2" fill="#16a34a"><title>Style_3/fp_001 (Stage B v2 (ridge_alpha_0.01, 63 shared physics features)): 0.397525</title></rect>
+<text x="464.2" y="396" transform="rotate(-45 464.2 396)" text-anchor="end" font-family="Segoe UI, Arial, sans-serif" font-size="10" fill="#334155">Style_3/fp_001</text>
+<rect x="490.4" y="240.1" width="17.4" height="141.9" rx="2" fill="#ea580c"><title>Style_3/fp_002 (Stage B v1 (Frozen Lasso, 252 features)): 1.667726</title></rect>
+<rect x="509.8" y="362.2" width="17.4" height="19.8" rx="2" fill="#16a34a"><title>Style_3/fp_002 (Stage B v2 (ridge_alpha_0.01, 63 shared physics features)): 0.232167</title></rect>
+<text x="508.8" y="396" transform="rotate(-45 508.8 396)" text-anchor="end" font-family="Segoe UI, Arial, sans-serif" font-size="10" fill="#334155">Style_3/fp_002</text>
+<rect x="535.0" y="225.7" width="17.4" height="156.3" rx="2" fill="#ea580c"><title>Style_3/fp_003 (Stage B v1 (Frozen Lasso, 252 features)): 1.836907</title></rect>
+<rect x="554.4" y="316.2" width="17.4" height="65.8" rx="2" fill="#16a34a"><title>Style_3/fp_003 (Stage B v2 (ridge_alpha_0.01, 63 shared physics features)): 0.773046</title></rect>
+<text x="553.4" y="396" transform="rotate(-45 553.4 396)" text-anchor="end" font-family="Segoe UI, Arial, sans-serif" font-size="10" fill="#334155">Style_3/fp_003</text>
+<rect x="579.6" y="152.9" width="17.4" height="229.1" rx="2" fill="#ea580c"><title>Style_3/fp_004 (Stage B v1 (Frozen Lasso, 252 features)): 2.691439</title></rect>
+<rect x="599.0" y="311.5" width="17.4" height="70.5" rx="2" fill="#16a34a"><title>Style_3/fp_004 (Stage B v2 (ridge_alpha_0.01, 63 shared physics features)): 0.828646</title></rect>
+<text x="598.0" y="396" transform="rotate(-45 598.0 396)" text-anchor="end" font-family="Segoe UI, Arial, sans-serif" font-size="10" fill="#334155">Style_3/fp_004</text>
+<rect x="624.2" y="190.8" width="17.4" height="191.2" rx="2" fill="#ea580c"><title>Style_3/fp_005 (Stage B v1 (Frozen Lasso, 252 features)): 2.247002</title></rect>
+<rect x="643.6" y="309.2" width="17.4" height="72.8" rx="2" fill="#16a34a"><title>Style_3/fp_005 (Stage B v2 (ridge_alpha_0.01, 63 shared physics features)): 0.855908</title></rect>
+<text x="642.6" y="396" transform="rotate(-45 642.6 396)" text-anchor="end" font-family="Segoe UI, Arial, sans-serif" font-size="10" fill="#334155">Style_3/fp_005</text>
+<rect x="668.8" y="315.0" width="17.4" height="67.0" rx="2" fill="#ea580c"><title>Style_4/fp_001 (Stage B v1 (Frozen Lasso, 252 features)): 0.786987</title></rect>
+<rect x="688.2" y="367.1" width="17.4" height="14.9" rx="2" fill="#16a34a"><title>Style_4/fp_001 (Stage B v2 (ridge_alpha_0.01, 63 shared physics features)): 0.174581</title></rect>
+<text x="687.2" y="396" transform="rotate(-45 687.2 396)" text-anchor="end" font-family="Segoe UI, Arial, sans-serif" font-size="10" fill="#334155">Style_4/fp_001</text>
+<rect x="713.4" y="268.9" width="17.4" height="113.1" rx="2" fill="#ea580c"><title>Style_4/fp_002 (Stage B v1 (Frozen Lasso, 252 features)): 1.328776</title></rect>
+<rect x="732.8" y="362.1" width="17.4" height="19.9" rx="2" fill="#16a34a"><title>Style_4/fp_002 (Stage B v2 (ridge_alpha_0.01, 63 shared physics features)): 0.233554</title></rect>
+<text x="731.8" y="396" transform="rotate(-45 731.8 396)" text-anchor="end" font-family="Segoe UI, Arial, sans-serif" font-size="10" fill="#334155">Style_4/fp_002</text>
+<rect x="758.0" y="297.8" width="17.4" height="84.2" rx="2" fill="#ea580c"><title>Style_4/fp_003 (Stage B v1 (Frozen Lasso, 252 features)): 0.988923</title></rect>
+<rect x="777.4" y="349.6" width="17.4" height="32.4" rx="2" fill="#16a34a"><title>Style_4/fp_003 (Stage B v2 (ridge_alpha_0.01, 63 shared physics features)): 0.380476</title></rect>
+<text x="776.4" y="396" transform="rotate(-45 776.4 396)" text-anchor="end" font-family="Segoe UI, Arial, sans-serif" font-size="10" fill="#334155">Style_4/fp_003</text>
+<rect x="802.6" y="253.4" width="17.4" height="128.6" rx="2" fill="#ea580c"><title>Style_4/fp_004 (Stage B v1 (Frozen Lasso, 252 features)): 1.511106</title></rect>
+<rect x="822.0" y="355.5" width="17.4" height="26.5" rx="2" fill="#16a34a"><title>Style_4/fp_004 (Stage B v2 (ridge_alpha_0.01, 63 shared physics features)): 0.310970</title></rect>
+<text x="821.0" y="396" transform="rotate(-45 821.0 396)" text-anchor="end" font-family="Segoe UI, Arial, sans-serif" font-size="10" fill="#334155">Style_4/fp_004</text>
+<rect x="847.3" y="280.3" width="17.4" height="101.7" rx="2" fill="#ea580c"><title>Style_4/fp_005 (Stage B v1 (Frozen Lasso, 252 features)): 1.195169</title></rect>
+<rect x="866.7" y="360.2" width="17.4" height="21.8" rx="2" fill="#16a34a"><title>Style_4/fp_005 (Stage B v2 (ridge_alpha_0.01, 63 shared physics features)): 0.256319</title></rect>
+<text x="865.7" y="396" transform="rotate(-45 865.7 396)" text-anchor="end" font-family="Segoe UI, Arial, sans-serif" font-size="10" fill="#334155">Style_4/fp_005</text>
+<rect x="891.9" y="309.5" width="17.4" height="72.5" rx="2" fill="#ea580c"><title>Style_4/fp_006 (Stage B v1 (Frozen Lasso, 252 features)): 0.852371</title></rect>
+<rect x="911.3" y="364.9" width="17.4" height="17.1" rx="2" fill="#16a34a"><title>Style_4/fp_006 (Stage B v2 (ridge_alpha_0.01, 63 shared physics features)): 0.200596</title></rect>
+<text x="910.3" y="396" transform="rotate(-45 910.3 396)" text-anchor="end" font-family="Segoe UI, Arial, sans-serif" font-size="10" fill="#334155">Style_4/fp_006</text>
+<rect x="936.5" y="304.9" width="17.4" height="77.1" rx="2" fill="#ea580c"><title>Style_4/fp_007 (Stage B v1 (Frozen Lasso, 252 features)): 0.905977</title></rect>
+<rect x="955.9" y="362.9" width="17.4" height="19.1" rx="2" fill="#16a34a"><title>Style_4/fp_007 (Stage B v2 (ridge_alpha_0.01, 63 shared physics features)): 0.224853</title></rect>
+<text x="954.9" y="396" transform="rotate(-45 954.9 396)" text-anchor="end" font-family="Segoe UI, Arial, sans-serif" font-size="10" fill="#334155">Style_4/fp_007</text>
+<rect x="981.1" y="294.6" width="17.4" height="87.4" rx="2" fill="#ea580c"><title>Style_4/fp_008 (Stage B v1 (Frozen Lasso, 252 features)): 1.026466</title></rect>
+<rect x="1000.5" y="368.6" width="17.4" height="13.4" rx="2" fill="#16a34a"><title>Style_4/fp_008 (Stage B v2 (ridge_alpha_0.01, 63 shared physics features)): 0.157067</title></rect>
+<text x="999.5" y="396" transform="rotate(-45 999.5 396)" text-anchor="end" font-family="Segoe UI, Arial, sans-serif" font-size="10" fill="#334155">Style_4/fp_008</text>
+<rect x="1025.7" y="328.2" width="17.4" height="53.8" rx="2" fill="#ea580c"><title>Style_4/fp_009 (Stage B v1 (Frozen Lasso, 252 features)): 0.632494</title></rect>
+<rect x="1045.1" y="354.5" width="17.4" height="27.5" rx="2" fill="#16a34a"><title>Style_4/fp_009 (Stage B v2 (ridge_alpha_0.01, 63 shared physics features)): 0.322656</title></rect>
+<text x="1044.1" y="396" transform="rotate(-45 1044.1 396)" text-anchor="end" font-family="Segoe UI, Arial, sans-serif" font-size="10" fill="#334155">Style_4/fp_009</text>
+<rect x="1070.3" y="298.1" width="17.4" height="83.9" rx="2" fill="#ea580c"><title>Style_4/fp_010 (Stage B v1 (Frozen Lasso, 252 features)): 0.985218</title></rect>
+<rect x="1089.7" y="356.8" width="17.4" height="25.2" rx="2" fill="#16a34a"><title>Style_4/fp_010 (Stage B v2 (ridge_alpha_0.01, 63 shared physics features)): 0.295894</title></rect>
+<text x="1088.7" y="396" transform="rotate(-45 1088.7 396)" text-anchor="end" font-family="Segoe UI, Arial, sans-serif" font-size="10" fill="#334155">Style_4/fp_010</text>
+</svg>

@@ -1,0 +1,6 @@
+candidate,family,feature_set,num_features,nonzero_params,hyperparameters,converged,weight_l2_norm,max_abs_weight,train_mae_c,val_mae_c,val_rmse_c,val_max_err_c,val_centered_mae_c,val_hottest_core_acc_pct,serialized_bytes,median_feat_ms,median_inf_ms,median_total_ms
+stage_b_v1_frozen_lasso,v1_multioutput_lasso,F0_v1_baseline_252_slot,252,600,"{""alpha"": 0.001}",True,4.1484,0.6221,,1.144337,1.463817,5.068595,1.045413,48.75,11197,,,
+ols,ols,F4_plus_boundary_images,63,63,{},True,94197.6284,71625.8415,0.332784,0.416286,0.566985,2.166698,0.376170,82.92,4796,0.586975,0.065239,0.652313
+ridge_alpha_1e-05,ridge,F4_plus_boundary_images,63,63,"{""alpha"": 1e-05}",True,97.4221,78.5411,0.334693,0.417951,0.571213,2.229586,0.378263,83.33,4268,0.578615,0.060422,0.639037
+lasso_alpha_1e-05,lasso,F4_plus_boundary_images,63,54,"{""alpha"": 1e-05}",False,2.0413,1.1188,0.340875,0.421548,0.573638,2.378312,0.377006,82.92,4354,0.500709,0.074505,0.574060
+enet_a1e-05_l1_0.2,elastic_net,F4_plus_boundary_images,63,62,"{""alpha"": 1e-05, ""l1_ratio"": 0.2}",False,2.2700,1.2095,0.339598,0.420492,0.571478,2.324675,0.376163,82.50,4366,0.665917,0.080231,0.748397

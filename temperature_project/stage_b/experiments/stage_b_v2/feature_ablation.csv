@@ -1,0 +1,18 @@
+feature_set,groups,description,num_features,reference_model,train_mae_c,val_mae_c,val_rmse_c,val_max_err_c,val_centered_mae_c,val_hottest_core_acc_pct,delta_val_mae_vs_v1_c
+F0_v1_baseline_252_slot,v1_original_252,Stage B v1 baseline (8 separate Lasso alpha=0.001 models),252,v1_lasso_0.001,,1.144337,1.463817,5.068595,1.045413,48.75,0.000000
+F1_self_global,self_global,Target core power/area/type + global chip power,11,shared_ridge_1.0,1.438718,1.131457,1.424335,4.169767,0.830656,57.08,-0.012880
+F1_self_global,self_global,Target core power/area/type + global chip power,11,shared_lasso_0.0001,1.438733,1.131368,1.424299,4.167399,0.830606,57.08,-0.012969
+F2_plus_pairwise,self_global+pairwise_coupling,+ Multi-scale 2D thermal coupling kernels,33,shared_ridge_1.0,0.595271,0.613673,0.814781,3.300953,0.580961,69.17,-0.530664
+F2_plus_pairwise,self_global+pairwise_coupling,+ Multi-scale 2D thermal coupling kernels,33,shared_lasso_0.0001,0.596812,0.611701,0.812932,3.291263,0.579233,68.75,-0.532637
+F3_plus_die_spread,self_global+pairwise_coupling+die_spreading,+ Die spreading & aspect-ratio resistance,49,shared_ridge_1.0,0.515045,0.599560,0.798361,2.815714,0.561317,70.00,-0.544777
+F3_plus_die_spread,self_global+pairwise_coupling+die_spreading,+ Die spreading & aspect-ratio resistance,49,shared_lasso_0.0001,0.521905,0.604653,0.800248,2.758604,0.564055,69.58,-0.539684
+F4_plus_boundary_images,self_global+pairwise_coupling+die_spreading+boundary_images,+ Adiabatic die-wall method-of-images reflections,63,shared_ridge_1.0,0.345090,0.426195,0.576198,2.409196,0.385266,81.25,-0.718142
+F4_plus_boundary_images,self_global+pairwise_coupling+die_spreading+boundary_images,+ Adiabatic die-wall method-of-images reflections,63,shared_lasso_0.0001,0.353033,0.433024,0.584202,2.573790,0.395482,80.00,-0.711313
+F5_full_physics,self_global+pairwise_coupling+die_spreading+boundary_images+local_interactions,+ Local power concentration & contrast interactions,71,shared_ridge_1.0,0.334667,0.434946,0.588378,2.356375,0.395218,81.67,-0.709391
+F5_full_physics,self_global+pairwise_coupling+die_spreading+boundary_images+local_interactions,+ Local power concentration & contrast interactions,71,shared_lasso_0.0001,0.344700,0.441961,0.596044,2.530868,0.403692,80.83,-0.702376
+F5_minus_die_spread,self_global+pairwise_coupling+boundary_images+local_interactions,Leave-one-out: drop die_spreading,55,shared_ridge_1.0,0.359349,0.441433,0.600260,2.538206,0.418785,80.83,-0.702905
+F5_minus_die_spread,self_global+pairwise_coupling+boundary_images+local_interactions,Leave-one-out: drop die_spreading,55,shared_lasso_0.0001,0.364233,0.443420,0.603613,2.591205,0.422633,80.42,-0.700917
+F5_minus_boundary,self_global+pairwise_coupling+die_spreading+local_interactions,Leave-one-out: drop boundary_images,57,shared_ridge_1.0,0.494282,0.593533,0.790047,2.939342,0.565280,70.42,-0.550804
+F5_minus_boundary,self_global+pairwise_coupling+die_spreading+local_interactions,Leave-one-out: drop boundary_images,57,shared_lasso_0.0001,0.504228,0.599574,0.796412,2.864935,0.568169,69.58,-0.544763
+F5_minus_pairwise,self_global+die_spreading+boundary_images+local_interactions,Leave-one-out: drop pairwise_coupling,49,shared_ridge_1.0,0.427199,0.502250,0.692417,2.874285,0.450926,77.50,-0.642087
+F5_minus_pairwise,self_global+die_spreading+boundary_images+local_interactions,Leave-one-out: drop pairwise_coupling,49,shared_lasso_0.0001,0.432916,0.499333,0.687954,2.858470,0.450899,77.50,-0.645004

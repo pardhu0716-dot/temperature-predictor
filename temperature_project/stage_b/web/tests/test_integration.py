@@ -23,11 +23,14 @@ class WebIntegrationTests(unittest.TestCase):
 
     def test_model_loaded_once_and_feature_contract(self):
         from stage_b.web import register_stage_b
-        before=id(self.service.bundle);register_stage_b(app)
+        before_v1=id(self.service.bundle);before_v2=id(self.service.v2_model);register_stage_b(app)
         self.client.post('/api/stage-b/predict',json=self.payload())
-        self.assertEqual(before,id(app.extensions['stage_b_predictor'].bundle))
+        self.assertEqual(before_v1,id(app.extensions['stage_b_predictor'].bundle))
+        self.assertEqual(before_v2,id(app.extensions['stage_b_predictor'].v2_model))
         info=self.client.get('/api/stage-b/model').json
-        self.assertEqual((info['alpha'],info['feature_count'],info['serialized_bundle_bytes']),(.001,252,11197))
+        self.assertEqual((info['default_model_version'],info['alpha'],info['feature_count'],info['serialized_bundle_bytes']),('v2',.01,63,3028))
+        v1=info['models']['v1']
+        self.assertEqual((v1['alpha'],v1['feature_count'],v1['serialized_bundle_bytes']),(.001,252,11197))
 
     def test_all_77_geometries_and_predictions(self):
         cat=self.client.get('/api/stage-b/floorplans').json;self.assertEqual(cat['total_floorplans'],77)
@@ -46,12 +49,12 @@ class WebIntegrationTests(unittest.TestCase):
         self.assertEqual(len(refs),240);powers=load_power_inputs(PROJECT/'stage_b/dataset_v1/floorplan_manifest.json')
         with patch.object(type(self.service.bundle.estimator),'fit',side_effect=AssertionError('Retraining forbidden')):
             for key,expected in refs.items():
-                fid,sid=key;p=dict(mode='existing',floorplan_id=fid,units=UNITS,powers_w=dict(zip(CORE_IDS,powers[key].tolist())))
+                fid,sid=key;p=dict(mode='existing',model_version='v1',floorplan_id=fid,units=UNITS,powers_w=dict(zip(CORE_IDS,powers[key].tolist())))
                 actual=self.client.post('/api/stage-b/predict',json=p);self.assertEqual(actual.status_code,200)
                 np.testing.assert_allclose([actual.json['temperatures_c'][n] for n in CORE_IDS],[expected[n] for n in CORE_IDS],rtol=0,atol=1e-10)
                 floor=self.service.floorplan(fid);rows=floor['cores'][::-1]
                 for r in rows:r['power_w']=p['powers_w'][r['id']]
-                custom=self.client.post('/api/stage-b/predict',json=dict(mode='custom',units=UNITS,die=floor['die'],cores=rows))
+                custom=self.client.post('/api/stage-b/predict',json=dict(mode='custom',model_version='v1',units=UNITS,die=floor['die'],cores=rows))
                 self.assertEqual(custom.status_code,200)
                 np.testing.assert_allclose([custom.json['temperatures_c'][n] for n in CORE_IDS],[expected[n] for n in CORE_IDS],rtol=0,atol=1e-10)
 

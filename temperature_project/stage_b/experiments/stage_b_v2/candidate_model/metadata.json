@@ -1,0 +1,37 @@
+{
+  "candidate_name": "ridge_alpha_0.01",
+  "converged": true,
+  "family": "ridge",
+  "feature_groups": [
+    "self_global",
+    "pairwise_coupling",
+    "die_spreading",
+    "boundary_images"
+  ],
+  "feature_set": "F4_plus_boundary_images",
+  "hyperparameters": {
+    "alpha": 0.01,
+    "kind": "ridge"
+  },
+  "model_sha256": "e2c39c6d1ca55351e67e051b5e35f2c17a107389fd6102b12badb0b22446507a",
+  "nonzero_params": 63,
+  "num_features": 63,
+  "seed": 42,
+  "selection_policy": "Selected strictly on original 53-train / 12-validation split; test split and 23 Stage A floorplans untouched.",
+  "serialized_bytes": 4267,
+  "source_csv_sha256": "ad78ac968292966a6b68e558f61aff3a1e2e185a553037e23fcd39c63e8bbc70",
+  "v1_validation_metrics": {
+    "centered_mae_c": 1.0454134819915633,
+    "hottest_core_acc_pct": 48.75,
+    "mae_c": 1.1443370113106028,
+    "max_err_c": 5.068595295218614,
+    "rmse_c": 1.4638169804539238
+  },
+  "validation_metrics": {
+    "centered_mae_c": 0.37782,
+    "hottest_core_acc_pct": 82.92,
+    "mae_c": 0.419293,
+    "max_err_c": 2.24652,
+    "rmse_c": 0.572021
+  }
+}

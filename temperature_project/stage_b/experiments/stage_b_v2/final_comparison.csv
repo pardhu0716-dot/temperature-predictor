@@ -1,0 +1,10 @@
+evaluation_setting,model,workloads,mae_c,rmse_c,max_err_c,centered_mae_c,hottest_core_acc_pct,median_feat_ms,median_inf_ms,median_total_ms,p95_total_ms,serialized_bytes
+Stage B Held-Out Test Split (12 floorplans / 240 workloads),Stage B v1 (Frozen Lasso alpha=0.001),240,1.070281,1.339064,4.974435,0.992799,56.67,,,,,11197
+Stage B Held-Out Test Split (12 floorplans / 240 workloads),"Stage B v2 (ridge_alpha_0.01, F4 63-feature shared physics)",240,0.350588,0.445882,1.512353,0.328706,84.17,,,,,4267
+External 23 Stage A Floorplans — ALL 23 (460 workloads),"Stage A Reference (Calibrated 8x8 Matrix, in-distribution)",460,0.002598,0.003032,0.007784,,100.00,0.000000,0.001450,0.001450,0.002157,17733
+External 23 Stage A Floorplans — ALL 23 (460 workloads),Stage B v1 (Frozen Lasso alpha=0.001),460,1.491469,1.917708,6.535131,1.174703,48.26,0.674617,0.111367,0.791799,1.406207,11197
+External 23 Stage A Floorplans — ALL 23 (460 workloads),"Stage B v2 (ridge_alpha_0.01, F4 63-feature shared physics)",460,0.460754,0.643017,2.731624,0.432468,79.78,0.414099,0.062753,0.481887,0.904807,4267
+External Subset — 17 Floorplans Inside Stage B Die Box (340 workloads),Stage B v1 (Frozen Lasso alpha=0.001),340,1.252364,1.598901,5.029334,1.107965,50.59,,,,,11197
+External Subset — 17 Floorplans Inside Stage B Die Box (340 workloads),"Stage B v2 (ridge_alpha_0.01, F4 63-feature shared physics)",340,0.355369,0.498052,2.731624,0.324181,85.00,,,,,4267
+External Subset — 6 Floorplans Outside Stage B Die Box (120 workloads),Stage B v1 (Frozen Lasso alpha=0.001),120,2.168934,2.618036,6.535131,1.363794,41.67,,,,,11197
+External Subset — 6 Floorplans Outside Stage B Die Box (120 workloads),"Stage B v2 (ridge_alpha_0.01, F4 63-feature shared physics)",120,0.759346,0.939227,2.462725,0.739284,65.00,,,,,4267

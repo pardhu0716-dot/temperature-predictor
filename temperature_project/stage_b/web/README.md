@@ -35,18 +35,59 @@ remain available at their committed repository paths.
 
 ## Model and geometry path
 
-`Predictor` loads the trusted, hash-pinned local Lasso bundle once when the
-combined app registers its Blueprint. Startup fails if the model checksum,
-scalers, alpha, core ordering or feature definitions do not match. Re-registering
-on the same Flask app reuses the existing predictor. There is no online fitting.
+`Predictor` loads two immutable, hash-pinned local models once when the combined
+app registers its Blueprint (zero online fitting, zero experimental imports):
 
-The adapter calls the unchanged `stage_b.ml.features.build_features` and the
-saved `ModelBundle.predict`: 252 engineered features, saved X scaling, eight
-Lasso outputs, inverse Y scaling to °C. No duplicated ML implementation or new
-scaler is introduced. Geometry comes from the original manifest and hashed FLPs;
-its original loader validates bounds, core count, FILL coverage and LCF assumptions.
-The Stage B catalogue contains the 77 original b_fp_006…082 geometries and does
-not load temperature labels.
+1. **Stage B v2 (Default — `stage_b/models/v2_ridge/model_v2.npz`)**: Portable,
+   pickle-free NumPy `.npz` (`allow_pickle=False`, `3,028` bytes, SHA-256
+   `edbae799105b57134ab99cfe3a68db2e4afd9c7aeb0ae78b3ec49476899c2175`) containing
+   the audited shared per-core **Ridge regression** (`alpha = 0.01`, `63`
+   physics-informed features via `stage_b.ml.features_v2.build_per_core_features`).
+   - **Why v1 was improved**: Stage B v1 trained 8 separate slot-indexed Lasso
+     models over 252 features (`1,060` rows per core), causing core-index
+     overfitting and `-1.7` to `-2.7 °C` negative bias on compact/high-aspect-ratio
+     dies due to missing power × geometry spreading and boundary reflection terms.
+   - **Stage B v2 physics features (`F4`, 63 features)**: Permutation-equivariant
+     per-core features combining self/global power (`11`), multi-scale 2D thermal
+     coupling kernels (`1/(d+c)`, `1/(d^2+c)`, `exp(-d/lambda)`, `log`, edge-gap,
+     Big/Little split — `22`), die spreading & aspect-ratio resistance
+     ($P_{\text{tot}}/A_{\text{die}}$, $P_{\text{tot}}/\sqrt{A_{\text{die}}}$, AR — `16`),
+     and adiabatic Neumann die-wall method-of-images reflections (`14`).
+   - **Why Ridge (`alpha = 0.01`) was selected**: Strictly on the original
+     `53`-train (`1,060` workloads / `8,480` core rows) / `12`-validation (`240`
+     workloads) floorplan split (`seed = 42`), unregularized OLS had huge collinear
+     weights (`max|w| = 71,625.8`), whereas `Ridge(alpha = 0.01)` achieved
+     `0.419293 °C` validation MAE with well-conditioned weights (`max|w| = 2.21`).
+2. **Stage B v1 (Selectable Baseline — `stage_b/models/final_lasso/model.joblib`)**:
+   Original multi-output Lasso (`alpha = 0.001`, `252` features, `11,197` bytes,
+   SHA-256 `db1b49992c8a11b95c85a98be861b95502b00b0d3ec680709778236484d9ae80`)
+   preserved unchanged for direct v1/v2 comparison via `model_version: "v1"` or
+   the UI model selector.
+
+### Independently Reproduced Benchmark (v1 vs v2)
+
+| Dataset | Stage B v1 MAE | Stage B v2 MAE |
+| :--- | :---: | :---: |
+| Validation (`12` floorplans / `240` workloads) | `1.144337 °C` | `0.419293 °C` |
+| Held-out test (`12` floorplans / `240` workloads) | `1.070281 °C` | `0.350588 °C` |
+| External 23 Stage A floorplans (`460` workloads) | `1.491469 °C` | `0.460754 °C` |
+
+- **External 23-floorplan latency & size** (460 workloads, WSL Ubuntu):
+  - v1: `11,197 B`, median pipeline `0.7591 ms` (feature eng. `0.6521 ms` + inference `0.1061 ms`).
+  - v2: `3,028 B` (`.npz`), median pipeline `0.4552 ms` (feature eng. `0.3928 ms` + inference `0.0596 ms`).
+- **Evaluation disclosure**: The 12 held-out Stage B test floorplans and 23
+  external Stage A floorplans were evaluated during earlier v1/v2 development and
+  must not be described as completely untouched blind benchmarks or website guarantees.
+- **Standalone loading**: `from stage_b.ml.v2_model import load_v2_production_model; m = load_v2_production_model()`
+  loads `model_v2.npz` directly in a fresh Python process with NumPy only.
+- **Reproducing equivalence & evaluation**:
+  - `PYTHONDONTWRITEBYTECODE=1 python stage_b/models/v2_ridge/export_v2_production.py`
+  - `PYTHONDONTWRITEBYTECODE=1 python stage_b/experiments/stage_b_v2/independent_audit.py`
+
+Geometry comes from the original manifest and hashed FLPs; its original loader
+validates bounds, core count, FILL coverage and LCF assumptions. The Stage B
+catalogue contains the 77 original b_fp_006…082 geometries and does not load
+temperature labels.
 
 ## API
 
