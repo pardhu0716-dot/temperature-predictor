@@ -209,10 +209,9 @@ def main() -> None:
 
     # 2. External 23 original Stage A floorplans (460 HotSpot workloads, 3,680 core predictions)
     # Load Stage A reference results from our previous benchmark (identical 460 workloads)
-    bench_dir = PROJECT_DIR / "stage_b/benchmarks/stage_a_vs_stage_b_results"
-    bench_comp = {r["model"]: r for r in csv.DictReader((bench_dir / "comparison.csv").open(encoding="utf-8"))}
-    bench_fp = {r["floorplan"]: r for r in csv.DictReader((bench_dir / "per_floorplan.csv").open(encoding="utf-8"))}
-    bench_core = {r["core_id"]: r for r in csv.DictReader((bench_dir / "per_core.csv").open(encoding="utf-8"))}
+    # Recompute reference tables in memory from tracked inputs, not an untracked folder.
+    from stage_b.final_audit.reference_data import legacy_baseline_tables
+    bench_comp, bench_fp, bench_core, _ = legacy_baseline_tables(PROJECT_DIR)
     stage_a_ref = next(v for k, v in bench_comp.items() if "Stage A" in k)
 
     # Warmup v1 & v2
@@ -222,7 +221,7 @@ def main() -> None:
     p0 = parse_ptrace(sorted((fp_dirs[0] / "validation_samples/ptrace").glob("val_sample_*.ptrace"))[0])
     v2_bundle.predict_temperatures_c(g0, p0, d0)
     v1_predictor.predict({
-        "mode": "custom", "units": UNITS,
+        "mode": "custom", "model_version": "v1", "units": UNITS,
         "die": {"width_mm": float(d0[0]), "height_mm": float(d0[1])},
         "cores": [{"id": n, "width_mm": float(g0[i, 0]), "height_mm": float(g0[i, 1]),
                    "x_mm": float(g0[i, 2]), "y_mm": float(g0[i, 3]), "power_w": float(p0[i])}
@@ -250,7 +249,7 @@ def main() -> None:
 
             # Stage B v1 via actual web service Predictor
             res_v1 = v1_predictor.predict({
-                "mode": "custom", "units": UNITS,
+                "mode": "custom", "model_version": "v1", "units": UNITS,
                 "die": {"width_mm": float(die[0]), "height_mm": float(die[1])},
                 "cores": [{"id": n, "width_mm": float(g[i, 0]), "height_mm": float(g[i, 1]),
                            "x_mm": float(g[i, 2]), "y_mm": float(g[i, 3]), "power_w": float(p[i])}

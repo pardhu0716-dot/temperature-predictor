@@ -1,0 +1,8 @@
+{
+  "result": "PASS",
+  "workloads": 460,
+  "observations": 3680,
+  "independent_metrics_models": 3,
+  "stage_a_api_floorplans": 23,
+  "legacy_fallback_rows": 3680
+}

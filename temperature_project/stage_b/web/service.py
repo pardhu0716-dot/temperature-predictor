@@ -22,9 +22,15 @@ UNITS = {'geometry': 'mm', 'power': 'W', 'temperature': 'C'}
 
 
 def numeric(value, label):
-    if isinstance(value, bool) or not isinstance(value, (int, float)) or not np.isfinite(value):
+    if isinstance(value, bool) or not isinstance(value, (int, float)):
         raise ValueError(f'{label} must be a finite JSON number')
-    return float(value)
+    try:
+        result = float(value)
+    except (OverflowError, ValueError, TypeError) as exc:
+        raise ValueError(f'{label} must be a finite JSON number') from exc
+    if not np.isfinite(result):
+        raise ValueError(f'{label} must be a finite JSON number')
+    return result
 
 
 class Predictor:
@@ -74,6 +80,7 @@ class Predictor:
             feature_count=len(self.v2_model.feature_names),
             model_sha256=self.v2_model.artifact_sha256,
             artifact_format='numpy_npz_no_pickle',
+            nearest_neighbor_tie_policy='mean_power_at_1e-12_mm',
             units=UNITS,
             historical_test=dict(mae_c=0.350588, rmse_c=0.445882, max_absolute_error_c=1.512353,
                                  hottest_core_acc_pct=84.17, external_23fp_mae_c=0.460754),
@@ -187,6 +194,8 @@ class Predictor:
             )
             boundary = 'Input scaling + shared per-core Ridge prediction + inverse target scaling; excludes feature engineering and HTTP'
 
+        if temperatures.shape != (8,) or not np.isfinite(temperatures).all():
+            raise RuntimeError('Model returned invalid temperatures')
         hot = int(np.argmax(temperatures))
         return dict(floorplan_id=fid, mode=payload['mode'], model_version=model_version, units=UNITS,
                     core_order=list(CORE_IDS),

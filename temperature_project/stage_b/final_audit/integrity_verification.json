@@ -1,0 +1,24 @@
+{
+  "base_commit": "b9ec778e68605f78e717829266e16b38c7e284c6",
+  "original_tracked_files": 3344,
+  "unchanged_tracked_files": 3335,
+  "modified_tracked_files": [
+    "temperature_project/stage_b/experiments/stage_b_v2/evaluate_final.py",
+    "temperature_project/stage_b/experiments/stage_b_v2/features_v2.py",
+    "temperature_project/stage_b/experiments/stage_b_v2/independent_audit.py",
+    "temperature_project/stage_b/experiments/stage_b_v2/phase1_error_analysis.py",
+    "temperature_project/stage_b/ml/features_v2.py",
+    "temperature_project/stage_b/ml/v2_model.py",
+    "temperature_project/stage_b/web/__init__.py",
+    "temperature_project/stage_b/web/service.py",
+    "temperature_project/stage_b/web/static/stage_b.js"
+  ],
+  "deleted_tracked_files": [],
+  "protected_files_verified": 3260,
+  "all_protected_unchanged": true,
+  "model_sha256": {
+    "temperature_project/stage_b/experiments/stage_b_v2/candidate_model/model_v2.joblib": "e2c39c6d1ca55351e67e051b5e35f2c17a107389fd6102b12badb0b22446507a",
+    "temperature_project/stage_b/models/final_lasso/model.joblib": "db1b49992c8a11b95c85a98be861b95502b00b0d3ec680709778236484d9ae80",
+    "temperature_project/stage_b/models/v2_ridge/model_v2.npz": "edbae799105b57134ab99cfe3a68db2e4afd9c7aeb0ae78b3ec49476899c2175"
+  }
+}

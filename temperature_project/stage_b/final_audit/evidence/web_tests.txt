@@ -1,0 +1,55 @@
+test_concurrent_mixed_version_predictions_are_deterministic (test_final_audit.AdditionalAuditTests.test_concurrent_mixed_version_predictions_are_deterministic) ... ok
+test_frozen_production_equivalence_and_all_geometry_permutations (test_final_audit.AdditionalAuditTests.test_frozen_production_equivalence_and_all_geometry_permutations) ... ok
+test_bad_feature_shapes_rejected (test_final_audit.FinalAuditTests.test_bad_feature_shapes_rejected) ... ok
+test_batch_root_settings_rejected (test_final_audit.FinalAuditTests.test_batch_root_settings_rejected) ... ok
+test_huge_invalid_powers_useful_errors (test_final_audit.FinalAuditTests.test_huge_invalid_powers_useful_errors) ... ok
+test_invalid_scalers_and_scalars_fail_closed (test_final_audit.FinalAuditTests.test_invalid_scalers_and_scalars_fail_closed) ... ok
+test_missing_tampered_artifacts (test_final_audit.FinalAuditTests.test_missing_tampered_artifacts) ... ok
+test_model_runtime_error_returns_json (test_final_audit.FinalAuditTests.test_model_runtime_error_returns_json) ... [2026-11-19 18:59:17,228] ERROR in __init__: Stage B inference failed
+Traceback (most recent call last):
+  File "/workspace/work/stage-b-web-integration/temperature_project/stage_b/web/__init__.py", line 60, in predict
+    return jsonify(service.predict(payload))
+                   ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/work/stage-b-web-integration/temperature_project/stage_b/web/service.py", line 188, in predict
+    temperatures = self.v2_model.predict_from_features(X)[0]
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/unittest/mock.py", line 1139, in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/unittest/mock.py", line 1143, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/unittest/mock.py", line 1198, in _execute_mock_call
+    raise effect
+RuntimeError: private path
+ok
+test_named_reference_parsers_reject_misalignment (test_final_audit.FinalAuditTests.test_named_reference_parsers_reject_misalignment) ... ok
+test_nearest_tie_is_mean_not_first (test_final_audit.FinalAuditTests.test_nearest_tie_is_mean_not_first) ... ok
+test_production_experimental_features_match (test_final_audit.FinalAuditTests.test_production_experimental_features_match) ... ok
+test_reflection_equivariance_on_symmetric_layout (test_final_audit.FinalAuditTests.test_reflection_equivariance_on_symmetric_layout) ... ok
+test_scripts_explicitly_select_v1 (test_final_audit.FinalAuditTests.test_scripts_explicitly_select_v1) ... ok
+test_streaming_input_read_is_bounded (test_final_audit.FinalAuditTests.test_streaming_input_read_is_bounded) ... ok
+test_symmetric_permutation_equivariance (test_final_audit.FinalAuditTests.test_symmetric_permutation_equivariance) ... ok
+test_training_scalers_match_frozen_legacy_features (test_final_audit.FinalAuditTests.test_training_scalers_match_frozen_legacy_features) ... ok
+test_240_saved_validation_cases_both_modes_no_retraining (test_integration.WebIntegrationTests.test_240_saved_validation_cases_both_modes_no_retraining) ... ok
+test_all_23_stage_a_matrix_predictions_unchanged (test_integration.WebIntegrationTests.test_all_23_stage_a_matrix_predictions_unchanged) ... ok
+test_all_77_geometries_and_predictions (test_integration.WebIntegrationTests.test_all_77_geometries_and_predictions) ... ok
+test_all_eight_power_inputs (test_integration.WebIntegrationTests.test_all_eight_power_inputs) ... ok
+test_ambient_and_material_settings_are_fixed (test_integration.WebIntegrationTests.test_ambient_and_material_settings_are_fixed) ... ok
+test_api_formats_batches_limits (test_integration.WebIntegrationTests.test_api_formats_batches_limits) ... ok
+test_invalid_geometry_numbers_ids_powers (test_integration.WebIntegrationTests.test_invalid_geometry_numbers_ids_powers) ... ok
+test_model_loaded_once_and_feature_contract (test_integration.WebIntegrationTests.test_model_loaded_once_and_feature_contract) ... ok
+test_stage_a_html_unchanged_except_navigation (test_integration.WebIntegrationTests.test_stage_a_html_unchanged_except_navigation) ... ok
+test_invalid_model_version_rejected (test_v2_integration.StageBV2IntegrationTests.test_invalid_model_version_rejected) ... ok
+test_stage_b_page_exposes_model_selector (test_v2_integration.StageBV2IntegrationTests.test_stage_b_page_exposes_model_selector) ... ok
+test_v2_and_v1_switching_on_identical_inputs (test_v2_integration.StageBV2IntegrationTests.test_v2_and_v1_switching_on_identical_inputs) ... ok
+test_v2_core_permutation_equivariance_via_api (test_v2_integration.StageBV2IntegrationTests.test_v2_core_permutation_equivariance_via_api) ... ok
+test_v2_existing_matches_custom_and_is_repeatable (test_v2_integration.StageBV2IntegrationTests.test_v2_existing_matches_custom_and_is_repeatable) ... ok
+test_v2_is_default_and_uses_portable_npz (test_v2_integration.StageBV2IntegrationTests.test_v2_is_default_and_uses_portable_npz) ... ok
+test_v2_loads_in_fresh_python_process_without_experiments (test_v2_integration.StageBV2IntegrationTests.test_v2_loads_in_fresh_python_process_without_experiments) ... ok
+test_v2_production_and_v1_artifact_integrity (test_v2_integration.StageBV2IntegrationTests.test_v2_production_and_v1_artifact_integrity) ... ok
+
+----------------------------------------------------------------------
+Ran 33 tests in 8.127s
+
+OK

@@ -90,8 +90,10 @@
   function setMode(reset) {
     const custom = $('b-mode').value === 'custom';
     $('b-floorplan').disabled = custom || state.loading;
-    ['b-die-width','b-die-height'].forEach(id => $(id).readOnly = !custom);
-    [...$('b-inputs').rows].forEach(r => {r.querySelector('select').disabled = !custom; r.querySelectorAll('input').forEach(i => i.readOnly = !custom && i.dataset.field !== 'power_w');});
+    $('b-mode').disabled = state.loading || !state.floor;
+    $('b-reset').disabled = state.loading || !state.floor;
+    ['b-die-width','b-die-height'].forEach(id => $(id).readOnly = !custom || state.loading);
+    [...$('b-inputs').rows].forEach(r => {r.querySelector('select').disabled = !custom || state.loading; r.querySelectorAll('input').forEach(i => i.readOnly = state.loading || (!custom && i.dataset.field !== 'power_w'));});
     if (reset && state.floor) { populate(state.floor); return; }
     $('b-floorplan-note').textContent = custom ? 'Custom mode starts from the selected real layout. Edit IDs, geometry and die dimensions below.' : `${state.floor ? state.floor.id : ''} · repository geometry · 77 Stage B layouts`;
   }
@@ -101,7 +103,7 @@
     return data;
   }
   async function loadFloor() {
-    const token = ++state.loadToken; state.revision++; state.loading = true; $('b-predict').disabled = true; clearResults(); error('');
+    const token = ++state.loadToken; state.revision++; state.loading = true; $('b-predict').disabled = true; setMode(false); clearResults(); error('');
     try {
       const data = await api(`/api/stage-b/floorplans/${encodeURIComponent($('b-floorplan').value)}`);
       if (token !== state.loadToken) return;
@@ -114,12 +116,12 @@
       badge: 'Stage B v2 · Ridge (α = 0.01) · 3,028 B',
       summary: 'Stage B v2 · Ridge (α = 0.01)',
       scope: 'Shared per-core physics-informed Ridge model (Stage B v2, 63 features, 3,028 B portable .npz) for the supported 2D eight-core configuration. Fixed 45°C ambient and original training material settings. No per-floorplan calibration or online HotSpot run.',
-      eval: 'Stage B v2 held-out test: MAE 0.350588°C · RMSE 0.445882°C · Max error 1.512353°C · Hottest-core 84.17%. External 23 Stage A layouts: MAE 0.460754°C. Note: these evaluation sets were reused across v1/v2 comparisons and are historical reference metrics, not guarantees for individual predictions.'
+      eval: 'Historical v2 measurements before the nearest-neighbor tie correction — held-out test: MAE 0.350588°C · RMSE 0.445882°C · Max error 1.512353°C · Hottest-core 84.17%. External 23 Stage A layouts: MAE 0.460754°C. Note: these evaluation sets were reused across v1/v2 comparisons and are historical reference metrics, not guarantees for individual predictions.'
     },
     v1: {
       badge: 'Stage B v1 · Lasso (α = 0.001) · 11,197 B',
       summary: 'Stage B v1 · Lasso (α = 0.001)',
-      scope: 'Baseline multi-output Lasso model (Stage B v1, 252 features, 11,197 B) preserved for direct comparison on identical inputs. Fixed 45°C ambient and original training material settings. No per-floorplan calibration or online HotSpot run.',
+      scope: 'Baseline multi-output Lasso model (Stage B v1, 252 features, 11,197 B) preserved for direct comparison on identical inputs. Its features depend on core IDs; arbitrary physical core renaming is not an invariance of v1. Fixed 45°C ambient and original training material settings. No per-floorplan calibration or online HotSpot run.',
       eval: 'Stage B v1 held-out test: MAE 1.070281°C · RMSE 1.339064°C · Max error 4.974435°C · Hottest-core 56.67%. External 23 Stage A layouts: MAE 1.491469°C. Historical reference metrics, not guarantees for individual predictions.'
     }
   };

@@ -1,0 +1,105 @@
+test_full_dataset_geometry_and_power (test_dataset_preparation.DatasetTests.test_full_dataset_geometry_and_power) ... ok
+test_manifest_tamper_rejected (test_dataset_preparation.DatasetTests.test_manifest_tamper_rejected) ... ok
+test_reproducible_generation_and_input_preservation (test_dataset_preparation.DatasetTests.test_reproducible_generation_and_input_preservation) ... ok
+test_trace_failures_and_nonfinite (test_dataset_preparation.DatasetTests.test_trace_failures_and_nonfinite) ... ok
+test_command_and_selection_dry_run (test_dataset_preparation.RunnerTests.test_command_and_selection_dry_run) ... INFO DRY RUN: 1 jobs; no simulations or output writes
+ERROR ValueError: Unknown floorplan selection: ['missing']
+ok
+test_failure_and_retry_no_labels (test_dataset_preparation.RunnerTests.test_failure_and_retry_no_labels) ... INFO RUN b_fp_006/sample_001
+INFO RUN b_fp_006/sample_001
+ok
+test_kelvin_parser (test_dataset_preparation.RunnerTests.test_kelvin_parser) ... ok
+test_read_only_result_validation (test_dataset_preparation.RunnerTests.test_read_only_result_validation) ... ERROR MISSING/INVALID b_fp_006/sample_001: /tmp/tmpfuo538pf/results/b_fp_006/sample_001/result
+INFO RESULT VALIDATION: 0 valid, 1 missing/invalid; no simulations or output writes
+INFO RUN b_fp_006/sample_001
+INFO RESULT VALIDATION: 1 valid, 0 missing/invalid; no simulations or output writes
+ok
+test_resume_and_overwrite_protection (test_dataset_preparation.RunnerTests.test_resume_and_overwrite_protection) ... INFO RUN b_fp_006/sample_001
+INFO SKIP b_fp_006/sample_001: verified existing result
+ok
+test_tampered_labels_and_binary_rejected (test_dataset_preparation.RunnerTests.test_tampered_labels_and_binary_rejected) ... INFO RUN b_fp_006/sample_001
+ok
+test_timeout_missing_output_and_lock (test_dataset_preparation.RunnerTests.test_timeout_missing_output_and_lock) ... INFO RUN b_fp_006/sample_001
+INFO RUN b_fp_006/sample_001
+ok
+test_diversity_invariance (test_generate_floorplans.GeometryTests.test_diversity_invariance) ... ok
+test_fill_and_roundtrip (test_generate_floorplans.GeometryTests.test_fill_and_roundtrip) ... ok
+test_invalid_geometries (test_generate_floorplans.GeometryTests.test_invalid_geometries) ... ok
+test_malformed_file (test_generate_floorplans.GeometryTests.test_malformed_file) ... ok
+test_original_catalog (test_generate_floorplans.GeometryTests.test_original_catalog) ... ok
+test_pilot (test_generate_floorplans.GeometryTests.test_pilot) ... ok
+test_reproducible_and_safe_output (test_generate_floorplans.GeometryTests.test_reproducible_and_safe_output) ... ok
+test_configurable_workloads (test_generate_power_traces.TestStageBPowerTraceGeneration.test_configurable_workloads)
+Test random workload generation with custom ranges, sample counts, and seeds. ... ok
+test_different_big_little_numbering (test_generate_power_traces.TestStageBPowerTraceGeneration.test_different_big_little_numbering)
+Verify Big/Little assignment when Big cores are NOT Core_0 and Core_1. ... ok
+test_different_block_ordering (test_generate_power_traces.TestStageBPowerTraceGeneration.test_different_block_ordering)
+Verify headers and values match floorplan block sequence regardless of order. ... ok
+test_fill_power_assignment (test_generate_power_traces.TestStageBPowerTraceGeneration.test_fill_power_assignment)
+Test strict zero-power assignment to FILL blocks and rejection of non-zero fills. ... ok
+test_header_alignment_and_formatting (test_generate_power_traces.TestStageBPowerTraceGeneration.test_header_alignment_and_formatting)
+Test tab and space formatting of .ptrace files. ... ok
+test_hotspot_simulation_match (test_generate_power_traces.TestStageBPowerTraceGeneration.test_hotspot_simulation_match)
+Run HotSpot with freshly generated reference traces and verify physical temperature ranges. ... skipped 'Real HotSpot integration is opt-in; preparation tests never simulate'
+test_invalid_and_inconsistent_geometry_rejection (test_generate_power_traces.TestStageBPowerTraceGeneration.test_invalid_and_inconsistent_geometry_rejection)
+Verify that any non-standard or corrupt floorplan is rejected. ... ok
+test_pilot_reference_workloads (test_generate_power_traces.TestStageBPowerTraceGeneration.test_pilot_reference_workloads)
+Test all 5 pilot floorplans: exactly 88 W total, correct Big/Little assignment. ... ok
+
+----------------------------------------------------------------------
+Ran 26 tests in 3.538s
+
+OK (skipped=1)
+{"floorplan": "b_fp_006", "sample": "sample_001", "command": ["/does/not/exist", "-c", "/workspace/work/stage-b-web-integration/temperature_project/hotspot.config", "-f", "b_fp_006_layer_0.flp", "-p", "/workspace/work/stage-b-web-integration/temperature_project/stage_b/dataset_v1/workloads/b_fp_006/sample_001.ptrace", "-grid_layer_file", "b_fp_006.lcf", "-model_type", "grid", "-steady_file", "/tmp/tmpns4ctdv6/results/b_fp_006/sample_001/attempts/<attempt>/steady.temp"], "cwd": "isolated copy of /workspace/work/stage-b-web-integration/temperature_project/stage_b/dataset_v1/floorplans/b_fp_006"}
+[
+  {
+    "id": "b_fp_001",
+    "style": "Style_1",
+    "die_um": [
+      17466,
+      8423
+    ],
+    "fills": 22,
+    "nearest_um": 934.01
+  },
+  {
+    "id": "b_fp_002",
+    "style": "Style_2",
+    "die_um": [
+      13287,
+      6278
+    ],
+    "fills": 20,
+    "nearest_um": 553.52
+  },
+  {
+    "id": "b_fp_003",
+    "style": "Style_3",
+    "die_um": [
+      8031,
+      16422
+    ],
+    "fills": 25,
+    "nearest_um": 891.11
+  },
+  {
+    "id": "b_fp_004",
+    "style": "Style_4",
+    "die_um": [
+      15556,
+      14670
+    ],
+    "fills": 25,
+    "nearest_um": 682.96
+  },
+  {
+    "id": "b_fp_005",
+    "style": "Style_1",
+    "die_um": [
+      10076,
+      10700
+    ],
+    "fills": 25,
+    "nearest_um": 841.01
+  }
+]

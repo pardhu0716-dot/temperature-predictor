@@ -96,9 +96,9 @@ def main() -> None:
     tr_area = tr_die[:, 0] * tr_die[:, 1]
 
     # 2. Load 23-floorplan external benchmark predictions
-    bench_dir = PROJECT_DIR / "stage_b/benchmarks/stage_a_vs_stage_b_results"
-    pred_rows = list(csv.DictReader((bench_dir / "predictions.csv").open(encoding="utf-8")))
-    fp_rows = list(csv.DictReader((bench_dir / "per_floorplan.csv").open(encoding="utf-8")))
+    from stage_b.final_audit.reference_data import legacy_baseline_tables
+    _, fp_mapping, _, pred_rows = legacy_baseline_tables(PROJECT_DIR)
+    fp_rows = list(fp_mapping.values())
 
     # Load geometries of all 23 Stage A floorplans
     sa_geom: Dict[str, Tuple[np.ndarray, np.ndarray]] = {}

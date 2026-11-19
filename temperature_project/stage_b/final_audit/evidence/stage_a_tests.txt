@@ -1,0 +1,10 @@
+test_all_23_models_ready_without_raw_training_archives (test_saved_models.SavedModelTests.test_all_23_models_ready_without_raw_training_archives) ... ok
+test_batch_never_calibrates_launches_hotspot_or_changes_saved_files (test_saved_models.SavedModelTests.test_batch_never_calibrates_launches_hotspot_or_changes_saved_files) ... ok
+test_missing_and_invalid_matrices_are_not_ready (test_saved_models.SavedModelTests.test_missing_and_invalid_matrices_are_not_ready) ... ok
+test_missing_model_fails_without_overwriting_summary (test_saved_models.SavedModelTests.test_missing_model_fails_without_overwriting_summary) ... ok
+test_overwrite_option_is_rejected (test_saved_models.SavedModelTests.test_overwrite_option_is_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 3.868s
+
+OK

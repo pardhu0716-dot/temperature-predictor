@@ -1,0 +1,21 @@
+test_cli_missing_data_and_schema_template (test_framework.DataTests.test_cli_missing_data_and_schema_template) ... FileNotFoundError: [Errno 2] No such file or directory: '/nonexistent/schema.json'
+FileExistsError: [Errno 17] File exists: '/tmp/tmpzp9gqbl4/schema.json'
+ValueError: CSV is empty or has no header
+ok
+test_cli_smoke_on_synthetic_fixture_only (test_framework.DataTests.test_cli_smoke_on_synthetic_fixture_only) ... ok
+test_end_to_end_selection_and_test_gate (test_framework.DataTests.test_end_to_end_selection_and_test_gate) ... ok
+test_feature_no_target_leakage (test_framework.DataTests.test_feature_no_target_leakage) ... ok
+test_floorplan_splits_and_train_only_scaling (test_framework.DataTests.test_floorplan_splits_and_train_only_scaling) ... ok
+test_schema_units_and_core_alignment (test_framework.DataTests.test_schema_units_and_core_alignment) ... ok
+test_validation_rejects_bad_rows (test_framework.DataTests.test_validation_rejects_bad_rows) ... ok
+test_all_models_multi_output (test_framework.ModelTests.test_all_models_multi_output) ... ok
+test_external_contract_fail_closed (test_framework.ModelTests.test_external_contract_fail_closed) ... ok
+test_metrics_and_regularization (test_framework.ModelTests.test_metrics_and_regularization) ... ok
+test_optimizers_learn_linear_problem_reproducibly (test_framework.ModelTests.test_optimizers_learn_linear_problem_reproducibly) ... ok
+test_xgboost_multi_output (test_framework.ModelTests.test_xgboost_multi_output) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 24.504s
+
+OK
+EXAMPLE mapping created. Inspect CSV and edit all column/unit declarations before validation.

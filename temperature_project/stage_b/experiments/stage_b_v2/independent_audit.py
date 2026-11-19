@@ -157,7 +157,8 @@ def main() -> None:
     va_mask = np.isin(ds.floorplan_ids, list(va_ids))
     te_mask = np.isin(ds.floorplan_ids, list(te_ids))
 
-    X_tr, defs = build_per_core_features(ds.geometry_mm[tr_mask], ds.powers_w[tr_mask], ds.die_mm[tr_mask], groups=v2.feature_groups)
+    X_tr, defs = build_per_core_features(ds.geometry_mm[tr_mask], ds.powers_w[tr_mask], ds.die_mm[tr_mask], groups=v2.feature_groups, nearest_policy="legacy_first")
+    # Frozen scalers were fitted before the symmetric nearest-tie correction.
     assert [d["name"] for d in defs] == v2.feature_names
     sc = StandardScaler().fit(X_tr)
     expected_scale = np.where(sc.scale_ == 0.0, 1.0, sc.scale_)
@@ -217,7 +218,7 @@ def main() -> None:
     wg, wd = parse_flp(fp_dirs[0] / f"{fp_dirs[0].name}_layer_0.flp")
     wp = parse_ptrace(sorted((fp_dirs[0] / "validation_samples/ptrace").glob("val_sample_*.ptrace"))[0])
     v2.predict(wg, wp, wd)
-    v1_web.predict({"mode": "custom", "units": UNITS, "die": {"width_mm": float(wd[0]), "height_mm": float(wd[1])},
+    v1_web.predict({"mode": "custom", "model_version": "v1", "units": UNITS, "die": {"width_mm": float(wd[0]), "height_mm": float(wd[1])},
                     "cores": [{"id": n, "width_mm": float(wg[i,0]), "height_mm": float(wg[i,1]),
                                "x_mm": float(wg[i,2]), "y_mm": float(wg[i,3]), "power_w": float(wp[i])}
                               for i, n in enumerate(CORE_IDS)]})
@@ -233,7 +234,7 @@ def main() -> None:
         for pt in sorted((fp_dir / "validation_samples/ptrace").glob("val_sample_*.ptrace")):
             p = parse_ptrace(pt)
             gt = parse_steady(fp_dir / "validation_samples/steady" / f"{pt.stem}.steady")
-            r1 = v1_web.predict({"mode": "custom", "units": UNITS, "die": {"width_mm": float(die[0]), "height_mm": float(die[1])},
+            r1 = v1_web.predict({"mode": "custom", "model_version": "v1", "units": UNITS, "die": {"width_mm": float(die[0]), "height_mm": float(die[1])},
                                  "cores": [{"id": n, "width_mm": float(g[i,0]), "height_mm": float(g[i,1]),
                                             "x_mm": float(g[i,2]), "y_mm": float(g[i,3]), "power_w": float(p[i])}
                                            for i, n in enumerate(CORE_IDS)]})

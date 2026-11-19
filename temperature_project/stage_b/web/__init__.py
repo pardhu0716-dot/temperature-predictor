@@ -36,16 +36,21 @@ def predict():
         # Local to this route: Stage A request limits/handling are unchanged.
         if request.content_length is not None and request.content_length > 100_000:
             return jsonify(error='Stage B request exceeds 100 KB'), 413
-        raw = request.get_data(cache=True)
+        raw = request.stream.read(100_001)
         if len(raw) > 100_000:
             return jsonify(error='Stage B request exceeds 100 KB'), 413
         if not request.is_json:
             return jsonify(error='Send application/json'), 415
-        payload = request.get_json()
+        try:
+            payload = current_app.json.loads(raw)
+        except (ValueError, UnicodeDecodeError) as exc:
+            raise ValueError('Malformed JSON request body') from exc
         if not isinstance(payload, dict):
             raise ValueError('Body must be a JSON object')
         service = current_app.extensions['stage_b_predictor']
         if 'batch' in payload:
+            if set(payload) != {'batch'}:
+                raise ValueError('Batch accepts only batch; declare model_version and settings on each item')
             batch = payload['batch']
             if not isinstance(batch, list) or not 1 <= len(batch) <= 32:
                 raise ValueError('batch must contain 1–32 predictions')
@@ -57,6 +62,9 @@ def predict():
         return jsonify(error=str(exc)), 400
     except KeyError:
         return jsonify(error='Unknown Stage B floorplan'), 404
+    except RuntimeError:
+        current_app.logger.exception('Stage B inference failed')
+        return jsonify(error='Stage B model inference is unavailable; check server logs'), 503
     except RequestEntityTooLarge:
         return jsonify(error='Stage B request too large'), 413
 

@@ -12,6 +12,7 @@ from __future__ import annotations
 
 from typing import Dict, List, Sequence, Tuple
 import numpy as np
+from stage_b.ml.geometry_features import feature_inputs, nearest_power
 
 VERSION = 2
 AMBIENT_C = 45.0
@@ -29,6 +30,7 @@ def build_per_core_features(
     powers_w: np.ndarray,
     die_mm: np.ndarray,
     groups: Sequence[str] = PRODUCTION_GROUPS,
+    nearest_policy: str = "mean_ties",
 ) -> Tuple[np.ndarray, List[Dict[str, str]]]:
     """
     Build permutation-equivariant per-core physical features.
@@ -51,13 +53,7 @@ def build_per_core_features(
     definitions : list of dict
         Ordered feature metadata [{'name': ..., 'group': ..., 'unit': ...}, ...].
     """
-    g = np.asarray(geometry_mm, dtype=np.float64)
-    p = np.asarray(powers_w, dtype=np.float64)
-    die = np.asarray(die_mm, dtype=np.float64)
-    if g.ndim == 2:
-        g = g[None, :, :]
-        p = p[None, :]
-        die = die[None, :]
+    g, p, die = feature_inputs(geometry_mm, powers_w, die_mm)
 
     N = g.shape[0]
     w = g[:, :, 0]
@@ -141,11 +137,9 @@ def build_per_core_features(
         c_inv1 = np.sum(p_src / (dist + 1.0), axis=2)
         add("coupling.is_big_x_sum_p_exp_3.0", is_big * c_exp3, grp, "W")
         add("coupling.is_big_x_sum_p_over_d_1.0", is_big * c_inv1, grp, "W/mm")
-        dist_masked = dist + (1.0 - off_diag) * 1e6
-        min_d = np.min(dist_masked, axis=2)
+        # Average tied nearest powers so core IDs cannot break geometric symmetry.
+        min_d, nearest_p = nearest_power(p, dist, policy=nearest_policy)
         mean_d = np.sum(dist * off_diag, axis=2) / 7.0
-        nearest_idx = np.argmin(dist_masked, axis=2)
-        nearest_p = np.take_along_axis(p, nearest_idx, axis=1)
         add("geom.min_neighbor_dist_mm", min_d, grp, "mm")
         add("geom.mean_neighbor_dist_mm", mean_d, grp, "mm")
         add("coupling.nearest_p_over_d", nearest_p / (min_d + 0.5), grp, "W/mm")

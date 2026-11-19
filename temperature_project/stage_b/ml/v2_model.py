@@ -15,7 +15,7 @@ import json
 from pathlib import Path
 from typing import Any, Dict, List, Tuple
 import numpy as np
-from .features_v2 import build_per_core_features
+from .features_v2 import build_per_core_features, PRODUCTION_GROUPS
 
 V2_MODEL_DIR = Path(__file__).resolve().parents[1] / "models/v2_ridge"
 
@@ -45,9 +45,16 @@ class StageBV2ProductionModel:
         return X
 
     def predict_from_features(self, X: np.ndarray) -> np.ndarray:
-        Xs = (X - self.x_mean) / self.x_scale
-        pred_scaled = Xs @ self.coef + self.intercept
-        return (pred_scaled * self.y_scale + self.y_mean).reshape(-1, 8)
+        X = np.asarray(X, dtype=np.float64)
+        if X.ndim != 2 or X.shape[1] != len(self.coef) or not len(X) or len(X) % 8 or not np.isfinite(X).all():
+            raise ValueError("Expected finite v2 features with shape (N*8,63)")
+        with np.errstate(over='raise', invalid='raise', divide='raise'):
+            Xs = (X - self.x_mean) / self.x_scale
+            pred_scaled = Xs @ self.coef + self.intercept
+            result = (pred_scaled * self.y_scale + self.y_mean).reshape(-1, 8)
+        if not np.isfinite(result).all():
+            raise RuntimeError("Nonfinite Stage B v2 prediction")
+        return result
 
     def predict(
         self, geometry_mm: np.ndarray, powers_w: np.ndarray, die_mm: np.ndarray
@@ -61,8 +68,11 @@ def load_v2_production_model(model_dir: Path | str = V2_MODEL_DIR) -> StageBV2Pr
     root = Path(model_dir).resolve()
     meta_path = root / "metadata.json"
     npz_path = root / "model_v2.npz"
-    meta = json.loads(meta_path.read_text(encoding="utf-8"))
-    raw_bytes = npz_path.read_bytes()
+    try:
+        meta = json.loads(meta_path.read_text(encoding="utf-8"))
+        raw_bytes = npz_path.read_bytes()
+    except (OSError, ValueError) as exc:
+        raise RuntimeError("Cannot read Stage B v2 model/metadata artifacts") from exc
     actual_sha = hashlib.sha256(raw_bytes).hexdigest()
     expected_sha = meta["artifact"]["npz_sha256"]
     if actual_sha != expected_sha:
@@ -79,10 +89,18 @@ def load_v2_production_model(model_dir: Path | str = V2_MODEL_DIR) -> StageBV2Pr
         y_scale = float(np.asarray(data["y_scale"], dtype=np.float64).reshape(()))
 
     feature_names = tuple(meta["feature_names"])
+    if (len(feature_names) != 63 or not all(isinstance(n, str) and n for n in feature_names)
+            or len(set(feature_names)) != 63
+            or tuple(meta["feature_groups"]) != PRODUCTION_GROUPS
+            or meta["units"] != {"geometry": "mm", "power": "W", "temperature": "C"}
+            or meta["ambient_c"] != 45.0):
+        raise RuntimeError("Unsupported Stage B v2 feature/unit/ambient metadata")
     if coef.shape != (len(feature_names),) or x_mean.shape != coef.shape or x_scale.shape != coef.shape:
         raise RuntimeError("Stage B v2 production weight/scaler shapes mismatch metadata")
     if not (np.isfinite(coef).all() and np.isfinite(x_mean).all() and np.isfinite(x_scale).all()):
         raise RuntimeError("Nonfinite parameter in Stage B v2 production artifact")
+    if not np.isfinite([intercept, y_mean, y_scale]).all() or np.any(x_scale <= 0) or y_scale <= 0:
+        raise RuntimeError("Invalid finite/positive Stage B v2 scalar or scaling parameter")
 
     return StageBV2ProductionModel(
         coef=coef,

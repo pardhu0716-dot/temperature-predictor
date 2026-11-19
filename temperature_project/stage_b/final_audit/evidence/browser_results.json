@@ -1,0 +1,206 @@
+{
+  "desktop": {
+    "floorplans": 77,
+    "power_inputs": 8,
+    "existing_result": {
+      "core_order": [
+        "Core_0_L0",
+        "Core_1_L0",
+        "Core_2_L0",
+        "Core_3_L0",
+        "Core_4_L0",
+        "Core_5_L0",
+        "Core_6_L0",
+        "Core_7_L0"
+      ],
+      "feature_engineering_ms": 41.889282,
+      "floorplan_id": "b_fp_006",
+      "hottest_core": "Core_2_L0",
+      "latency_boundary": "Input scaling + shared per-core Ridge prediction + inverse target scaling; excludes feature engineering and HTTP",
+      "latency_ms": 1.451117,
+      "maximum_c": 140.29365745403325,
+      "minimum_c": 134.49218851347874,
+      "mode": "existing",
+      "model": {
+        "alpha": 0.01,
+        "feature_count": 63,
+        "name": "Ridge Regression (Stage B v2 \u00b7 Shared Physics)",
+        "serialized_bundle_bytes": 3028,
+        "version": "v2"
+      },
+      "model_version": "v2",
+      "temperatures_c": {
+        "Core_0_L0": 139.2010904051556,
+        "Core_1_L0": 137.80046046108367,
+        "Core_2_L0": 140.29365745403325,
+        "Core_3_L0": 140.2788335266818,
+        "Core_4_L0": 134.54172122905962,
+        "Core_5_L0": 134.49218851347874,
+        "Core_6_L0": 138.87824521616616,
+        "Core_7_L0": 138.52973704707625
+      },
+      "units": {
+        "geometry": "mm",
+        "power": "W",
+        "temperature": "C"
+      },
+      "warning": null
+    },
+    "custom_result": {
+      "core_order": [
+        "Core_0_L0",
+        "Core_1_L0",
+        "Core_2_L0",
+        "Core_3_L0",
+        "Core_4_L0",
+        "Core_5_L0",
+        "Core_6_L0",
+        "Core_7_L0"
+      ],
+      "feature_engineering_ms": 1.359617,
+      "floorplan_id": null,
+      "hottest_core": "Core_2_L0",
+      "latency_boundary": "Input scaling + shared per-core Ridge prediction + inverse target scaling; excludes feature engineering and HTTP",
+      "latency_ms": 0.050737,
+      "maximum_c": 139.2424553441458,
+      "minimum_c": 133.62032984981144,
+      "mode": "custom",
+      "model": {
+        "alpha": 0.01,
+        "feature_count": 63,
+        "name": "Ridge Regression (Stage B v2 \u00b7 Shared Physics)",
+        "serialized_bundle_bytes": 3028,
+        "version": "v2"
+      },
+      "model_version": "v2",
+      "temperatures_c": {
+        "Core_0_L0": 138.2215982596561,
+        "Core_1_L0": 136.75720653613612,
+        "Core_2_L0": 139.2424553441458,
+        "Core_3_L0": 139.1006299270647,
+        "Core_4_L0": 133.67355097072922,
+        "Core_5_L0": 133.62032984981144,
+        "Core_6_L0": 137.8335540615688,
+        "Core_7_L0": 137.4812171482794
+      },
+      "units": {
+        "geometry": "mm",
+        "power": "W",
+        "temperature": "C"
+      },
+      "warning": "Custom geometry accuracy is not guaranteed."
+    },
+    "heatmap_values_match_api": true,
+    "geometry_preview_updates": true,
+    "reset_and_overlap_checks": true,
+    "api_error_clears_results": true,
+    "stale_response_ignored": true,
+    "no_page_horizontal_overflow": true
+  },
+  "mobile": {
+    "floorplans": 77,
+    "power_inputs": 8,
+    "existing_result": {
+      "core_order": [
+        "Core_0_L0",
+        "Core_1_L0",
+        "Core_2_L0",
+        "Core_3_L0",
+        "Core_4_L0",
+        "Core_5_L0",
+        "Core_6_L0",
+        "Core_7_L0"
+      ],
+      "feature_engineering_ms": 2.162209,
+      "floorplan_id": "b_fp_006",
+      "hottest_core": "Core_2_L0",
+      "latency_boundary": "Input scaling + shared per-core Ridge prediction + inverse target scaling; excludes feature engineering and HTTP",
+      "latency_ms": 0.166741,
+      "maximum_c": 140.29365745403325,
+      "minimum_c": 134.49218851347874,
+      "mode": "existing",
+      "model": {
+        "alpha": 0.01,
+        "feature_count": 63,
+        "name": "Ridge Regression (Stage B v2 \u00b7 Shared Physics)",
+        "serialized_bundle_bytes": 3028,
+        "version": "v2"
+      },
+      "model_version": "v2",
+      "temperatures_c": {
+        "Core_0_L0": 139.2010904051556,
+        "Core_1_L0": 137.80046046108367,
+        "Core_2_L0": 140.29365745403325,
+        "Core_3_L0": 140.2788335266818,
+        "Core_4_L0": 134.54172122905962,
+        "Core_5_L0": 134.49218851347874,
+        "Core_6_L0": 138.87824521616616,
+        "Core_7_L0": 138.52973704707625
+      },
+      "units": {
+        "geometry": "mm",
+        "power": "W",
+        "temperature": "C"
+      },
+      "warning": null
+    },
+    "custom_result": {
+      "core_order": [
+        "Core_0_L0",
+        "Core_1_L0",
+        "Core_2_L0",
+        "Core_3_L0",
+        "Core_4_L0",
+        "Core_5_L0",
+        "Core_6_L0",
+        "Core_7_L0"
+      ],
+      "feature_engineering_ms": 8.46427,
+      "floorplan_id": null,
+      "hottest_core": "Core_2_L0",
+      "latency_boundary": "Input scaling + shared per-core Ridge prediction + inverse target scaling; excludes feature engineering and HTTP",
+      "latency_ms": 0.127185,
+      "maximum_c": 139.2424553441458,
+      "minimum_c": 133.62032984981144,
+      "mode": "custom",
+      "model": {
+        "alpha": 0.01,
+        "feature_count": 63,
+        "name": "Ridge Regression (Stage B v2 \u00b7 Shared Physics)",
+        "serialized_bundle_bytes": 3028,
+        "version": "v2"
+      },
+      "model_version": "v2",
+      "temperatures_c": {
+        "Core_0_L0": 138.2215982596561,
+        "Core_1_L0": 136.75720653613612,
+        "Core_2_L0": 139.2424553441458,
+        "Core_3_L0": 139.1006299270647,
+        "Core_4_L0": 133.67355097072922,
+        "Core_5_L0": 133.62032984981144,
+        "Core_6_L0": 137.8335540615688,
+        "Core_7_L0": 137.4812171482794
+      },
+      "units": {
+        "geometry": "mm",
+        "power": "W",
+        "temperature": "C"
+      },
+      "warning": "Custom geometry accuracy is not guaranteed."
+    },
+    "heatmap_values_match_api": true,
+    "geometry_preview_updates": true,
+    "reset_and_overlap_checks": true,
+    "api_error_clears_results": true,
+    "stale_response_ignored": true,
+    "no_page_horizontal_overflow": true
+  },
+  "stage_a": {
+    "floorplans": 23,
+    "all_core_prediction": true,
+    "individual_core_prediction": true,
+    "shared_navigation": true
+  },
+  "javascript_errors": [],
+  "failed_stage_b_assets": []
+}

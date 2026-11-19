@@ -1,0 +1,144 @@
+FFFFFFFF.[2026-11-19 18:49:21,058] ERROR in app: Exception on /api/stage-b/predict [POST]
+Traceback (most recent call last):
+  File "/workspace/work/review-b9ec778-clean-env/lib/python3.12/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/work/review-b9ec778-clean-env/lib/python3.12/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/work/review-b9ec778-clean-env/lib/python3.12/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/work/review-b9ec778-clean-env/lib/python3.12/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/work/review-b9ec778/temperature_project/stage_b/web/__init__.py", line 55, in predict
+    return jsonify(service.predict(payload))
+                   ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/work/review-b9ec778/temperature_project/stage_b/web/service.py", line 181, in predict
+    temperatures = self.v2_model.predict_from_features(X)[0]
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/unittest/mock.py", line 1139, in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/unittest/mock.py", line 1143, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/unittest/mock.py", line 1198, in _execute_mock_call
+    raise effect
+RuntimeError: private path
+FF...F
+======================================================================
+FAIL: test_bad_feature_shapes_rejected (__main__.FinalAuditTests.test_bad_feature_shapes_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/work/stage-b-web-integration/temperature_project/stage_b/web/tests/test_final_audit.py", line 28, in test_bad_feature_shapes_rejected
+    with self.assertRaises(ValueError):build_per_core_features(g,p,d)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_batch_root_settings_rejected (__main__.FinalAuditTests.test_batch_root_settings_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/work/stage-b-web-integration/temperature_project/stage_b/web/tests/test_final_audit.py", line 53, in test_batch_root_settings_rejected
+    self.assertEqual(self.client.post('/api/stage-b/predict',json={'batch':[self.payload],key:value}).status_code,400)
+AssertionError: 200 != 400
+
+======================================================================
+FAIL: test_huge_invalid_powers_useful_errors (__main__.FinalAuditTests.test_huge_invalid_powers_useful_errors)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/work/stage-b-web-integration/temperature_project/stage_b/web/tests/test_final_audit.py", line 56, in test_huge_invalid_powers_useful_errors
+    p=copy.deepcopy(self.payload);p['powers_w']['Core_0_L0']=power;r=self.client.post('/api/stage-b/predict',json=p);self.assertEqual(r.status_code,400);self.assertNotIn('ufunc',r.json['error'])
+                                                                                                                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'ufunc' unexpectedly found in "ufunc 'isfinite' not supported for the input types, and the inputs could not be safely coerced to any supported types according to the casting rule ''safe''"
+
+======================================================================
+FAIL: test_invalid_scalers_and_scalars_fail_closed (__main__.FinalAuditTests.test_invalid_scalers_and_scalars_fail_closed) (field='x_scale')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/work/stage-b-web-integration/temperature_project/stage_b/web/tests/test_final_audit.py", line 37, in test_invalid_scalers_and_scalars_fail_closed
+    with self.assertRaises(RuntimeError):load_v2_production_model(root)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: RuntimeError not raised
+
+======================================================================
+FAIL: test_invalid_scalers_and_scalars_fail_closed (__main__.FinalAuditTests.test_invalid_scalers_and_scalars_fail_closed) (field='x_scale')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/work/stage-b-web-integration/temperature_project/stage_b/web/tests/test_final_audit.py", line 37, in test_invalid_scalers_and_scalars_fail_closed
+    with self.assertRaises(RuntimeError):load_v2_production_model(root)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: RuntimeError not raised
+
+======================================================================
+FAIL: test_invalid_scalers_and_scalars_fail_closed (__main__.FinalAuditTests.test_invalid_scalers_and_scalars_fail_closed) (field='y_scale')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/work/stage-b-web-integration/temperature_project/stage_b/web/tests/test_final_audit.py", line 37, in test_invalid_scalers_and_scalars_fail_closed
+    with self.assertRaises(RuntimeError):load_v2_production_model(root)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: RuntimeError not raised
+
+======================================================================
+FAIL: test_invalid_scalers_and_scalars_fail_closed (__main__.FinalAuditTests.test_invalid_scalers_and_scalars_fail_closed) (field='y_mean')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/work/stage-b-web-integration/temperature_project/stage_b/web/tests/test_final_audit.py", line 37, in test_invalid_scalers_and_scalars_fail_closed
+    with self.assertRaises(RuntimeError):load_v2_production_model(root)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: RuntimeError not raised
+
+======================================================================
+FAIL: test_invalid_scalers_and_scalars_fail_closed (__main__.FinalAuditTests.test_invalid_scalers_and_scalars_fail_closed) (field='intercept')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/work/stage-b-web-integration/temperature_project/stage_b/web/tests/test_final_audit.py", line 37, in test_invalid_scalers_and_scalars_fail_closed
+    with self.assertRaises(RuntimeError):load_v2_production_model(root)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: RuntimeError not raised
+
+======================================================================
+FAIL: test_model_runtime_error_returns_json (__main__.FinalAuditTests.test_model_runtime_error_returns_json)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/work/stage-b-web-integration/temperature_project/stage_b/web/tests/test_final_audit.py", line 59, in test_model_runtime_error_returns_json
+    self.assertEqual(r.status_code,503);self.assertNotIn('private path',r.json['error'])
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 500 != 503
+
+======================================================================
+FAIL: test_nearest_tie_is_mean_not_first (__main__.FinalAuditTests.test_nearest_tie_is_mean_not_first)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/work/stage-b-web-integration/temperature_project/stage_b/web/tests/test_final_audit.py", line 22, in test_nearest_tie_is_mean_not_first
+    self.assertAlmostEqual(X[3,i],((P[2]+P[4])/2)/3,places=12)
+AssertionError: np.float64(1.8333333333333333) != np.float64(2.4166666666666665) within 12 places (np.float64(0.5833333333333333) difference)
+
+======================================================================
+FAIL: test_symmetric_permutation_equivariance (__main__.FinalAuditTests.test_symmetric_permutation_equivariance)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/work/stage-b-web-integration/temperature_project/stage_b/web/tests/test_final_audit.py", line 19, in test_symmetric_permutation_equivariance
+    for perm in [np.arange(8)[::-1],np.array([2,4,1,6,0,7,5,3]),np.random.default_rng(9).permutation(8)]:np.testing.assert_allclose(m.predict(G[perm],P[perm],D)[0],expected[perm],atol=1e-11,rtol=0)
+                                                                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/work/review-b9ec778-clean-env/lib/python3.12/site-packages/numpy/testing/_private/utils.py", line 1711, in assert_allclose
+    assert_array_compare(compare, actual, desired, err_msg=str(err_msg),
+  File "/workspace/work/review-b9ec778-clean-env/lib/python3.12/site-packages/numpy/testing/_private/utils.py", line 919, in assert_array_compare
+    raise AssertionError(msg)
+AssertionError: 
+Not equal to tolerance rtol=0, atol=1e-11
+
+Mismatched elements: 2 / 8 (25%)
+Max absolute difference among violations: 0.00860415
+Max relative difference among violations: 6.12577955e-05
+ ACTUAL: array([144.51582 , 142.086207, 140.328409, 144.715874, 140.449482,
+       139.455233, 136.683129, 137.745572])
+ DESIRED: array([144.51582 , 142.092353, 140.328409, 144.715874, 140.458086,
+       139.455233, 136.683129, 137.745572])
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.285s
+
+FAILED (failures=11)

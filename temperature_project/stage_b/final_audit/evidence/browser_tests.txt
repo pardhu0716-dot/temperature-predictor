@@ -1,0 +1,7 @@
+{
+  "desktop": "PASS",
+  "mobile": "PASS",
+  "stage_a": "PASS",
+  "javascript_errors": "PASS",
+  "failed_stage_b_assets": "PASS"
+}
