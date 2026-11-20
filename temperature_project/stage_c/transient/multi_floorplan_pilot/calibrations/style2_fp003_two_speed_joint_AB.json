@@ -1,0 +1,295 @@
+{
+  "architecture": "generalized_two_speed",
+  "full_name": "Style_2/fp_003",
+  "tag": "style2_fp003",
+  "calibration_strategy": "joint_A_plus_B",
+  "num_active_cores_N": 8,
+  "num_passive_blocks": 1,
+  "core_names_ordered": [
+    "Core_0_L0",
+    "Core_1_L0",
+    "Core_2_L0",
+    "Core_3_L0",
+    "Core_4_L0",
+    "Core_5_L0",
+    "Core_6_L0",
+    "Core_7_L0"
+  ],
+  "core_types_ordered": [
+    "Little",
+    "Little",
+    "Little",
+    "Little",
+    "Little",
+    "Little",
+    "Big",
+    "Big"
+  ],
+  "dt_seconds": 0.01,
+  "ambient_temp_c": 45.0,
+  "beta": [
+    0.17734273803374953,
+    0.18076596921207178,
+    0.18208647042228365,
+    0.18071915523022986,
+    0.176040021364887,
+    0.17138402352202975,
+    0.12509887416275203,
+    0.11811726761861607
+  ],
+  "tau_fast_seconds": [
+    0.006177740473942629,
+    0.006462254935774397,
+    0.006631852719563178,
+    0.006614656030179447,
+    0.006460555706687381,
+    0.006136208186986381,
+    0.009887643942431168,
+    0.011905162991213882
+  ],
+  "tau_slow_seconds": [
+    39.12734321486495,
+    38.80928144321674,
+    38.68905935622274,
+    38.85365205416837,
+    39.294417019554494,
+    39.931473630335624,
+    41.422768909965576,
+    41.78852915666367
+  ],
+  "alpha_fast": [
+    0.8018468000612644,
+    0.7872095631480204,
+    0.7786199249908848,
+    0.7794860693220108,
+    0.7872961519439645,
+    0.8040059374364448,
+    0.6362772142419628,
+    0.5682772591168973
+  ],
+  "alpha_slow": [
+    0.00025554309106069203,
+    0.0002576371266671077,
+    0.00025843760284422797,
+    0.00025734294465143117,
+    0.00025445669947369746,
+    0.0002503976700674024,
+    0.0002413839850553337,
+    0.00023927148900970062
+  ],
+  "transient_param_count": 24,
+  "total_param_count_with_R": 88,
+  "raw_float64_bytes_with_R": 704,
+  "optimizer": {
+    "optimizer": "L-BFGS-B",
+    "all_cores_success": true,
+    "mean_mse_c2": 0.5523765938498313,
+    "calibration_time_ms": 1725.301416,
+    "per_core": [
+      {
+        "core_name": "Core_0_L0",
+        "success": true,
+        "status": 0,
+        "nit": 18,
+        "nfev": 23,
+        "mse_c2": 0.5329706408561516,
+        "max_grad_abs": 4.636797079626831e-08
+      },
+      {
+        "core_name": "Core_1_L0",
+        "success": true,
+        "status": 0,
+        "nit": 25,
+        "nfev": 28,
+        "mse_c2": 0.560932169488062,
+        "max_grad_abs": 2.7137211411343287e-07
+      },
+      {
+        "core_name": "Core_2_L0",
+        "success": true,
+        "status": 0,
+        "nit": 19,
+        "nfev": 24,
+        "mse_c2": 0.5793372501305334,
+        "max_grad_abs": 2.3974088492195733e-07
+      },
+      {
+        "core_name": "Core_3_L0",
+        "success": true,
+        "status": 0,
+        "nit": 18,
+        "nfev": 23,
+        "mse_c2": 0.5906703579772059,
+        "max_grad_abs": 7.240567079236371e-08
+      },
+      {
+        "core_name": "Core_4_L0",
+        "success": true,
+        "status": 0,
+        "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "selected_multistart_index": 2,
+        "selected_multistart_init_physical": [
+          0.15,
+          0.008,
+          120.0
+        ],
+        "nit": 25,
+        "nfev": 28,
+        "mse_c2": 0.6020674944141038,
+        "max_grad_abs": 3.1370284148124483e-09
+      },
+      {
+        "core_name": "Core_5_L0",
+        "success": true,
+        "status": 0,
+        "nit": 21,
+        "nfev": 25,
+        "mse_c2": 0.5832512995356227,
+        "max_grad_abs": 3.215035349057871e-09
+      },
+      {
+        "core_name": "Core_6_L0",
+        "success": true,
+        "status": 0,
+        "nit": 30,
+        "nfev": 47,
+        "mse_c2": 0.5121289139030476,
+        "max_grad_abs": 1.9071064993880782e-07
+      },
+      {
+        "core_name": "Core_7_L0",
+        "success": true,
+        "status": 0,
+        "nit": 22,
+        "nfev": 24,
+        "mse_c2": 0.45765462449392313,
+        "max_grad_abs": 7.1025079151354475e-09
+      }
+    ]
+  },
+  "training_metrics_only": {
+    "workload_a": {
+      "mse_c2": 0.4861889533068272,
+      "rmse_c": 0.6972725100753845,
+      "mae_c": 0.571137933599612,
+      "max_error_c": 2.8029697389758965,
+      "per_core_rmse_c": [
+        0.6918893300039566,
+        0.7098570907591882,
+        0.7212880861607116,
+        0.7276773789718031,
+        0.7325534628889625,
+        0.7196600876639393,
+        0.6484626035186217,
+        0.6181293191123614
+      ],
+      "per_core_mae_c": [
+        0.5525298362779881,
+        0.563000350478412,
+        0.571063314789726,
+        0.5810661743303137,
+        0.5978240405763932,
+        0.5967145398755472,
+        0.5731787906278085,
+        0.533726421840707
+      ],
+      "per_core_max_error_c": [
+        2.524133720876435,
+        2.640252005959894,
+        2.7052360565367763,
+        2.7071252192529727,
+        2.626945960019114,
+        2.4956542333252827,
+        2.4372213147823416,
+        2.8029697389758965
+      ]
+    },
+    "workload_b": {
+      "mse_c2": 0.6185642343928398,
+      "rmse_c": 0.7864885468923497,
+      "mae_c": 0.6916585030686607,
+      "max_error_c": 2.0415291189289775,
+      "per_core_rmse_c": [
+        0.7663096219799069,
+        0.7861089299041351,
+        0.7990106363645497,
+        0.8073576333243783,
+        0.8170069845708758,
+        0.8053520703982718,
+        0.7770161385994236,
+        0.7302228384825725
+      ],
+      "per_core_mae_c": [
+        0.6821713766988577,
+        0.6976603037714233,
+        0.7082330320971434,
+        0.7179842947088934,
+        0.7322067688474091,
+        0.7263155553883892,
+        0.6571320448444683,
+        0.611564648192701
+      ],
+      "per_core_max_error_c": [
+        1.904357017916638,
+        1.992125266357057,
+        2.0415291189289775,
+        2.0369594494983403,
+        1.989248670503791,
+        1.8912787036071848,
+        1.4592826237011849,
+        1.3693029292207157
+      ]
+    },
+    "combined_ab": {
+      "mse_c2": 0.5523765938498335,
+      "rmse_c": 0.7432204207702002,
+      "mae_c": 0.6313982183341363,
+      "max_error_c": 2.8029697389758965,
+      "per_core_rmse_c": [
+        0.7300483825447159,
+        0.7489540503182164,
+        0.7611420696102223,
+        0.7685508167826036,
+        0.7759300834573325,
+        0.763708910210969,
+        0.7156318284586384,
+        0.6765017549821496
+      ],
+      "per_core_mae_c": [
+        0.6173506064884229,
+        0.6303303271249177,
+        0.6396481734434347,
+        0.6495252345196036,
+        0.6650154047119011,
+        0.6615150476319682,
+        0.6151554177361384,
+        0.5726455350167039
+      ],
+      "per_core_max_error_c": [
+        2.524133720876435,
+        2.640252005959894,
+        2.7052360565367763,
+        2.7071252192529727,
+        2.626945960019114,
+        2.4956542333252827,
+        2.4372213147823416,
+        2.8029697389758965
+      ]
+    }
+  },
+  "calibration_inputs": {
+    "r_matrix_path": "/home/pardhu/temperature_project/dataset/Sample_dataset/2D_floorplans/Style_2/fp_003/generated_samples/thermal_matrix_fp003.csv",
+    "r_matrix_sha256": "c0a7d0024fda30e3b093b0ace222a9d8277afedb6a5ff8ed6650c0befd7aeaaf",
+    "workload_a_ptrace_sha256": "9c86181f08bef0ed16d8d73bb47c7a77adae2f517fbde896b26acb9b57acb248",
+    "workload_a_ttrace_sha256": "93722f69eb00176becc1f549059792c17f3cd814602180892ff8158018ed1bd6",
+    "workload_b_ptrace_sha256": "d86a39d91ce0dce35bf47d96c12032354565eeea13e327ff06383ec9f54ed02b",
+    "workload_b_ttrace_sha256": "bb3448eb64a34d8b814c20044bec7413a3bb30df2fe863584b162d040617eda3"
+  },
+  "convergence_repair_provenance": {
+    "repaired_core": "Core_4_L0",
+    "other_cores_modified": false,
+    "pre_repair_archive_path": "/home/pardhu/temperature_project/stage_c/transient/multi_floorplan_pilot/calibrations/archived_pre_repair/style2_fp003_two_speed_joint_AB_pre_repair.json",
+    "pre_repair_sha256": "d5376f8d17453e8868249c9af809d69452205ea2d214c6d1136b119ce1086625",
+    "reason": "Multi-start selector previously picked non-converged Start 4 (status=2, max|g|=6.11e-7) over cleanly converged Start 2 (status=0, max|g|=3.14e-9) due to 4e-15 floating-point objective noise."
+  }
+}

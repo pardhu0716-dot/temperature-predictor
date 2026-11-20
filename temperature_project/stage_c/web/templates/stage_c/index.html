@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stage C — 2D Transient Temperature Predictor</title>
+  <link rel="stylesheet" href="{{ url_for('stage_c_web.static', filename='stage_c/stage_c.css') }}" />
+</head>
+<body>
+  <header class="sc-header">
+    <div class="sc-header-inner">
+      <div>
+        <div class="sc-eyebrow">Lightweight Temperature Predictor • Stage C</div>
+        <h1>2D Transient Thermal Predictor (Two-Speed Dual-RC)</h1>
+        <p class="sc-subtitle">
+          23 calibrated 2D floorplans • 8 active cores (2 Big + 6 Little) • 200 steps @ 0.01 s (2.00 s horizon) • T<sub>init</sub> = T<sub>ambient</sub> = 45.0 °C
+        </p>
+      </div>
+      <div class="sc-header-badges" id="globalBadges">
+        <span class="sc-badge sc-badge-ok" id="shaHeaderBadge">SHA-256 Verified (23/23)</span>
+        <span class="sc-badge sc-badge-neutral">704 B / Floorplan</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="sc-container">
+    <div id="errorBanner" class="sc-alert sc-alert-error sc-hidden" role="alert"></div>
+
+    <div class="sc-grid">
+      <!-- Left Column: Controls -->
+      <section class="sc-panel sc-controls">
+        <h2>1. Floorplan Selection</h2>
+        <div class="sc-row">
+          <div class="sc-field">
+            <label for="styleFilter">Style</label>
+            <select id="styleFilter">
+              <option value="ALL">All Styles (23)</option>
+              <option value="Style_1">Style_1 (3)</option>
+              <option value="Style_2">Style_2 (5)</option>
+              <option value="Style_3">Style_3 (5)</option>
+              <option value="Style_4">Style_4 (10)</option>
+            </select>
+          </div>
+          <div class="sc-field sc-field-grow">
+            <label for="floorplanSelect">Calibrated Floorplan</label>
+            <select id="floorplanSelect"></select>
+          </div>
+        </div>
+
+        <div class="sc-domain-box">
+          <strong>Calibrated Workload Domain:</strong>
+          Big cores <code>10.0–20.0 W</code> • Little cores <code>5.0–10.0 W</code> • <code>200</code> steps @ <code>0.01 s</code>.
+          Inputs outside this range (within physical bounds <code>0–50 W</code>) are clearly flagged as <strong>Extrapolated</strong>.
+        </div>
+
+        <h2>2. Power Input Mode</h2>
+        <div class="sc-tabs" role="tablist">
+          <button type="button" class="sc-tab active" data-mode="constant">Constant (8 Cores)</button>
+          <button type="button" class="sc-tab" data-mode="schedule">Time-Varying Schedule</button>
+          <button type="button" class="sc-tab" data-mode="trace">200-Step CSV Trace</button>
+        </div>
+
+        <!-- Mode: Constant -->
+        <div id="modeConstant" class="sc-mode-panel">
+          <div class="sc-mode-actions">
+            <button type="button" class="sc-btn sc-btn-secondary" id="btnWorkloadA">Workload A (20 W Big / 8 W Little)</button>
+            <button type="button" class="sc-btn sc-btn-secondary" id="btnMidCalibrated">Mid Calibrated (15 W / 7.5 W)</button>
+          </div>
+          <div id="coreInputsGrid" class="sc-core-grid"></div>
+        </div>
+
+        <!-- Mode: Schedule -->
+        <div id="modeSchedule" class="sc-mode-panel sc-hidden">
+          <div class="sc-field">
+            <label for="presetSelect">Built-in Time-Varying Preset</label>
+            <select id="presetSelect"></select>
+          </div>
+          <p id="presetDesc" class="sc-muted"></p>
+          <div class="sc-table-wrap">
+            <table class="sc-table" id="scheduleTable">
+              <thead>
+                <tr>
+                  <th>Steps (1–200)</th>
+                  <th>Time (s)</th>
+                  <th colspan="8">Per-Core Powers (W) in Exact .flp Order</th>
+                  <th></th>
+                </tr>
+                <tr id="scheduleCoreHeaders">
+                  <th>Start–End</th>
+                  <th>Window</th>
+                  <th>C0</th><th>C1</th><th>C2</th><th>C3</th><th>C4</th><th>C5</th><th>C6</th><th>C7</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody id="scheduleBody"></tbody>
+            </table>
+          </div>
+          <div class="sc-mode-actions">
+            <button type="button" class="sc-btn sc-btn-secondary" id="btnAddSegment">+ Add Segment</button>
+          </div>
+        </div>
+
+        <!-- Mode: CSV Trace -->
+        <div id="modeTrace" class="sc-mode-panel sc-hidden">
+          <p class="sc-muted">
+            Paste up to <code>200</code> rows of 8 comma- or tab-separated power values (W) in exact floorplan core order.
+            Optional header row is automatically skipped.
+          </p>
+          <div class="sc-mode-actions">
+            <button type="button" class="sc-btn sc-btn-secondary" id="btnFillTraceFromPreset">Populate 200-Step Sample Trace</button>
+          </div>
+          <textarea id="traceTextarea" rows="8" placeholder="10.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 10.0&#10;..."></textarea>
+        </div>
+
+        <div class="sc-submit-bar">
+          <button type="button" class="sc-btn sc-btn-primary" id="btnPredict">Run Two-Speed Transient Prediction</button>
+        </div>
+      </section>
+
+      <!-- Right Column: Results & Charts -->
+      <section class="sc-results">
+        <!-- Domain Status Banner -->
+        <div id="domainBanner" class="sc-domain-banner sc-domain-validated">
+          <div class="sc-domain-title">
+            <span class="sc-pill sc-pill-ok" id="domainBadge">VALIDATED DOMAIN</span>
+            <span id="domainHeadline">All 8 core power inputs lie within the calibrated workload domain.</span>
+          </div>
+          <ul id="extrapolationList" class="sc-warning-list sc-hidden"></ul>
+        </div>
+
+        <!-- Temperature vs Time Chart -->
+        <div class="sc-panel">
+          <div class="sc-panel-head">
+            <div>
+              <h2>Temperature vs. Time (All 8 Active Cores)</h2>
+              <p class="sc-muted" id="chartSubtitle">Select a floorplan and run prediction to view transient curves.</p>
+            </div>
+            <div class="sc-kpi-inline" id="peakSummaryInline"></div>
+          </div>
+          <div class="sc-chart-wrap">
+            <svg id="tempChart" viewBox="0 0 860 360" preserveAspectRatio="xMidYMid meet" aria-label="Temperature versus time chart"></svg>
+            <div id="chartTooltip" class="sc-tooltip sc-hidden"></div>
+          </div>
+          <div id="chartLegend" class="sc-legend"></div>
+        </div>
+
+        <!-- Accuracy + Footprint Cards -->
+        <div class="sc-cards-2col">
+          <div class="sc-panel">
+            <h2>Per-Floorplan Audited Accuracy (Unseen Workload C)</h2>
+            <div class="sc-metric-grid" id="accuracyMetrics"></div>
+          </div>
+          <div class="sc-panel">
+            <h2>Model Footprint &amp; Inference Latency</h2>
+            <div class="sc-metric-grid" id="footprintMetrics"></div>
+          </div>
+        </div>
+
+        <!-- Per-Core Summary Table -->
+        <div class="sc-panel">
+          <h2>Per-Core Transient Summary</h2>
+          <div class="sc-table-wrap">
+            <table class="sc-table">
+              <thead>
+                <tr>
+                  <th>Core</th>
+                  <th>Type</th>
+                  <th>Power Range (W)</th>
+                  <th>Peak Temp (°C)</th>
+                  <th>Time to Peak (s)</th>
+                  <th>Final Temp @ 2.00 s (°C)</th>
+                  <th>ΔT Final (°C)</th>
+                </tr>
+              </thead>
+              <tbody id="coreSummaryBody"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script src="{{ url_for('stage_c_web.static', filename='stage_c/stage_c.js') }}"></script>
+</body>
+</html>
